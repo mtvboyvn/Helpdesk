@@ -1,0 +1,69 @@
+﻿<%@ Master Language="VB" Inherits="HelpDesk.Site" Codebehind="Site.master.vb" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>HELPDESK</title>
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .newStyle1
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+        <form id="form1" runat="server">
+        
+            <div id="header">
+                <span class="title">HELPDESK</span>
+            </div>
+        
+            <div id="content">
+                <asp:contentplaceholder id="MainContent" runat="server">
+                  <!-- Page-specific content will go here... -->
+                </asp:contentplaceholder>
+            </div>
+            
+            <div id="navigation">
+                <asp:ContentPlaceHolder ID="LoginContent" runat="server">
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <LoggedInTemplate>
+                            Welcome back,
+                            <asp:LoginName ID="LoginName1" runat="server" />.
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            XIN CHÀO, BẠN CHƯA ĐĂNG NHẬP
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                    <br />
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Logout.aspx" />
+                    
+                    <br /><br />
+                </asp:ContentPlaceHolder>
+                <br />
+                <asp:LinkButton ID="LinkButton1" runat="server" 
+                    PostBackUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">Tài khoản quản trị</asp:LinkButton>
+                <br />
+                <br />
+                <asp:LinkButton ID="LinkButton2" runat="server" 
+                    PostBackUrl="~/Controls/ThemDaiLy.aspx">Thêm 
+                DN cho đại lý</asp:LinkButton>
+                <br />
+                <br />
+                <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Controls/ThemDoiTen_VNACCS.aspx">Đổi 
+                tên đơn vị</asp:LinkButton>
+                <br />
+                <br />
+                <asp:LinkButton ID="LinkButton4" runat="server" 
+                    PostBackUrl="~/Controls/Them_XemTTCKS.aspx">Xem thông tin chữ ký số</asp:LinkButton>
+                <br />
+                <br />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
