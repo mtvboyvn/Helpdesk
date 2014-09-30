@@ -11,6 +11,7 @@ Partial Public Class _Default
     Public Urrcore As String = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=tchq-scan.tongcuc.haiquan.vn)(PORT=1521))(CONNECT_DATA=(SERVER=dedicated)(SERVICE_NAME=VNACCSORA_EX)));User ID=VNACCS_URR_Core;Password=VNACCS_URR_Core; Persist Security Info=True"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+
     End Sub
 
     Protected Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
