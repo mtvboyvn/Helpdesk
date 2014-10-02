@@ -54,6 +54,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -61,6 +65,18 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.Design, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
     <Reference Include="vnConvert, Version=1.0.2723.36603, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\O D\Code\vnConvert.dll</HintPath>
@@ -88,7 +104,12 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HelpDesk.mdb" />
     <Content Include="DLL\Oracle.DataAccess.dll" />
+    <Content Include="DLL\System.Data.SQLite.dll" />
+    <Content Include="DLL\Telerik.Web.Design.dll" />
+    <Content Include="DLL\Telerik.Web.UI.dll" />
+    <Content Include="DLL\Telerik.Web.UI.Skins.dll" />
     <Content Include="DLL\vnConvert.dll" />
     <Content Include="Doiten.aspx" />
   </ItemGroup>
@@ -244,7 +265,6 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Class\" />
   </ItemGroup>
   <PropertyGroup>
