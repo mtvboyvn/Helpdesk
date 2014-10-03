@@ -1,38 +1,32 @@
-﻿<%@ Master Language="VB" Inherits="HelpDesk.Site" Codebehind="Site.master.vb" %>
+﻿<%@ Master Language="VB" Inherits="HelpDesk.Site" CodeBehind="Site.master.vb" %>
+
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 <!DOCTYPE html>
 
-<html lang="en" >
+<html lang="en">
 <head id="Head1" runat="server">
-    <title>HELPDESK</title>
+    <title>Help Desk</title>
     <link href="Styles.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        .newStyle1
-        {
-            font-weight: bold;
-        }
-    </style>
+    <asp:PlaceHolder runat="server">
+        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.6.2.js") %>"></script>
+    </asp:PlaceHolder>
 </head>
 <body>
-    <div id="wrapper">
-
-        <form id="form1" runat="server">
-         <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableTheming="True">
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableTheming="True">
             <Scripts>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js">
-                </asp:ScriptReference>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js">
-                </asp:ScriptReference>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js">
-                </asp:ScriptReference>
-<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js"></asp:ScriptReference>
-<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js"></asp:ScriptReference>
-<asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js"></asp:ScriptReference>
-               
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js"></asp:ScriptReference>
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js"></asp:ScriptReference>
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js"></asp:ScriptReference>
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js"></asp:ScriptReference>
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js"></asp:ScriptReference>
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js"></asp:ScriptReference>
+                <asp:ScriptReference Name="jquery.ui.combined"></asp:ScriptReference>
+                <asp:ScriptReference Name="jquery"></asp:ScriptReference>
             </Scripts>
         </telerik:RadScriptManager>
-            <table border="1" width="100%" style="text-align: left;">
+        <table border="1" width="100%" style="text-align: left;">
             <tr>
                 <td style="width: 10px;">
                     <p class="site-title">
@@ -46,7 +40,7 @@
                         <FocusedStyle BackColor="#FFFF99" />
                     </telerik:RadTextBox>
                 </td>
-                <td >
+                <td>
                     <section id="login" runat="server">
                         <asp:LoginView ID="LoginView" runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>
@@ -56,47 +50,47 @@
                                 </ul>
                             </AnonymousTemplate>
                             <%-- <LoggedInTemplate>
-                                    <p>
-                                        Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
-                                            <asp:LoginName runat="server" CssClass="username" />
-                                        </a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
-                                    </p>
-                                </LoggedInTemplate>--%>
+                                <p>
+                                    Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                                        <asp:LoginName runat="server" CssClass="username" />
+                                    </a>!
+                            <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                </p>
+                            </LoggedInTemplate>--%>
                         </asp:LoginView>
                     </section>
 
-                    <div style="float:right;">
-                    <telerik:RadMenu ID="menuUser" Visible="true"  runat="server" >
+                    <div style="float: right;">
+                        <telerik:RadMenu ID="menuUser" Visible="true" runat="server">
+                            <Items>
+                                <telerik:RadMenuItem runat="server" PostBack="False" Text="Menu" Value="Menu">
                                     <Items>
-                                        <telerik:RadMenuItem runat="server" PostBack="False" Text="Menu" Value="Menu">
-                                            <Items>
-                                                <telerik:RadMenuItem runat="server" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
-                                                </telerik:RadMenuItem>
-                                                <telerik:RadMenuItem runat="server" Text="Thêm doanh nghiệp cho đại lý" Value="ThemDaiLy" NavigateUrl="~/Controls/ThemDaiLy.aspx">
-                                                </telerik:RadMenuItem>
-                                                <telerik:RadMenuItem runat="server" IsSeparator="True" Text="Child RadMenuItem 5">
-                                                </telerik:RadMenuItem>
-                                                <telerik:RadMenuItem runat="server" Text="Đổi tên đơn vị" Value="ThemDoiTen_VNACCS" PostBackUrl="~/Controls/ThemDoiTen_VNACCS.aspx">
-                                                </telerik:RadMenuItem>
-                                                <telerik:RadMenuItem runat="server" Text="Xem thông tin chữ ký số" Value="Them_XemTTCKS" PostBackUrl="~/Controls/Them_XemTTCKS.aspx">
-                                                </telerik:RadMenuItem>
-                                            </Items>
+                                        <telerik:RadMenuItem runat="server" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
+                                        </telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Thêm doanh nghiệp cho đại lý" Value="ThemDaiLy" NavigateUrl="~/Controls/ThemDaiLy.aspx">
+                                        </telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" IsSeparator="True" Text="Child RadMenuItem 5">
+                                        </telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Đổi tên đơn vị" Value="ThemDoiTen_VNACCS" PostBackUrl="~/Controls/ThemDoiTen_VNACCS.aspx">
+                                        </telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Xem thông tin chữ ký số" Value="Them_XemTTCKS" PostBackUrl="~/Controls/Them_XemTTCKS.aspx">
                                         </telerik:RadMenuItem>
                                     </Items>
-                                </telerik:RadMenu>
+                                </telerik:RadMenuItem>
+                            </Items>
+                        </telerik:RadMenu>
                     </div>
                     <%--<nav>
-                        <ul id="menu" runat="server" visible="false">
-                            <li><a runat="server" href="~/">Supporter</a></li>
-                            <li><a runat="server" href="~/About.aspx">Administrator</a></li>
-                        </ul>
-                    </nav>--%>
-                </td>
+                    <ul id="menu" runat="server" visible="false">
+                        <li><a runat="server" href="~/">Supporter</a></li>
+                        <li><a runat="server" href="~/About.aspx">Administrator</a></li>
+                    </ul>
+                </nav>--%>
+            </td>
             </tr>
         </table>
 
-             <div id="body">
+        <div id="body">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             <section class="content-wrapper main-content clear-fix">
                 <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1" />
@@ -106,11 +100,11 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; <%: DateTime.Now.Year %> - Trung tâm quản lý và vận hành hệ thống CNTT</p>
+                    <p>&copy; <%: DateTime.Now.Year %> - Trung tâm quản lý và vận hành hệ thống CNTT - Tổng Cục Hải Quan</p>
                 </div>
             </div>
         </footer>
-        </form>
-    </div>
+    </form>
+
 </body>
 </html>
