@@ -18,7 +18,5 @@
             Visible="False"></asp:Label>&nbsp;</p>
 </asp:Content>
 
-<asp:Content ID="Content2" runat="server" contentplaceholderid="LoginContent">
-</asp:Content>
 
 

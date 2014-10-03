@@ -25,7 +25,9 @@ a {
     a:link, a:visited,
     a:active, a:hover {
         color: #333;
-    }
+    top: 0px;
+    left: 0px;
+}
 
     a:hover {
         background-color: #c7d1d6;
@@ -742,11 +744,25 @@ tr.pager td {
         float: right;
        
     }*/ 
+  /*div.RadMenu {  
+        float: right;
+       
+    }*/ 
 .rmRootGroup  
     {  
+     color:white;
         background: #4484F1 !important;             
     }
 .RadMenu .rmItem .rmExpandDown {
     color:white;
     background: #4484F1 !important;  
 } 
+
+.RadMenu a.rmLink:hover
+    {
+      background-color:red !important;
+    }
+    .RadMenu a.rmLink, .RadMenu .rmText
+    {
+        background-image:none !important;
+    }

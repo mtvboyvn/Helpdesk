@@ -50,22 +50,13 @@ Partial Public Class Site
     Protected WithEvents nutTimKiem As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
-    '''login control.
+    '''RadMenuDangNhap control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents login As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''LoginView control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents LoginView As Global.System.Web.UI.WebControls.LoginView
+    Protected WithEvents RadMenuDangNhap As Global.Telerik.Web.UI.RadMenu
 
     '''<summary>
     '''menuUser control.

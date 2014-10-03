@@ -36,49 +36,53 @@
                     </p>
                 </td>
                 <td style="width: 610px;">
-                    <telerik:RadTextBox ID="nutTimKiem" Width="600px" BorderStyle="Groove" BorderColor="White" Font-Size="Medium" runat="server" ShowButton="True" EmptyMessage="Tìm theo mã lỗi hoặc từ khóa liên quan" LabelWidth="240px" SelectionOnFocus="SelectAll">
+                    <telerik:RadTextBox ID="nutTimKiem" Width="600px" BorderStyle="Groove" BorderColor="White" Font-Size="Medium" runat="server" EmptyMessage="Tìm theo mã lỗi hoặc từ khóa liên quan" LabelWidth="240px" SelectionOnFocus="SelectAll">
                         <FocusedStyle BackColor="#FFFF99" />
                     </telerik:RadTextBox>
                 </td>
                 <td>
-                    <section id="login" runat="server">
-                        <asp:LoginView ID="LoginView" runat="server" ViewStateMode="Disabled">
-                            <AnonymousTemplate>
-                                <ul>
-                                    <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Đăng nhập</a></li>
-                                    <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Đăng ký</a></li>
-                                </ul>
-                            </AnonymousTemplate>
-                            <%-- <LoggedInTemplate>
-                                <p>
-                                    Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
-                                        <asp:LoginName runat="server" CssClass="username" />
-                                    </a>!
-                            <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
-                                </p>
-                            </LoggedInTemplate>--%>
-                        </asp:LoginView>
-                    </section>
-
                     <div style="float: right;">
-                        <telerik:RadMenu ID="menuUser" Visible="true" runat="server">
-                            <Items>
-                                <telerik:RadMenuItem runat="server" PostBack="False" Text="Menu" Value="Menu">
-                                    <Items>
-                                        <telerik:RadMenuItem runat="server" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
-                                        </telerik:RadMenuItem>
-                                        <telerik:RadMenuItem runat="server" Text="Thêm doanh nghiệp cho đại lý" Value="ThemDaiLy" NavigateUrl="~/Controls/ThemDaiLy.aspx">
-                                        </telerik:RadMenuItem>
-                                        <telerik:RadMenuItem runat="server" IsSeparator="True" Text="Child RadMenuItem 5">
-                                        </telerik:RadMenuItem>
-                                        <telerik:RadMenuItem runat="server" Text="Đổi tên đơn vị" Value="ThemDoiTen_VNACCS" PostBackUrl="~/Controls/ThemDoiTen_VNACCS.aspx">
-                                        </telerik:RadMenuItem>
-                                        <telerik:RadMenuItem runat="server" Text="Xem thông tin chữ ký số" Value="Them_XemTTCKS" PostBackUrl="~/Controls/Them_XemTTCKS.aspx">
-                                        </telerik:RadMenuItem>
-                                    </Items>
-                                </telerik:RadMenuItem>
-                            </Items>
-                        </telerik:RadMenu>
+                        <table border="0">
+                            <tr>
+                                <td>
+                                    
+                                    <telerik:RadMenu ID="RadMenuDangNhap" runat="server">
+                                        <Items>
+                                            <telerik:RadMenuItem  runat="server" PostBack="False" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" ForeColor="White">
+                                              <Items>
+                                                    <telerik:RadMenuItem runat="server" Visible="false" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
+                                                    </telerik:RadMenuItem>
+                                                </Items>
+                                            </telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenu>
+                                
+                                </td>
+                                <td>
+                                    <telerik:RadMenu ID="menuUser" Visible="true" runat="server">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" PostBack="False" Text="Menu" Value="Menu">
+                                                <Items>
+                                                    <telerik:RadMenuItem runat="server" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
+                                                    </telerik:RadMenuItem>
+                                                    <telerik:RadMenuItem runat="server" Text="Thêm doanh nghiệp cho đại lý" Value="ThemDaiLy" NavigateUrl="~/Controls/ThemDaiLy.aspx">
+                                                    </telerik:RadMenuItem>
+                                                    <telerik:RadMenuItem runat="server" IsSeparator="True" Text="Child RadMenuItem 5">
+                                                    </telerik:RadMenuItem>
+                                                    <telerik:RadMenuItem runat="server" Text="Đổi tên đơn vị" Value="ThemDoiTen_VNACCS" PostBackUrl="~/Controls/ThemDoiTen_VNACCS.aspx">
+                                                    </telerik:RadMenuItem>
+                                                    <telerik:RadMenuItem runat="server" Text="Xem thông tin chữ ký số" Value="Them_XemTTCKS" PostBackUrl="~/Controls/Them_XemTTCKS.aspx">
+                                                    </telerik:RadMenuItem>
+                                                </Items>
+                                            </telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenu>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
                     </div>
                     <%--<nav>
                     <ul id="menu" runat="server" visible="false">
