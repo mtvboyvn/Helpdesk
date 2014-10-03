@@ -5,7 +5,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 
-    <asp:Panel runat="server" ID="AuthenticatedMessagePanel">
+   <%-- <asp:Panel runat="server" ID="AuthenticatedMessagePanel">
         <asp:Label runat="server" ID="WelcomeBackMessage"></asp:Label>
     </asp:Panel>
     
@@ -13,7 +13,7 @@
         <asp:HyperLink runat="server" ID="lnkLogin" Text="Log In" NavigateUrl="~/Login.aspx"></asp:HyperLink>
     </asp:Panel>
      <span class="style1">HELPDESK</span><br />
-    <br />
+    <br />--%>
    <%-- <asp:LinkButton ID="LinkButton1" runat="server" 
         PostBackUrl="~/TaikhoanQT.aspx">Tài khoản quản trị</asp:LinkButton>
     <br />
