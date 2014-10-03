@@ -306,6 +306,13 @@
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="WebForm3.aspx.designer.vb">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.vb">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -336,6 +343,7 @@
     <Content Include="TaikhoanQT.aspx" />
     <Content Include="ThongtinCKS.aspx" />
     <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
     <Content Include="web__.config" />
     <Content Include="web.config" />
     <None Include="My Project\Application.myapp">

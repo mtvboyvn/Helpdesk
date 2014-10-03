@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        <asp:RadioButton ID="RadioButton1" Text="Doanh nghiệp" runat="server" />
     </div>
     </form>
 </body>

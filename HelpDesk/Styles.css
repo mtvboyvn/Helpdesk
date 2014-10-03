@@ -396,12 +396,7 @@ fieldset {
         fieldset ol li {
             padding-bottom: 5px;
         }
-
-    label {
-        display: block;
-        font-size: 1.2em;
-        font-weight: 600;
-    }
+           
 
     label.checkbox {
         display: inline;
@@ -412,9 +407,9 @@ fieldset {
         background: #fff;
         color: #333;
         font-size: 1.2em;
-        margin: 5px 0 6px 0;
+        margin: 5px 2px 6px 5px;
         padding: 5px;
-        width: 300px;
+      
     }
 
     textarea {
@@ -512,7 +507,7 @@ input[type="checkbox"].input-validation-error {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-top: 0.75em;
+    margin-top: 0.0em;
     border: 0 none;    
 }
 
@@ -561,7 +556,7 @@ th {
 	}
 
 td {
-    padding: 0.25em 2em 0.25em 0em;
+    padding: 2px 0 0 0em;
     border: 0 none;
 }
 

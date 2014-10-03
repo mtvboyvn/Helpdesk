@@ -26,12 +26,12 @@
                 <asp:ScriptReference Name="jquery"></asp:ScriptReference>
             </Scripts>
         </telerik:RadScriptManager>
-        <table border="1" width="100%" style="text-align: left;">
+        <table border="1" width="100%" style="text-align: left;margin-top: 1em;">
             <tr>
                 <td style="width: 10px;">
                     <p class="site-title">
                         <a runat="server" href="~/">
-                            <nobr>Help Desk</nobr>
+                            <nobr>Help Desk&nbsp;</nobr>
                         </a>
                     </p>
                 </td>
@@ -53,13 +53,15 @@
                                             </telerik:RadMenuItem>
                                         </Items>
                                     </telerik:RadMenu>
-                                
+                                &nbsp;&nbsp;&nbsp;
                                 </td>
                                 <td>
                                     <telerik:RadMenu ID="menuUser" Visible="true" runat="server">
                                         <Items>
                                             <telerik:RadMenuItem runat="server" PostBack="False" Text="Menu" Value="Menu">
                                                 <Items>
+                                                    <telerik:RadMenuItem runat="server" Text="Thêm câu hỏi" Value="ThemCauHoi" NavigateUrl="~/Controls/ThemCauHoi.aspx">
+                                                    </telerik:RadMenuItem>
                                                     <telerik:RadMenuItem runat="server" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
                                                     </telerik:RadMenuItem>
                                                     <telerik:RadMenuItem runat="server" Text="Thêm doanh nghiệp cho đại lý" Value="ThemDaiLy" NavigateUrl="~/Controls/ThemDaiLy.aspx">
@@ -74,11 +76,10 @@
                                             </telerik:RadMenuItem>
                                         </Items>
                                     </telerik:RadMenu>
+                                    &nbsp;
                                 </td>
                             </tr>
                         </table>
-
-
 
                     </div>
                     <%--<nav>

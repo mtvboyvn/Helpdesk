@@ -1,119 +1,168 @@
 ﻿<%@ Page Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" CodeBehind="ThemCauHoi.aspx.vb" Inherits="HelpDesk.ThemCauHoi"%>
 
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <div>
+<h2>
+        Thêm câu hỏi</h2>
+            <hr />
+ 
 
-            
-        <table style="width: 100%">
-            <tr>
-                <td style="width: 199px">
-                    <asp:Label ID="Label1" runat="server" style="font-weight: 700" 
+        <table border="1"  style="width: 100%;border:0px solid black;">
+            <tr >
+                <td style="width:1px;text-align:right;" >
+                    <nobr> 
+                    <asp:Label ID="Label1" runat="server" 
                         Text="Phân loại đối tượng:"></asp:Label>
+                        </nobr>
+                </td>
+                <td style="text-align:left;">
+                <nobr>    <asp:RadioButton ID="RadioButton1" GroupName="ABC" Text="Doanh nghiệp" runat="server" Checked="True" Font-Bold="True" ForeColor="Red" />
+                    &nbsp;&nbsp;&nbsp;
+                     <asp:RadioButton ID="RadioButton2"  GroupName="ABC" Text="Hải quan" runat="server" ForeColor="Blue" />
+                </nobr>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+              <tr>
+                <td style="width:1px;text-align:right;" >
+                    <nobr>
+                    <asp:Label ID="Label2" runat="server" 
+                        Text="Mã số thuế:"></asp:Label>
+                        </nobr>
+                </td>
+                <td style="width:1px;text-align:left;">                   
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox1" Runat="server" Font-Bold="True" Text="0100101308">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
+                </td>
+                <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label3" runat="server" 
+                        Text="Tên doanh nghiệp:"></asp:Label>
+                        </nobr>
                 </td>
                 <td>
-                    <asp:DropDownList ID="Doituong" runat="server">
-                        <asp:ListItem Value="1">Doanh nghiệp</asp:ListItem>
-                        <asp:ListItem Value="2">Hải quan</asp:ListItem>
-                    </asp:DropDownList>
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox2" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
                 </td>
             </tr>
-        </table>
-        <table style="width: 100%">
             <tr>
-                <td style="width: 130px">
-                    <asp:Label ID="Label2" runat="server" style="font-weight: 700" 
-                        Text="Mã số thuế:"></asp:Label>
-                </td>
-                <td style="width: 152px">
-                    <asp:TextBox ID="TextBox1" runat="server" style="margin-left: 0px"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:Label ID="Label3" runat="server" style="font-weight: 700" 
-                        Text="Mã số thuế:"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 0px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 130px">
-                    <asp:Label ID="Label4" runat="server" style="font-weight: 700" 
+                <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label4" runat="server" 
                         Text="Tên người hỏi:"></asp:Label>
+                        </nobr>
                 </td>
-                <td style="width: 152px">
-                    <asp:TextBox ID="TextBox3" runat="server" style="margin-left: 0px"></asp:TextBox>
+                <td >
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox3" Runat="server" Font-Bold="False" Text="Hứa Mạnh Tuyển">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
                 </td>
-                <td>
-                    <asp:Label ID="Label5" runat="server" style="font-weight: 700" 
+                <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label5" runat="server" 
                         Text="Số điện thoại:"></asp:Label>
+                        </nobr>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox4" runat="server" style="margin-left: 0px"></asp:TextBox>
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox4" Runat="server" Font-Bold="False" Text="0936394405">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
                 </td>
             </tr>
             <tr>
-                <td style="width: 130px">
-                    <asp:Label ID="Label6" runat="server" style="font-weight: 700" Text="Email:"></asp:Label>
+                <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label6" runat="server"  Text="Email:"></asp:Label>
+                        </nobr>
                 </td>
-                <td colspan="2">
-                    <asp:TextBox ID="TextBox5" runat="server" style="margin-left: 0px" 
-                        Width="304px"></asp:TextBox>
+                <td colspan="3">
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox5" Runat="server" Font-Bold="False" Text="huamanhtuyen@gmail.com" Width="160px">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
                 </td>
                 <td>
                     &nbsp;</td>
             </tr>
-        </table>
-        <table style="width: 100%">
             <tr>
-                <td style="width: 199px">
-                    <asp:Label ID="Label7" runat="server" style="font-weight: 700" 
-                        Text="Phân loại câu hỏi:"></asp:Label>
+              <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label10" runat="server"  Text="Phân loại câu hỏi:"></asp:Label>
+                        </nobr>
+                </td>
+                <td colspan="3">
+                <nobr>    
+                    &nbsp;&nbsp;&nbsp;
+                     <asp:RadioButton ID="RadioButton3"  GroupName="PhanLoai" Text="VNACCS" Checked="true" runat="server"  />
+                    &nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton4"  GroupName="PhanLoai" Text="VCIS" runat="server"  />
+                    &nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton5"  GroupName="PhanLoai" Text="Nghiệp vụ Hải quan" runat="server"  />
+                    &nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton6"  GroupName="PhanLoai" Text="E-Manifest" runat="server"  />
+                    &nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton7"  GroupName="PhanLoai" Text="E-Customs" runat="server"  />
+                    &nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton8"  GroupName="PhanLoai" Text="Kế toán thuế" runat="server"  />
+                    &nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton9"  GroupName="PhanLoai" Text="Đăng ký người sử dụng" runat="server"  />
+                </nobr>
                 </td>
                 <td>
-                    <asp:DropDownList ID="Doituong0" runat="server">
-                        <asp:ListItem Value="1">VNACCS</asp:ListItem>
-                        <asp:ListItem Value="2">VCIS</asp:ListItem>
-                        <asp:ListItem Value="3">Nghiệp vụ Hải quan</asp:ListItem>
-                        <asp:ListItem Value="4">E-manifest</asp:ListItem>
-                        <asp:ListItem Value="5">E-Customs</asp:ListItem>
-                        <asp:ListItem Value="6">Kế toán thuế</asp:ListItem>
-                        <asp:ListItem Value="7">Đăng ký người sử dụng</asp:ListItem>
-                    </asp:DropDownList>
-                </td>
+                    &nbsp;</td>
             </tr>
-            <tr>
-                <td style="width: 199px; height: 144px;">
-                    <asp:Label ID="Label8" runat="server" style="font-weight: 700" 
+             <tr>
+                <td style="width:1px;text-align:right;vertical-align:top;">
+                    <nobr>
+                    <asp:Label ID="Label8" runat="server" 
                         Text="Nội dung câu hỏi:"></asp:Label>
+                        </nobr>
                 </td>
-                <td style="height: 144px">
-                    <asp:TextBox ID="TextBox6" runat="server" style="margin-left: 0px" 
-                        TextMode="MultiLine" Width="100%" Height="177px"></asp:TextBox>
+                <td colspan="4">
+                    <telerik:RadEditor ID="RadEditor1" Runat="server" Skin="Office2010Blue" Width="800px">
+                    </telerik:RadEditor>
                 </td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
-                <td style="width: 199px; height: 129px;">
-                    <asp:Label ID="Label9" runat="server" style="font-weight: 700" 
+                 <td style="width:1px;text-align:right;vertical-align:top;">
+                     <nobr>
+                    <asp:Label ID="Label9" runat="server" 
                         Text="Nội dung câu trả lời:"></asp:Label>
+                         </nobr>
                 </td>
-                <td style="height: 129px">
-                    <asp:TextBox ID="TextBox7" runat="server" style="margin-left: 0px" 
-                        TextMode="MultiLine" Width="100%" Height="188px"></asp:TextBox>
+                <td colspan="4">
+                    <telerik:RadEditor ID="RadEditor2" Runat="server" Width="800px" Skin="Office2010Blue">
+                    </telerik:RadEditor>
                 </td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td style="width: 199px">
                     &nbsp;</td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Cập nhật" />
+                    
+                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu" Skin="Black">
+        </telerik:RadButton>
                 </td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
 
-            
+        
+       
         <br />
         <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Default.aspx">Quay 
         lại</asp:LinkButton>
+    
+        
     
     </div>
 </asp:Content>

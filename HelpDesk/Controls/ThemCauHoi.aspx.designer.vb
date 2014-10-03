@@ -23,13 +23,22 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Doituong control.
+    '''RadioButton1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Doituong As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents RadioButton1 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton2 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
     '''Label2 control.
@@ -41,13 +50,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextBox1 control.
+    '''RadTextBox1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadTextBox1 As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
     '''Label3 control.
@@ -59,13 +68,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextBox2 control.
+    '''RadTextBox2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadTextBox2 As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
     '''Label4 control.
@@ -77,13 +86,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextBox3 control.
+    '''RadTextBox3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadTextBox3 As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
     '''Label5 control.
@@ -95,13 +104,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextBox4 control.
+    '''RadTextBox4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadTextBox4 As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
     '''Label6 control.
@@ -113,31 +122,85 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextBox5 control.
+    '''RadTextBox5 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox5 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadTextBox5 As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
-    '''Label7 control.
+    '''Label10 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label7 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label10 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Doituong0 control.
+    '''RadioButton3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Doituong0 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents RadioButton3 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton4 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton5 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton6 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton7 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton7 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton8 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton8 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton9 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton9 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
     '''Label8 control.
@@ -149,13 +212,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label8 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextBox6 control.
+    '''RadEditor1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadEditor1 As Global.Telerik.Web.UI.RadEditor
 
     '''<summary>
     '''Label9 control.
@@ -167,22 +230,22 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label9 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextBox7 control.
+    '''RadEditor2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox7 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadEditor2 As Global.Telerik.Web.UI.RadEditor
 
     '''<summary>
-    '''Button1 control.
+    '''RadButton1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents RadButton1 As Global.Telerik.Web.UI.RadButton
 
     '''<summary>
     '''LinkButton2 control.

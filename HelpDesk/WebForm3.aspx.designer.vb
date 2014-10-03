@@ -11,16 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm2
-
-    '''<summary>
-    '''form1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+Partial Public Class WebForm3
 
     '''<summary>
     '''RadioButton1 control.
@@ -30,4 +21,13 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadioButton1 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''RadioButton2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButton2 As Global.System.Web.UI.WebControls.RadioButton
 End Class
