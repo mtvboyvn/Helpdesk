@@ -34,7 +34,7 @@
                         </nobr>
                 </td>
                 <td style="width:1px;text-align:left;">                   
-                    &nbsp;<telerik:RadTextBox ID="RadTextBox1" Runat="server" Font-Bold="True" Text="0100101308">
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox1" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -45,7 +45,7 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<telerik:RadTextBox ID="RadTextBox2" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px">
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox2" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -58,7 +58,7 @@
                         </nobr>
                 </td>
                 <td >
-                    &nbsp;<telerik:RadTextBox ID="RadTextBox3" Runat="server" Font-Bold="False" Text="Hứa Mạnh Tuyển">
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox3" Runat="server" Font-Bold="False" Text="Hứa Mạnh Tuyển" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -69,7 +69,7 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<telerik:RadTextBox ID="RadTextBox4" Runat="server" Font-Bold="False" Text="0936394405">
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox4" Runat="server" Font-Bold="False" Text="0936394405" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -81,7 +81,7 @@
                         </nobr>
                 </td>
                 <td colspan="3">
-                    &nbsp;<telerik:RadTextBox ID="RadTextBox5" Runat="server" Font-Bold="False" Text="huamanhtuyen@gmail.com" Width="160px">
+                    &nbsp;<telerik:RadTextBox ID="RadTextBox5" Runat="server" Font-Bold="False" Text="huamanhtuyen@gmail.com" Width="160px" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -148,7 +148,7 @@
                     &nbsp;</td>
                 <td>
                     
-                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu" Skin="Black">
+                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu" Skin="Forest">
         </telerik:RadButton>
                 </td>
                 <td></td>
