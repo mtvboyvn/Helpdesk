@@ -49,10 +49,7 @@
                                     <telerik:RadMenu ID="RadMenuDangNhap" runat="server">
                                         <Items>
                                             <telerik:RadMenuItem  runat="server" PostBack="False" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" ForeColor="White">
-                                              <Items>
-                                                    <telerik:RadMenuItem runat="server" Visible="false" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
-                                                    </telerik:RadMenuItem>
-                                                </Items>
+                                             
                                             </telerik:RadMenuItem>
                                         </Items>
                                     </telerik:RadMenu>

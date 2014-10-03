@@ -10,8 +10,8 @@ body {
     color: #333;
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 0px 0 0px;
+    padding: 0 0px 0 0px;
 }
 
 a {
@@ -103,6 +103,8 @@ h5, h6 {
     background-color: #ffffff;
     clear: both;
     padding-bottom: 35px;
+    padding-left:10px;
+    padding-right:10px;
 }
 
     .main-content {
