@@ -731,3 +731,7 @@ tr.pager td {
 .nutBam:hover {
     background-color:red !important;
 }
+
+.txtTimKiem:focus {
+    background-color:yellow !important;
+}

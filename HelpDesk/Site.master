@@ -47,7 +47,7 @@
                 </td>
                 <td style="width: 610px;">
                     <asp:Panel runat="server" ID="Panel1">
-                        <asp:TextBox ID="TextBox1" runat="server" Font-Size="1.2em" Width="600px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Font-Size="1.2em" Width="600px" CssClass="txtTimKiem"></asp:TextBox>
                         <cc1:TextBoxWatermarkExtender ID="TextBox1_TextBoxWatermarkExtender" runat="server" Enabled="True" TargetControlID="TextBox1" WatermarkText="Nhập từ khóa tìm kiếm">
                         </cc1:TextBoxWatermarkExtender>
                         <cc1:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" CompletionSetCount="10"
