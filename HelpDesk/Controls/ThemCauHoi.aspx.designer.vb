@@ -248,11 +248,11 @@ Partial Public Class ThemCauHoi
     Protected WithEvents RadButton1 As Global.Telerik.Web.UI.RadButton
 
     '''<summary>
-    '''LinkButton2 control.
+    '''RadButton2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LinkButton2 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents RadButton2 As Global.Telerik.Web.UI.RadButton
 End Class

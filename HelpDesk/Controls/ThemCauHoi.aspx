@@ -148,10 +148,14 @@
                     &nbsp;</td>
                 <td>
                     
-                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" AccessKey="s" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
         </telerik:RadButton>
                 </td>
-                <td></td>
+                <td>
+                    
+                    <telerik:RadButton ID="RadButton2" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </telerik:RadButton>
+                </td>
                 <td></td>
             </tr>
         </table>
@@ -159,8 +163,7 @@
         
        
         <br />
-        <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Default.aspx">Quay 
-        lại</asp:LinkButton>
+     
     
         
     
