@@ -148,7 +148,7 @@
                     &nbsp;</td>
                 <td>
                     
-                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu" Skin="Forest">
+                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
         </telerik:RadButton>
                 </td>
                 <td></td>

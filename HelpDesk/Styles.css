@@ -726,3 +726,8 @@ tr.pager td {
     {
         background-image:none !important;
     }
+
+
+.nutBam:hover {
+    background-color:red !important;
+}
