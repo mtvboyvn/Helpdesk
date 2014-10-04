@@ -16,9 +16,10 @@ Public Class WebService
 
     <WebMethod()> _
     Public Function GetCompletionList(ByVal prefixText As String, ByVal count As Integer, ByVal contextKey As String) As String()
-        Dim a(2) As String
-        a(0) = "aaa"
-        a(1) = "bbb"
+        Dim a(3) As String
+        a(0) = "tuyen chim"
+        a(1) = "kien giang"
+        a(2) = "huong tra"
         Return a
     End Function
 

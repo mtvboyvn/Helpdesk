@@ -59,6 +59,15 @@ Partial Public Class Site
     Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''TextBox1_TextBoxWatermarkExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBox1_TextBoxWatermarkExtender As Global.AjaxControlToolkit.TextBoxWatermarkExtender
+
+    '''<summary>
     '''AutoCompleteExtender1 control.
     '''</summary>
     '''<remarks>
@@ -66,15 +75,6 @@ Partial Public Class Site
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents AutoCompleteExtender1 As Global.AjaxControlToolkit.AutoCompleteExtender
-
-    '''<summary>
-    '''nutTimKiem control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents nutTimKiem As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
     '''RadMenuDangNhap control.

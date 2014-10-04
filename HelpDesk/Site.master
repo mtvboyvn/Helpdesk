@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="true" Inherits="HelpDesk.Site" CodeBehind="Site.master.vb" %>
+
 <%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
     Namespace="System.Web.UI" TagPrefix="asp" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
@@ -7,13 +8,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head >
+<head>
     <title>Help Desk</title>
     <link href="Styles.css" rel="stylesheet" type="text/css" />
-   
+
 </head>
 <body>
-    <form id="form1" runat="server">         
+    <form id="form1" runat="server">
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableTheming="True">
             <Scripts>
                 <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js"></asp:ScriptReference>
@@ -25,28 +26,17 @@
                 <asp:ScriptReference Name="jquery.ui.combined"></asp:ScriptReference>
                 <asp:ScriptReference Name="jquery"></asp:ScriptReference>
             </Scripts>
-        </telerik:RadScriptManager>
-         <br />
-    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" EnableAJAX="true">
-        <AjaxSettings>
-            <telerik:AjaxSetting AjaxControlID="Panel1">
-                <UpdatedControls>
-                    <telerik:AjaxUpdatedControl ControlID="Panel1" />
-                </UpdatedControls>
-            </telerik:AjaxSetting>
-        </AjaxSettings>
-    </telerik:RadAjaxManager>
-    <br />
-  
-        <asp:Panel runat="server" ID="Panel1">
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <cc1:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" CompletionSetCount="10"
-            MinimumPrefixLength="1" ServicePath="WebService.asmx" ServiceMethod="GetCompletionList"
-            TargetControlID="TextBox1" ContextKey="vasa,test" FirstRowSelected="true" EnableCaching="true">
-        </cc1:AutoCompleteExtender>
-        </asp:Panel>
-           
-        <table border="1" width="100%" style="text-align: left;margin-top: 1em;">
+        </telerik:RadScriptManager>       
+        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" EnableAJAX="true">
+            <AjaxSettings>
+                <telerik:AjaxSetting AjaxControlID="Panel1">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="Panel1" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+            </AjaxSettings>
+        </telerik:RadAjaxManager>
+        <table border="1" width="100%" style="text-align: left; margin-top: 1em;">
             <tr>
                 <td style="width: 10px;">
                     <p class="site-title">
@@ -56,24 +46,28 @@
                     </p>
                 </td>
                 <td style="width: 610px;">
-                    <telerik:RadTextBox ID="nutTimKiem" Width="600px" BorderStyle="Groove" BorderColor="White" Font-Size="Medium" runat="server" EmptyMessage="Tìm theo mã lỗi hoặc từ khóa liên quan" LabelWidth="240px" SelectionOnFocus="SelectAll">
-                        <FocusedStyle BackColor="#FFFF99" />
-                    </telerik:RadTextBox>
+                    <asp:Panel runat="server" ID="Panel1">
+                        <asp:TextBox ID="TextBox1" runat="server" Font-Size="1.2em" Width="600px"></asp:TextBox>
+                        <cc1:TextBoxWatermarkExtender ID="TextBox1_TextBoxWatermarkExtender" runat="server" Enabled="True" TargetControlID="TextBox1" WatermarkText="Nhập từ khóa tìm kiếm">
+                        </cc1:TextBoxWatermarkExtender>
+                        <cc1:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" CompletionSetCount="10"
+                            MinimumPrefixLength="1" ServicePath="WebService.asmx" ServiceMethod="GetCompletionList"
+                            TargetControlID="TextBox1" ContextKey="vasa,test" FirstRowSelected="true" EnableCaching="true">
+                        </cc1:AutoCompleteExtender>
+                    </asp:Panel>
                 </td>
                 <td>
                     <div style="float: right;">
                         <table border="0">
                             <tr>
                                 <td>
-                                    
                                     <telerik:RadMenu ID="RadMenuDangNhap" runat="server">
                                         <Items>
-                                            <telerik:RadMenuItem  runat="server" PostBack="False" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" ForeColor="White">
-                                             
+                                            <telerik:RadMenuItem runat="server" PostBack="False" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" ForeColor="White">
                                             </telerik:RadMenuItem>
                                         </Items>
                                     </telerik:RadMenu>
-                                &nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;
                                 </td>
                                 <td>
                                     <telerik:RadMenu ID="menuUser" Visible="true" runat="server">
@@ -102,8 +96,8 @@
                         </table>
 
                     </div>
-                  
-            </td>
+
+                </td>
             </tr>
         </table>
 
