@@ -40,7 +40,7 @@
             <tr>
                 <td style="width: 10px;">
                     <p class="site-title">
-                        <a runat="server" href="~/">
+                        <a runat="server" href="~/Dashboard.aspx">
                             <nobr>Help Desk&nbsp;</nobr>
                         </a>
                     </p>
@@ -70,7 +70,7 @@
                                     &nbsp;&nbsp;&nbsp;
                                 </td>
                                 <td>
-                                    <telerik:RadMenu ID="menuUser" Visible="true" runat="server">
+                                    <telerik:RadMenu ID="menuUser" runat="server">
                                         <Items>
                                             <telerik:RadMenuItem runat="server" PostBack="False" Text="Menu" Value="Menu">
                                                 <Items>
@@ -85,6 +85,8 @@
                                                     <telerik:RadMenuItem runat="server" Text="Đổi tên đơn vị" Value="ThemDoiTen_VNACCS" PostBackUrl="~/Controls/ThemDoiTen_VNACCS.aspx">
                                                     </telerik:RadMenuItem>
                                                     <telerik:RadMenuItem runat="server" Text="Xem thông tin chữ ký số" Value="Them_XemTTCKS" PostBackUrl="~/Controls/Them_XemTTCKS.aspx">
+                                                    </telerik:RadMenuItem>
+                                                    <telerik:RadMenuItem runat="server" NavigateUrl="~/Default.aspx" PostBack="False" Text="Kiểm tra tình trạng thông tin chuyển sang VNACCS">
                                                     </telerik:RadMenuItem>
                                                 </Items>
                                             </telerik:RadMenuItem>

@@ -180,6 +180,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="DLL\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="DLL\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
     <Content Include="DLL\Oracle.DataAccess.dll" />
@@ -204,6 +205,13 @@
     <Compile Include="Controls\ThemDoiTen_VNACCS.aspx.vb">
       <DependentUpon>ThemDoiTen_VNACCS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.vb">
       <DependentUpon>Logout.aspx</DependentUpon>
