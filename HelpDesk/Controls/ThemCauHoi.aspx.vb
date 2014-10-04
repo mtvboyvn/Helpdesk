@@ -36,9 +36,12 @@ Partial Public Class ThemCauHoi
                 End If
                 mainDB.SubmitAllChange()
             End Using
-            lblMSG1.Text = String.Format("Ghi thành công lúc: {0:HHgiờ mmfút ssgiây dd/MM/yyyy}", Date.Now)
+
+            Dim s As String = String.Format("&nbsp;Ghi thành công lúc: {0:ss-mm-HH dd/MM/yyyy}&nbsp;", Date.Now)
+            lblMSG1.Text = s
+            lblMSG2.Text = s
         Catch ex As Exception
-            lblMSG1.Text = String.Format("Có lỗi khi ghi dữ liệu. Nội dung lỗi {0}", ex.Message)
+            lblMSG1.Text = String.Format("&nbsp;Có lỗi khi ghi dữ liệu. Nội dung lỗi {0}&nbsp;", ex.Message)
         End Try
 
     End Sub
