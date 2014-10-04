@@ -180,6 +180,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Controls\SearchItem.ascx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="DLL\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="DLL\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
@@ -192,6 +193,13 @@
     <Content Include="Doiten.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\SearchItem.ascx.designer.vb">
+      <DependentUpon>SearchItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchItem.ascx.vb">
+      <DependentUpon>SearchItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Controls\Them_XemTTCKS.aspx.designer.vb">
       <DependentUpon>Them_XemTTCKS.aspx</DependentUpon>
     </Compile>

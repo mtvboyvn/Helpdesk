@@ -3,6 +3,10 @@
     <h2>
         100 câu hỏi mới nhất</h2>
     <hr />
+
+    <div id="divSearch" style="padding-left:50px;" runat="server">
+   
+        </div>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
