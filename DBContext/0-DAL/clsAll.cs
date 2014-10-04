@@ -9,13 +9,109 @@ using System.IO.Compression;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.UI.HtmlControls;
 using System.Windows.Forms;
+using Telerik.Web.UI;
 
 namespace t
 {
     public class clsAll
     {
-       
+
+        public static void CopyData(HtmlTable tblDetail, object outObj)
+        {
+            foreach (PropertyInfo i in outObj.GetType().GetProperties())
+            {
+                if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
+                {
+                    RadTextBox txt = tblDetail.FindControl(i.Name) as RadTextBox;
+                    if (txt == null)
+                    {
+                        ////thử với CodeList
+                        //CodeList cl = tblDetail.FindControl(i.Name) as CodeList;
+                        //if (cl == null) continue;
+                        //i.SetValue(outObj, cl.CODE, null);
+                        continue;
+                    }
+                    else
+                    {
+                        i.SetValue(outObj, txt.Text, null);
+                        continue;
+                    }
+                }
+                if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
+                {
+                    RadNumericTextBox txt = tblDetail.FindControl(i.Name) as RadNumericTextBox;
+                    if (txt == null) continue;
+                    decimal dm = 0;
+                    if (decimal.TryParse(txt.Text, out dm) == true)
+                        i.SetValue(outObj, dm, null);
+                }
+            }
+        }
+
+        //public static void CopyData(GridDataItem item, object outObj)
+        //{
+        //    foreach (PropertyInfo i in outObj.GetType().GetProperties())
+        //    {
+        //        if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
+        //        {
+        //            RadTextBox txt = item[i.Name].Controls[1] as RadTextBox;
+        //            if (txt == null)
+        //            {
+        //                //thử với label
+        //                Label lbl = item[i.Name].Controls[1] as Label;
+        //                if (lbl == null)
+        //                {
+        //                    //thử với code list
+        //                    //CodeList cl = item[i.Name].Controls[1] as CodeList;
+        //                    //if (cl == null) continue;
+        //                    //i.SetValue(outObj, cl.CODE, null);
+        //                    continue;
+        //                }
+        //                else
+        //                {
+        //                    i.SetValue(outObj, lbl.Text, null);
+        //                    continue;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                i.SetValue(outObj, txt.Text, null);
+        //                continue;
+        //            }
+        //        }
+        //        if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
+        //        {
+        //            RadNumericTextBox txt = item[i.Name].Controls[1] as RadNumericTextBox;
+        //            if (txt == null) continue;
+        //            decimal dm = 0;
+        //            if (decimal.TryParse(txt.Text, out dm) == true)
+        //                i.SetValue(outObj, dm, null);
+        //            continue;
+        //        }
+        //    }
+        //}
+
+        public static void ClearDesignData(HtmlTable tblDetail, object obj)
+        {
+            foreach (PropertyInfo i in obj.GetType().GetProperties())
+            {
+                if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
+                {
+                    RadTextBox txt = tblDetail.FindControl(i.Name) as RadTextBox;
+                    if (txt == null) continue;
+                    txt.Text = string.Empty;
+                }
+
+                if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
+                {
+                    RadNumericTextBox txt = tblDetail.FindControl(i.Name) as RadNumericTextBox;
+                    if (txt == null) continue;
+                    txt.Text = string.Empty;
+                }
+            }
+        }
 
         public static DataTable AddFirstRowEmpty(DataTable DATA)
         {

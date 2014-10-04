@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class ThemCauHoi
 
     '''<summary>
+    '''tblCauHoi control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents tblCauHoi As Global.System.Web.UI.HtmlControls.HtmlTable
+
+    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>
@@ -50,13 +59,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''RadTextBox1 control.
+    '''CH_DONVI_MST control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadTextBox1 As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_DONVI_MST As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
     '''Label3 control.
@@ -239,13 +248,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents RadEditor2 As Global.Telerik.Web.UI.RadEditor
 
     '''<summary>
-    '''RadButton1 control.
+    '''btnGhiDuLieu control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadButton1 As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents btnGhiDuLieu As Global.Telerik.Web.UI.RadButton
 
     '''<summary>
     '''RadButton2 control.
@@ -255,4 +264,13 @@ Partial Public Class ThemCauHoi
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadButton2 As Global.Telerik.Web.UI.RadButton
+
+    '''<summary>
+    '''lblMSG1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMSG1 As Global.System.Web.UI.WebControls.Label
 End Class

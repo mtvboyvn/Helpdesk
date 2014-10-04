@@ -9,7 +9,7 @@
             <hr />
  
 
-        <table border="0"  style="width: 100%;border:0px solid black;">
+        <table border="0" id="tblCauHoi"  style="width: 100%;border:0px solid black;" runat="server" >
             <tr >
                 <td style="width:1px;text-align:right;" >
                     <nobr> 
@@ -34,7 +34,7 @@
                         </nobr>
                 </td>
                 <td style="width:1px;text-align:left;">                   
-                    &nbsp;<telerik:RadTextBox ID="RadTextBox1" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em">
+                    &nbsp;<telerik:RadTextBox ID="CH_DONVI_MST" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -148,7 +148,7 @@
                     &nbsp;</td>
                 <td>
                     
-                    <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" AccessKey="s" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+                    <telerik:RadButton ID="btnGhiDuLieu" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" AccessKey="s" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
         </telerik:RadButton>
                 </td>
                 <td>
@@ -156,7 +156,11 @@
                     <telerik:RadButton ID="RadButton2" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
         </telerik:RadButton>
                 </td>
-                <td></td>
+                <td>
+                    <nobr>
+                    <asp:Label ID="lblMSG1" runat="server" BackColor="#FFFF66" BorderColor="#0066FF" BorderStyle="Solid" BorderWidth="1px" Font-Size="1.2em" ForeColor="Black" Height="30px" Text="&nbsp;Thông báo tại đây&nbsp;"></asp:Label>
+                        </nobr>
+                </td>
             </tr>
         </table>
 
