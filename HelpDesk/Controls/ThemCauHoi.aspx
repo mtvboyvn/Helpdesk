@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" CodeBehind="ThemCauHoi.aspx.vb" Inherits="HelpDesk.ThemCauHoi"%>
+﻿<%@ Page Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="ThemCauHoi.aspx.vb" Inherits="HelpDesk.ThemCauHoi"%>
 
 <%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
 
@@ -9,7 +9,7 @@
             <hr />
  
 
-        <table border="1"  style="width: 100%;border:0px solid black;">
+        <table border="0"  style="width: 100%;border:0px solid black;">
             <tr >
                 <td style="width:1px;text-align:right;" >
                     <nobr> 

@@ -8,10 +8,10 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+<head id="Head1" runat="server">
     <title>Help Desk</title>
-    <link href="Styles.css" rel="stylesheet" type="text/css" />
-
+    <link href="~/Styles.css" rel="stylesheet" type="text/css" />
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -36,7 +36,7 @@
                 </telerik:AjaxSetting>
             </AjaxSettings>
         </telerik:RadAjaxManager>
-        <table border="1" width="100%" style="text-align: left; margin-top: 1em;">
+        <table border="0" width="100%" style="text-align: left; margin-top: 1em;">
             <tr>
                 <td style="width: 10px;">
                     <p class="site-title">
