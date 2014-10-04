@@ -5,14 +5,14 @@ using System.Data;
 using System.IO;
 using System.Text;
 
-namespace tHelpDesk
+namespace t
 {
     public class st
     {
         //Liên quan tới CSDL
         //public static string AccessDBDir = Server.MapPath("~");
         public static string sqlSTRINGADO = "Data Source=(local);Initial Catalog=NACCS.VN;User ID=sa;pwd=1";
-        public static string sqlSTRINGOLE = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\NACCS.VN.mdb;Persist Security Info=True;Jet OLEDB:Database Password=tuyenchim";
+        public static string sqlSTRINGOLE = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\HelpDesk.mdb;Persist Security Info=True;Jet OLEDB:Database Password=tuyenchim";
         public static string sqlSTRINGLITE = "Data Source= |DataDirectory|NACCS.VN.db;Version=3;New=False;Compress=True;";
         public static string sqlSTRINGORACLE = "Data Source=//localhost:1521/orcl;User ID=thelpdesk;pwd=1";
         //public static string sqlSTRINGORACLE = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;

@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Text;
 using System.Reflection;
 using System.Collections.Generic;
-namespace tHelpDesk
+namespace t
 {
 	/// <summary>
 	/// DB context sử dụng trong using.
@@ -114,23 +114,13 @@ namespace tHelpDesk
 		}
 
 		/// <summary>
-		/// Thuộc tính đại diện cho bảng TUSER.
+		/// Thuộc tính đại diện cho bảng CAUHOI.
 		/// </summary>
-		public DBTable<TUSER> TUSERs
+		public DBTable<CAUHOI> CAUHOIs
 		{
 			get
 			{
-				return GetTable<TUSER>();
-			}
-		}
-		/// <summary>
-		/// Thuộc tính đại diện cho bảng THREED.
-		/// </summary>
-		public DBTable<THREED> THREEDs
-		{
-			get
-			{
-				return GetTable<THREED>();
+				return GetTable<CAUHOI>();
 			}
 		}
 		/// <summary>

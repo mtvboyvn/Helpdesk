@@ -6,14 +6,14 @@ using System.Text;
 using System.Data.OleDb;
 using System.Collections.Generic;
 
-namespace tHelpDesk
+namespace t
 {
     public enum DBManagement : int { Access = 0, SQL = 1, SQLLite = 2,Oracle=3 }
     public enum ProType : int { STRING = 0, VNDATESTRING = 1, USDATESTRING = 2, BOOL = 3, DATETIME = 4, OTHER = 5, NUMBER = 6 }
 
     public class clsDAL
     {
-        public static DBManagement defaultDBMan = DBManagement.Oracle;
+        public static DBManagement defaultDBMan = DBManagement.Access;
 
         #region Utilities
         public static string SelectField(string FieldName, ProType typ)

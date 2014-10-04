@@ -5,7 +5,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace tHelpDesk
+namespace t
 {
     public class clsDalOLE
     {

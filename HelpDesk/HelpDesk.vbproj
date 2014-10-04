@@ -348,6 +348,12 @@
   <ItemGroup>
     <Folder Include="Class\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBContext\DBContext.csproj">
+      <Project>{b76cab74-26c4-4e35-ab72-d33fbb2323a1}</Project>
+      <Name>DBContext</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

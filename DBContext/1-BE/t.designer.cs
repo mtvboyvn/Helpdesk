@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Text;
 using System.Reflection;
 using System.Collections.Generic;
-namespace tHelpDesk
+namespace t
 {
 	public enum DBStatus : int { Normal = 0, Inserted = 1, Updated = 2, Deleted = 3 }
 	/// <summary>

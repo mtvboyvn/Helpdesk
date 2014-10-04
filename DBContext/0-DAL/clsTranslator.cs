@@ -4,7 +4,7 @@ using System.Text;
 using System.Reflection;
 using System.Collections;
 
-namespace tHelpDesk
+namespace t
 {
     public class clsTranslator
     {

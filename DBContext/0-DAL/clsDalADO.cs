@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Collections.Generic;
 
-namespace tHelpDesk
+namespace t
 {
     public class clsDalADO
     {

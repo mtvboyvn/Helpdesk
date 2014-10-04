@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
-namespace tHelpDesk
+namespace t
 {
     public class clsAll
     {

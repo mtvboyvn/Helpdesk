@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 
-namespace tHelpDesk
+namespace t
 {
     public class ct
     {

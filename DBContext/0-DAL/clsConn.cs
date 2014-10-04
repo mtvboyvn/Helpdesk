@@ -5,7 +5,7 @@ using System.Data.SQLite;
 using System.Data;
 using System.Data.OracleClient;
 
-namespace tHelpDesk
+namespace t
 {
     public class clsConn
     {
