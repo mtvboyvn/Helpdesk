@@ -1,19 +1,19 @@
-﻿<%@ Master Language="VB" Inherits="HelpDesk.Site" CodeBehind="Site.master.vb" %>
-
+﻿<%@ Master Language="VB" AutoEventWireup="true" Inherits="HelpDesk.Site" CodeBehind="Site.master.vb" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <!DOCTYPE html>
 
 <html lang="en">
-<head id="Head1" runat="server">
+<head >
     <title>Help Desk</title>
     <link href="Styles.css" rel="stylesheet" type="text/css" />
-    <asp:PlaceHolder runat="server">
-        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.6.2.js") %>"></script>
-    </asp:PlaceHolder>
+   
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">         
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableTheming="True">
             <Scripts>
                 <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js"></asp:ScriptReference>
@@ -26,6 +26,26 @@
                 <asp:ScriptReference Name="jquery"></asp:ScriptReference>
             </Scripts>
         </telerik:RadScriptManager>
+         <br />
+    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" EnableAJAX="true">
+        <AjaxSettings>
+            <telerik:AjaxSetting AjaxControlID="Panel1">
+                <UpdatedControls>
+                    <telerik:AjaxUpdatedControl ControlID="Panel1" />
+                </UpdatedControls>
+            </telerik:AjaxSetting>
+        </AjaxSettings>
+    </telerik:RadAjaxManager>
+    <br />
+  
+        <asp:Panel runat="server" ID="Panel1">
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <cc1:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" CompletionSetCount="10"
+            MinimumPrefixLength="1" ServicePath="WebService.asmx" ServiceMethod="GetCompletionList"
+            TargetControlID="TextBox1" ContextKey="vasa,test" FirstRowSelected="true" EnableCaching="true">
+        </cc1:AutoCompleteExtender>
+        </asp:Panel>
+           
         <table border="1" width="100%" style="text-align: left;margin-top: 1em;">
             <tr>
                 <td style="width: 10px;">
@@ -82,12 +102,7 @@
                         </table>
 
                     </div>
-                    <%--<nav>
-                    <ul id="menu" runat="server" visible="false">
-                        <li><a runat="server" href="~/">Supporter</a></li>
-                        <li><a runat="server" href="~/About.aspx">Administrator</a></li>
-                    </ul>
-                </nav>--%>
+                  
             </td>
             </tr>
         </table>
@@ -102,7 +117,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; <%: DateTime.Now.Year %> - Trung tâm quản lý và vận hành hệ thống CNTT - Tổng Cục Hải Quan</p>
+                    <p>&copy; 2014- Trung tâm quản lý và vận hành hệ thống CNTT - Tổng Cục Hải Quan</p>
                 </div>
             </div>
         </footer>
