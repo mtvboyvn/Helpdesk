@@ -46,6 +46,13 @@
                             <asp:Literal ID="Literal2" Text='<%#Eval("CH_CAUHOI_NOIDUNGTRALOI")%>' runat="server"></asp:Literal>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <asp:HyperLink ID="HyperLink3" runat="server"
+                                NavigateUrl='<%#Eval("CH_ID", "~/Controls/ThemCauHoi.aspx?CH_ID={0}")%>'>
+                                Sửa</asp:HyperLink>&nbsp;
+                        </td>
+                    </tr>
                 </table>
             </ItemTemplate>
         </asp:ListView>

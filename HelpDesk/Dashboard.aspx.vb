@@ -42,24 +42,25 @@
         sb.Append("ORDER BY A.[RANK] DESC")
 
         Dim ds As DataSet = t.clsDAL.GetDataSet(sb.ToString())
-        Dim l As New List(Of t.CAUHOI)
-        l = t.clsAll.DataTable2ListObjects(Of t.CAUHOI)(ds.Tables(0))
-        'For Each c In divSearch.Controls
-        '    divSearch.Controls.Remove(c)
-        'Next
-        'divSearch.Controls.Clear()
-        If l.Count < 1 Then
+        If ds Is Nothing Then
             ListView1.DataSource = Nothing
             ListView1.DataBind()
             Return
         End If
-        ' For Each i In l
-        '    Dim c As SearchItem = Me.LoadControl("~/Controls/SearchItem.ascx")
-        '    c.CauHoi = i.CH_CAUHOI_NOIDUNGCAUHOI
-        '    divSearch.Controls.Add(c)
-        'Next
+        If ds.Tables.Count < 1 Then
+            ListView1.DataSource = Nothing
+            ListView1.DataBind()
+            Return
+        End If
+        If ds.Tables(0).Rows.Count < 1 Then
+            ListView1.DataSource = Nothing
+            ListView1.DataBind()
+            Return
+        End If
+     
         ListView1.DataSource = ds.Tables(0)
         ListView1.DataBind()
+        lblMSG.Text = String.Format("{0} kết quả trong vòng 0.0000000000268 giây", ds.Tables(0).Rows.Count)
     End Sub
 
     Private Sub SelectTop100()

@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using Telerik.Web.UI;
 
@@ -34,15 +35,38 @@ namespace t
                         
                         //Thử với RadEditor
                         RadEditor ed = tblDetail.FindControl(i.Name) as RadEditor;
-                        if (ed == null) continue;
-                        i.SetValue(outObj, ed.Text, null);
-                        continue;
+                        if (ed == null)
+                        {
+                            //Thử với HidenField
+                            HiddenField hd = tblDetail.FindControl(i.Name) as HiddenField;
+                            if (hd == null) continue;                            
+                            i.SetValue(outObj, hd.Value, null);
+                            continue;
+                        }
+                        else
+                        {
+                            i.SetValue(outObj, ed.Text, null);
+                            continue;
+                        }
                     }
                     else
                     {
                         i.SetValue(outObj, txt.Text, null);
                         continue;
                     }
+                }
+                if (i.PropertyType.FullName.Equals(typeof(int).FullName) == true)
+                {
+                    //Thử với HidenField
+                    HiddenField hd = tblDetail.FindControl(i.Name) as HiddenField;
+                    if (hd == null) continue;
+                    if (hd.Value == null) continue;
+                    if (string.IsNullOrEmpty(hd.Value) == true) continue;
+                    int intValue = -1;
+                    bool tryP = int.TryParse(hd.Value, out intValue);
+                    if (tryP == false) continue;
+                    i.SetValue(outObj, intValue, null);
+                    continue;
                 }
                 if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
                 {
@@ -71,16 +95,31 @@ namespace t
 
                         //Thử với RadEditor
                         RadEditor ed = tblDetail.FindControl(i.Name) as RadEditor;
-                        if (ed == null) continue;
+                        if (ed == null)
+                        {
+                            //Thử với HidenField
+                            HiddenField hd = tblDetail.FindControl(i.Name) as HiddenField;
+                            if (hd == null) continue;
+                            hd.Value=string.Format("{0}", i.GetValue(outObj, null));
+                            continue;
+                        }
                        // i.SetValue(outObj, ed.Text, null);
-                        ed.Text = i.GetValue(outObj,null).ToString();
+                        ed.Content = string.Format("{0}", i.GetValue(outObj, null));
                         continue;
                     }
                     else
                     {
-                        i.SetValue(outObj, txt.Text, null);
+                       txt.Text= string.Format("{0}",i.GetValue(outObj,  null));
                         continue;
                     }
+                }
+                if (i.PropertyType.FullName.Equals(typeof(int).FullName) == true)
+                {
+                    //Thử với HidenField
+                    HiddenField hd = tblDetail.FindControl(i.Name) as HiddenField;
+                    if (hd == null) continue;
+                    hd.Value = string.Format("{0}", i.GetValue(outObj, null));
+                    continue;
                 }
                 if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
                 {
@@ -88,8 +127,8 @@ namespace t
                     if (txt == null) continue;
                     decimal dm = 0;
                     if (decimal.TryParse(txt.Text, out dm) == true)
-                       // i.SetValue(outObj, dm, null);
-                        txt.Text = i.GetValue(outObj, null).ToString();
+                    // i.SetValue(outObj, dm, null);
+                    txt.Text = string.Format("{0}", i.GetValue(outObj, null));
                 }
             }
         }
@@ -155,6 +194,53 @@ namespace t
                     txt.Text = string.Empty;
                 }
             }
+        }
+
+        public static string CombineProperty(object obj)
+        {
+            string strResult = "";
+            foreach (PropertyInfo i in obj.GetType().GetProperties())
+            {
+                if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
+                {
+                    strResult += string.Format(" {0}", i.GetValue(obj, null));
+                    continue;
+                }
+
+                if (i.PropertyType.FullName.IndexOf(typeof(DateTime).FullName) >-1)
+                {
+                    strResult += string.Format(" {0:dd/MM/yyyy HH:mm:ss}", i.GetValue(obj, null));
+                    continue;
+                }
+            }
+            return strResult;
+        }
+
+        public static string LoaiBoDau(string strCoDau)
+        {
+            string strKhongDau = strCoDau;
+
+            strKhongDau = strKhongDau.Replace("ạ", "a").Replace("á", "a").Replace("à", "a").Replace("ả", "a").Replace("ã", "a");
+            strKhongDau = strKhongDau.Replace("ậ", "a").Replace("ấ", "a").Replace("ầ", "a").Replace("ẩ", "a").Replace("ẫ", "a");
+            strKhongDau = strKhongDau.Replace("ặ", "a").Replace("ắ", "a").Replace("ằ", "a").Replace("ẳ", "a").Replace("ẵ", "a");
+            strKhongDau = strKhongDau.Replace("ă", "a").Replace("â", "a");
+
+            strKhongDau = strKhongDau.Replace("ị", "i").Replace("í", "i").Replace("ì", "i").Replace("ỉ", "i").Replace("ĩ", "i");
+            
+            strKhongDau = strKhongDau.Replace("ụ", "u").Replace("ú", "u").Replace("ù", "u").Replace("ủ", "u").Replace("ũ", "u");
+            strKhongDau = strKhongDau.Replace("ự", "u").Replace("ứ", "u").Replace("ừ", "u").Replace("ử", "u").Replace("ữ", "u");
+            strKhongDau = strKhongDau.Replace("ư", "u");
+
+            strKhongDau = strKhongDau.Replace("ẹ", "e").Replace("é", "e").Replace("è", "e").Replace("ẻ", "e").Replace("ẽ", "e");
+            strKhongDau = strKhongDau.Replace("ệ", "e").Replace("ế", "e").Replace("ề", "e").Replace("ể", "e").Replace("ễ", "e");            
+            strKhongDau = strKhongDau.Replace("ê", "e");
+
+            strKhongDau = strKhongDau.Replace("ọ", "o").Replace("ó", "o").Replace("ò", "o").Replace("ỏ", "o").Replace("õ", "o");
+            strKhongDau = strKhongDau.Replace("ợ", "o").Replace("ớ", "o").Replace("ờ", "o").Replace("ở", "o").Replace("ỡ", "o");
+            strKhongDau = strKhongDau.Replace("ộ", "o").Replace("ố", "o").Replace("ồ", "o").Replace("ổ", "o").Replace("ỗ", "o");
+            strKhongDau = strKhongDau.Replace("ô", "o").Replace("ơ", "o");
+
+            return strKhongDau;
         }
 
         public static DataTable AddFirstRowEmpty(DataTable DATA)
