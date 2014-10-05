@@ -15,15 +15,24 @@ Partial Public Class ThemCauHoi
             t.clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
         End If
 
-    End Sub
-    
-    'Public Sub PMsgBox(ByVal Message As String)
-    '    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=""JavaScript"">" & (13) & (10))
-    '    HttpContext.Current.Response.Write(("alert(""" & Message & """)" & (13) & (10)))
-    '    HttpContext.Current.Response.Write("</SCRIPT>")
-    'End Sub
+        If IsPostBack = False Then
+            Dim strCH_ID As String = Me.Request.QueryString("CH_ID")
+            Dim intCH_ID As Integer = -1
+            Integer.TryParse(strCH_ID, intCH_ID)
+            If intCH_ID > 0 Then 'update data
+                Using mainDB As New t.tDBContext
+                    Dim ch As t.CAUHOI = mainDB.CAUHOIs.GetObject(String.Format("CH_ID={0}", intCH_ID))
+                    t.clsAll.BindData(ch, tblCauHoi)
+                End Using
+                CH_ID.Value = intCH_ID
+            Else 'insert data
 
-    Protected Sub RadButton1_Click(sender As Object, e As EventArgs) Handles btnGhiDuLieu.Click
+            End If
+        End If
+
+    End Sub
+
+    Protected Sub RadButton1_Click(sender As Object, e As EventArgs) Handles btnGhiDuLieu.Click, RadButton1.Click
 
         Try
             Dim a As New t.CAUHOI
@@ -48,5 +57,9 @@ Partial Public Class ThemCauHoi
             lblMSG1.Text = String.Format("&nbsp;Có lỗi khi ghi dữ liệu. Nội dung lỗi {0}&nbsp;", ex.Message)
         End Try
 
+    End Sub
+
+    Protected Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click, btnNhapMoi.Click
+        t.clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
     End Sub
 End Class

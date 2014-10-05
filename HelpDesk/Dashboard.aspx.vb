@@ -63,20 +63,22 @@
     End Sub
 
     Private Sub SelectTop100()
-      
-        Using mainDB As New t.tDBContext
-            Dim l As New List(Of t.CAUHOI)
-            Dim dt100 As DataTable = mainDB.CAUHOIs.GetList("TOP 100 *", "")
-            l = t.clsAll.DataTable2ListObjects(Of t.CAUHOI)(dt100)
-
-            'For Each i In l
-            '    Dim c As SearchItem = Me.LoadControl("~/Controls/SearchItem.ascx")
-            '    c.CauHoi = i.CH_CAUHOI_NOIDUNGCAUHOI
-            '    divSearch.Controls.Add(c)
-            'Next
-            ListView1.DataSource = dt100
-            ListView1.DataBind()
-        End Using
+        Try
+            Using mainDB As New t.tDBContext
+                Dim l As New List(Of t.CAUHOI)
+                Dim dt100 As DataTable = mainDB.CAUHOIs.GetList("TOP 100 *", "")
+                ' l = t.clsAll.DataTable2ListObjects(Of t.CAUHOI)(dt100)           
+                ListView1.DataSource = dt100
+                ListView1.DataBind()
+            End Using
+            lblMSG.Text = "100 câu hỏi mới nhất"
+            lblError.Visible = False
+            lblError.Text = ""
+        Catch ex As Exception
+            lblMSG.Text = "Máy chủ dữ liệu tạm ngừng phục vụ"
+            lblError.Text = String.Format("{0}", ex.Message)
+            lblError.Visible = True
+        End Try
     End Sub
 
 End Class

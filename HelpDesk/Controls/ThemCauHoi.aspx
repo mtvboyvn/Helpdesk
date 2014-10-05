@@ -15,17 +15,21 @@
             <tr>
                 <td></td>
                 <td>
-                     <telerik:RadButton ID="RadButton1" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+                     <telerik:RadButton ID="RadButton1" OnClick="RadButton1_Click" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
         </telerik:RadButton>
                     <br />
                 </td>
                 <td>
-                    <telerik:RadButton ID="RadButton3" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+                    <telerik:RadButton ID="btnNhapMoi" runat="server"  Text="Nhập mới" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
         </telerik:RadButton>
                 </td>
                 <td>
                       <nobr>
-                &nbsp;<asp:Label ID="lblMSG2" runat="server" BackColor="#FFFF66" BorderColor="#0066FF" BorderStyle="Solid" BorderWidth="1px" Font-Size="1.2em" ForeColor="Black" Height="30px" Text="&nbsp;Thông báo tại đây&nbsp;"></asp:Label>
+                &nbsp;<telerik:RadButton ID="RadButton4" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </telerik:RadButton>
+                          &nbsp;&nbsp;&nbsp;
+                      <asp:Label ID="lblMSG2" runat="server" BackColor="#FFFF66" BorderColor="#0066FF" BorderStyle="Solid" BorderWidth="1px" Font-Size="1.2em" ForeColor="Black" Height="30px" Text="&nbsp;Thông báo tại đây&nbsp;"></asp:Label>
+                      <asp:HiddenField ID="CH_ID" runat="server" />
         </nobr>
                 </td>
             </tr>
@@ -174,11 +178,14 @@
                 </td>
                 <td>
                     
-                    <telerik:RadButton ID="RadButton2" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+                    <telerik:RadButton ID="RadButton2" runat="server"  Text="Nhập mới" Skin="Metro"  BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
         </telerik:RadButton>
                 </td>
                 <td>
                     <nobr>
+                        <telerik:RadButton ID="RadButton5" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </telerik:RadButton>
+                         &nbsp; &nbsp; &nbsp;
                     <asp:Label ID="lblMSG1" runat="server" BackColor="#FFFF66" BorderColor="#0066FF" BorderStyle="Solid" BorderWidth="1px" Font-Size="1.2em" ForeColor="Black" Height="30px" Text="&nbsp;Thông báo tại đây&nbsp;"></asp:Label>
                         </nobr>
                 </td>

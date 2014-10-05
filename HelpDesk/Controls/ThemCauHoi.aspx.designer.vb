@@ -32,13 +32,22 @@ Partial Public Class ThemCauHoi
     Protected WithEvents RadButton1 As Global.Telerik.Web.UI.RadButton
 
     '''<summary>
-    '''RadButton3 control.
+    '''btnNhapMoi control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadButton3 As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents btnNhapMoi As Global.Telerik.Web.UI.RadButton
+
+    '''<summary>
+    '''RadButton4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadButton4 As Global.Telerik.Web.UI.RadButton
 
     '''<summary>
     '''lblMSG2 control.
@@ -48,6 +57,15 @@ Partial Public Class ThemCauHoi
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblMSG2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''CH_ID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CH_ID As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
     '''Label1 control.
@@ -291,6 +309,15 @@ Partial Public Class ThemCauHoi
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadButton2 As Global.Telerik.Web.UI.RadButton
+
+    '''<summary>
+    '''RadButton5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadButton5 As Global.Telerik.Web.UI.RadButton
 
     '''<summary>
     '''lblMSG1 control.

@@ -55,6 +55,45 @@ namespace t
             }
         }
 
+        public static void BindData(object outObj, HtmlTable tblDetail)
+        {
+            foreach (PropertyInfo i in outObj.GetType().GetProperties())
+            {
+                if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
+                {
+                    RadTextBox txt = tblDetail.FindControl(i.Name) as RadTextBox;
+                    if (txt == null)
+                    {
+                        ////thử với CodeList
+                        //CodeList cl = tblDetail.FindControl(i.Name) as CodeList;
+                        //if (cl == null) continue;
+                        //i.SetValue(outObj, cl.CODE, null);
+
+                        //Thử với RadEditor
+                        RadEditor ed = tblDetail.FindControl(i.Name) as RadEditor;
+                        if (ed == null) continue;
+                       // i.SetValue(outObj, ed.Text, null);
+                        ed.Text = i.GetValue(outObj,null).ToString();
+                        continue;
+                    }
+                    else
+                    {
+                        i.SetValue(outObj, txt.Text, null);
+                        continue;
+                    }
+                }
+                if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
+                {
+                    RadNumericTextBox txt = tblDetail.FindControl(i.Name) as RadNumericTextBox;
+                    if (txt == null) continue;
+                    decimal dm = 0;
+                    if (decimal.TryParse(txt.Text, out dm) == true)
+                       // i.SetValue(outObj, dm, null);
+                        txt.Text = i.GetValue(outObj, null).ToString();
+                }
+            }
+        }
+
         //public static void CopyData(GridDataItem item, object outObj)
         //{
         //    foreach (PropertyInfo i in outObj.GetType().GetProperties())

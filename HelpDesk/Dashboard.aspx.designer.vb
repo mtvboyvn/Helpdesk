@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class Dashboard
 
     '''<summary>
+    '''lblMSG control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMSG As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblError control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''divSearch control.
     '''</summary>
     '''<remarks>
