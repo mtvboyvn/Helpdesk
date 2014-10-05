@@ -59,22 +59,22 @@ Partial Public Class Site
     Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''TextBox1 control.
+    '''txtTimKiem control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtTimKiem As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox1_TextBoxWatermarkExtender control.
+    '''txtTimKiem_TextBoxWatermarkExtender control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox1_TextBoxWatermarkExtender As Global.AjaxControlToolkit.TextBoxWatermarkExtender
+    Protected WithEvents txtTimKiem_TextBoxWatermarkExtender As Global.AjaxControlToolkit.TextBoxWatermarkExtender
 
     '''<summary>
     '''AutoCompleteExtender1 control.
