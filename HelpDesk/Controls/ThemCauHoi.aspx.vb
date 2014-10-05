@@ -23,6 +23,7 @@ Partial Public Class ThemCauHoi
                 Using mainDB As New t.tDBContext
                     Dim ch As t.CAUHOI = mainDB.CAUHOIs.GetObject(String.Format("CH_ID={0}", intCH_ID))
                     t.clsAll.BindData(ch, tblCauHoi)
+                    Me.BindData(ch, tblCauHoi)
                 End Using
                 CH_ID.Value = intCH_ID
             Else 'insert data
@@ -33,18 +34,26 @@ Partial Public Class ThemCauHoi
     End Sub
 
     Protected Sub RadButton1_Click(sender As Object, e As EventArgs) Handles btnGhiDuLieu.Click, RadButton1.Click
-
         Try
             Dim a As New t.CAUHOI
             t.clsAll.CopyData(tblCauHoi, a)
+            Me.CopyData(tblCauHoi, a)
+
             Using mainDB As New t.tDBContext
                 If a.CH_ID > 0 Then 'update data
+                    If String.IsNullOrEmpty(a.CH_CAUHOI_NOIDUNGTRALOI) = False Then 'Cần xử lý thêm xem có thay đổi với DB hay ko nữa
+                        a.CH_CAUHOI_NGAYTRALOI = Date.Now
+                    End If
                     mainDB.CAUHOIs.UpdateOnSubmit(a)
                 Else 'insert data
                     Dim strMaxID As String = mainDB.CAUHOIs.Max("CH_ID")
                     If String.IsNullOrEmpty(strMaxID) = True Then strMaxID = "0"
                     Dim intMaxID As Integer = Convert.ToInt32(strMaxID) + 1
                     a.CH_ID = intMaxID
+                    a.CH_CAUHOI_NGAYHOI = Date.Now
+                    If String.IsNullOrEmpty(a.CH_CAUHOI_NOIDUNGTRALOI) = False Then
+                        a.CH_CAUHOI_NGAYTRALOI = Date.Now
+                    End If
                     mainDB.CAUHOIs.InsertOnSubmit(a)
                 End If
                 mainDB.SubmitAllChange()
@@ -61,5 +70,68 @@ Partial Public Class ThemCauHoi
 
     Protected Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click, btnNhapMoi.Click
         t.clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
+    End Sub
+
+    'Copy data riêng cho một số trường hợp đặc biệt
+    Private Sub CopyData(ByVal tblCauHoi As HtmlTable, ByRef ch As t.CAUHOI)
+
+        'Đối tượng hỏi
+        ch.CH_DOITUONGHOI = CH_DOITUONGHOI1.Text
+        If CH_DOITUONGHOI2.Checked = True Then
+            ch.CH_DOITUONGHOI = CH_DOITUONGHOI2.Text
+        End If
+
+        'Phân loại câu hỏi
+        ch.CH_CAUHOI_PHANLOAI = CH_CAUHOI_PHANLOAI1.Text
+        If CH_CAUHOI_PHANLOAI2.Checked = True Then
+            ch.CH_CAUHOI_PHANLOAI = CH_CAUHOI_PHANLOAI2.Text
+        End If
+        If CH_CAUHOI_PHANLOAI3.Checked = True Then
+            ch.CH_CAUHOI_PHANLOAI = CH_CAUHOI_PHANLOAI3.Text
+        End If
+        If CH_CAUHOI_PHANLOAI4.Checked = True Then
+            ch.CH_CAUHOI_PHANLOAI = CH_CAUHOI_PHANLOAI4.Text
+        End If
+        If CH_CAUHOI_PHANLOAI5.Checked = True Then
+            ch.CH_CAUHOI_PHANLOAI = CH_CAUHOI_PHANLOAI5.Text
+        End If
+        If CH_CAUHOI_PHANLOAI6.Checked = True Then
+            ch.CH_CAUHOI_PHANLOAI = CH_CAUHOI_PHANLOAI6.Text
+        End If
+        If CH_CAUHOI_PHANLOAI7.Checked = True Then
+            ch.CH_CAUHOI_PHANLOAI = CH_CAUHOI_PHANLOAI7.Text
+        End If
+    End Sub
+
+    'Bind data riêng cho một số trường hợp đặc biệt
+    Private Sub BindData(ByVal ch As t.CAUHOI, ByVal tblCauHoi As HtmlTable)
+
+        'Đối tượng hỏi
+        CH_DOITUONGHOI1.Checked = True
+        If ch.CH_DOITUONGHOI.Equals(CH_DOITUONGHOI2.Text) = True Then
+            CH_DOITUONGHOI2.Checked = True
+        End If
+
+        'Phân loại câu hỏi
+        CH_CAUHOI_PHANLOAI1.Checked = True
+        If ch.CH_CAUHOI_PHANLOAI.Equals(CH_CAUHOI_PHANLOAI2.Text) = True Then
+            CH_CAUHOI_PHANLOAI2.Checked = True
+        End If
+        If ch.CH_CAUHOI_PHANLOAI.Equals(CH_CAUHOI_PHANLOAI3.Text) = True Then
+            CH_CAUHOI_PHANLOAI3.Checked = True
+        End If
+        If ch.CH_CAUHOI_PHANLOAI.Equals(CH_CAUHOI_PHANLOAI4.Text) = True Then
+            CH_CAUHOI_PHANLOAI4.Checked = True
+        End If
+        If ch.CH_CAUHOI_PHANLOAI.Equals(CH_CAUHOI_PHANLOAI5.Text) = True Then
+            CH_CAUHOI_PHANLOAI5.Checked = True
+        End If
+        If ch.CH_CAUHOI_PHANLOAI.Equals(CH_CAUHOI_PHANLOAI6.Text) = True Then
+            CH_CAUHOI_PHANLOAI6.Checked = True
+        End If
+        If ch.CH_CAUHOI_PHANLOAI.Equals(CH_CAUHOI_PHANLOAI7.Text) = True Then
+            CH_CAUHOI_PHANLOAI7.Checked = True
+        End If
+        
     End Sub
 End Class

@@ -41,9 +41,9 @@
                         </nobr>
                 </td>
                 <td style="text-align:left;">
-                <nobr>    <asp:RadioButton ID="RadioButton1" GroupName="ABC" Text="Doanh nghiệp" runat="server" Checked="True" Font-Bold="True" ForeColor="Red" />
+                <nobr>    <asp:RadioButton ID="CH_DOITUONGHOI1" GroupName="ABC" Text="Doanh nghiệp" runat="server" Checked="True" Font-Bold="True" ForeColor="Red" />
                     &nbsp;&nbsp;&nbsp;
-                     <asp:RadioButton ID="RadioButton2"  GroupName="ABC" Text="Hải quan" runat="server" ForeColor="Blue" />
+                     <asp:RadioButton ID="CH_DOITUONGHOI2"  GroupName="ABC" Text="Hải quan" runat="server" ForeColor="Blue" />
                 </nobr>
                 </td>
                 <td>&nbsp;</td>
@@ -105,7 +105,7 @@
                     <asp:Label ID="Label6" runat="server"  Text="Email:"></asp:Label>
                         </nobr>
                 </td>
-                <td colspan="3">
+                <td >
                     &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_EMAIL" Runat="server" Font-Bold="False" Text="huamanhtuyen@gmail.com" Width="160px" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
@@ -122,19 +122,19 @@
                 <td colspan="3">
                 <nobr>    
                     &nbsp;&nbsp;&nbsp;
-                     <asp:RadioButton ID="RadioButton3"  GroupName="PhanLoai" Text="VNACCS" Checked="true" runat="server"  />
+                     <asp:RadioButton ID="CH_CAUHOI_PHANLOAI1"  GroupName="PhanLoai" Text="VNACCS" Checked="true" runat="server"  />
                     &nbsp;&nbsp;
-                    <asp:RadioButton ID="RadioButton4"  GroupName="PhanLoai" Text="VCIS" runat="server"  />
+                    <asp:RadioButton ID="CH_CAUHOI_PHANLOAI2"  GroupName="PhanLoai" Text="VCIS" runat="server"  />
                     &nbsp;&nbsp;
-                    <asp:RadioButton ID="RadioButton5"  GroupName="PhanLoai" Text="Nghiệp vụ Hải quan" runat="server"  />
+                    <asp:RadioButton ID="CH_CAUHOI_PHANLOAI3"  GroupName="PhanLoai" Text="Nghiệp vụ Hải quan" runat="server"  />
                     &nbsp;&nbsp;
-                    <asp:RadioButton ID="RadioButton6"  GroupName="PhanLoai" Text="E-Manifest" runat="server"  />
+                    <asp:RadioButton ID="CH_CAUHOI_PHANLOAI4"  GroupName="PhanLoai" Text="E-Manifest" runat="server"  />
                     &nbsp;&nbsp;
-                    <asp:RadioButton ID="RadioButton7"  GroupName="PhanLoai" Text="E-Customs" runat="server"  />
+                    <asp:RadioButton ID="CH_CAUHOI_PHANLOAI5"  GroupName="PhanLoai" Text="E-Customs" runat="server"  />
                     &nbsp;&nbsp;
-                    <asp:RadioButton ID="RadioButton8"  GroupName="PhanLoai" Text="Kế toán thuế" runat="server"  />
+                    <asp:RadioButton ID="CH_CAUHOI_PHANLOAI6"  GroupName="PhanLoai" Text="Kế toán thuế" runat="server"  />
                     &nbsp;&nbsp;
-                    <asp:RadioButton ID="RadioButton9"  GroupName="PhanLoai" Text="Đăng ký người sử dụng" runat="server"  />
+                    <asp:RadioButton ID="CH_CAUHOI_PHANLOAI7"  GroupName="PhanLoai" Text="Đăng ký người sử dụng" runat="server"  />
                 </nobr>
                 </td>
                 <td>

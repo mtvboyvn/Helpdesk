@@ -77,22 +77,22 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''RadioButton1 control.
+    '''CH_DOITUONGHOI1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton1 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_DOITUONGHOI1 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioButton2 control.
+    '''CH_DOITUONGHOI2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton2 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_DOITUONGHOI2 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
     '''Label2 control.
@@ -194,67 +194,67 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label10 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''RadioButton3 control.
+    '''CH_CAUHOI_PHANLOAI1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton3 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_CAUHOI_PHANLOAI1 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioButton4 control.
+    '''CH_CAUHOI_PHANLOAI2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton4 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_CAUHOI_PHANLOAI2 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioButton5 control.
+    '''CH_CAUHOI_PHANLOAI3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton5 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_CAUHOI_PHANLOAI3 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioButton6 control.
+    '''CH_CAUHOI_PHANLOAI4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton6 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_CAUHOI_PHANLOAI4 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioButton7 control.
+    '''CH_CAUHOI_PHANLOAI5 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton7 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_CAUHOI_PHANLOAI5 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioButton8 control.
+    '''CH_CAUHOI_PHANLOAI6 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton8 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_CAUHOI_PHANLOAI6 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioButton9 control.
+    '''CH_CAUHOI_PHANLOAI7 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButton9 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents CH_CAUHOI_PHANLOAI7 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
     '''Label8 control.

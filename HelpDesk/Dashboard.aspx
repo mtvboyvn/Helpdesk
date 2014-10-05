@@ -9,29 +9,41 @@
     <div id="divSearch" style="padding-left: 50px;" runat="server">
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
+                <br />
                 <table style="width: 500px; border-bottom: 1px dotted gray;">
                     <tr>
                         <td>
-                            <nobr>
-                               
-                    <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Blue" PostBackUrl="~/Dashboard.aspx?q=<%#Eval("CH_DONVI_MST")%>"><%#Eval("CH_DONVI_MST")%> - <%#Eval("CH_DONVI_TEN")%></asp:LinkButton>
-                </nobr>
+                            <asp:HyperLink ID="HyperLink1" ForeColor="Blue"
+                                NavigateUrl='<%#Eval("CH_DONVI_MST","~/Dashboard.aspx?q={0}")%>'
+                                runat="server"><%#Eval("CH_DONVI_MST")%></asp:HyperLink>
+                            &nbsp;-&nbsp;
+                             <asp:HyperLink ID="HyperLink6" ForeColor="Blue"
+                                 NavigateUrl='<%#Eval("CH_DONVI_TEN","~/Dashboard.aspx?q={0}")%>'
+                                 runat="server"><%#Eval("CH_DONVI_TEN")%></asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Dashboard.aspx?q=<%#Eval("CH_NGUOIHOI_TEN")%>"><%#Eval("CH_NGUOIHOI_TEN")%></asp:HyperLink>&nbsp;
-                 <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Dashboard.aspx?q=<%#Eval("CH_CAUHOI_NGAYHOI")%>"><%#Eval("CH_CAUHOI_NGAYHOI")%></asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" 
+                                NavigateUrl='<%#Eval("CH_NGUOIHOI_TEN","~/Dashboard.aspx?q={0}")%>'>
+                                <%#Eval("CH_NGUOIHOI_TEN")%></asp:HyperLink>&nbsp;
+                 <asp:HyperLink ID="HyperLink5" runat="server"
+                     NavigateUrl='<%#Eval("CH_CAUHOI_NGAYHOI","~/Dashboard.aspx?q={0}")%>'>
+                     <%#Eval("CH_CAUHOI_NGAYHOI")%></asp:HyperLink>
                             <span>&nbsp;hỏi:&nbsp;</span>
-                            <asp:Literal ID="lblCauHoi" Text="<%#Eval("CH_CAUHOI_NOIDUNGCAUHOI")%>" runat="server"></asp:Literal>
+                            <asp:Literal ID="lblCauHoi" Text='<%#Eval("CH_CAUHOI_NOIDUNGCAUHOI")%>' runat="server"></asp:Literal>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Dashboard.aspx?q=<%#Eval("CH_NGUOITRALOI_TEN")%>"><%#Eval("CH_NGUOITRALOI_TEN")%></asp:HyperLink>&nbsp;
-                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Dashboard.aspx?q=<%#Eval("CH_CAUHOI_NGAYTRALOI")%>"><%#Eval("CH_CAUHOI_NGAYTRALOI")%></asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink7" runat="server"
+                                NavigateUrl='<%#Eval("CH_NGUOITRALOI_TEN","~/Dashboard.aspx?q={0}")%>'>
+                                <%#Eval("CH_NGUOITRALOI_TEN")%></asp:HyperLink>&nbsp;
+                 <asp:HyperLink ID="HyperLink8" runat="server"
+                     NavigateUrl='<%#Eval("CH_CAUHOI_NGAYTRALOI","~/Dashboard.aspx?q={0}")%>'>
+                     <%#Eval("CH_CAUHOI_NGAYTRALOI")%></asp:HyperLink>
                             <span>&nbsp;trả lời:&nbsp;</span>
-                            <asp:Literal ID="Literal1" Text="<%#Eval("CH_CAUHOI_NOIDUNGTRALOI")%>" runat="server"></asp:Literal>
+                            <asp:Literal ID="Literal2" Text='<%#Eval("CH_CAUHOI_NOIDUNGTRALOI")%>' runat="server"></asp:Literal>
                         </td>
                     </tr>
                 </table>
