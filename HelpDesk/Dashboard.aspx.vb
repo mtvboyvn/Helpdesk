@@ -12,7 +12,10 @@
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        'For Each c In divSearch.Controls
+        '    divSearch.Controls.Remove(c)
+        'Next
+        'divSearch.Controls.Clear()
         If IsPostBack = True Then
             Return
         End If
@@ -24,8 +27,9 @@
             'Page.SetFocus(txt)
             If String.IsNullOrEmpty(txt.Text) = False Then
                 SearchNay(txt.Text)
+                Return
             End If
-
+            SelectTop100()
         End If
 
 
@@ -38,17 +42,41 @@
         sb.Append("ORDER BY A.[RANK] DESC")
 
         Dim ds As DataSet = t.clsDAL.GetDataSet(sb.ToString())
-        Dim i As Integer = ds.Tables.Count
+        Dim l As New List(Of t.CAUHOI)
+        l = t.clsAll.DataTable2ListObjects(Of t.CAUHOI)(ds.Tables(0))
+        'For Each c In divSearch.Controls
+        '    divSearch.Controls.Remove(c)
+        'Next
+        'divSearch.Controls.Clear()
+        If l.Count < 1 Then
+            ListView1.DataSource = Nothing
+            ListView1.DataBind()
+            Return
+        End If
+        ' For Each i In l
+        '    Dim c As SearchItem = Me.LoadControl("~/Controls/SearchItem.ascx")
+        '    c.CauHoi = i.CH_CAUHOI_NOIDUNGCAUHOI
+        '    divSearch.Controls.Add(c)
+        'Next
+        ListView1.DataSource = ds.Tables(0)
+        ListView1.DataBind()
+    End Sub
 
-        'Using mainDB As New t.tDBContext
-        '    Dim l As List(Of t.CAUHOI) = mainDB.CAUHOIs.GetListObject("")
+    Private Sub SelectTop100()
+      
+        Using mainDB As New t.tDBContext
+            Dim l As New List(Of t.CAUHOI)
+            Dim dt100 As DataTable = mainDB.CAUHOIs.GetList("TOP 100 *", "")
+            l = t.clsAll.DataTable2ListObjects(Of t.CAUHOI)(dt100)
 
-        '    For Each i In l
-        '        Dim c As SearchItem = Me.LoadControl("~/Controls/SearchItem.ascx")
-        '        c.CauHoi = i.CH_CAUHOI_NOIDUNGCAUHOI
-        '        divSearch.Controls.Add(c)
-        '    Next
-        'End Using
+            'For Each i In l
+            '    Dim c As SearchItem = Me.LoadControl("~/Controls/SearchItem.ascx")
+            '    c.CauHoi = i.CH_CAUHOI_NOIDUNGCAUHOI
+            '    divSearch.Controls.Add(c)
+            'Next
+            ListView1.DataSource = dt100
+            ListView1.DataBind()
+        End Using
     End Sub
 
 End Class

@@ -10,7 +10,11 @@ Partial Public Class ThemCauHoi
         'If Request.IsAuthenticated = False Then
         '    Response.Redirect("~/Default.aspx")
         'End If
-        t.clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
+
+        If IsPostBack = False Then
+            t.clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
+        End If
+
     End Sub
     
     'Public Sub PMsgBox(ByVal Message As String)
