@@ -22,20 +22,33 @@
             txt.Text = Me.Request.QueryString("Q")
             'ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "txtTimKiem", "$get('" + txt.ClientID + "').focus();$get('" + txt.ClientID + "').select();", True)
             'Page.SetFocus(txt)
+            If String.IsNullOrEmpty(txt.Text) = False Then
+                SearchNay(txt.Text)
+            End If
+
         End If
-        SearchNay()
+
 
     End Sub
-    Private Sub SearchNay()
+    Private Sub SearchNay(ByVal strSearch As String)
+        Dim sb As New StringBuilder
+        sb.Append("SELECT A.[KEY], A.[RANK] , B.*  ")
+        sb.AppendFormat("FROM FREETEXTTABLE([CAUHOI],[CH_FULLTEXT_SEARCH],'{0}') AS A ", strSearch.Replace("'", ""))
+        sb.Append("INNER JOIN [CAUHOI] AS B ON B.[CH_ID]=A.[KEY] ")
+        sb.Append("ORDER BY A.[RANK] DESC")
 
-        Using mainDB As New t.tDBContext
-            Dim l As List(Of t.CAUHOI) = mainDB.CAUHOIs.GetListObject("")
-            For Each i In l
-                Dim c As SearchItem = Me.LoadControl("~/Controls/SearchItem.ascx")
-                c.CauHoi = i.CH_CAUHOI_NOIDUNGCAUHOI
-                divSearch.Controls.Add(c)
-            Next
-        End Using
+        Dim ds As DataSet = t.clsDAL.GetDataSet(sb.ToString())
+        Dim i As Integer = ds.Tables.Count
+
+        'Using mainDB As New t.tDBContext
+        '    Dim l As List(Of t.CAUHOI) = mainDB.CAUHOIs.GetListObject("")
+
+        '    For Each i In l
+        '        Dim c As SearchItem = Me.LoadControl("~/Controls/SearchItem.ascx")
+        '        c.CauHoi = i.CH_CAUHOI_NOIDUNGCAUHOI
+        '        divSearch.Controls.Add(c)
+        '    Next
+        'End Using
     End Sub
 
 End Class

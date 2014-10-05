@@ -14,7 +14,11 @@ namespace t
         {
             return GetDataSet(TSQL, null);
         }
-
+        
+        public static DataSet GetDataSetWithParam(string TSQL, List<IDbDataParameter> myParams)
+        {
+            return GetDataSet(TSQL, null,null,myParams);
+        }
         public static DataSet GetDataSet(string TSQL, IDbConnection myConn)
         {
             return GetDataSet(TSQL, myConn, null);
@@ -36,6 +40,32 @@ namespace t
             myCMD.CommandTimeout = 180000;//3 phut             
             if (myTrans != null)
                 myCMD.Transaction = myTrans as SqlTransaction;
+            // 
+            myAD.Fill(myDS);
+            //
+            if (mustClose) myConn.Close();
+            return myDS;
+        }
+
+        public static DataSet GetDataSet(string TSQL, IDbConnection myConn, IDbTransaction myTrans, List<IDbDataParameter> myParams)
+        {
+            bool mustClose = false;
+            if (myConn == null)
+            {
+                mustClose = true;
+                myConn = clsConn.getConnADO();
+            }
+            DataSet myDS = new DataSet();
+            SqlCommand myCMD = new SqlCommand(TSQL, myConn as SqlConnection);
+            SqlDataAdapter myAD = new SqlDataAdapter(myCMD);
+            // 
+            myCMD.CommandType = CommandType.Text;
+            myCMD.CommandTimeout = 180000;//3 phut             
+            if (myTrans != null)
+                myCMD.Transaction = myTrans as SqlTransaction;
+            if (myParams != null)
+                AttachParameters(myCMD, myParams);
+
             // 
             myAD.Fill(myDS);
             //
@@ -357,6 +387,7 @@ namespace t
                 case "nvarchar":
                 case "string":
                 case "guid":
+                case "wchar":
                     return SqlDbType.NVarChar;
                 case "real":
                 case "single":

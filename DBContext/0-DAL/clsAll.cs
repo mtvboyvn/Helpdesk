@@ -31,6 +31,11 @@ namespace t
                         //CodeList cl = tblDetail.FindControl(i.Name) as CodeList;
                         //if (cl == null) continue;
                         //i.SetValue(outObj, cl.CODE, null);
+                        
+                        //Thử với RadEditor
+                        RadEditor ed = tblDetail.FindControl(i.Name) as RadEditor;
+                        if (ed == null) continue;
+                        i.SetValue(outObj, ed.Text, null);
                         continue;
                     }
                     else
