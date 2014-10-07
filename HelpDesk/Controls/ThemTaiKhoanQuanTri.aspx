@@ -9,11 +9,13 @@
 <asp:Button ID="Button1" runat="server" Text="Thêm mới tài khoản quản trị" />
     
     </div>
+    <div>
     <p>
         <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Default.aspx">Quay 
         lại</asp:LinkButton>
     </p>
     </div>
+   
 </asp:Content>
 
 
