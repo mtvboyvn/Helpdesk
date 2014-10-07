@@ -29,13 +29,21 @@ Partial Public Class ThemCauHoi
                     End If
                 End Using
             Else 'insert data
-
+                CH_NGUOITRALOI_TAIKHOAN.Text = "" 'Tài khoản người đăng nhập
             End If
         End If
 
     End Sub
 
     Protected Sub RadButton1_Click(sender As Object, e As EventArgs) Handles btnGhiDuLieu.Click, RadButton1.Click
+
+        If String.IsNullOrEmpty(CH_CAUHOI_NOIDUNGCAUHOI.Text) = True Then
+            Dim s As String = String.Format("&nbsp;Bắt buộc phải nhập câu hỏi&nbsp;", Date.Now)
+            lblMSG1.Text = s
+            lblMSG2.Text = s
+            Return
+        End If
+
         Try
             Dim a As New t.CAUHOI
             t.clsAll.CopyData(tblCauHoi, a)

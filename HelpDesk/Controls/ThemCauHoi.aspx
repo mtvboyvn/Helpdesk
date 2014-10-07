@@ -59,7 +59,7 @@
                         </nobr>
                 </td>
                 <td style="width:1px;text-align:left;">                   
-                    &nbsp;<telerik:RadTextBox ID="CH_DONVI_MST" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em">
+                    &nbsp;<telerik:RadTextBox ID="CH_DONVI_MST" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Red">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -70,7 +70,31 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<telerik:RadTextBox ID="CH_DONVI_TEN" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px" Font-Size="1.2em">
+                    &nbsp;<telerik:RadTextBox ID="CH_DONVI_TEN" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px" Font-Size="1.2em" ForeColor="Red">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label11" runat="server" 
+                        Text="Mã Hải quan:"></asp:Label>
+                        </nobr>
+                </td>
+                <td >
+                  &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_MAHQLIENQUAN" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Blue">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
+                </td>
+                <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label12" runat="server" 
+                        Text="Tên Hải quan:"></asp:Label>
+                        </nobr>
+                </td>
+                <td>
+                    &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_TENHQLIENQUAN" Runat="server" Font-Bold="False" Text="Hải quan Hà nội" Width="350px" Font-Size="1.2em" ForeColor="Blue">
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
@@ -90,7 +114,7 @@
                 <td style="width:1px;text-align:right;">
                     <nobr>
                     <asp:Label ID="Label5" runat="server" 
-                        Text="Số điện thoại:"></asp:Label>
+                        Text="Số điện thoại người hỏi:"></asp:Label>
                         </nobr>
                 </td>
                 <td>
@@ -102,7 +126,7 @@
             <tr>
                 <td style="width:1px;text-align:right;">
                     <nobr>
-                    <asp:Label ID="Label6" runat="server"  Text="Email:"></asp:Label>
+                    <asp:Label ID="Label6" runat="server"  Text="Email người hỏi:"></asp:Label>
                         </nobr>
                 </td>
                 <td >
@@ -110,8 +134,17 @@
                         <focusedstyle backcolor="#FFFF66" />
                     </telerik:RadTextBox>
                 </td>
+                <td style="width:1px;text-align:right;">
+                    <nobr>
+                    <asp:Label ID="Label13" runat="server" 
+                        Text="Người trả lời:" Font-Bold="True"></asp:Label>
+                        </nobr>
+                </td>
                 <td>
-                    &nbsp;</td>
+                    &nbsp;<telerik:RadTextBox ID="CH_NGUOITRALOI_TAIKHOAN" Runat="server" Font-Bold="True" Text="TuyenHM" Font-Size="1.2em">
+                        <focusedstyle backcolor="#FFFF66" />
+                    </telerik:RadTextBox>
+                </td>
             </tr>
             <tr>
               <td style="width:1px;text-align:right;">
