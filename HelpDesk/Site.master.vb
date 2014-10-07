@@ -2,6 +2,7 @@
 Partial Class Site
     Inherits System.Web.UI.MasterPage
 
+
     Protected Sub Page_Init(sender As Object, e As EventArgs) Handles Me.Init
         Page.SetFocus(txtTimKiem)
         txtTimKiem.Focus()

@@ -29,7 +29,10 @@ Partial Public Class ThemCauHoi
                     End If
                 End Using
             Else 'insert data
-                CH_NGUOITRALOI_TAIKHOAN.Text = "" 'Tài khoản người đăng nhập
+                If Request.IsAuthenticated = True Then
+                    CH_NGUOITRALOI_TAIKHOAN.Text = User.Identity.Name 'Tài khoản người đăng nhập
+                End If
+
             End If
         End If
 

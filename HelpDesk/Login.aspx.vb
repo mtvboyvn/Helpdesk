@@ -4,8 +4,8 @@ Partial Class Login
 
     Protected Sub LoginButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles LoginButton.Click
         ' Three valid username/password pairs: Scott/password, Jisun/password, and Sam/password.
-        Dim users() As String = {"Scott", "Jisun", "Sam"}
-        Dim passwords() As String = {"password", "password", "password"}
+        Dim users() As String = {"tuyenhm", "Jisun", "Sam"}
+        Dim passwords() As String = {"1", "password", "password"}
         Dim companyName() As String = {"Northwind Traders", "Adventure Works", "Contoso"}
         Dim titleAtCompany() As String = {"Janitor", "Scientist", "Mascot"}
 

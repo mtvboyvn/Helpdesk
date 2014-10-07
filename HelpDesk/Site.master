@@ -61,13 +61,22 @@
                         <table border="0">
                             <tr>
                                 <td>
-                                    <telerik:RadMenu ID="RadMenuDangNhap" runat="server">
+                                    <asp:LoginView ID="haha" runat="server">
+                                        <AnonymousTemplate>
+                                        <telerik:RadMenu ID="RadMenuDangNhap" runat="server">
                                         <Items>
                                             <telerik:RadMenuItem runat="server" PostBack="False" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" ForeColor="White">
                                             </telerik:RadMenuItem>
                                         </Items>
                                     </telerik:RadMenu>
                                     &nbsp;&nbsp;&nbsp;
+                                        </AnonymousTemplate>
+                                        <LoggedInTemplate>                                            
+                                        <asp:Label ID="UserNameLabel" ForeColor="Red" Font-Bold="true" Font-Italic="true"  runat="server" ><%= My.User.Name %></asp:Label>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </LoggedInTemplate>
+                                    </asp:LoginView>
+                                   
                                 </td>
                                 <td>
                                     <telerik:RadMenu ID="menuUser" runat="server">

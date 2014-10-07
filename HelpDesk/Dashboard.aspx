@@ -38,7 +38,7 @@
                         <td>
                             <asp:HyperLink ID="HyperLink7" runat="server"
                                 NavigateUrl='<%#Eval("CH_NGUOITRALOI_TEN","~/Dashboard.aspx?q={0}")%>'>
-                                <%#Eval("CH_NGUOITRALOI_TEN")%></asp:HyperLink>&nbsp;
+                                <%#Eval("CH_NGUOITRALOI_TAIKHOAN")%></asp:HyperLink>&nbsp;
                  <asp:HyperLink ID="HyperLink8" runat="server"
                      NavigateUrl='<%#Eval("CH_CAUHOI_NGAYTRALOI","~/Dashboard.aspx?q={0}")%>'>
                      <%#Eval("CH_CAUHOI_NGAYTRALOI")%></asp:HyperLink>

@@ -86,13 +86,13 @@ Partial Public Class Site
     Protected WithEvents AutoCompleteExtender1 As Global.AjaxControlToolkit.AutoCompleteExtender
 
     '''<summary>
-    '''RadMenuDangNhap control.
+    '''haha control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadMenuDangNhap As Global.Telerik.Web.UI.RadMenu
+    Protected WithEvents haha As Global.System.Web.UI.WebControls.LoginView
 
     '''<summary>
     '''menuUser control.
