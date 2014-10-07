@@ -45,6 +45,7 @@ namespace t
                         }
                         else
                         {
+                            //i.SetValue(outObj, ed.GetHtml(EditorStripHtmlOptions.None), null);
                             i.SetValue(outObj, ed.Text, null);
                             continue;
                         }

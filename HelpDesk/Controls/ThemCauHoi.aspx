@@ -181,7 +181,14 @@
                         </nobr>
                 </td>
                 <td colspan="4">
-                    <telerik:RadEditor ID="CH_CAUHOI_NOIDUNGCAUHOI" Runat="server" Skin="Office2010Blue" Width="800px">
+                    <telerik:RadEditor ID="CH_CAUHOI_NOIDUNGCAUHOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
+                        <Modules>
+        <telerik:EditorModule Name="RadEditorStatistics" Visible="false" Enabled="false" />
+        <telerik:EditorModule Name="RadEditorDomInspector" Visible="false" Enabled="false" />
+        <telerik:EditorModule Name="RadEditorNodeInspector" Visible="false" Enabled="false" />
+        <telerik:EditorModule Name="RadEditorHtmlInspector" Visible="false" Enabled="false" />
+                              <telerik:EditorModule Name="RadEditorTrackChangesInfo" Visible="false" Enabled="false" />
+    </Modules>
                     </telerik:RadEditor>
                 </td>
                 <td></td>
@@ -195,7 +202,16 @@
                          </nobr>
                 </td>
                 <td colspan="4">
-                    <telerik:RadEditor ID="CH_CAUHOI_NOIDUNGTRALOI" Runat="server" Width="800px" Skin="Office2010Blue">
+                    <telerik:RadEditor ID="CH_CAUHOI_NOIDUNGTRALOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
+                          <Modules>
+        <telerik:EditorModule Name="RadEditorStatistics" Visible="false" Enabled="false" />
+        <telerik:EditorModule Name="RadEditorDomInspector" Visible="false" Enabled="false" />
+        <telerik:EditorModule Name="RadEditorNodeInspector" Visible="false" Enabled="false" />
+        <telerik:EditorModule Name="RadEditorHtmlInspector" Visible="false" Enabled="false" />
+                              <telerik:EditorModule Name="RadEditorTrackChangesInfo" Visible="false" Enabled="false" />
+    </Modules>
+                        <Content>
+</Content>
                     </telerik:RadEditor>
                 </td>
                 <td></td>
