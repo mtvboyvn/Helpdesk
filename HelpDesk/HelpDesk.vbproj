@@ -175,6 +175,7 @@
     <Content Include="Doiten.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Class1.vb" />
     <Compile Include="Controls\Them_XemTTCKS.aspx.designer.vb">
       <DependentUpon>Them_XemTTCKS.aspx</DependentUpon>
     </Compile>
@@ -337,9 +338,7 @@
     </None>
     <Content Include="Site.master" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DBContext\DBContext.csproj">
       <Project>{b76cab74-26c4-4e35-ab72-d33fbb2323a1}</Project>
