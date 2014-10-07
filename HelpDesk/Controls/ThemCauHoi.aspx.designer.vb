@@ -29,7 +29,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadButton1 As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents RadButton1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''btnNhapMoi control.
@@ -38,7 +38,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnNhapMoi As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents btnNhapMoi As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''RadButton4 control.
@@ -47,7 +47,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadButton4 As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents RadButton4 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lblMSG2 control.
@@ -110,7 +110,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_DONVI_MST As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_DONVI_MST As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label3 control.
@@ -128,7 +128,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_DONVI_TEN As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_DONVI_TEN As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label11 control.
@@ -146,7 +146,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_NGUOIHOI_MAHQLIENQUAN As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_NGUOIHOI_MAHQLIENQUAN As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label12 control.
@@ -164,7 +164,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_NGUOIHOI_TENHQLIENQUAN As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_NGUOIHOI_TENHQLIENQUAN As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label4 control.
@@ -182,7 +182,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_NGUOIHOI_TEN As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_NGUOIHOI_TEN As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label5 control.
@@ -200,7 +200,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_NGUOIHOI_DIENTHOAI As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_NGUOIHOI_DIENTHOAI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label6 control.
@@ -218,7 +218,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_NGUOIHOI_EMAIL As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_NGUOIHOI_EMAIL As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label13 control.
@@ -236,7 +236,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_NGUOITRALOI_TAIKHOAN As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents CH_NGUOITRALOI_TAIKHOAN As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label10 control.
@@ -311,6 +311,42 @@ Partial Public Class ThemCauHoi
     Protected WithEvents CH_CAUHOI_PHANLOAI7 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
+    '''Label14 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label14 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''RadDateInput1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadDateInput1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Label15 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label15 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''RadDateInput2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadDateInput2 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Label8 control.
     '''</summary>
     '''<remarks>
@@ -326,7 +362,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_CAUHOI_NOIDUNGCAUHOI As Global.Telerik.Web.UI.RadEditor
+    Protected WithEvents CH_CAUHOI_NOIDUNGCAUHOI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label9 control.
@@ -344,7 +380,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CH_CAUHOI_NOIDUNGTRALOI As Global.Telerik.Web.UI.RadEditor
+    Protected WithEvents CH_CAUHOI_NOIDUNGTRALOI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnGhiDuLieu control.
@@ -353,7 +389,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnGhiDuLieu As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents btnGhiDuLieu As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''RadButton2 control.
@@ -362,7 +398,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadButton2 As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents RadButton2 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''RadButton5 control.
@@ -371,7 +407,7 @@ Partial Public Class ThemCauHoi
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadButton5 As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents RadButton5 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lblMSG1 control.

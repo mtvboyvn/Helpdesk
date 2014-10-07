@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="ThemCauHoi.aspx.vb" Inherits="HelpDesk.ThemCauHoi"%>
 
-<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <div>
@@ -15,18 +15,18 @@
             <tr>
                 <td></td>
                 <td>
-                     <telerik:RadButton ID="RadButton1" OnClick="RadButton1_Click" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
-        </telerik:RadButton>
+                     <asp:Button ID="RadButton1" OnClick="RadButton1_Click" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </asp:Button>
                     <br />
                 </td>
                 <td>
-                    <telerik:RadButton ID="btnNhapMoi" runat="server"  Text="Nhập mới" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
-        </telerik:RadButton>
+                    <asp:Button ID="btnNhapMoi" runat="server"  Text="Nhập mới" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </asp:Button>
                 </td>
                 <td>
                       <nobr>
-                &nbsp;<telerik:RadButton ID="RadButton4" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
-        </telerik:RadButton>
+                &nbsp;<asp:Button ID="RadButton4" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </asp:Button>
                           &nbsp;&nbsp;&nbsp;
                       <asp:Label ID="lblMSG2" runat="server" BackColor="#FFFF66" BorderColor="#0066FF" BorderStyle="Solid" BorderWidth="1px" Font-Size="1.2em" ForeColor="Black" Height="30px" Text="&nbsp;Thông báo tại đây&nbsp;"></asp:Label>
                       <asp:HiddenField ID="CH_ID" runat="server" />
@@ -59,9 +59,9 @@
                         </nobr>
                 </td>
                 <td style="width:1px;text-align:left;">                   
-                    &nbsp;<telerik:RadTextBox ID="CH_DONVI_MST" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Red">
+                    &nbsp;<asp:TextBox ID="CH_DONVI_MST" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Red">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -70,9 +70,9 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<telerik:RadTextBox ID="CH_DONVI_TEN" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px" Font-Size="1.2em" ForeColor="Red">
+                    &nbsp;<asp:TextBox ID="CH_DONVI_TEN" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px" Font-Size="1.2em" ForeColor="Red">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -83,9 +83,9 @@
                         </nobr>
                 </td>
                 <td >
-                  &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_MAHQLIENQUAN" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Blue">
+                  &nbsp;<asp:TextBox ID="CH_NGUOIHOI_MAHQLIENQUAN" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Blue">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -94,9 +94,9 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_TENHQLIENQUAN" Runat="server" Font-Bold="False" Text="Hải quan Hà nội" Width="350px" Font-Size="1.2em" ForeColor="Blue">
+                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_TENHQLIENQUAN" Runat="server" Font-Bold="False" Text="Hải quan Hà nội" Width="350px" Font-Size="1.2em" ForeColor="Blue">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -107,9 +107,9 @@
                         </nobr>
                 </td>
                 <td >
-                    &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_TEN" Runat="server" Font-Bold="False" Text="Hứa Mạnh Tuyển" Font-Size="1.2em">
+                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_TEN" Runat="server" Font-Bold="False" Text="Hứa Mạnh Tuyển" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -118,9 +118,9 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_DIENTHOAI" Runat="server" Font-Bold="False" Text="0936394405" Font-Size="1.2em">
+                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_DIENTHOAI" Runat="server" Font-Bold="False" Text="0936394405" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -130,9 +130,9 @@
                         </nobr>
                 </td>
                 <td >
-                    &nbsp;<telerik:RadTextBox ID="CH_NGUOIHOI_EMAIL" Runat="server" Font-Bold="False" Text="huamanhtuyen@gmail.com" Width="160px" Font-Size="1.2em">
+                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_EMAIL" Runat="server" Font-Bold="False" Text="huamanhtuyen@gmail.com" Width="160px" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -141,9 +141,9 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<telerik:RadTextBox ID="CH_NGUOITRALOI_TAIKHOAN" Runat="server" Font-Bold="True" Text="TuyenHM" Font-Size="1.2em">
+                    &nbsp;<asp:TextBox ID="CH_NGUOITRALOI_TAIKHOAN" Runat="server" Font-Bold="True" Text="TuyenHM" Font-Size="1.2em">
                         <focusedstyle backcolor="#FFFF66" />
-                    </telerik:RadTextBox>
+                    </asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -176,20 +176,33 @@
              <tr>
                 <td style="width:1px;text-align:right;vertical-align:top;">
                     <nobr>
+                    <asp:Label ID="Label14" runat="server"  Text="Ngày hỏi:"></asp:Label>
+                        </nobr>
+                </td>
+                <td >
+                    &nbsp;<asp:TextBox ID="RadDateInput1" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy">
+                    </asp:TextBox>
+                 </td>
+                <td style="width:1px;text-align:right;vertical-align:top;">
+                    <nobr>
+                    <asp:Label ID="Label15" runat="server"  Text="Ngày trả lời:"></asp:Label>
+                        </nobr>
+                 </td>
+                <td>
+                    &nbsp;<asp:TextBox ID="RadDateInput2" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy">
+                    </asp:TextBox>
+                 </td>
+            </tr>
+             <tr>
+                <td style="width:1px;text-align:right;vertical-align:top;">
+                    <nobr>
                     <asp:Label ID="Label8" runat="server" 
                         Text="Nội dung câu hỏi:"></asp:Label>
                         </nobr>
                 </td>
                 <td colspan="4">
-                    <telerik:RadEditor ID="CH_CAUHOI_NOIDUNGCAUHOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
-                        <Modules>
-        <telerik:EditorModule Name="RadEditorStatistics" Visible="false" Enabled="false" />
-        <telerik:EditorModule Name="RadEditorDomInspector" Visible="false" Enabled="false" />
-        <telerik:EditorModule Name="RadEditorNodeInspector" Visible="false" Enabled="false" />
-        <telerik:EditorModule Name="RadEditorHtmlInspector" Visible="false" Enabled="false" />
-                              <telerik:EditorModule Name="RadEditorTrackChangesInfo" Visible="false" Enabled="false" />
-    </Modules>
-                    </telerik:RadEditor>
+                    <asp:TextBox ID="CH_CAUHOI_NOIDUNGCAUHOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
+                       </asp:TextBox>
                 </td>
                 <td></td>
                 <td></td>
@@ -202,17 +215,10 @@
                          </nobr>
                 </td>
                 <td colspan="4">
-                    <telerik:RadEditor ID="CH_CAUHOI_NOIDUNGTRALOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
-                          <Modules>
-        <telerik:EditorModule Name="RadEditorStatistics" Visible="false" Enabled="false" />
-        <telerik:EditorModule Name="RadEditorDomInspector" Visible="false" Enabled="false" />
-        <telerik:EditorModule Name="RadEditorNodeInspector" Visible="false" Enabled="false" />
-        <telerik:EditorModule Name="RadEditorHtmlInspector" Visible="false" Enabled="false" />
-                              <telerik:EditorModule Name="RadEditorTrackChangesInfo" Visible="false" Enabled="false" />
-    </Modules>
-                        <Content>
-</Content>
-                    </telerik:RadEditor>
+                    <asp:TextBox ID="CH_CAUHOI_NOIDUNGTRALOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
+                          
+        
+                    </asp:TextBox>
                 </td>
                 <td></td>
                 <td></td>
@@ -222,18 +228,18 @@
                     &nbsp;</td>
                 <td>
                     
-                    <telerik:RadButton ID="btnGhiDuLieu" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" AccessKey="s" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
-        </telerik:RadButton>
+                    <asp:Button ID="btnGhiDuLieu" runat="server"  Text="Ghi dữ liệu (Alt+S)" Skin="Metro" AccessKey="s" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </asp:Button>
                 </td>
                 <td>
                     
-                    <telerik:RadButton ID="RadButton2" runat="server"  Text="Nhập mới" Skin="Metro"  BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
-        </telerik:RadButton>
+                    <asp:Button ID="RadButton2" runat="server"  Text="Nhập mới" Skin="Metro"  BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </asp:Button>
                 </td>
                 <td>
                     <nobr>
-                        <telerik:RadButton ID="RadButton5" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
-        </telerik:RadButton>
+                        <asp:Button ID="RadButton5" runat="server"  Text="Quay lại" Skin="Metro" PostBackUrl="~/Default.aspx" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </asp:Button>
                          &nbsp; &nbsp; &nbsp;
                     <asp:Label ID="lblMSG1" runat="server" BackColor="#FFFF66" BorderColor="#0066FF" BorderStyle="Solid" BorderWidth="1px" Font-Size="1.2em" ForeColor="Black" Height="30px" Text="&nbsp;Thông báo tại đây&nbsp;"></asp:Label>
                         </nobr>

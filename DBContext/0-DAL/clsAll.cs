@@ -11,8 +11,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-using System.Windows.Forms;
-using Telerik.Web.UI;
 
 namespace t
 {
@@ -25,7 +23,7 @@ namespace t
             {
                 if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
                 {
-                    RadTextBox txt = tblDetail.FindControl(i.Name) as RadTextBox;
+                    TextBox txt = tblDetail.FindControl(i.Name) as TextBox;
                     if (txt == null)
                     {
                         ////thử với CodeList
@@ -34,7 +32,7 @@ namespace t
                         //i.SetValue(outObj, cl.CODE, null);
                         
                         //Thử với RadEditor
-                        RadEditor ed = tblDetail.FindControl(i.Name) as RadEditor;
+                        TextBox ed = tblDetail.FindControl(i.Name) as TextBox;
                         if (ed == null)
                         {
                             //Thử với HidenField
@@ -71,7 +69,7 @@ namespace t
                 }
                 if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
                 {
-                    RadNumericTextBox txt = tblDetail.FindControl(i.Name) as RadNumericTextBox;
+                    TextBox txt = tblDetail.FindControl(i.Name) as TextBox;
                     if (txt == null) continue;
                     decimal dm = 0;
                     if (decimal.TryParse(txt.Text, out dm) == true)
@@ -86,7 +84,7 @@ namespace t
             {
                 if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
                 {
-                    RadTextBox txt = tblDetail.FindControl(i.Name) as RadTextBox;
+                    TextBox txt = tblDetail.FindControl(i.Name) as TextBox;
                     if (txt == null)
                     {
                         ////thử với CodeList
@@ -95,7 +93,7 @@ namespace t
                         //i.SetValue(outObj, cl.CODE, null);
 
                         //Thử với RadEditor
-                        RadEditor ed = tblDetail.FindControl(i.Name) as RadEditor;
+                        TextBox ed = tblDetail.FindControl(i.Name) as TextBox;
                         if (ed == null)
                         {
                             //Thử với HidenField
@@ -105,7 +103,7 @@ namespace t
                             continue;
                         }
                        // i.SetValue(outObj, ed.Text, null);
-                        ed.Content = string.Format("{0}", i.GetValue(outObj, null));
+                        ed.Text = string.Format("{0}", i.GetValue(outObj, null));
                         continue;
                     }
                     else
@@ -124,7 +122,7 @@ namespace t
                 }
                 if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
                 {
-                    RadNumericTextBox txt = tblDetail.FindControl(i.Name) as RadNumericTextBox;
+                    TextBox txt = tblDetail.FindControl(i.Name) as TextBox;
                     if (txt == null) continue;
                     decimal dm = 0;
                     if (decimal.TryParse(txt.Text, out dm) == true)
@@ -183,14 +181,14 @@ namespace t
             {
                 if (i.PropertyType.FullName.Equals(typeof(string).FullName) == true)
                 {
-                    RadTextBox txt = tblDetail.FindControl(i.Name) as RadTextBox;
+                    TextBox txt = tblDetail.FindControl(i.Name) as TextBox;
                     if (txt == null) continue;
                     txt.Text = string.Empty;
                 }
 
                 if (i.PropertyType.FullName.Equals(typeof(decimal).FullName) == true)
                 {
-                    RadNumericTextBox txt = tblDetail.FindControl(i.Name) as RadNumericTextBox;
+                    TextBox txt = tblDetail.FindControl(i.Name) as TextBox;
                     if (txt == null) continue;
                     txt.Text = string.Empty;
                 }
@@ -262,8 +260,8 @@ namespace t
         {
             try
             {
-                if (Directory.Exists(Application.StartupPath + "\\Log") == false) Directory.CreateDirectory(Application.StartupPath + "\\Log");
-                string filename = Application.StartupPath + "\\Log\\VNACCS.Log.txt";
+                if (Directory.Exists(System.Windows.Forms.Application.StartupPath + "\\Log") == false) Directory.CreateDirectory(System.Windows.Forms.Application.StartupPath + "\\Log");
+                string filename = System.Windows.Forms.Application.StartupPath + "\\Log\\VNACCS.Log.txt";
                 string mytext = "";
                 //Ngắt nội dung thông báo cho ngắn lại 
                 string result = "";
@@ -318,8 +316,8 @@ namespace t
         {
             try
             {
-                if (Directory.Exists(Application.StartupPath + "\\Log") == false) Directory.CreateDirectory(Application.StartupPath + "\\Log");
-                string filename = Application.StartupPath + "\\Log\\VNACCS.Log.txt";
+                if (Directory.Exists(System.Windows.Forms.Application.StartupPath + "\\Log") == false) Directory.CreateDirectory(System.Windows.Forms.Application.StartupPath + "\\Log");
+                string filename = System.Windows.Forms.Application.StartupPath + "\\Log\\VNACCS.Log.txt";
                 string mytext = "";
                 //Ngắt nội dung thông báo cho ngắn lại 
                 string result = "";

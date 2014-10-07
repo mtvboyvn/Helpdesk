@@ -7,8 +7,8 @@
     <hr />
     <asp:Label ID="lblError" Visible="false" ForeColor="Red" runat="server" Text=""></asp:Label>
     <div id="divSearch" style="padding-left: 50px;" runat="server">
-        <asp:ListView ID="ListView1" runat="server">
-            <ItemTemplate>
+        <asp:DataList ID="ListView1" runat="server">
+             <ItemTemplate>
                 <br />
                 <table style="width: 500px; border-bottom: 1px dotted gray;">
                     <tr>
@@ -63,7 +63,8 @@
                     </tr>
                 </table>
             </ItemTemplate>
-        </asp:ListView>
+        </asp:DataList>
+       
     </div>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

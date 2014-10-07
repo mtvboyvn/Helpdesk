@@ -1,9 +1,8 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="true" Inherits="HelpDesk.Site" CodeBehind="Site.master.vb" %>
 
-<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
-    Namespace="System.Web.UI" TagPrefix="asp" %>
-<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+
+
 
 <!DOCTYPE html>
 
@@ -15,27 +14,9 @@
 </head>
 <body>
     <form id="form1" defaultfocus="txtTimKiem" runat="server">
-        <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableTheming="True">
-            <Scripts>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js"></asp:ScriptReference>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js"></asp:ScriptReference>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js"></asp:ScriptReference>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js"></asp:ScriptReference>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js"></asp:ScriptReference>
-                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js"></asp:ScriptReference>
-                <asp:ScriptReference Name="jquery.ui.combined"></asp:ScriptReference>
-                <asp:ScriptReference Name="jquery"></asp:ScriptReference>
-            </Scripts>
-        </telerik:RadScriptManager>       
-        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" EnableAJAX="true">
-            <AjaxSettings>
-                <telerik:AjaxSetting AjaxControlID="Panel1">
-                    <UpdatedControls>
-                        <telerik:AjaxUpdatedControl ControlID="Panel1" />
-                    </UpdatedControls>
-                </telerik:AjaxSetting>
-            </AjaxSettings>
-        </telerik:RadAjaxManager>
+       
+      
+
         <table border="0" width="100%" style="text-align: left; margin-top: 1em;">
             <tr>
                 <td style="width: 10px;">
@@ -48,12 +29,7 @@
                 <td style="width: 610px;">
                     <asp:Panel runat="server" ID="Panel1">
                         <asp:TextBox ID="txtTimKiem" runat="server" Font-Size="1.2em" Width="600px" CssClass="txtTimKiem"></asp:TextBox>
-                        <cc1:TextBoxWatermarkExtender ID="txtTimKiem_TextBoxWatermarkExtender" runat="server" Enabled="True" TargetControlID="txtTimKiem" WatermarkText="Nhập từ khóa tìm kiếm">
-                        </cc1:TextBoxWatermarkExtender>
-                        <cc1:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" CompletionSetCount="10"
-                            MinimumPrefixLength="1" ServicePath="WebService.asmx" ServiceMethod="GetCompletionList"
-                            TargetControlID="txtTimKiem" ContextKey="vasa,test" FirstRowSelected="true" EnableCaching="true">
-                        </cc1:AutoCompleteExtender>
+                       
                     </asp:Panel>
                 </td>
                 <td>
@@ -63,12 +39,13 @@
                                 <td>
                                     <asp:LoginView ID="haha" runat="server">
                                         <AnonymousTemplate>
-                                        <telerik:RadMenu ID="RadMenuDangNhap" runat="server">
-                                        <Items>
-                                            <telerik:RadMenuItem runat="server" PostBack="False" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" ForeColor="White">
-                                            </telerik:RadMenuItem>
+                                            <asp:Menu ID="Menu1" runat="server">
+                                                <Items>
+                                            <asp:MenuItem runat="server"  Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" >
+                                            </asp:MenuItem>
                                         </Items>
-                                    </telerik:RadMenu>
+                                            </asp:Menu>
+                                      
                                     &nbsp;&nbsp;&nbsp;
                                         </AnonymousTemplate>
                                         <LoggedInTemplate>                                            
@@ -79,28 +56,13 @@
                                    
                                 </td>
                                 <td>
-                                    <telerik:RadMenu ID="menuUser" runat="server">
+                                    <asp:Menu ID="menuUser" runat="server">
                                         <Items>
-                                            <telerik:RadMenuItem runat="server" PostBack="False" Text="Menu" Value="Menu">
-                                                <Items>
-                                                    <telerik:RadMenuItem runat="server" Text="Thêm câu hỏi" Value="ThemCauHoi" NavigateUrl="~/Controls/ThemCauHoi.aspx">
-                                                    </telerik:RadMenuItem>
-                                                    <telerik:RadMenuItem runat="server" Text="Tài khoản quản trị" Value="ThemTaiKhoanQuanTri" NavigateUrl="~/Controls/ThemTaiKhoanQuanTri.aspx">
-                                                    </telerik:RadMenuItem>
-                                                    <telerik:RadMenuItem runat="server" Text="Thêm doanh nghiệp cho đại lý" Value="ThemDaiLy" NavigateUrl="~/Controls/ThemDaiLy.aspx">
-                                                    </telerik:RadMenuItem>
-                                                    <telerik:RadMenuItem runat="server" IsSeparator="True" Text="Child RadMenuItem 5">
-                                                    </telerik:RadMenuItem>
-                                                    <telerik:RadMenuItem runat="server" Text="Đổi tên đơn vị" Value="ThemDoiTen_VNACCS" PostBackUrl="~/Controls/ThemDoiTen_VNACCS.aspx">
-                                                    </telerik:RadMenuItem>
-                                                    <telerik:RadMenuItem runat="server" Text="Xem thông tin chữ ký số" Value="Them_XemTTCKS" PostBackUrl="~/Controls/Them_XemTTCKS.aspx">
-                                                    </telerik:RadMenuItem>
-                                                    <telerik:RadMenuItem runat="server" NavigateUrl="~/Default.aspx" PostBack="False" Text="Kiểm tra tình trạng thông tin chuyển sang VNACCS">
-                                                    </telerik:RadMenuItem>
-                                                </Items>
-                                            </telerik:RadMenuItem>
+                                            <asp:MenuItem runat="server"  Text="Menu" Value="Menu">
+                                               
+                                            </asp:MenuItem>
                                         </Items>
-                                    </telerik:RadMenu>
+                                    </asp:Menu>
                                     &nbsp;
                                 </td>
                             </tr>

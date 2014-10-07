@@ -47,5 +47,5 @@ Partial Public Class Dashboard
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ListView1 As Global.System.Web.UI.WebControls.ListView
+    Protected WithEvents ListView1 As Global.System.Web.UI.WebControls.DataList
 End Class

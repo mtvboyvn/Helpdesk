@@ -18,8 +18,8 @@
         <asp:CheckBox ID="RememberMe" runat="server" Text="Nhớ tài khoản trên máy tính này" />&nbsp;</p>
     <p>
         
-     <telerik:RadButton ID="LoginButton" runat="server"  OnClick="LoginButton_Click"   Text="Đăng nhập" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
-        </telerik:RadButton>
+     <asp:Button ID="LoginButton" runat="server"  OnClick="LoginButton_Click"   Text="Đăng nhập" Skin="Metro" BackColor="#4484F1" CssClass="nutBam" ForeColor="White" Height="30px">
+        </asp:Button>
     <p>
         <asp:Label ID="InvalidCredentialsMessage" runat="server" ForeColor="Red" Text="Sai tài khoản / mật khẩu"
             Visible="False"></asp:Label>&nbsp;</p>

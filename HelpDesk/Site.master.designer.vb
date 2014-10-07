@@ -32,24 +32,6 @@ Partial Public Class Site
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''RadScriptManager1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RadScriptManager1 As Global.Telerik.Web.UI.RadScriptManager
-
-    '''<summary>
-    '''RadAjaxManager1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RadAjaxManager1 As Global.Telerik.Web.UI.RadAjaxManager
-
-    '''<summary>
     '''Panel1 control.
     '''</summary>
     '''<remarks>
@@ -68,24 +50,6 @@ Partial Public Class Site
     Protected WithEvents txtTimKiem As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtTimKiem_TextBoxWatermarkExtender control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtTimKiem_TextBoxWatermarkExtender As Global.AjaxControlToolkit.TextBoxWatermarkExtender
-
-    '''<summary>
-    '''AutoCompleteExtender1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents AutoCompleteExtender1 As Global.AjaxControlToolkit.AutoCompleteExtender
-
-    '''<summary>
     '''haha control.
     '''</summary>
     '''<remarks>
@@ -101,7 +65,7 @@ Partial Public Class Site
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents menuUser As Global.Telerik.Web.UI.RadMenu
+    Protected WithEvents menuUser As Global.System.Web.UI.WebControls.Menu
 
     '''<summary>
     '''MainContent control.
