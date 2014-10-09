@@ -172,42 +172,16 @@ footer {
         text-decoration: underline;
     }
 
-    #login ul {
+    /*#login ul {
         margin: 0;
     }
 
     #login li {
         display: inline;
         list-style: none;
-    }
+    }*/
 
 
-/* menu
-----------------------------------------------------------*/
-ul#menu {
-    font-size: 1.3em;
-    font-weight: 600;
-    margin: 0 0 5px;
-    padding: 0;
-    text-align: right;
-}
-
-    ul#menu li {
-        display: inline;
-        list-style: none;
-        padding-left: 15px;
-    }
-
-        ul#menu li a {
-            background: none;
-            color: #6d6d6d;
-            text-decoration: none;
-        }
-
-        ul#menu li a:hover {
-            color: #333;
-            text-decoration: none;
-        }
 
 
 /* page elements
@@ -319,7 +293,7 @@ aside {
     width: 25%;
 }
 
-    aside ul {
+    /*aside ul {
         list-style: none;
         padding: 0;
     }
@@ -327,7 +301,7 @@ aside {
         aside ul li {
             background: url("../Images/bullet.png") no-repeat 0 50%;
             padding: 2px 0 2px 20px;
-        }
+        }*/
 
 .label {
     font-weight: 700;
@@ -553,7 +527,7 @@ tr.pager td {
         text-align: center;
     }
 
-        #login ul {
+        /*#login ul {
             margin: 5px 0;
             padding: 0;
         }
@@ -571,28 +545,13 @@ tr.pager td {
             font-weight: 600;
             margin: 2px;
             padding: 0;
-        }
+        }*/
 
         #login a:hover {
             color: #333;
         }
 
-    /* menu */
-    nav {
-        margin-bottom: 5px;
-    }
-
-    ul#menu {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-        ul#menu li {
-            margin: 0;
-            padding: 0;
-        }
-
+  
 
     /* main layout
     ----------------------------------------------------------*/
@@ -735,3 +694,5 @@ tr.pager td {
 .txtTimKiem:focus {
     background-color:yellow !important;
 }
+
+   

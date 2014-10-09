@@ -10,12 +10,58 @@
 <head id="Head1" runat="server">
     <title>Help Desk</title>
     <link href="~/Styles.css" rel="stylesheet" type="text/css" />
-    
+    <style type="text/css">
+        #horizontalmenu ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+           
+        }
+
+        #horizontalmenu li {
+            float: left;
+            position: relative;
+            padding: 5px 20px 5px 20px;
+            display: block;
+            border: 0px solid #4484F1;
+            border-style: inset;
+            background-color: #4484F1;
+        }
+        #horizontalmenu li:hover {
+             background-color:red;
+        }
+
+            #horizontalmenu li ul {
+                display: none;
+                position: absolute;               
+            }
+
+            #horizontalmenu li:hover ul {
+                display: block;
+            }
+
+            #horizontalmenu li ul li {
+                clear: both;
+                border-style: none;
+            }
+
+        .menua {
+            color:white;text-decoration:none;          
+        }
+        .menua:hover {
+        
+            color:white;text-decoration:none;
+           
+        }
+        .lidai {
+            width:150px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" defaultfocus="txtTimKiem" runat="server">
-       
-      
+
+
 
         <table border="0" width="100%" style="text-align: left; margin-top: 1em;">
             <tr>
@@ -29,7 +75,7 @@
                 <td style="width: 610px;">
                     <asp:Panel runat="server" ID="Panel1">
                         <asp:TextBox ID="txtTimKiem" runat="server" Font-Size="1.2em" Width="600px" CssClass="txtTimKiem"></asp:TextBox>
-                       
+
                     </asp:Panel>
                 </td>
                 <td>
@@ -39,30 +85,36 @@
                                 <td>
                                     <asp:LoginView ID="haha" runat="server">
                                         <AnonymousTemplate>
-                                            <asp:Menu ID="Menu1" runat="server">
+                                            <asp:Menu ID="Menu1" runat="server" BackColor="#4484F1" ForeColor="White">
+                                                <DynamicHoverStyle BackColor="Red" ForeColor="White" />
                                                 <Items>
-                                            <asp:MenuItem runat="server"  Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx" >
-                                            </asp:MenuItem>
-                                        </Items>
+                                                    <asp:MenuItem runat="server" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                                                </Items>
                                             </asp:Menu>
-                                      
-                                    &nbsp;&nbsp;&nbsp;
+
+                                            &nbsp;&nbsp;&nbsp;
+                                         
                                         </AnonymousTemplate>
-                                        <LoggedInTemplate>                                            
-                                        <asp:Label ID="UserNameLabel" ForeColor="Red" Font-Bold="true" Font-Italic="true"  runat="server" ><%= My.User.Name %></asp:Label>
+                                        <LoggedInTemplate>
+                                            <asp:Label ID="UserNameLabel" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server"><%= My.User.Name %></asp:Label>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         </LoggedInTemplate>
                                     </asp:LoginView>
-                                   
+
                                 </td>
                                 <td>
-                                    <asp:Menu ID="menuUser" runat="server">
-                                        <Items>
-                                            <asp:MenuItem runat="server"  Text="Menu" Value="Menu">
-                                               
-                                            </asp:MenuItem>
-                                        </Items>
-                                    </asp:Menu>
+                                    <div id="horizontalmenu">
+                                        <ul>
+                                            <li><a class="menua" href="#">Menu</a>
+                                                <ul>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Thêm câu hỏi</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Kiểm tra chữ ký số</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Kiểm tra chữ ký số</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Kiểm tra chữ ký số</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     &nbsp;
                                 </td>
                             </tr>

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" Inherits="HelpDesk.Login" title="Login Page" Codebehind="Login.aspx.vb" %>
-<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <h2>
         Đăng nhập</h2>
