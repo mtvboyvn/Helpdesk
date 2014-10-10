@@ -53,14 +53,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\AspNet.ScriptManager.jQuery.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined, Version=1.8.24.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
-    </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.112.1.2, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Oracle.DataAccess.dll</HintPath>
@@ -73,6 +65,12 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>DLL\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>DLL\System.Web.Extensions.Design.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -160,22 +158,27 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Controls\tDateTime.ascx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="DLL\AjaxControlToolkit.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DLL\AspNet.ScriptManager.jQuery.dll" />
-    <Content Include="DLL\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
     <Content Include="DLL\Oracle.DataAccess.dll" />
     <Content Include="DLL\System.Data.SQLite.dll" />
-    <Content Include="DLL\Telerik.Web.Design.dll" />
-    <Content Include="DLL\Telerik.Web.UI.dll" />
-    <Content Include="DLL\Telerik.Web.UI.Skins.dll" />
+    <Content Include="DLL\System.Web.Extensions.Design.dll" />
+    <Content Include="DLL\System.Web.Extensions.dll" />
     <Content Include="DLL\vnConvert.dll" />
     <Content Include="Doiten.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Class1.vb" />
+    <Compile Include="Controls\tDateTime.ascx.designer.vb">
+      <DependentUpon>tDateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\tDateTime.ascx.vb">
+      <DependentUpon>tDateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Controls\Them_XemTTCKS.aspx.designer.vb">
       <DependentUpon>Them_XemTTCKS.aspx</DependentUpon>
     </Compile>

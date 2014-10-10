@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="true" Inherits="HelpDesk.Site" CodeBehind="Site.master.vb" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
 
 
 
@@ -25,17 +27,15 @@
 
         #horizontalmenu li {
             float: left;
-            position: relative;
-            padding: 5px 20px 5px 20px;
+            position: relative;           
             display: block;
             border: 0px solid #4484F1;
             border-style: inset;
-            background-color: #4484F1;
-
-            
+           
+             padding: 0px 0px 0px 0px;
         }
         #horizontalmenu li:hover {
-             background-color:red;
+           
         }
 
             #horizontalmenu li ul {
@@ -71,11 +71,10 @@
             float:left;
             position: relative;
             margin:0px;
-            padding: 5px 20px 5px 20px;
             display: block;
-            border: 0px solid #4484F1;
+            border:solid 0px #4484F1;
             border-style: inset;
-            background-color: #4484F1;
+           
         }
 
         .lidangnhap:hover {
@@ -87,7 +86,10 @@
     outline: none;
     padding-left: 3px;
     padding-right: 3px;
-    text-decoration:none;       
+    text-decoration:none;    
+    background-color:  #4484F1;   
+    padding: 5px 20px 5px 20px;
+    border-bottom:solid 1px white;
 }
 
     .adangnhap:link, .adangnhap:visited,
@@ -103,9 +105,9 @@
     </style>
 </head>
 <body>
-    <form id="form1" defaultfocus="txtTimKiem" runat="server">
-
-
+    <form id="form1" runat="server">
+        <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></cc1:ToolkitScriptManager>
+       
 
         <table border="0" width="100%" style="text-align: left; margin-top: 1em;">
             <tr>
@@ -143,10 +145,10 @@
                                         <ul>
                                             <li><a class="adangnhap" href="#">Menu</a>
                                                 <ul>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Thêm câu hỏi</a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Kiểm tra chữ ký số</a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Kiểm tra chữ ký số</a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Kiểm tra chữ ký số</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="~/login.aspx" runat="server"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="#"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="#"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="#"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
                                                 </ul>
                                             </li>
                                         </ul>
