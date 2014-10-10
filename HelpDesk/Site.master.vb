@@ -4,8 +4,8 @@ Partial Class Site
 
 
     Protected Sub Page_Init(sender As Object, e As EventArgs) Handles Me.Init
-        Page.SetFocus(txtTimKiem)
-        txtTimKiem.Focus()
+        'Page.SetFocus(txtTimKiem)
+        'txtTimKiem.Focus()
     End Sub
 
     Protected Sub Page_PreRender(sender As Object, e As EventArgs) Handles Me.PreRender

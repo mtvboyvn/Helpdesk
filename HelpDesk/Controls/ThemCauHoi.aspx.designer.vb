@@ -329,6 +329,24 @@ Partial Public Class ThemCauHoi
     Protected WithEvents RadDateInput1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''CalendarExtender1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CalendarExtender1 As Global.AjaxControlToolkit.CalendarExtender
+
+    '''<summary>
+    '''ImageButton1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ImageButton1 As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
     '''Label15 control.
     '''</summary>
     '''<remarks>

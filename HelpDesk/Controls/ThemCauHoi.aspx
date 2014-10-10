@@ -2,6 +2,10 @@
 
 
 
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <div>
             <nobr>
@@ -161,7 +165,10 @@
                         </nobr>
                 </td>
                 <td >
-                    &nbsp;<asp:TextBox ID="RadDateInput1" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy" Width="200px"></asp:TextBox>
+                    &nbsp;<asp:TextBox ID="RadDateInput1" Runat="server" Width="100px"></asp:TextBox>
+                    <cc1:CalendarExtender ID="CalendarExtender1" runat="server"
+        TargetControlID="RadDateInput1" PopupButtonID="ImageButton1"/>
+<asp:ImageButton ID="ImageButton1" runat="server" />
                  </td>
                 <td style="width:1px;text-align:right;vertical-align:top;">
                     <nobr>
