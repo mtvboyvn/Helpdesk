@@ -58,10 +58,7 @@
                         Text="Mã số thuế:"></asp:Label>
                         </nobr>
                 </td>
-                <td style="width:1px;text-align:left;">                   
-                    &nbsp;<asp:TextBox ID="CH_DONVI_MST" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Red">
-                        <focusedstyle backcolor="#FFFF66" />
-                    </asp:TextBox>
+                <td style="width:1px;text-align:left;">&nbsp;<asp:TextBox ID="CH_DONVI_MST" Runat="server" Font-Bold="True" Font-Size="1.2em" ForeColor="Red" Width="200px"></asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -70,9 +67,7 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<asp:TextBox ID="CH_DONVI_TEN" Runat="server" Font-Bold="False" Text="Công ty THHH May 10" Width="350px" Font-Size="1.2em" ForeColor="Red">
-                        <focusedstyle backcolor="#FFFF66" />
-                    </asp:TextBox>
+                    &nbsp;<asp:TextBox ID="CH_DONVI_TEN" Runat="server" Font-Bold="False" Width="350px" Font-Size="1.2em" ForeColor="Red"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -82,10 +77,7 @@
                         Text="Mã Hải quan:"></asp:Label>
                         </nobr>
                 </td>
-                <td >
-                  &nbsp;<asp:TextBox ID="CH_NGUOIHOI_MAHQLIENQUAN" Runat="server" Font-Bold="True" Text="0100101308" Font-Size="1.2em" ForeColor="Blue">
-                        <focusedstyle backcolor="#FFFF66" />
-                    </asp:TextBox>
+                <td >&nbsp;<asp:TextBox ID="CH_NGUOIHOI_MAHQLIENQUAN" Runat="server" Font-Bold="True" Font-Size="1.2em" ForeColor="Blue" Width="200px"></asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -93,9 +85,8 @@
                         Text="Tên Hải quan:"></asp:Label>
                         </nobr>
                 </td>
-                <td>
-                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_TENHQLIENQUAN" Runat="server" Font-Bold="False" Text="Hải quan Hà nội" Width="350px" Font-Size="1.2em" ForeColor="Blue">
-                        <focusedstyle backcolor="#FFFF66" />
+                <td>&nbsp;<asp:TextBox ID="CH_NGUOIHOI_TENHQLIENQUAN" Runat="server" Font-Bold="False" Text="Hải quan Hà nội" Width="350px" Font-Size="1.2em" ForeColor="Blue">
+                        
                     </asp:TextBox>
                 </td>
             </tr>
@@ -106,10 +97,7 @@
                         Text="Tên người hỏi:"></asp:Label>
                         </nobr>
                 </td>
-                <td >
-                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_TEN" Runat="server" Font-Bold="False" Text="Hứa Mạnh Tuyển" Font-Size="1.2em">
-                        <focusedstyle backcolor="#FFFF66" />
-                    </asp:TextBox>
+                <td>&nbsp;<asp:TextBox ID="CH_NGUOIHOI_TEN" Runat="server" Font-Bold="False" Font-Size="1.2em" Width="200px"></asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -118,9 +106,7 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_DIENTHOAI" Runat="server" Font-Bold="False" Text="0936394405" Font-Size="1.2em">
-                        <focusedstyle backcolor="#FFFF66" />
-                    </asp:TextBox>
+                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_DIENTHOAI" Runat="server" Font-Bold="False" Font-Size="1.2em" Width="200px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -129,10 +115,7 @@
                     <asp:Label ID="Label6" runat="server"  Text="Email người hỏi:"></asp:Label>
                         </nobr>
                 </td>
-                <td >
-                    &nbsp;<asp:TextBox ID="CH_NGUOIHOI_EMAIL" Runat="server" Font-Bold="False" Text="huamanhtuyen@gmail.com" Width="160px" Font-Size="1.2em">
-                        <focusedstyle backcolor="#FFFF66" />
-                    </asp:TextBox>
+                <td >&nbsp;<asp:TextBox ID="CH_NGUOIHOI_EMAIL" Runat="server" Font-Bold="False" Width="200px" Font-Size="1.2em"></asp:TextBox>
                 </td>
                 <td style="width:1px;text-align:right;">
                     <nobr>
@@ -141,9 +124,7 @@
                         </nobr>
                 </td>
                 <td>
-                    &nbsp;<asp:TextBox ID="CH_NGUOITRALOI_TAIKHOAN" Runat="server" Font-Bold="True" Text="TuyenHM" Font-Size="1.2em">
-                        <focusedstyle backcolor="#FFFF66" />
-                    </asp:TextBox>
+                    &nbsp;<asp:TextBox ID="CH_NGUOITRALOI_TAIKHOAN" Runat="server" Font-Bold="True" Font-Size="1.2em" Width="200px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -180,8 +161,7 @@
                         </nobr>
                 </td>
                 <td >
-                    &nbsp;<asp:TextBox ID="RadDateInput1" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy">
-                    </asp:TextBox>
+                    &nbsp;<asp:TextBox ID="RadDateInput1" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy" Width="200px"></asp:TextBox>
                  </td>
                 <td style="width:1px;text-align:right;vertical-align:top;">
                     <nobr>
@@ -189,8 +169,7 @@
                         </nobr>
                  </td>
                 <td>
-                    &nbsp;<asp:TextBox ID="RadDateInput2" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy">
-                    </asp:TextBox>
+                    &nbsp;<asp:TextBox ID="RadDateInput2" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy" Width="200px"></asp:TextBox>
                  </td>
             </tr>
              <tr>
@@ -201,8 +180,7 @@
                         </nobr>
                 </td>
                 <td colspan="4">
-                    <asp:TextBox ID="CH_CAUHOI_NOIDUNGCAUHOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
-                       </asp:TextBox>
+                    <asp:TextBox ID="CH_CAUHOI_NOIDUNGCAUHOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px" Height="250px" TextMode="MultiLine"></asp:TextBox>
                 </td>
                 <td></td>
                 <td></td>
@@ -215,10 +193,7 @@
                          </nobr>
                 </td>
                 <td colspan="4">
-                    <asp:TextBox ID="CH_CAUHOI_NOIDUNGTRALOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px">
-                          
-        
-                    </asp:TextBox>
+                    <asp:TextBox ID="CH_CAUHOI_NOIDUNGTRALOI" Runat="server" Skin="Metro" Width="800px" EditModes="Design" ToolbarMode="RibbonBarFloating" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px" Height="250px" TextMode="MultiLine"></asp:TextBox>
                 </td>
                 <td></td>
                 <td></td>
