@@ -17,6 +17,8 @@ Partial Class Site
         'txtTimKiem.Focus()
         'ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "txtTimKiem", "$get('" + txtTimKiem.ClientID + "').focus();$get('" + txtTimKiem.ClientID + "').select();", True)
         'Page.SetFocus(txtTimKiem)
+        btnDangNhap.Visible = Not My.User.IsAuthenticated
+        lblUserName.Visible = Not btnDangNhap.Visible
     End Sub
 
     Protected Sub txtTimKiem_TextChanged(sender As Object, e As EventArgs) Handles txtTimKiem.TextChanged

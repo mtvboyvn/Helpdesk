@@ -50,13 +50,22 @@ Partial Public Class Site
     Protected WithEvents txtTimKiem As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''UserNameLabel control.
+    '''btnDangNhap control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UserNameLabel As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnDangNhap As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''lblUserName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUserName As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''MainContent control.

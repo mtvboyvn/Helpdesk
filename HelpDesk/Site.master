@@ -15,7 +15,12 @@
             padding: 0px;
             margin: 0px;
             list-style: none;
-           
+            float: right;
+            position: absolute;
+            right: 0;
+            top: 5px;
+            padding-top:2em;
+            z-index: 99999;
         }
 
         #horizontalmenu li {
@@ -26,14 +31,16 @@
             border: 0px solid #4484F1;
             border-style: inset;
             background-color: #4484F1;
+
+            
         }
         #horizontalmenu li:hover {
              background-color:red;
         }
 
             #horizontalmenu li ul {
-                display: none;
-                position: absolute;               
+                display:none;
+                position:absolute;
             }
 
             #horizontalmenu li:hover ul {
@@ -49,21 +56,19 @@
             color:white;text-decoration:none;          
         }
         .menua:hover {
-        
-            color:white;text-decoration:none;
-           
+            color:white;text-decoration:none;           
         }
         .lidai {
             width:150px;
         }
 
         .uldangnhap {
-             padding: 0px;
+            padding: 0px;
             margin: 0px;
             list-style: none;
         }
         .lidangnhap {
-            float: left;
+            float:left;
             position: relative;
             margin:0px;
             padding: 5px 20px 5px 20px;
@@ -121,19 +126,19 @@
                     <div style="float: right;">
                         <table border="0">
                             <tr>
-                                <td style="padding-right:5px;">
-                                     <ul class="uldangnhap">
+                                <td style="padding-right:5px;padding-top:15px;">
+                                     <ul id="btnDangNhap" class="uldangnhap" runat="server">
                                              <li class="lidangnhap">
                                                  <a class="adangnhap" href="~/login.aspx" runat="server">Đăng nhập</a>
                                              </li>
                                          </ul>
 
-                                    <asp:Label ID="UserNameLabel" Visible="false" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server"><%= My.User.Name %></asp:Label>
+                                    <asp:Label ID="lblUserName" Visible="false"  ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server"><%= My.User.Name %></asp:Label>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                    
 
                                 </td>
-                                <td>
+                                <td style="padding-right:80px;">
                                     <div id="horizontalmenu">
                                         <ul>
                                             <li><a class="adangnhap" href="#">Menu</a>
