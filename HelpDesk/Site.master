@@ -56,6 +56,45 @@
         .lidai {
             width:150px;
         }
+
+        .uldangnhap {
+             padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        .lidangnhap {
+            float: left;
+            position: relative;
+            margin:0px;
+            padding: 5px 20px 5px 20px;
+            display: block;
+            border: 0px solid #4484F1;
+            border-style: inset;
+            background-color: #4484F1;
+        }
+
+        .lidangnhap:hover {
+             background-color: red;
+        }     
+
+   .adangnhap {
+    color:white;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration:none;       
+}
+
+    .adangnhap:link, .adangnhap:visited,
+    .adangnhap:active, .adangnhap:hover {
+    color: white;
+    top: 0px;
+    left: 0px;
+    text-decoration:none;
+}
+     .adangnhap:hover {
+        background-color: red;
+    }
     </style>
 </head>
 <body>
@@ -82,35 +121,27 @@
                     <div style="float: right;">
                         <table border="0">
                             <tr>
-                                <td>
-                                    <asp:LoginView ID="haha" runat="server">
-                                        <AnonymousTemplate>
-                                            <asp:Menu ID="Menu1" runat="server" BackColor="#4484F1" ForeColor="White">
-                                                <DynamicHoverStyle BackColor="Red" ForeColor="White" />
-                                                <Items>
-                                                    <asp:MenuItem runat="server" Text="Đăng nhập" Value="MenuDangNhap" NavigateUrl="~/Login.aspx"></asp:MenuItem>
-                                                </Items>
-                                            </asp:Menu>
+                                <td style="padding-right:5px;">
+                                     <ul class="uldangnhap">
+                                             <li class="lidangnhap">
+                                                 <a class="adangnhap" href="~/login.aspx" runat="server">Đăng nhập</a>
+                                             </li>
+                                         </ul>
 
-                                            &nbsp;&nbsp;&nbsp;
-                                         
-                                        </AnonymousTemplate>
-                                        <LoggedInTemplate>
-                                            <asp:Label ID="UserNameLabel" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server"><%= My.User.Name %></asp:Label>
+                                    <asp:Label ID="UserNameLabel" Visible="false" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server"><%= My.User.Name %></asp:Label>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </LoggedInTemplate>
-                                    </asp:LoginView>
+                                   
 
                                 </td>
                                 <td>
                                     <div id="horizontalmenu">
                                         <ul>
-                                            <li><a class="menua" href="#">Menu</a>
+                                            <li><a class="adangnhap" href="#">Menu</a>
                                                 <ul>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Thêm câu hỏi</a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Kiểm tra chữ ký số</a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Kiểm tra chữ ký số</a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="menua" href="#">Kiểm tra chữ ký số</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Thêm câu hỏi</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Kiểm tra chữ ký số</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Kiểm tra chữ ký số</a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 150px;"><a class="adangnhap" href="#">Kiểm tra chữ ký số</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

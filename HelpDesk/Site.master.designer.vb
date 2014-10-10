@@ -50,13 +50,13 @@ Partial Public Class Site
     Protected WithEvents txtTimKiem As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''haha control.
+    '''UserNameLabel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents haha As Global.System.Web.UI.WebControls.LoginView
+    Protected WithEvents UserNameLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''MainContent control.
