@@ -12,7 +12,7 @@ Partial Public Class ThemCauHoi
         'End If
 
         If IsPostBack = False Then
-            t.clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
+            clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
         End If
 
         If IsPostBack = False Then
@@ -23,7 +23,7 @@ Partial Public Class ThemCauHoi
                 Using mainDB As New t.tDBContext
                     Dim ch As t.CAUHOI = mainDB.CAUHOIs.GetObject(String.Format("CH_ID={0}", intCH_ID))
                     If ch IsNot Nothing Then
-                        t.clsAll.BindData(ch, tblCauHoi)
+                        clsAll.BindData(ch, tblCauHoi)
                         Me.BindData(ch, tblCauHoi)
                         CH_ID.Value = intCH_ID
                     End If
@@ -49,11 +49,11 @@ Partial Public Class ThemCauHoi
 
         Try
             Dim a As New t.CAUHOI
-            t.clsAll.CopyData(tblCauHoi, a)
+            clsAll.CopyData(tblCauHoi, a)
             Me.CopyData(tblCauHoi, a)
-            If String.IsNullOrEmpty(a.CH_CAUHOI_NOIDUNGTRALOI) = False Then
-                a.CH_CAUHOI_NGAYTRALOI = Date.Now
-            End If
+            'If String.IsNullOrEmpty(a.CH_CAUHOI_NOIDUNGTRALOI) = False Then
+            '    a.CH_CAUHOI_NGAYTRALOI = Date.Now
+            'End If
             Dim strFull As String = t.clsAll.CombineProperty(a)
             a.CH_FULLTEXT_SEARCH = strFull + " " + t.clsAll.LoaiBoDau(strFull)
             Using mainDB As New t.tDBContext
@@ -82,7 +82,7 @@ Partial Public Class ThemCauHoi
     End Sub
 
     Protected Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click, btnNhapMoi.Click
-        t.clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
+        clsAll.ClearDesignData(tblCauHoi, New t.CAUHOI)
     End Sub
 
     'Copy data riêng cho một số trường hợp đặc biệt

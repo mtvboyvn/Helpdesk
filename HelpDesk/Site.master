@@ -145,10 +145,10 @@
                                         <ul>
                                             <li><a class="adangnhap" href="#">Menu</a>
                                                 <ul>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="~/login.aspx" runat="server"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="#"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="#"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
-                                                    <li style="border-bottom: solid 1px white; width: 150px;height:30px;"><a class="adangnhap" href="#"><nobr>Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 220px;height:30px;"><a class="adangnhap" href="~/Controls/ThemCauHoi.aspx" runat="server"><nobr>Thêm câu hỏi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 220px;height:30px;"><a class="adangnhap" href="~/ThongtinCKS.aspx" runat="server"><nobr>Thông tin chữ ký số&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 220px;height:30px;"><a class="adangnhap" href="~/Doiten.aspx" runat="server"><nobr>Đổi tên đơn vị&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
+                                                    <li style="border-bottom: solid 1px white; width: 220px;height:30px;"><a class="adangnhap" href="~/Default.aspx"><nobr>Tình trạng chuyển sang VNACCS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></a></li>
                                                 </ul>
                                             </li>
                                         </ul>

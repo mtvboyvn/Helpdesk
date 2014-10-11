@@ -172,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Class1.vb" />
+    <Compile Include="Class\clsAll.vb" />
     <Compile Include="Controls\tDateTime.ascx.designer.vb">
       <DependentUpon>tDateTime.ascx</DependentUpon>
     </Compile>

@@ -320,13 +320,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label14 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''tDateTime1 control.
+    '''CH_CAUHOI_NGAYHOI control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents tDateTime1 As Global.HelpDesk.tDateTime
+    Protected WithEvents CH_CAUHOI_NGAYHOI As Global.HelpDesk.tDateTime
 
     '''<summary>
     '''Label15 control.
@@ -338,13 +338,13 @@ Partial Public Class ThemCauHoi
     Protected WithEvents Label15 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''RadDateInput2 control.
+    '''CH_CAUHOI_NGAYTRALOI control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadDateInput2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents CH_CAUHOI_NGAYTRALOI As Global.HelpDesk.tDateTime
 
     '''<summary>
     '''Label8 control.

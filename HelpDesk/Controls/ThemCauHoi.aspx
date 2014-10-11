@@ -169,7 +169,7 @@
                         </nobr>
                 </td>
                 <td >
-                    <uc1:tDateTime ID="tDateTime1" runat="server" />
+                    <uc1:tDateTime ID="CH_CAUHOI_NGAYHOI" runat="server" />
                  </td>
                 <td style="width:1px;text-align:right;vertical-align:top;">
                     <nobr>
@@ -177,7 +177,7 @@
                         </nobr>
                  </td>
                 <td>
-                    &nbsp;<asp:TextBox ID="RadDateInput2" Runat="server" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy" Width="200px"></asp:TextBox>
+                    <uc1:tDateTime ID="CH_CAUHOI_NGAYTRALOI" runat="server" />
                  </td>
             </tr>
              <tr>
