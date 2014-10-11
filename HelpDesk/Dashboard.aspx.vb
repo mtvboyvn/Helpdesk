@@ -66,8 +66,8 @@
     Private Sub SelectTop100()
         Try
             Using mainDB As New t.tDBContext
-                Dim l As New List(Of t.CAUHOI)
-                Dim dt100 As DataTable = mainDB.CAUHOIs.GetList("TOP 100 *", "")
+                'Dim l As New List(Of t.CAUHOI)                
+                Dim dt100 As DataTable = mainDB.CAUHOIs.GetList("TOP 100 *", "", "CH_CAUHOI_NGAYHOI DESC")
                 ' l = t.clsAll.DataTable2ListObjects(Of t.CAUHOI)(dt100)           
                 ListView1.DataSource = dt100
                 ListView1.DataBind()
