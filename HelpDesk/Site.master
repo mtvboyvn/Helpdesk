@@ -122,6 +122,9 @@
                     <asp:Panel runat="server" ID="Panel1">
                         <asp:TextBox ID="txtTimKiem" runat="server" Font-Size="1.2em" Width="600px" CssClass="txtTimKiem"></asp:TextBox>
 
+                        <cc1:TextBoxWatermarkExtender  ID="txtTimKiem_TextBoxWatermarkExtender" runat="server" Enabled="True" TargetControlID="txtTimKiem" WatermarkText="Tìm kiếm theo câu hỏi hoặc từ khóa bất kỳ" WatermarkCssClass="chumo">
+                        </cc1:TextBoxWatermarkExtender>
+
                     </asp:Panel>
                 </td>
                 <td>

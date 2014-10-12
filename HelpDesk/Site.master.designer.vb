@@ -59,6 +59,15 @@ Partial Public Class Site
     Protected WithEvents txtTimKiem As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''txtTimKiem_TextBoxWatermarkExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTimKiem_TextBoxWatermarkExtender As Global.AjaxControlToolkit.TextBoxWatermarkExtender
+
+    '''<summary>
     '''btnDangNhap control.
     '''</summary>
     '''<remarks>
