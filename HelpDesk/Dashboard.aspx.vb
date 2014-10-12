@@ -2,7 +2,7 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Init(sender As Object, e As EventArgs) Handles Me.Init
-        Dim txt As TextBox = Me.Master.FindControl("txtTimKiem")
+        Dim txt As TextBox = Me.Master.FindControl("myTextBox")
         If txt IsNot Nothing Then
             'txt.Text = Me.Request.QueryString("Q")
             Page.SetFocus(txt)
@@ -20,7 +20,7 @@
             Return
         End If
 
-        Dim txt As TextBox = Me.Master.FindControl("txtTimKiem")
+        Dim txt As TextBox = Me.Master.FindControl("myTextBox")
         If txt IsNot Nothing Then
             txt.Text = Me.Request.QueryString("Q")
             'ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "txtTimKiem", "$get('" + txt.ClientID + "').focus();$get('" + txt.ClientID + "').select();", True)

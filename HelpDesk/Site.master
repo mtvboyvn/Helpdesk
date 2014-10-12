@@ -129,7 +129,7 @@
                 CompletionInterval="1000"
                 EnableCaching="true"
                 CompletionSetCount="10"
-               FirstRowSelected="true"
+               FirstRowSelected="false"
                 DelimiterCharacters=";, :">
                 <Animations>
                     <OnShow>
