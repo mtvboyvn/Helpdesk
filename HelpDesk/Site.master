@@ -1,11 +1,8 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="true" Inherits="HelpDesk.Site" CodeBehind="Site.master.vb" %>
-
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-
-
-
-
-
+<%@ Register
+    Assembly="AjaxControlToolkit"
+    Namespace="AjaxControlToolkit"
+    TagPrefix="cc1" %>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -106,7 +103,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></cc1:ToolkitScriptManager>
+        <cc1:ToolkitScriptManager runat="server" ID="ScriptManager1" />
        
 
         <table border="0" width="100%" style="text-align: left; margin-top: 1em;">
@@ -120,9 +117,57 @@
                 </td>
                 <td style="width: 610px;">
                     <asp:Panel runat="server" ID="Panel1">
-                        <asp:TextBox ID="txtTimKiem" runat="server" Font-Size="1.2em" Width="600px" CssClass="txtTimKiem"></asp:TextBox>
-
-                        <cc1:TextBoxWatermarkExtender  ID="txtTimKiem_TextBoxWatermarkExtender" runat="server" Enabled="True" TargetControlID="txtTimKiem" WatermarkText="Tìm kiếm theo câu hỏi hoặc từ khóa bất kỳ" WatermarkCssClass="chumo">
+                          <asp:TextBox runat="server" ID="myTextBox" Font-Size="1.2em" Width="600px" CssClass="txtTimKiem" autocomplete="off" />
+            <cc1:AutoCompleteExtender
+                runat="server" 
+                BehaviorID="AutoCompleteEx"
+                ID="autoComplete1" 
+                TargetControlID="myTextBox"
+                ServicePath="AutoComplete.asmx" 
+                ServiceMethod="GetCompletionList"
+                MinimumPrefixLength="2" 
+                CompletionInterval="1000"
+                EnableCaching="true"
+                CompletionSetCount="20"
+                CompletionListCssClass="autocomplete_completionListElement" 
+                CompletionListItemCssClass="autocomplete_listItem" 
+                CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
+                DelimiterCharacters=";, :">
+                <Animations>
+                    <OnShow>
+                        <Sequence>
+                            <%-- Make the completion list transparent and then show it --%>
+                            <OpacityAction Opacity="0" />
+                            <HideAction Visible="true" />
+                            
+                            <%--Cache the original size of the completion list the first time
+                                the animation is played and then set it to zero --%>
+                            <ScriptAction Script="
+                                // Cache the size and setup the initial size
+                                var behavior = $find('AutoCompleteEx');
+                                if (!behavior._height) {
+                                    var target = behavior.get_completionList();
+                                    behavior._height = target.offsetHeight - 2;
+                                    target.style.height = '0px';
+                                }" />
+                            
+                            <%-- Expand from 0px to the appropriate size while fading in --%>
+                            <Parallel Duration=".4">
+                                <FadeIn />
+                                <Length PropertyKey="height" StartValue="0" EndValueScript="$find('AutoCompleteEx')._height" />
+                            </Parallel>
+                        </Sequence>
+                    </OnShow>
+                    <OnHide>
+                        <%-- Collapse down to 0px and fade out --%>
+                        <Parallel Duration=".4">
+                            <FadeOut />
+                            <Length PropertyKey="height" StartValueScript="$find('AutoCompleteEx')._height" EndValue="0" />
+                        </Parallel>
+                    </OnHide>
+                </Animations>
+            </cc1:AutoCompleteExtender>
+  <cc1:TextBoxWatermarkExtender  ID="txtTimKiem_TextBoxWatermarkExtender" runat="server" Enabled="True" TargetControlID="myTextBox" WatermarkText="Tìm kiếm theo câu hỏi hoặc từ khóa bất kỳ" WatermarkCssClass="chumo">
                         </cc1:TextBoxWatermarkExtender>
 
                     </asp:Panel>

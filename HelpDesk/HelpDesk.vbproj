@@ -105,6 +105,7 @@
   <ItemGroup>
     <Content Include="App_Data\CAUHOI.sql" />
     <Content Include="App_Data\HelpDesk.mdb" />
+    <Content Include="AutoComplete.asmx" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -172,6 +173,10 @@
     <Content Include="Doiten.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoComplete.asmx.vb">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class\Class1.vb" />
     <Compile Include="Class\clsAll.vb" />
     <Compile Include="Controls\tDateTime.ascx.designer.vb">
@@ -295,10 +300,6 @@
       <DependentUpon>ThongtinCKS.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="WebService.asmx.vb">
-      <DependentUpon>WebService.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -329,7 +330,6 @@
     <Content Include="Styles.css" />
     <Content Include="TaikhoanQT.aspx" />
     <Content Include="ThongtinCKS.aspx" />
-    <Content Include="WebService.asmx" />
     <Content Include="web__.config" />
     <Content Include="web.config" />
     <None Include="My Project\Application.myapp">

@@ -32,13 +32,13 @@ Partial Public Class Site
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''ToolkitScriptManager1 control.
+    '''ScriptManager1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ToolkitScriptManager1 As Global.AjaxControlToolkit.ToolkitScriptManager
+    Protected WithEvents ScriptManager1 As Global.AjaxControlToolkit.ToolkitScriptManager
 
     '''<summary>
     '''Panel1 control.
@@ -50,13 +50,22 @@ Partial Public Class Site
     Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''txtTimKiem control.
+    '''myTextBox control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtTimKiem As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents myTextBox As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''autoComplete1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents autoComplete1 As Global.AjaxControlToolkit.AutoCompleteExtender
 
     '''<summary>
     '''txtTimKiem_TextBoxWatermarkExtender control.
