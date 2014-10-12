@@ -126,7 +126,7 @@
                 ServicePath="AutoComplete.asmx" 
                 ServiceMethod="GetCompletionList"
                 MinimumPrefixLength="1" 
-                CompletionInterval="1000"
+                CompletionInterval="100"
                 EnableCaching="true"
                 CompletionSetCount="10"
                FirstRowSelected="false"
