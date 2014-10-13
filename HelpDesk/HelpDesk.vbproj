@@ -279,6 +279,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="DataBaseHelper\SQLHelper.vb" />
+    <Compile Include="ServicesMonitoring.aspx.designer.vb">
+      <DependentUpon>ServicesMonitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesMonitoring.aspx.vb">
+      <DependentUpon>ServicesMonitoring.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Site.master.designer.vb">
       <DependentUpon>Site.master</DependentUpon>
     </Compile>
@@ -327,6 +334,7 @@
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="ServicesMonitoring.aspx" />
     <Content Include="Styles.css" />
     <Content Include="TaikhoanQT.aspx" />
     <Content Include="ThongtinCKS.aspx" />
