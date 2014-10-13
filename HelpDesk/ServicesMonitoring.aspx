@@ -24,7 +24,26 @@
                                      <asp:Button ID="btnUpdate" runat="server" Text="Refesh" OnClick="btnUpdate_Click" />
                                  <asp:Label ID="lblUpdate" runat="server" Text=""></asp:Label>
                                 <hr />
-                                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" EnableModelValidation="True">
+                                    <Columns>
+                                        <asp:BoundField DataField="COMPUTER_NAME" HeaderText="Computer Name" />
+                                        <asp:BoundField DataField="APP_TYPE" HeaderText="APP_TYPE" />
+                                        <asp:BoundField DataField="SERVICES_NAME" HeaderText="Service Name" />
+                                        <asp:BoundField DataField="APP_NAME" HeaderText="App Name" />
+                                        <asp:BoundField DataField="SERVICES_TYPE" HeaderText="Service Type" />
+                                        <asp:BoundField DataField="NGAY_INSERT" HeaderText="Online Date" />
+                                       
+                                        <asp:TemplateField HeaderText="Online Status">
+                                            <ItemTemplate>
+                                                <div style="padding:2px;margin-right:4px;">
+                                                <asp:Label ID="Label1" ForeColor="White" Width="100%" style="padding:2px;"
+                                                     BackColor='<%# System.Drawing.Color.FromName(Eval("MCOLOR").ToString())%>'
+                                                    runat="server" Text='<%#Eval("MCOLOR")%>'></asp:Label>
+                                                </div> 
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                     </asp:GridView>
                             </div>
                         </ContentTemplate>
                         <Triggers>

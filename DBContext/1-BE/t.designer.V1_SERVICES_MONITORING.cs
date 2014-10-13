@@ -150,23 +150,23 @@ namespace t
 			}
 		}
 
-		private string m_COLOR;
+		private string m_MCOLOR;
 		/// <summary>
-		/// COLOR.
+		/// MCOLOR.
 		/// </summary>
-		public string COLOR
+		public string MCOLOR
 		{
 			get
 			{
-				return m_COLOR;
+				return m_MCOLOR;
 			}
 			set
 			{
-				if ((this.m_COLOR != value))
+				if ((this.m_MCOLOR != value))
 				{
-					this.SendPropertyChanging("COLOR");
-					this.m_COLOR = value;
-					this.SendPropertyChanged("COLOR");
+					this.SendPropertyChanging("MCOLOR");
+					this.m_MCOLOR = value;
+					this.SendPropertyChanged("MCOLOR");
 				}
 			}
 		}
@@ -191,11 +191,11 @@ namespace t
 				case DBManagement.SQL:
 				case DBManagement.SQLLite:
 				default:
-				sbSQL.Append(clsDAL.SelectField("[COMPUTER_NAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[APP_TYPE]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[SERVICES_NAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[APP_NAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[SERVICES_TYPE]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[NGAY_INSERT]", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[COLOR]", ProType.OTHER, this.DataManagement));
+				sbSQL.Append(clsDAL.SelectField("[COMPUTER_NAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[APP_TYPE]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[SERVICES_NAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[APP_NAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[SERVICES_TYPE]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[NGAY_INSERT]", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[MCOLOR]", ProType.OTHER, this.DataManagement));
 				break;
 				 
 				case DBManagement.Oracle:
-				sbSQL.Append(clsDAL.SelectField("COMPUTER_NAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("APP_TYPE", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("SERVICES_NAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("APP_NAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("SERVICES_TYPE", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("NGAY_INSERT", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("COLOR", ProType.OTHER, this.DataManagement));
+				sbSQL.Append(clsDAL.SelectField("COMPUTER_NAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("APP_TYPE", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("SERVICES_NAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("APP_NAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("SERVICES_TYPE", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("NGAY_INSERT", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("MCOLOR", ProType.OTHER, this.DataManagement));
 				break;
 			}
 			return SelectStatement(sbSQL.ToString(), WhereClause, OrderClause);
