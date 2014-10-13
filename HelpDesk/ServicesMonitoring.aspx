@@ -11,7 +11,7 @@
 <body>
     <form id="form1" runat="server">
         <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></cc1:ToolkitScriptManager>
-
+        <asp:Timer ID="timer1" runat="server" Interval="10000" OnTick="btnUpdate_Click"></asp:Timer>
     <div style="width:100%;background-color:green;text-align:center;">
         <span style="font-family:'Segoe UI';font-size:x-large;color:white;"><b>WIN/WEB SERVICES MONITORING</b></span>
     </div>
@@ -27,13 +27,14 @@
                             </div>
                         </ContentTemplate>
                         <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="timer1" EventName="Tick" />
                             <asp:AsyncPostBackTrigger ControlID="btnUpdate" EventName="Click" />
                         </Triggers>
                     </asp:UpdatePanel>
                 </div>
             </div>
 
-        <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
+        <asp:Button ID="btnUpdate" runat="server" Text="Refesh" OnClick="btnUpdate_Click" />
         
         <cc1:UpdatePanelAnimationExtender ID="upae" BehaviorID="animation" runat="server" TargetControlID="update">
             <Animations>
