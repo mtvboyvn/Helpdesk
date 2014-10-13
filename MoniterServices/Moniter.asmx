@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="VB" CodeBehind="Moniter.asmx.vb" Class="MoniterServices.Service1" %>
