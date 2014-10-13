@@ -50,6 +50,15 @@ Partial Public Class ServicesMonitoring
     Protected WithEvents update As Global.System.Web.UI.UpdatePanel
 
     '''<summary>
+    '''btnUpdate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''lblUpdate control.
     '''</summary>
     '''<remarks>
@@ -59,13 +68,13 @@ Partial Public Class ServicesMonitoring
     Protected WithEvents lblUpdate As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''btnUpdate control.
+    '''GridView1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''upae control.

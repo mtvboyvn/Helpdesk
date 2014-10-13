@@ -114,6 +114,36 @@ namespace t
 		}
 
 		/// <summary>
+		/// Thuộc tính đại diện cho bảng V1_SERVICES_MONITORING.
+		/// </summary>
+		public DBView<V1_SERVICES_MONITORING> V1_SERVICES_MONITORINGs
+		{
+			get
+			{
+				return GetView<V1_SERVICES_MONITORING>();
+			}
+		}
+		/// <summary>
+		/// Thuộc tính đại diện cho bảng SV.
+		/// </summary>
+		public DBTable<SV> SVs
+		{
+			get
+			{
+				return GetTable<SV>();
+			}
+		}
+		/// <summary>
+		/// Thuộc tính đại diện cho bảng DM_SV.
+		/// </summary>
+		public DBTable<DM_SV> DM_SVs
+		{
+			get
+			{
+				return GetTable<DM_SV>();
+			}
+		}
+		/// <summary>
 		/// Thuộc tính đại diện cho bảng CAUHOI.
 		/// </summary>
 		public DBTable<CAUHOI> CAUHOIs

@@ -16,14 +16,15 @@
         <span style="font-family:'Segoe UI';font-size:x-large;color:white;"><b>WIN/WEB SERVICES MONITORING</b></span>
     </div>
        
-         <div style="border: dashed 1px #222222;">
-                <div id="up_container" style="background-color: #40669A;">
+         <div style="border: dashed 0px #222222;">
+                <div id="up_container" style="background-color: #f1f1f1;height:90%;">
                     <asp:UpdatePanel ID="update" runat="server">
                         <ContentTemplate>
-                            <div id="background" style="text-align: center; vertical-align: middle; line-height: 44px; padding: 12px; height: 44px; color: #FFFFFF;">
-                                <asp:Label ID="lblUpdate" runat="server" Style="padding: 5px; font-size: 14px; font-weight: bold;">
-                                    4/28/1906 12:00:00 AM
-                                </asp:Label>
+                            <div id="background" style="text-align:left; vertical-align: top; padding: 5px; color: black;">
+                                     <asp:Button ID="btnUpdate" runat="server" Text="Refesh" OnClick="btnUpdate_Click" />
+                                 <asp:Label ID="lblUpdate" runat="server" Text=""></asp:Label>
+                                <hr />
+                                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
                             </div>
                         </ContentTemplate>
                         <Triggers>
@@ -32,10 +33,7 @@
                         </Triggers>
                     </asp:UpdatePanel>
                 </div>
-            </div>
-
-        <asp:Button ID="btnUpdate" runat="server" Text="Refesh" OnClick="btnUpdate_Click" />
-        
+            </div>        
         <cc1:UpdatePanelAnimationExtender ID="upae" BehaviorID="animation" runat="server" TargetControlID="update">
             <Animations>
                 <OnUpdating>
@@ -77,7 +75,7 @@
                             </Condition>
                             <Condition ConditionScript="true">
                                 <Color AnimationTarget="up_container" PropertyKey="backgroundColor"
-                                    StartValue="#FF0000" EndValue="#40669A" />
+                                    StartValue="#FF0000" EndValue="#f1f1f1" />
                             </Condition>
                         </Parallel>
                         
@@ -89,6 +87,15 @@
                 </OnUpdated>
             </Animations>
         </cc1:UpdatePanelAnimationExtender>
+
+         <footer>             
+            <div class="content-wrapper">
+                <div class="float-left">
+                     <hr />
+                    <p>&copy; 2014- Trung tâm quản lý và vận hành hệ thống CNTT - Tổng Cục Hải Quan</p>
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>
