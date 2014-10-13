@@ -32,10 +32,7 @@
                     </asp:UpdatePanel>
                 </div>
             </div>
-         Choose the effects, then press 'Update':<br />
-        <input type="checkbox" id="effect_fade" checked="checked" /><label for="effect_fade">Fade</label><br />
-        <input type="checkbox" id="effect_collapse" checked="checked" /><label for="effect_collapse">Collapse</label><br />
-        <input type="checkbox" id="effect_color" checked="checked" /><label for="effect_color">Color Background</label><br />
+
         <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
         
         <cc1:UpdatePanelAnimationExtender ID="upae" BehaviorID="animation" runat="server" TargetControlID="update">
@@ -47,22 +44,19 @@
                         
                         <%-- Disable all the controls --%>
                         <Parallel duration="0">
-                            <EnableAction AnimationTarget="btnUpdate" Enabled="false" />
-                            <EnableAction AnimationTarget="effect_color" Enabled="false" />
-                            <EnableAction AnimationTarget="effect_collapse" Enabled="false" />
-                            <EnableAction AnimationTarget="effect_fade" Enabled="false" />
+                            <EnableAction AnimationTarget="btnUpdate" Enabled="false" />                          
                         </Parallel>
                         <StyleAction Attribute="overflow" Value="hidden" />
                         
                         <%-- Do each of the selected effects --%>
                         <Parallel duration=".25" Fps="30">
-                            <Condition ConditionScript="$get('effect_fade').checked">
+                            <Condition ConditionScript="true">
                                 <FadeOut AnimationTarget="up_container" minimumOpacity=".2" />
                             </Condition>
-                            <Condition ConditionScript="$get('effect_collapse').checked">
+                            <Condition ConditionScript="false">
                                 <Resize Height="0" />
                             </Condition>
-                            <Condition ConditionScript="$get('effect_color').checked">
+                            <Condition ConditionScript="true">
                                 <Color AnimationTarget="up_container" PropertyKey="backgroundColor"
                                     EndValue="#FF0000" StartValue="#40669A" />
                             </Condition>
@@ -73,24 +67,21 @@
                     <Sequence>
                         <%-- Do each of the selected effects --%>
                         <Parallel duration=".25" Fps="30">
-                            <Condition ConditionScript="$get('effect_fade').checked">
+                            <Condition ConditionScript="true">
                                 <FadeIn AnimationTarget="up_container" minimumOpacity=".2" />
                             </Condition>
-                            <Condition ConditionScript="$get('effect_collapse').checked">
+                            <Condition ConditionScript="false">
                                 <%-- Get the stored height --%>
                                 <Resize HeightScript="$find('animation')._originalHeight" />
                             </Condition>
-                            <Condition ConditionScript="$get('effect_color').checked">
+                            <Condition ConditionScript="true">
                                 <Color AnimationTarget="up_container" PropertyKey="backgroundColor"
                                     StartValue="#FF0000" EndValue="#40669A" />
                             </Condition>
                         </Parallel>
                         
                         <%-- Enable all the controls --%>
-                        <Parallel duration="0">
-                            <EnableAction AnimationTarget="effect_fade" Enabled="true" />
-                            <EnableAction AnimationTarget="effect_collapse" Enabled="true" />
-                            <EnableAction AnimationTarget="effect_color" Enabled="true" />
+                        <Parallel duration="0">                          
                             <EnableAction AnimationTarget="btnUpdate" Enabled="true" />
                         </Parallel>                            
                     </Sequence>
