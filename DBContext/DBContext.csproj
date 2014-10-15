@@ -7,7 +7,7 @@
     <ProjectGuid>{B76CAB74-26C4-4E35-AB72-D33FBB2323A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tHelpDesk</RootNamespace>
+    <RootNamespace>t</RootNamespace>
     <AssemblyName>DBContext</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
