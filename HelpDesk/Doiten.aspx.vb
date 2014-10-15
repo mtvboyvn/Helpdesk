@@ -6,11 +6,11 @@ Imports Oracle.DataAccess.Client
 Imports ConvertDB
 Partial Public Class Doiten
     Inherits System.Web.UI.Page
-    Public t2c As String = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.224.176.10)(PORT=1521))(CONNECT_DATA=(SERVER=dedicated)(SERVICE_NAME=thqdn)));User ID=thq;Password=cgetvnrcntndnt; Persist Security Info=True"
-    Public connect As String = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.224.133.100)(PORT=1521))(CONNECT_DATA=(SERVER=dedicated)(SERVICE_NAME=VNACCSORA_EX)));User ID=ECUSTOMS_COREDB;Password=ECUSTOMS_COREDB; Persist Security Info=True"
-    Public Urrcore As String = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=tchq-scan.tongcuc.haiquan.vn)(PORT=1521))(CONNECT_DATA=(SERVER=dedicated)(SERVICE_NAME=VNACCSORA_EX)));User ID=VNACCS_URR_Core;Password=VNACCS_URR_Core; Persist Security Info=True"
+    Public t2c As String = ""
+    Public connect As String = ""
+    Public Urrcore As String = ""
 
-    Public ConnectSql As String = "Server=10.224.33.12;Initial Catalog=t2c;User ID=sa;Password=mdcnldlsm"
+    Public ConnectSql As String = ""
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 

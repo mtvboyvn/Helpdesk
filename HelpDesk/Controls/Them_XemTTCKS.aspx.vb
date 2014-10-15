@@ -8,7 +8,7 @@ Imports Microsoft.VisualBasic
 Partial Public Class Them_XemTTCKS
     Inherits System.Web.UI.Page
     Protected Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
-        Dim connect As String = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.224.133.100)(PORT=1521))(CONNECT_DATA=(SERVER=dedicated)(SERVICE_NAME=VNACCSORA_EX)));User ID=ECUSTOMS_COREDB;Password=ECUSTOMS_COREDB; Persist Security Info=True"
+        Dim connect As String = ""
         Dim conn As New OracleConnection(connect)
         conn.Open()
         Dim ds2 As New DataSet
@@ -28,7 +28,7 @@ Partial Public Class Them_XemTTCKS
     End Sub
 
     Public Function Danhsach() As DataSet
-        Dim connect As String = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.224.133.100)(PORT=1521))(CONNECT_DATA=(SERVER=dedicated)(SERVICE_NAME=VNACCSORA_EX)));User ID=ECUSTOMS_COREDB;Password=ECUSTOMS_COREDB; Persist Security Info=True"
+        Dim connect As String = ""
         Dim conn As New OracleConnection(connect)
         conn.Open()
         Dim sql As String = "select * FROM  VNACCS_URR_CORE.DN_ACCOUNT"
