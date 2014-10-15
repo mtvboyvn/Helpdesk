@@ -7,7 +7,7 @@
     <ProjectGuid>{B76CAB74-26C4-4E35-AB72-D33FBB2323A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tHelpDesk</RootNamespace>
+    <RootNamespace>t</RootNamespace>
     <AssemblyName>DBContext</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -68,6 +68,9 @@
     <Compile Include="1-BE\t.designer.cs">
       <DependentUpon>t.cs</DependentUpon>
     </Compile>
+    <Compile Include="1-BE\t.designer.DM_SV.cs" />
+    <Compile Include="1-BE\t.designer.SV.cs" />
+    <Compile Include="1-BE\t.designer.V1_SERVICES_MONITORING.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
