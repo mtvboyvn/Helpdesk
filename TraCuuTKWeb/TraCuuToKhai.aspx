@@ -183,11 +183,41 @@
                             </cc1:TabPanel>
                         </cc1:TabContainer>
                         <div id="background" style="text-align: left; vertical-align: top; padding: 5px; color: black;">
-                            <asp:Button ID="btnDatLenh" runat="server" Text="Đặt lệnh tra cứu" OnClick="btnDatLenh_Click" />
-                            <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click" />
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="width:1px;">
+    <asp:Button ID="btnDatLenh" runat="server" Text="Đặt lệnh tra cứu" OnClick="btnDatLenh_Click" />
+                                    </td>
+ <td style="width:1px;">
+  <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click" />
+    
+                                     </td>
+                                    <td style="width:1px;">
+                                          <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="update" DynamicLayout="true">
+                        <ProgressTemplate>
+                            <nobr>
+                            <asp:Label ID="Label1" runat="server" BackColor="Yellow" Font-Bold="true" Font-Size="Large" Text="Đang xử lý dữ liệu, vui lòng đợi..."></asp:Label>
+                            </nobr>
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+                                    </td>
+ <td>
+
+   <div id="divMSG">
+      
+
                             <asp:Label ID="lblUpdate" runat="server" Text=""></asp:Label>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblMSG" runat="server" BackColor="Yellow" Text="Thông báo:"></asp:Label>
+                                </div>
+                                    </td>
+                                </tr>
+                               
+                                
+                            </table>
+                        
+                          
+                         
                             <hr />
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" EnableModelValidation="True">
                                 <Columns>
@@ -202,10 +232,8 @@
                                     <asp:BoundField DataField="RP_EXPORTDATE" HeaderText="Ngày xuất kết quả tra cứu" />
                                      <asp:TemplateField HeaderText="Tải về KQ tra cứu">
                                         <ItemTemplate>
-                                            <div style="padding: 2px; margin-right: 4px;">
-                                                <asp:Label ID="Label1" ForeColor="White" Width="100%" Style="padding: 2px;"
-                                                    
-                                                    runat="server" Text='<%#Eval("RP_FILEPATH")%>'></asp:Label>
+                                            <div style="padding: 2px; margin-right: 4px;">                                               
+                                                <a  style="padding: 2px;" href='<%#Eval("RP_FILEPATH")%>' runat="server"><%#Eval("RP_FILEPATH")%></a>
                                             </div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
@@ -214,6 +242,7 @@
                                 </Columns>
                             </asp:GridView>
                         </div>
+                      
                     </ContentTemplate>
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="timer1" EventName="Tick" />
@@ -231,20 +260,21 @@
                         
                         <%-- Disable all the controls --%>
                         <Parallel duration="0">
-                            <EnableAction AnimationTarget="btnUpdate" Enabled="false" />                          
+                            <EnableAction AnimationTarget="btnUpdate" Enabled="false" />   
+                            <EnableAction AnimationTarget="btnDatLenh" Enabled="false" />                                                    
                         </Parallel>
                         <StyleAction Attribute="overflow" Value="hidden" />
                         
                         <%-- Do each of the selected effects --%>
                         <Parallel duration=".25" Fps="30">
                             <Condition ConditionScript="true">
-                                <FadeOut AnimationTarget="up_container" minimumOpacity=".2" />
+                                <FadeOut AnimationTarget="divMSG" minimumOpacity=".2" />
                             </Condition>
                             <Condition ConditionScript="false">
-                                <Resize Height="0" />
+                                <Resize Height="0" />                               
                             </Condition>
                             <Condition ConditionScript="true">
-                                <Color AnimationTarget="up_container" PropertyKey="backgroundColor"
+                                <Color AnimationTarget="divMSG" PropertyKey="backgroundColor"
                                     EndValue="#FF0000" StartValue="#40669A" />
                             </Condition>
                         </Parallel>
@@ -255,14 +285,14 @@
                         <%-- Do each of the selected effects --%>
                         <Parallel duration=".25" Fps="30">
                             <Condition ConditionScript="true">
-                                <FadeIn AnimationTarget="up_container" minimumOpacity=".2" />
+                                <FadeIn AnimationTarget="divMSG" minimumOpacity=".2" />
                             </Condition>
                             <Condition ConditionScript="false">
                                 <%-- Get the stored height --%>
                                 <Resize HeightScript="$find('animation')._originalHeight" />
                             </Condition>
                             <Condition ConditionScript="true">
-                                <Color AnimationTarget="up_container" PropertyKey="backgroundColor"
+                                <Color AnimationTarget="divMSG" PropertyKey="backgroundColor"
                                     StartValue="#FF0000" EndValue="#f1f1f1" />
                             </Condition>
                         </Parallel>
@@ -270,6 +300,7 @@
                         <%-- Enable all the controls --%>
                         <Parallel duration="0">                          
                             <EnableAction AnimationTarget="btnUpdate" Enabled="true" />
+                            <EnableAction AnimationTarget="btnDatLenh" Enabled="true" />
                         </Parallel>                            
                     </Sequence>
                 </OnUpdated>

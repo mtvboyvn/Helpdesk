@@ -26,6 +26,7 @@ namespace t
         {
             try
             {
+                System.Threading.Thread.Sleep(5000);
                 using (tDBContext mainDB = new tDBContext())
                 {                   
                     GridView1.DataSource = mainDB.SREPORTs.GetList("",string.Format("RP_USERNAME='{0}'", Session[ct.USERNAME]),"RP_CREATEDATE DESC");
@@ -50,6 +51,7 @@ namespace t
         {
             try
             {
+                System.Threading.Thread.Sleep(5000);
                 using (tDBContext mainDB = new tDBContext())
                 {
                     SREPORT rp = new SREPORT();
