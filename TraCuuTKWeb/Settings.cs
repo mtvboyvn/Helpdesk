@@ -13,7 +13,7 @@ namespace t
         //public static string AccessDBDir = Server.MapPath("~");
         public static string sqlSTRINGADO = "Data Source=.\\SQL2012ENT;Initial Catalog=HelpDesk;User ID=sa;pwd=1";
         public static string sqlSTRINGADO_MONITORING = "Data Source=.\\SQL2012ENT;Initial Catalog=TTDL;User ID=sa;pwd=1";
-        public static string sqlSTRINGOLE = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\HelpDesk.mdb;Persist Security Info=True;Jet OLEDB:Database Password=tuyenchim";
+        public static string sqlSTRINGOLE = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\DesignDB.mdb;Persist Security Info=True;Jet OLEDB:Database Password=tuyenchim";
         public static string sqlSTRINGLITE = "Data Source= |DataDirectory|NACCS.VN.db;Version=3;New=False;Compress=True;";
         public static string sqlSTRINGORACLE = "Data Source=//localhost:1521/orcl;User ID=thelpdesk;pwd=1";
         //public static string sqlSTRINGORACLE = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;

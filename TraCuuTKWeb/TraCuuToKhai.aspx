@@ -6,18 +6,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+   
 </head>
 <body>
     <form id="form1" runat="server">
         <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></cc1:ToolkitScriptManager>
         <asp:Timer ID="timer1" runat="server" Interval="1000000" OnTick="btnUpdate_Click"></asp:Timer>
         <div style="width: 100%; background-color: #215a9d; text-align: center;">
-            <div>
-                <span style="font-family: 'Segoe UI'; font-size: x-large; color: white;"><b>TRA CỨU TỜ KHAI</b></span>
-            </div>
-            <div style="text-align: right; float: right;">
-                <span style="font-family: 'Segoe UI'; color: white;">TuyenHM</span>
-            </div>
+            <table style="width:100%;border-collapse:collapse;">
+                <tr>
+                    <td style="width:100%;">
+                         <span style="font-family: 'Segoe UI'; font-size: x-large; color: white;"><b>TRA CỨU TỜ KHAI</b></span>
+                    </td>
+                    <td style="width:1px;margin-right:3px;">
+                        <nobr>                            
+                            <asp:LinkButton ID="btnLogOut" OnClick="btnLogOut_Click" ForeColor="White" Font-Bold="true" runat="server"><%=Session["USERNAME"] %> </asp:LinkButton>
+                        </nobr>
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <div style="border: dashed 0px #222222;">
@@ -176,7 +183,7 @@
                             </cc1:TabPanel>
                         </cc1:TabContainer>
                         <div id="background" style="text-align: left; vertical-align: top; padding: 5px; color: black;">
-                            <asp:Button ID="Button1" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click" />
+                            <asp:Button ID="Button1" runat="server" Text="Đặt lệnh tra cứu" OnClick="btnUpdate_Click" />
                             <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click" />
                             <asp:Label ID="lblUpdate" runat="server" Text=""></asp:Label>
                             <hr />
