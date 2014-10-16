@@ -45,7 +45,7 @@
                                                         </nobr>
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 1px red;">
-                                                <asp:TextBox ID="TextBox1" runat="server" Width="100px">999999999999</asp:TextBox>
+                                                <asp:TextBox ID="txtSoTK" runat="server" Width="100px">999999999999</asp:TextBox>
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 1px red;">
                                                 <nobr>
@@ -183,9 +183,11 @@
                             </cc1:TabPanel>
                         </cc1:TabContainer>
                         <div id="background" style="text-align: left; vertical-align: top; padding: 5px; color: black;">
-                            <asp:Button ID="Button1" runat="server" Text="Đặt lệnh tra cứu" OnClick="btnUpdate_Click" />
+                            <asp:Button ID="btnDatLenh" runat="server" Text="Đặt lệnh tra cứu" OnClick="btnDatLenh_Click" />
                             <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click" />
                             <asp:Label ID="lblUpdate" runat="server" Text=""></asp:Label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblMSG" runat="server" BackColor="Yellow" Text="Thông báo:"></asp:Label>
                             <hr />
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" EnableModelValidation="True">
                                 <Columns>
