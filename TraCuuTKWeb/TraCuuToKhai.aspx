@@ -191,22 +191,26 @@
                             <hr />
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" EnableModelValidation="True">
                                 <Columns>
-                                    <asp:BoundField DataField="COMPUTER_NAME" HeaderText="Computer Name" />
-                                    <asp:BoundField DataField="APP_TYPE" HeaderText="APP_TYPE" />
-                                    <asp:BoundField DataField="SERVICES_NAME" HeaderText="Service Name" />
-                                    <asp:BoundField DataField="APP_NAME" HeaderText="App Name" />
-                                    <asp:BoundField DataField="SERVICES_TYPE" HeaderText="Service Type" />
-                                    <asp:BoundField DataField="NGAY_INSERT" HeaderText="Online Date" />
-
-                                    <asp:TemplateField HeaderText="Online Status">
+                                    <asp:TemplateField HeaderText="STT">
+                                    <ItemTemplate>
+                                        <%# Container.DataItemIndex + 1 %>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                    <asp:BoundField DataField="RP_ID" HeaderText="RP_ID" />
+                                    <asp:BoundField DataField="RP_USERNAME" HeaderText="Tài khoản" />
+                                    <asp:BoundField DataField="RP_CREATEDATE" HeaderText="Ngày tra cứu" />
+                                    <asp:BoundField DataField="RP_EXPORTDATE" HeaderText="Ngày xuất kết quả tra cứu" />
+                                     <asp:TemplateField HeaderText="Tải về KQ tra cứu">
                                         <ItemTemplate>
                                             <div style="padding: 2px; margin-right: 4px;">
                                                 <asp:Label ID="Label1" ForeColor="White" Width="100%" Style="padding: 2px;"
-                                                    BackColor='<%# System.Drawing.Color.FromName(Eval("MCOLOR").ToString())%>'
-                                                    runat="server" Text='<%#Eval("MCOLOR")%>'></asp:Label>
+                                                    
+                                                    runat="server" Text='<%#Eval("RP_FILEPATH")%>'></asp:Label>
                                             </div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
+                                    <asp:BoundField DataField="RP_DISPLAY" ItemStyle-Width="500px" HeaderText="Điều kiện tra cứu" />
+                                    <asp:BoundField DataField="RP_QUERY"  HeaderText="SQL QUERY" />
                                 </Columns>
                             </asp:GridView>
                         </div>

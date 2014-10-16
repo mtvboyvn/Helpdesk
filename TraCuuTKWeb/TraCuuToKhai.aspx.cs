@@ -18,13 +18,26 @@ namespace t
 
             if (Page.IsPostBack == false)
             {
-                
+                btnUpdate_Click(null, null);
             }
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            lblUpdate.Text = String.Format("Cập nhật lúc: {0}", DateTime.Now);
+            try
+            {
+                using (tDBContext mainDB = new tDBContext())
+                {                   
+                    GridView1.DataSource = mainDB.SREPORTs.GetList("",string.Format("RP_USERNAME='{0}'", Session[ct.USERNAME]),"RP_CREATEDATE DESC");
+                    GridView1.DataBind();
+                }
+                lblUpdate.Text = String.Format("Cập nhật lúc: {0}", DateTime.Now);
+            }
+            catch (Exception ex)
+            {
+                lblUpdate.Text = String.Format("Có lỗi trong quá trình cập nhật dữ liệu, nội dung lỗi: {0}", ex.Message);
+            }
+            
         }
 
         protected void btnLogOut_Click(object sender, EventArgs e)
@@ -52,6 +65,7 @@ namespace t
                     mainDB.SubmitAllChange();
                 }
                 lblMSG.Text = string.Format("Đặt lệnh thành công lúc {0}", DateTime.Now);
+                btnUpdate_Click(null, null);
             }
             catch (Exception ex)
             {
