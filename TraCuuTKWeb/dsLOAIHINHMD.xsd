@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLOAIHINHMD" targetNamespace="http://tempuri.org/dsLOAIHINHMD.xsd" xmlns:mstns="http://tempuri.org/dsLOAIHINHMD.xsd" xmlns="http://tempuri.org/dsLOAIHINHMD.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLOAIHINHMD" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLOAIHINHMD" msprop:Generator_UserDSName="dsLOAIHINHMD">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SLOAIHINHMD" msprop:Generator_TableClassName="SLOAIHINHMDDataTable" msprop:Generator_TableVarName="tableSLOAIHINHMD" msprop:Generator_TablePropName="SLOAIHINHMD" msprop:Generator_RowDeletingName="SLOAIHINHMDRowDeleting" msprop:Generator_RowChangingName="SLOAIHINHMDRowChanging" msprop:Generator_RowEvHandlerName="SLOAIHINHMDRowChangeEventHandler" msprop:Generator_RowDeletedName="SLOAIHINHMDRowDeleted" msprop:Generator_UserTableName="SLOAIHINHMD" msprop:Generator_RowChangedName="SLOAIHINHMDRowChanged" msprop:Generator_RowEvArgName="SLOAIHINHMDRowChangeEvent" msprop:Generator_RowClassName="SLOAIHINHMDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MA_LH" msprop:Generator_ColumnVarNameInTable="columnMA_LH" msprop:Generator_ColumnPropNameInRow="MA_LH" msprop:Generator_ColumnPropNameInTable="MA_LHColumn" msprop:Generator_UserColumnName="MA_LH" type="xs:string" minOccurs="0" />
+              <xs:element name="TEN_LH" msprop:Generator_ColumnVarNameInTable="columnTEN_LH" msprop:Generator_ColumnPropNameInRow="TEN_LH" msprop:Generator_ColumnPropNameInTable="TEN_LHColumn" msprop:Generator_UserColumnName="TEN_LH" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

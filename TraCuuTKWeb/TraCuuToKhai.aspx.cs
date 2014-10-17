@@ -18,7 +18,7 @@ namespace t
 
             if (Page.IsPostBack == false)
             {
-                btnUpdate_Click(null, null);
+               // btnUpdate_Click(null, null);
             }
         }
 
@@ -26,7 +26,7 @@ namespace t
         {
             try
             {
-                System.Threading.Thread.Sleep(5000);
+                //System.Threading.Thread.Sleep(5000);
                 using (tDBContext mainDB = new tDBContext())
                 {                   
                     GridView1.DataSource = mainDB.SREPORTs.GetList("",string.Format("RP_USERNAME='{0}'", Session[ct.USERNAME]),"RP_CREATEDATE DESC");
@@ -51,7 +51,7 @@ namespace t
         {
             try
             {
-                System.Threading.Thread.Sleep(5000);
+                //System.Threading.Thread.Sleep(5000);
                 using (tDBContext mainDB = new tDBContext())
                 {
                     SREPORT rp = new SREPORT();
@@ -74,6 +74,43 @@ namespace t
                 lblMSG.Text = string.Format("Đã xảy ra lỗi trong quá trình đặt lệnh, nội dung lỗi: {0}", ex.Message);
             }
           
+        }
+
+        protected void MA_LH_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MA_LH.Text.Trim()) == true)
+            {
+                TEN_LH.SelectedIndex = 0;
+                return;
+            }
+            try
+            {
+                TEN_LH.SelectedValue = MA_LH.Text.Trim().ToUpper();
+                MA_LH.Text = MA_LH.Text.Trim().ToUpper();
+            }
+            catch (Exception ex)
+            {
+                string s = ex.Message;
+                MA_LH.Text = string.Empty;
+                TEN_LH.SelectedIndex = 0;
+            }
+        }
+
+        protected void TEN_LH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TEN_LH.SelectedValue == null)
+            {
+                TEN_LH.SelectedIndex = 0;
+                MA_LH.Text = string.Empty;
+                return;
+            }
+            if (string.IsNullOrEmpty(TEN_LH.SelectedValue.ToString())==true)
+            {
+                TEN_LH.SelectedIndex = 0;
+                MA_LH.Text = string.Empty;
+                return;
+            }
+            MA_LH.Text = TEN_LH.SelectedValue.ToString().ToUpper();
         }
     }
 }
