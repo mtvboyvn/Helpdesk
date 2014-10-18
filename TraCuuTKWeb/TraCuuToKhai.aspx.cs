@@ -89,6 +89,7 @@ namespace t
                     rp.RP_CREATEDATE = DateTime.Now;
                     rp.RP_DISPLAY = string.Format("Số TK: {0}", SOTK.Text);
                     rp.RP_QUERY = TạoTruyVấn(strWhere);
+                    rp.RP_STATUS = "Đang xử lý";
                     mainDB.SREPORTs.InsertOnSubmit(rp);
                     mainDB.SubmitAllChange();
                 }
@@ -108,15 +109,15 @@ namespace t
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
             if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)
             {
-                return string.Format("SIKNO='{0}'", SOTK.Text);
+                return string.Format("V1.SIKNO='{0}'", SOTK.Text);
             }
             return "";
         }
 
         private string TạoTruyVấn(string strWhere)
         {
-            //string strSQL = "SELECT * FROM MVIEW1_TOKHAIMD WHERE {0}";
-            string strSQL = "SELECT * FROM A501A WHERE {0}";
+            string strSQL = "SELECT V1.* FROM (" + t.Properties.Resources.MVIEW1_TOKHAIMD + ") V1 WHERE {0}";
+            //string strSQL = "SELECT * FROM A501A WHERE {0}";
             return string.Format(strSQL, strWhere);
         }
 

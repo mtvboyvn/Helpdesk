@@ -274,6 +274,7 @@
                                     <asp:BoundField DataField="RP_ID" HeaderText="RP_ID" />
                                     <asp:BoundField DataField="RP_USERNAME" HeaderText="Tài khoản" />
                                     <asp:BoundField DataField="RP_CREATEDATE" HeaderText="Ngày tra cứu" />
+                                    <asp:BoundField DataField="RP_STATUS" HeaderText="Trạng thái" />
                                     <asp:BoundField DataField="RP_EXPORTDATE" HeaderText="Ngày xuất kết quả tra cứu" />
                                      <asp:TemplateField HeaderText="Tải về KQ tra cứu">
                                         <ItemTemplate>
@@ -282,7 +283,9 @@
                                             </div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="RP_DISPLAY" ItemStyle-Width="500px" HeaderText="Điều kiện tra cứu" />
+                                    <asp:BoundField DataField="RP_DISPLAY" ItemStyle-Width="500px" HeaderText="Điều kiện tra cứu" >
+                                    <ItemStyle Width="500px" />
+                                    </asp:BoundField>
                                     <asp:BoundField DataField="RP_QUERY"  HeaderText="SQL QUERY" />
                                 </Columns>
                             </asp:GridView>
