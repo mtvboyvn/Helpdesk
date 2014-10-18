@@ -9,7 +9,20 @@ namespace t
 {
     public partial class TraCuuToKhai : System.Web.UI.Page
     {
-        
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            //SOTK.Focus();
+            //Page.SetFocus(SOTK);
+            //Page.Form.DefaultFocus = SOTK.ClientID;
+        }
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            //SOTK.Focus();
+            //Page.SetFocus(SOTK);
+            //Page.Form.DefaultFocus = SOTK.ClientID;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session[ct.USERNAME] == null)
@@ -21,7 +34,9 @@ namespace t
             if (Page.IsPostBack == false)
             {
                
-
+                //SOTK.Focus();
+                //Page.SetFocus(SOTK);
+                //Page.Form.DefaultFocus = SOTK.ClientID;
                // btnUpdate_Click(null, null);
             }
         }
