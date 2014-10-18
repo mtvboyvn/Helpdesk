@@ -45,21 +45,21 @@
                                                         </nobr>
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;">
-                                                <asp:TextBox ID="txtSoTK" runat="server" Width="100px">999999999999</asp:TextBox>
+                                                <asp:TextBox ID="SOTK" runat="server" Width="100px">999999999999</asp:TextBox>
                                             </td>
                                             <td style=" text-align: left; border: solid 0px red;">
                                                 <nobr>
                                                     <asp:Label ID="Label3" runat="server" Text="&nbsp;&nbsp;&nbsp;Ngày ĐK:"></asp:Label>
-                                                        <asp:TextBox ID="TextBox2" runat="server" Width="80px">31/12/2014</asp:TextBox>
-                                                        <cc1:CalendarExtender ID="TextBox2_CalendarExtender" runat="server" Enabled="True" Format="dd/MM/yyyy" TargetControlID="TextBox2">
+                                                        <asp:TextBox ID="NGAYDK_FROM" runat="server" Width="80px">31/12/2014</asp:TextBox>
+                                                        <cc1:CalendarExtender ID="NGAYDK_FROM_CalendarExtender" runat="server" Enabled="True" Format="dd/MM/yyyy" TargetControlID="NGAYDK_FROM">
                                                     </cc1:CalendarExtender>
-                                                    <cc1:MaskedEditExtender ID="TextBox2_MaskedEditExtender" runat="server" ClearMaskOnLostFocus="False" ClearTextOnInvalid="True" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" TargetControlID="TextBox2">
+                                                    <cc1:MaskedEditExtender ID="NGAYDK_FROM_MaskedEditExtender" runat="server" ClearMaskOnLostFocus="False" ClearTextOnInvalid="True" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" TargetControlID="NGAYDK_FROM">
                                                     </cc1:MaskedEditExtender>
                                                         <asp:Label ID="Label6" runat="server" Text="đến:"></asp:Label>
-                                                        <asp:TextBox ID="TextBox3" runat="server" Width="80px">31/12/2014</asp:TextBox>
-                                                        <cc1:CalendarExtender ID="TextBox3_CalendarExtender" runat="server" Enabled="True" Format="dd/MM/yyyy" TargetControlID="TextBox3">
+                                                        <asp:TextBox ID="NGAYDK_TO" runat="server" Width="80px">31/12/2014</asp:TextBox>
+                                                        <cc1:CalendarExtender ID="NGAYDK_TO_CalendarExtender" runat="server" Enabled="True" Format="dd/MM/yyyy" TargetControlID="NGAYDK_TO">
                                                     </cc1:CalendarExtender>
-                                                    <cc1:MaskedEditExtender ID="TextBox3_MaskedEditExtender" runat="server" ClearMaskOnLostFocus="False" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" TargetControlID="TextBox3">
+                                                    <cc1:MaskedEditExtender ID="NGAYDK_TO_MaskedEditExtender" runat="server" ClearMaskOnLostFocus="False" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" TargetControlID="NGAYDK_TO">
                                                     </cc1:MaskedEditExtender>
                                                         </nobr>
                                             </td>
@@ -71,7 +71,7 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;">
                                                 <nobr>
-                                                   <asp:TextBox ID="TextBox8" runat="server" Width="185px"></asp:TextBox>
+                                                   <asp:TextBox ID="MA_HS" runat="server" Width="185px"></asp:TextBox>
                                                         </nobr>
                                             </td>
                                         </tr>
@@ -99,7 +99,7 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;">
                                                 <nobr>
-                                                   <asp:TextBox ID="TextBox9" runat="server" Width="400px"></asp:TextBox>
+                                                   <asp:TextBox ID="TEN_HANG" runat="server" Width="400px"></asp:TextBox>
                                                         </nobr>
                                             </td>
 
@@ -112,8 +112,12 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2">
                                                 <nobr>
-                                                    <asp:TextBox ID="TextBox5" Width="50px" runat="server"></asp:TextBox>
-                                                    <asp:DropDownList ID="DropDownList2" Width="410px" runat="server" Height="22px"></asp:DropDownList>
+                                                    <asp:TextBox ID="MA_CUCHQ" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_CUCHQ_TextChanged"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_CUCHQ" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_CUCHQ_SelectedIndexChanged">
+                                                        <asp:ListItem></asp:ListItem>
+                                                        <asp:ListItem Value="01">Thành phố Hà Nội</asp:ListItem>
+                                                        <asp:ListItem Value="02">Thành phố Hồ Chí Minh</asp:ListItem>
+                                                </asp:DropDownList>
                                                         </nobr>
                                             </td>
 
@@ -124,8 +128,11 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;">
                                                 <nobr>
-                                                   <asp:TextBox ID="TextBox10" runat="server" Width="30px"></asp:TextBox>
-                                                        <asp:DropDownList ID="DropDownList5" runat="server" Height="22px" Width="150px">
+                                                   <asp:TextBox ID="MA_NUOCXNK" runat="server" Width="30px" AutoPostBack="True" OnTextChanged="MA_NUOCXNK_TextChanged"></asp:TextBox>
+                                                        <asp:DropDownList ID="TEN_NUOCXNK" runat="server" Height="22px" Width="150px" AutoPostBack="True" OnSelectedIndexChanged="TEN_NUOCXNK_SelectedIndexChanged">
+                                                            <asp:ListItem></asp:ListItem>
+                                                            <asp:ListItem Value="AF">Afganistan</asp:ListItem>
+                                                            <asp:ListItem Value="AL">Albania</asp:ListItem>
                                                     </asp:DropDownList>
                                                         </nobr>
                                             </td>
@@ -138,8 +145,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2">
                                                 <nobr>
-                                                    <asp:TextBox ID="TextBox7" Width="50px" runat="server"></asp:TextBox>
-                                                    <asp:DropDownList ID="DropDownList4" Width="410px" runat="server" Height="22px"></asp:DropDownList>
+                                                    <asp:TextBox ID="MA_CC" Width="50px" runat="server"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_CC" Width="410px" runat="server" Height="22px"></asp:DropDownList>
                                                         </nobr>
                                             </td>
 
@@ -150,8 +157,11 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;">
                                                 <nobr>
-                                                   <asp:TextBox ID="TextBox13" runat="server" Width="30px"></asp:TextBox>
-                                                        <asp:DropDownList ID="DropDownList6" runat="server" Height="22px" Width="150px">
+                                                   <asp:TextBox ID="MA_NUOCXX" runat="server" Width="30px" AutoPostBack="True" OnTextChanged="MA_NUOCXX_TextChanged"></asp:TextBox>
+                                                        <asp:DropDownList ID="TEN_NUOCXX" runat="server" Height="22px" Width="150px" AutoPostBack="True" OnSelectedIndexChanged="TEN_NUOCXX_SelectedIndexChanged">
+                                                            <asp:ListItem></asp:ListItem>
+                                                            <asp:ListItem Value="AF">Afganistan</asp:ListItem>
+                                                            <asp:ListItem Value="AL">Albania</asp:ListItem>
                                                     </asp:DropDownList>
                                                         </nobr>
                                             </td>
@@ -164,8 +174,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2">
                                                 <nobr>
-                                                    <asp:TextBox ID="TextBox6" Width="100px" runat="server"></asp:TextBox>
-                                                    <asp:DropDownList ID="DropDownList3" Width="360px" runat="server" Height="22px"></asp:DropDownList>
+                                                    <asp:TextBox ID="MA_DONVI" Width="100px" runat="server"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_DONVI" Width="360px" runat="server" Height="22px"></asp:DropDownList>
                                                         </nobr>
                                             </td>
 

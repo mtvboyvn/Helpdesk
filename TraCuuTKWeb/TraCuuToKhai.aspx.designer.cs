@@ -85,13 +85,13 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtSoTK control.
+        /// SOTK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoTK;
+        protected global::System.Web.UI.WebControls.TextBox SOTK;
         
         /// <summary>
         /// Label3 control.
@@ -103,31 +103,31 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextBox2 control.
+        /// NGAYDK_FROM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox NGAYDK_FROM;
         
         /// <summary>
-        /// TextBox2_CalendarExtender control.
+        /// NGAYDK_FROM_CalendarExtender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender TextBox2_CalendarExtender;
+        protected global::AjaxControlToolkit.CalendarExtender NGAYDK_FROM_CalendarExtender;
         
         /// <summary>
-        /// TextBox2_MaskedEditExtender control.
+        /// NGAYDK_FROM_MaskedEditExtender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.MaskedEditExtender TextBox2_MaskedEditExtender;
+        protected global::AjaxControlToolkit.MaskedEditExtender NGAYDK_FROM_MaskedEditExtender;
         
         /// <summary>
         /// Label6 control.
@@ -139,31 +139,31 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// TextBox3 control.
+        /// NGAYDK_TO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox NGAYDK_TO;
         
         /// <summary>
-        /// TextBox3_CalendarExtender control.
+        /// NGAYDK_TO_CalendarExtender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender TextBox3_CalendarExtender;
+        protected global::AjaxControlToolkit.CalendarExtender NGAYDK_TO_CalendarExtender;
         
         /// <summary>
-        /// TextBox3_MaskedEditExtender control.
+        /// NGAYDK_TO_MaskedEditExtender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.MaskedEditExtender TextBox3_MaskedEditExtender;
+        protected global::AjaxControlToolkit.MaskedEditExtender NGAYDK_TO_MaskedEditExtender;
         
         /// <summary>
         /// Label9 control.
@@ -175,13 +175,13 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// TextBox8 control.
+        /// MA_HS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox MA_HS;
         
         /// <summary>
         /// Label4 control.
@@ -220,13 +220,13 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// TextBox9 control.
+        /// TEN_HANG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox TEN_HANG;
         
         /// <summary>
         /// Label5 control.
@@ -238,22 +238,22 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// TextBox5 control.
+        /// MA_CUCHQ control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox MA_CUCHQ;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// TEN_CUCHQ control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList TEN_CUCHQ;
         
         /// <summary>
         /// Label11 control.
@@ -265,22 +265,22 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// TextBox10 control.
+        /// MA_NUOCXNK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox MA_NUOCXNK;
         
         /// <summary>
-        /// DropDownList5 control.
+        /// TEN_NUOCXNK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
+        protected global::System.Web.UI.WebControls.DropDownList TEN_NUOCXNK;
         
         /// <summary>
         /// Label7 control.
@@ -292,22 +292,22 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// TextBox7 control.
+        /// MA_CC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox MA_CC;
         
         /// <summary>
-        /// DropDownList4 control.
+        /// TEN_CC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList TEN_CC;
         
         /// <summary>
         /// Label12 control.
@@ -319,22 +319,22 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// TextBox13 control.
+        /// MA_NUOCXX control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox MA_NUOCXX;
         
         /// <summary>
-        /// DropDownList6 control.
+        /// TEN_NUOCXX control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList6;
+        protected global::System.Web.UI.WebControls.DropDownList TEN_NUOCXX;
         
         /// <summary>
         /// Label8 control.
@@ -346,22 +346,22 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// TextBox6 control.
+        /// MA_DONVI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox MA_DONVI;
         
         /// <summary>
-        /// DropDownList3 control.
+        /// TEN_DONVI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList TEN_DONVI;
         
         /// <summary>
         /// Label13 control.
