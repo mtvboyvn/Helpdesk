@@ -72,12 +72,20 @@ namespace TRACUUTKWIN
 
                           Excel.Application objExcel = this.GetExcelApp();                         
                           objExcel.Visible = false;
+                          objExcel.Application.Visible = false; 
                           objExcel.Workbooks.Open(strReportFilePath);
                           objExcel.Visible = false;
                           objExcel.Range[string.Format("A1:IV{0}", ds.Tables[0].Rows.Count)].Value = objData;
 
-                          objExcel.Visible = false;
-                          objExcel.SaveWorkspace(Missing.Value);
+                          objExcel.Visible = false;                        
+                         // objExcel.SaveWorkspace(Missing.Value);
+                         
+                            try
+                            {
+                                objExcel.Save(strReportFilePath + "x");//để nó khỏi hỏi có lưu hay không lưu
+                            }
+                            catch { }
+                          objExcel.Workbooks.Close();
                           objExcel.Quit();
 
                           r["RP_STATUS"] = "Thành công";
