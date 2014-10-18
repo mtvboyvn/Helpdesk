@@ -9,6 +9,7 @@ namespace t
 {
     public partial class TraCuuToKhai : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session[ct.USERNAME] == null)
@@ -16,8 +17,11 @@ namespace t
                 Response.Redirect("~/DangNhap.aspx");
             }
 
+           
             if (Page.IsPostBack == false)
             {
+               
+
                // btnUpdate_Click(null, null);
             }
         }
@@ -78,6 +82,7 @@ namespace t
 
         protected void MA_LH_TextChanged(object sender, EventArgs e)
         {
+            
             if (string.IsNullOrEmpty(MA_LH.Text.Trim()) == true)
             {
                 TEN_LH.SelectedIndex = 0;
@@ -86,7 +91,7 @@ namespace t
             try
             {
                 TEN_LH.SelectedValue = MA_LH.Text.Trim().ToUpper();
-                MA_LH.Text = MA_LH.Text.Trim().ToUpper();
+                MA_LH.Text = MA_LH.Text.Trim().ToUpper();                
             }
             catch (Exception ex)
             {

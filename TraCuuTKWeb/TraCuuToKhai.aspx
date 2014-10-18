@@ -6,10 +6,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-   
+     <script language="javascript">
+         var postbackElement = null;
+         function RestoreFocus(source, args) {
+             document.getElementById(postbackElement.id).focus();
+         }
+         function SavePostbackElement(source, args) {
+             postbackElement = args.get_postBackElement();
+         }
+         function AddRequestHandler() {
+             var prm = Sys.WebForms.PageRequestManager.getInstance();
+             prm.add_endRequest(RestoreFocus);
+             prm.add_beginRequest(SavePostbackElement);
+         }
+    </script>
 </head>
-<body>
+<body onload="AddRequestHandler()">
     <form id="form1" runat="server">
+       
         <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></cc1:ToolkitScriptManager>
         <asp:Timer ID="timer1" runat="server" Interval="1000000" OnTick="btnUpdate_Click"></asp:Timer>
         <div style="width: 100%; background-color: #215a9d; text-align: center;">
@@ -329,6 +343,7 @@
                 </div>
             </div>
         </footer>
+       
     </form>
 </body>
 </html>
