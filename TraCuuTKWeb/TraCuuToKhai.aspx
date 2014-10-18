@@ -286,7 +286,14 @@
                                     <asp:BoundField DataField="RP_DISPLAY" ItemStyle-Width="500px" HeaderText="Điều kiện tra cứu" >
                                     <ItemStyle Width="500px" />
                                     </asp:BoundField>
-                                    <asp:BoundField DataField="RP_QUERY"  HeaderText="SQL QUERY" />
+                                    <asp:BoundField DataField="RP_QUERY"  HeaderText="SQL QUERY" Visible="false" />
+                                     <asp:TemplateField HeaderText="SQL QUERY">
+                                        <ItemTemplate>
+                                            <div style="padding: 2px; margin-right: 4px;">                                               
+                                                <a  style="padding: 2px;" href='<%#Eval("RP_ID","~/XemSQL.aspx?={0}")%>' runat="server">SQL</a>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                         </div>

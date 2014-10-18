@@ -73,6 +73,7 @@
     <Content Include="App_Data\MVIEW1_TOKHAIMD.sql" />
     <Content Include="DangNhap.aspx" />
     <Content Include="DLL\AjaxControlToolkit.dll" />
+    <Content Include="DLL\Interop.Excel.dll" />
     <Content Include="DLL\System.Data.SQLite.dll" />
     <Content Include="DLL\System.Web.Extensions.Design.dll" />
     <Content Include="DLL\System.Web.Extensions.dll" />
@@ -143,7 +144,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TuyenHM\abc.rar" />
+    <Content Include="Reports\TuyenHM\abc.rar" />
     <Content Include="dsLOAIHINHMD.xsc">
       <DependentUpon>dsLOAIHINHMD.xsd</DependentUpon>
     </Content>
