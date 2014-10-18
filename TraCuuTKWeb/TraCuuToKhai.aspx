@@ -279,7 +279,7 @@
                                      <asp:TemplateField HeaderText="Tải về KQ tra cứu">
                                         <ItemTemplate>
                                             <div style="padding: 2px; margin-right: 4px;">                                               
-                                                <a  style="padding: 2px;" href='<%#Eval("RP_FILEPATH")%>' runat="server"><%#Eval("RP_FILEPATH")%></a>
+                                                <a  style="padding: 2px;" href='<%#Eval("RP_FILEPATH")%>' runat="server"><%#Eval("RP_FILENAME")%></a>
                                             </div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
@@ -290,7 +290,7 @@
                                      <asp:TemplateField HeaderText="SQL QUERY">
                                         <ItemTemplate>
                                             <div style="padding: 2px; margin-right: 4px;">                                               
-                                                <a  style="padding: 2px;" href='<%#Eval("RP_ID","~/XemSQL.aspx?={0}")%>' runat="server">SQL</a>
+                                                <a  style="padding: 2px;" href='<%#Eval("RP_ID","~/XemSQL.aspx?RP_ID={0}")%>' runat="server">SQL</a>
                                             </div>
                                         </ItemTemplate>
                                     </asp:TemplateField>

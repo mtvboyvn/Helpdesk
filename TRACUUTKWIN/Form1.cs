@@ -87,9 +87,11 @@ namespace TRACUUTKWIN
                             catch { }
                           objExcel.Workbooks.Close();
                           objExcel.Quit();
-
+                          //t.SREPORT a = new t.SREPORT();a.RP_EXPORTDATE
                           r["RP_STATUS"] = "Thành công";
                           r["RP_FILEPATH"] = strDuongDanTuongDoi;
+                          r["RP_FILENAME"] = strReportFileName;
+                          r["RP_EXPORTDATE"]=DateTime.Now;
                           t.SREPORT objUpdate=new t.SREPORT();
                           t.clsAll.DataRow2Object(r, objUpdate);
                           objUpdate.DataStatus = t.DBStatus.Updated;

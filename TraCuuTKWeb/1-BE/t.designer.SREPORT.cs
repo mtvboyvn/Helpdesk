@@ -213,7 +213,7 @@ namespace t
 		private string m_RP_FILEPATH;
 		private bool m_RP_FILEPATHUpdated = false;
 		/// <summary>
-		/// Đường dẫn đến file báo cáo kết xuất được.
+		/// Đường dẫn tương đối đến file báo cáo kết xuất được.
 		/// </summary>
 		public string RP_FILEPATH
 		{
@@ -230,6 +230,30 @@ namespace t
 					this.SendPropertyChanged("RP_FILEPATH");
 					if ((this.DataStatus != DBStatus.Inserted))
 						this.m_RP_FILEPATHUpdated = true;
+				}
+			}
+		}
+
+		private string m_RP_FILENAME;
+		private bool m_RP_FILENAMEUpdated = false;
+		/// <summary>
+		/// Tên  file báo cáo kết xuất được.
+		/// </summary>
+		public string RP_FILENAME
+		{
+			get
+			{
+				return m_RP_FILENAME;
+			}
+			set
+			{
+				if ((this.m_RP_FILENAME != value))
+				{
+					this.SendPropertyChanging("RP_FILENAME");
+					this.m_RP_FILENAME = value;
+					this.SendPropertyChanged("RP_FILENAME");
+					if ((this.DataStatus != DBStatus.Inserted))
+						this.m_RP_FILENAMEUpdated = true;
 				}
 			}
 		}
@@ -254,11 +278,11 @@ namespace t
 				case DBManagement.SQL:
 				case DBManagement.SQLLite:
 				default:
-				sbSQL.Append(clsDAL.SelectField("[RP_ID]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_USERNAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_CREATEDATE]", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_DISPLAY]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_QUERY]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_QUERY_MD5]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_STATUS]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_EXPORTDATE]", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_FILEPATH]", ProType.OTHER, this.DataManagement));
+				sbSQL.Append(clsDAL.SelectField("[RP_ID]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_USERNAME]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_CREATEDATE]", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_DISPLAY]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_QUERY]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_QUERY_MD5]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_STATUS]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_EXPORTDATE]", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_FILEPATH]", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("[RP_FILENAME]", ProType.OTHER, this.DataManagement));
 				break;
 				 
 				case DBManagement.Oracle:
-				sbSQL.Append(clsDAL.SelectField("RP_ID", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_USERNAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_CREATEDATE", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_DISPLAY", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_QUERY", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_QUERY_MD5", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_STATUS", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_EXPORTDATE", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_FILEPATH", ProType.OTHER, this.DataManagement));
+				sbSQL.Append(clsDAL.SelectField("RP_ID", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_USERNAME", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_CREATEDATE", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_DISPLAY", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_QUERY", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_QUERY_MD5", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_STATUS", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_EXPORTDATE", ProType.DATETIME, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_FILEPATH", ProType.OTHER, this.DataManagement)).Append(",").Append(clsDAL.SelectField("RP_FILENAME", ProType.OTHER, this.DataManagement));
 				break;
 			}
 			return SelectStatement(sbSQL.ToString(), WhereClause, OrderClause);
@@ -292,11 +316,11 @@ namespace t
 				case DBManagement.SQL:
 				case DBManagement.SQLLite:
 				default:
-				sbSQL.Append("INSERT INTO SREPORT ([RP_ID], [RP_USERNAME], [RP_CREATEDATE], [RP_DISPLAY], [RP_QUERY], [RP_QUERY_MD5], [RP_STATUS], [RP_EXPORTDATE], [RP_FILEPATH]) VALUES(").Append("@RP_ID").Append(",").Append("@RP_USERNAME").Append(",").Append("@RP_CREATEDATE").Append(",").Append("@RP_DISPLAY").Append(",").Append("@RP_QUERY").Append(",").Append("@RP_QUERY_MD5").Append(",").Append("@RP_STATUS").Append(",").Append("@RP_EXPORTDATE").Append(",").Append("@RP_FILEPATH").Append(")");
+				sbSQL.Append("INSERT INTO SREPORT ([RP_ID], [RP_USERNAME], [RP_CREATEDATE], [RP_DISPLAY], [RP_QUERY], [RP_QUERY_MD5], [RP_STATUS], [RP_EXPORTDATE], [RP_FILEPATH], [RP_FILENAME]) VALUES(").Append("@RP_ID").Append(",").Append("@RP_USERNAME").Append(",").Append("@RP_CREATEDATE").Append(",").Append("@RP_DISPLAY").Append(",").Append("@RP_QUERY").Append(",").Append("@RP_QUERY_MD5").Append(",").Append("@RP_STATUS").Append(",").Append("@RP_EXPORTDATE").Append(",").Append("@RP_FILEPATH").Append(",").Append("@RP_FILENAME").Append(")");
 				break;
 				 
 				case DBManagement.Oracle:
-				sbSQL.Append("INSERT INTO SREPORT (RP_ID, RP_USERNAME, RP_CREATEDATE, RP_DISPLAY, RP_QUERY, RP_QUERY_MD5, RP_STATUS, RP_EXPORTDATE, RP_FILEPATH) VALUES(").Append(":RP_ID").Append(",").Append(":RP_USERNAME").Append(",").Append(":RP_CREATEDATE").Append(",").Append(":RP_DISPLAY").Append(",").Append(":RP_QUERY").Append(",").Append(":RP_QUERY_MD5").Append(",").Append(":RP_STATUS").Append(",").Append(":RP_EXPORTDATE").Append(",").Append(":RP_FILEPATH").Append(")");
+				sbSQL.Append("INSERT INTO SREPORT (RP_ID, RP_USERNAME, RP_CREATEDATE, RP_DISPLAY, RP_QUERY, RP_QUERY_MD5, RP_STATUS, RP_EXPORTDATE, RP_FILEPATH, RP_FILENAME) VALUES(").Append(":RP_ID").Append(",").Append(":RP_USERNAME").Append(",").Append(":RP_CREATEDATE").Append(",").Append(":RP_DISPLAY").Append(",").Append(":RP_QUERY").Append(",").Append(":RP_QUERY_MD5").Append(",").Append(":RP_STATUS").Append(",").Append(":RP_EXPORTDATE").Append(",").Append(":RP_FILEPATH").Append(",").Append(":RP_FILENAME").Append(")");
 				break;
 			}
 			return sbSQL.ToString();		}
@@ -322,11 +346,11 @@ namespace t
 				case DBManagement.SQL:
 				case DBManagement.SQLLite:
 				default:
-				sbSQL.Append(m_RP_CREATEDATEUpdated ? string.Format(",[RP_CREATEDATE] = {0}", "@RP_CREATEDATE") : string.Empty).Append(m_RP_DISPLAYUpdated ? string.Format(",[RP_DISPLAY] = {0}", "@RP_DISPLAY") : string.Empty).Append(m_RP_QUERYUpdated ? string.Format(",[RP_QUERY] = {0}", "@RP_QUERY") : string.Empty).Append(m_RP_QUERY_MD5Updated ? string.Format(",[RP_QUERY_MD5] = {0}", "@RP_QUERY_MD5") : string.Empty).Append(m_RP_STATUSUpdated ? string.Format(",[RP_STATUS] = {0}", "@RP_STATUS") : string.Empty).Append(m_RP_EXPORTDATEUpdated ? string.Format(",[RP_EXPORTDATE] = {0}", "@RP_EXPORTDATE") : string.Empty).Append(m_RP_FILEPATHUpdated ? string.Format(",[RP_FILEPATH] = {0}", "@RP_FILEPATH") : string.Empty);
+				sbSQL.Append(m_RP_CREATEDATEUpdated ? string.Format(",[RP_CREATEDATE] = {0}", "@RP_CREATEDATE") : string.Empty).Append(m_RP_DISPLAYUpdated ? string.Format(",[RP_DISPLAY] = {0}", "@RP_DISPLAY") : string.Empty).Append(m_RP_QUERYUpdated ? string.Format(",[RP_QUERY] = {0}", "@RP_QUERY") : string.Empty).Append(m_RP_QUERY_MD5Updated ? string.Format(",[RP_QUERY_MD5] = {0}", "@RP_QUERY_MD5") : string.Empty).Append(m_RP_STATUSUpdated ? string.Format(",[RP_STATUS] = {0}", "@RP_STATUS") : string.Empty).Append(m_RP_EXPORTDATEUpdated ? string.Format(",[RP_EXPORTDATE] = {0}", "@RP_EXPORTDATE") : string.Empty).Append(m_RP_FILEPATHUpdated ? string.Format(",[RP_FILEPATH] = {0}", "@RP_FILEPATH") : string.Empty).Append(m_RP_FILENAMEUpdated ? string.Format(",[RP_FILENAME] = {0}", "@RP_FILENAME") : string.Empty);
 				break;
 				 
 				case DBManagement.Oracle:
-				sbSQL.Append(m_RP_CREATEDATEUpdated ? string.Format(",RP_CREATEDATE = {0}", ":RP_CREATEDATE") : string.Empty).Append(m_RP_DISPLAYUpdated ? string.Format(",RP_DISPLAY = {0}", ":RP_DISPLAY") : string.Empty).Append(m_RP_QUERYUpdated ? string.Format(",RP_QUERY = {0}", ":RP_QUERY") : string.Empty).Append(m_RP_QUERY_MD5Updated ? string.Format(",RP_QUERY_MD5 = {0}", ":RP_QUERY_MD5") : string.Empty).Append(m_RP_STATUSUpdated ? string.Format(",RP_STATUS = {0}", ":RP_STATUS") : string.Empty).Append(m_RP_EXPORTDATEUpdated ? string.Format(",RP_EXPORTDATE = {0}", ":RP_EXPORTDATE") : string.Empty).Append(m_RP_FILEPATHUpdated ? string.Format(",RP_FILEPATH = {0}", ":RP_FILEPATH") : string.Empty);
+				sbSQL.Append(m_RP_CREATEDATEUpdated ? string.Format(",RP_CREATEDATE = {0}", ":RP_CREATEDATE") : string.Empty).Append(m_RP_DISPLAYUpdated ? string.Format(",RP_DISPLAY = {0}", ":RP_DISPLAY") : string.Empty).Append(m_RP_QUERYUpdated ? string.Format(",RP_QUERY = {0}", ":RP_QUERY") : string.Empty).Append(m_RP_QUERY_MD5Updated ? string.Format(",RP_QUERY_MD5 = {0}", ":RP_QUERY_MD5") : string.Empty).Append(m_RP_STATUSUpdated ? string.Format(",RP_STATUS = {0}", ":RP_STATUS") : string.Empty).Append(m_RP_EXPORTDATEUpdated ? string.Format(",RP_EXPORTDATE = {0}", ":RP_EXPORTDATE") : string.Empty).Append(m_RP_FILEPATHUpdated ? string.Format(",RP_FILEPATH = {0}", ":RP_FILEPATH") : string.Empty).Append(m_RP_FILENAMEUpdated ? string.Format(",RP_FILENAME = {0}", ":RP_FILENAME") : string.Empty);
 				break;
 			}
 			if(sbSQL.Length > 0)
@@ -347,11 +371,11 @@ namespace t
 				case DBManagement.SQL:
 				case DBManagement.SQLLite:
 				default:
-				sbSQL.AppendFormat("[RP_CREATEDATE] = {0}", "@RP_CREATEDATE").AppendFormat(",[RP_DISPLAY] = {0}", "@RP_DISPLAY").AppendFormat(",[RP_QUERY] = {0}", "@RP_QUERY").AppendFormat(",[RP_QUERY_MD5] = {0}", "@RP_QUERY_MD5").AppendFormat(",[RP_STATUS] = {0}", "@RP_STATUS").AppendFormat(",[RP_EXPORTDATE] = {0}", "@RP_EXPORTDATE").AppendFormat(",[RP_FILEPATH] = {0}", "@RP_FILEPATH");
+				sbSQL.AppendFormat("[RP_CREATEDATE] = {0}", "@RP_CREATEDATE").AppendFormat(",[RP_DISPLAY] = {0}", "@RP_DISPLAY").AppendFormat(",[RP_QUERY] = {0}", "@RP_QUERY").AppendFormat(",[RP_QUERY_MD5] = {0}", "@RP_QUERY_MD5").AppendFormat(",[RP_STATUS] = {0}", "@RP_STATUS").AppendFormat(",[RP_EXPORTDATE] = {0}", "@RP_EXPORTDATE").AppendFormat(",[RP_FILEPATH] = {0}", "@RP_FILEPATH").AppendFormat(",[RP_FILENAME] = {0}", "@RP_FILENAME");
 				break;
 				 
 				case DBManagement.Oracle:
-				sbSQL.AppendFormat("RP_CREATEDATE = {0}", ":RP_CREATEDATE").AppendFormat(",RP_DISPLAY = {0}", ":RP_DISPLAY").AppendFormat(",RP_QUERY = {0}", ":RP_QUERY").AppendFormat(",RP_QUERY_MD5 = {0}", ":RP_QUERY_MD5").AppendFormat(",RP_STATUS = {0}", ":RP_STATUS").AppendFormat(",RP_EXPORTDATE = {0}", ":RP_EXPORTDATE").AppendFormat(",RP_FILEPATH = {0}", ":RP_FILEPATH");
+				sbSQL.AppendFormat("RP_CREATEDATE = {0}", ":RP_CREATEDATE").AppendFormat(",RP_DISPLAY = {0}", ":RP_DISPLAY").AppendFormat(",RP_QUERY = {0}", ":RP_QUERY").AppendFormat(",RP_QUERY_MD5 = {0}", ":RP_QUERY_MD5").AppendFormat(",RP_STATUS = {0}", ":RP_STATUS").AppendFormat(",RP_EXPORTDATE = {0}", ":RP_EXPORTDATE").AppendFormat(",RP_FILEPATH = {0}", ":RP_FILEPATH").AppendFormat(",RP_FILENAME = {0}", ":RP_FILENAME");
 				break;
 			}
 			return UpdateStatement(sbSQL.ToString(), WhereClause);
@@ -427,6 +451,7 @@ namespace t
 			paramList.Add(clsDAL.CreateParameter("RP_STATUS", "WChar", clsDAL.ToDBParam(RP_STATUS, ProType.STRING, this.DataManagement) , this.DataManagement));
 			paramList.Add(clsDAL.CreateParameter("RP_EXPORTDATE", "Date", clsDAL.ToDBParam(RP_EXPORTDATE, ProType.DATETIME, this.DataManagement) , this.DataManagement));
 			paramList.Add(clsDAL.CreateParameter("RP_FILEPATH", "WChar", clsDAL.ToDBParam(RP_FILEPATH, ProType.STRING, this.DataManagement) , this.DataManagement));
+			paramList.Add(clsDAL.CreateParameter("RP_FILENAME", "WChar", clsDAL.ToDBParam(RP_FILENAME, ProType.STRING, this.DataManagement) , this.DataManagement));
 			paramList.Add(clsDAL.CreateParameter("RP_ID", "Integer", clsDAL.ToDBParam(RP_ID, ProType.NUMBER, this.DataManagement) , this.DataManagement));
 			paramList.Add(clsDAL.CreateParameter("RP_USERNAME", "WChar", clsDAL.ToDBParam(RP_USERNAME, ProType.STRING, this.DataManagement) , this.DataManagement));
 			return paramList;
@@ -447,6 +472,7 @@ namespace t
 			paramList.Add(clsDAL.CreateParameter("RP_STATUS", "WChar", clsDAL.ToDBParam(RP_STATUS, ProType.STRING, this.DataManagement) , this.DataManagement));
 			paramList.Add(clsDAL.CreateParameter("RP_EXPORTDATE", "Date", clsDAL.ToDBParam(RP_EXPORTDATE, ProType.DATETIME, this.DataManagement), this.DataManagement));
 			paramList.Add(clsDAL.CreateParameter("RP_FILEPATH", "WChar", clsDAL.ToDBParam(RP_FILEPATH, ProType.STRING, this.DataManagement) , this.DataManagement));
+			paramList.Add(clsDAL.CreateParameter("RP_FILENAME", "WChar", clsDAL.ToDBParam(RP_FILENAME, ProType.STRING, this.DataManagement) , this.DataManagement));
 			return paramList;
 		}
 	}

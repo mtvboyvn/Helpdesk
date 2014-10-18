@@ -85,6 +85,7 @@
     <Content Include="TraCuuToKhai.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="XemSQL.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="0-DAL\clsAll.cs" />
@@ -136,6 +137,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XemSQL.aspx.cs">
+      <DependentUpon>XemSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XemSQL.aspx.designer.cs">
+      <DependentUpon>XemSQL.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
