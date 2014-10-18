@@ -243,5 +243,79 @@ namespace t
             }
             MA_CUCHQ.Text = TEN_CUCHQ.SelectedValue.ToString().ToUpper();
         }
+
+        protected void MA_CC_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MA_CC.Text.Trim()) == true)
+            {
+                TEN_CC.SelectedIndex = 0;
+                return;
+            }
+            try
+            {
+                TEN_CC.SelectedValue = MA_CC.Text.Trim().ToUpper();
+                MA_CC.Text = MA_CC.Text.Trim().ToUpper();
+            }
+            catch (Exception ex)
+            {
+                string s = ex.Message;
+                MA_CC.Text = string.Empty;
+                TEN_CC.SelectedIndex = 0;
+            }
+        }
+
+        protected void TEN_CC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TEN_CC.SelectedValue == null)
+            {
+                TEN_CC.SelectedIndex = 0;
+                MA_CC.Text = string.Empty;
+                return;
+            }
+            if (string.IsNullOrEmpty(TEN_CC.SelectedValue.ToString()) == true)
+            {
+                TEN_CC.SelectedIndex = 0;
+                MA_CC.Text = string.Empty;
+                return;
+            }
+            MA_CC.Text = TEN_CC.SelectedValue.ToString().ToUpper();
+        }
+
+        protected void MA_DONVI_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MA_DONVI.Text.Trim()) == true)
+            {
+                TEN_DONVI.SelectedIndex = 0;
+                return;
+            }
+            try
+            {
+                TEN_DONVI.SelectedValue = MA_DONVI.Text.Trim().ToUpper();
+                MA_DONVI.Text = MA_DONVI.Text.Trim().ToUpper();
+            }
+            catch (Exception ex)
+            {
+                string s = ex.Message;
+                MA_DONVI.Text = string.Empty;
+                TEN_DONVI.SelectedIndex = 0;
+            }
+        }
+
+        protected void TEN_DONVI_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TEN_DONVI.SelectedValue == null)
+            {
+                TEN_DONVI.SelectedIndex = 0;
+                MA_DONVI.Text = string.Empty;
+                return;
+            }
+            if (string.IsNullOrEmpty(TEN_DONVI.SelectedValue.ToString()) == true)
+            {
+                TEN_DONVI.SelectedIndex = 0;
+                MA_DONVI.Text = string.Empty;
+                return;
+            }
+            MA_DONVI.Text = TEN_DONVI.SelectedValue.ToString().ToUpper();
+        }
     }
 }
