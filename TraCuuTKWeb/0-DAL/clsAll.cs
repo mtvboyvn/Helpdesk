@@ -9,6 +9,7 @@ using System.IO.Compression;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
@@ -193,6 +194,30 @@ namespace t
                     txt.Text = string.Empty;
                 }
             }
+        }
+
+        public static void ClearDesignData2(Control tblDetail)
+        {
+            foreach (Control c in tblDetail.Controls)
+            {
+                TextBox txt = c as TextBox;
+                if (txt != null)
+                {
+                    txt.Text = string.Empty;
+                    continue;
+                }
+                DropDownList drd = c as DropDownList;
+                if (drd != null)
+                {
+                    try
+                    {
+                        drd.SelectedIndex = 0;
+                    }
+                    catch { }
+                    continue;
+                }
+                ClearDesignData2(c);
+            }            
         }
 
         public static string CombineProperty(object obj)

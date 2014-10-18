@@ -61,7 +61,7 @@
                                     <div style="color: blue;">Điều kiện tra cứu</div>
                                 </HeaderTemplate>
                                 <ContentTemplate>
-                                    <table style="width: 100%; border: solid 0px black; border-collapse: collapse;">
+                                    <table id="tblDieuKien" runat="server" style="width: 100%; border: solid 0px black; border-collapse: collapse;">
                                         <tr>
                                             <td style="text-align: right; width: 1px; border: solid 0px red;">
                                                 <nobr>

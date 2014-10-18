@@ -33,7 +33,7 @@ namespace t
            
             if (Page.IsPostBack == false)
             {
-               
+                clsAll.ClearDesignData2(tblDieuKien);
                 //SOTK.Focus();
                 //Page.SetFocus(SOTK);
                 //Page.Form.DefaultFocus = SOTK.ClientID;
@@ -70,6 +70,13 @@ namespace t
         {
             try
             {
+                string strWhere = TạoWHERE();
+                if (string.IsNullOrEmpty(strWhere) == true)
+                {
+                    lblMSG.Text = "Vui lòng nhập điều kiện tìm kiếm!";
+                    return;
+                }
+
                 //System.Threading.Thread.Sleep(5000);
                 using (tDBContext mainDB = new tDBContext())
                 {
@@ -81,7 +88,7 @@ namespace t
                     rp.RP_USERNAME = string.Format("{0}", Session[ct.USERNAME]);
                     rp.RP_CREATEDATE = DateTime.Now;
                     rp.RP_DISPLAY = string.Format("Số TK: {0}", SOTK.Text);
-                    rp.RP_QUERY = "SELECT * FROM B501A";
+                    rp.RP_QUERY = TạoTruyVấn(strWhere);
                     mainDB.SREPORTs.InsertOnSubmit(rp);
                     mainDB.SubmitAllChange();
                 }
@@ -93,6 +100,24 @@ namespace t
                 lblMSG.Text = string.Format("Đã xảy ra lỗi trong quá trình đặt lệnh, nội dung lỗi: {0}", ex.Message);
             }
           
+        }
+
+        private string TạoWHERE()
+        {
+            //string strSQL = "SELECT * FROM MVIEW1_TOKHAIMD WHERE {0}";
+            //string strSQL = "SELECT * FROM A501A WHERE {0}";
+            if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)
+            {
+                return string.Format("SIKNO='{0}'", SOTK.Text);
+            }
+            return "";
+        }
+
+        private string TạoTruyVấn(string strWhere)
+        {
+            //string strSQL = "SELECT * FROM MVIEW1_TOKHAIMD WHERE {0}";
+            string strSQL = "SELECT * FROM A501A WHERE {0}";
+            return string.Format(strSQL, strWhere);
         }
 
         protected void MA_LH_TextChanged(object sender, EventArgs e)
