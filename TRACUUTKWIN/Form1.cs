@@ -47,14 +47,14 @@ namespace TRACUUTKWIN
                   }
                   foreach (DataRow r in rr.Rows)
                   {
+                      string strReportDir = Path.Combine(strReportRootPath, r["RP_USERNAME"].ToString());
+                      if (Directory.Exists(strReportDir) == false) Directory.CreateDirectory(strReportDir);
+                      string tmpFileXSL = Path.Combine(Application.StartupPath, "tempExcel.xls");
+                      string strReportFileName = string.Format("TOKHAIMD_{0}.xls", r["RP_ID"].ToString());
+                      string strReportFilePath = Path.Combine(strReportDir, strReportFileName);
+                      string strDuongDanTuongDoi = string.Format("~/Reports/{0}/{1}", r["RP_USERNAME"].ToString(), strReportFileName);
                       try
-                      {
-                          string strReportDir = Path.Combine(strReportRootPath, r["RP_USERNAME"].ToString());
-                          if (Directory.Exists(strReportDir) == false) Directory.CreateDirectory(strReportDir);
-                          string tmpFileXSL = Path.Combine(Application.StartupPath, "tempExcel.xls");
-                          string strReportFileName = string.Format("TOKHAIMD_{0}.xls", r["RP_ID"].ToString());
-                          string strReportFilePath = Path.Combine(strReportDir, strReportFileName);
-                          string strDuongDanTuongDoi = string.Format("~/{0}/{1}", r["RP_USERNAME"].ToString(), strReportFileName);
+                      {                         
                           File.Copy(tmpFileXSL, strReportFilePath, true);
 
                           DataSet ds = t.clsDalORACLE.GetDataSet(r["RP_QUERY"].ToString());
@@ -70,7 +70,7 @@ namespace TRACUUTKWIN
 
                           object[,] objData = t.clsAll.DataTable2ArrayObjects(ds.Tables[0]);
 
-                          Excel.Application objExcel=new Excel.Application();                          
+                          Excel.Application objExcel = this.GetExcelApp();                         
                           objExcel.Visible = false;
                           objExcel.Workbooks.Open(strReportFilePath);
                           objExcel.Visible = false;
@@ -116,6 +116,45 @@ namespace TRACUUTKWIN
             button1.Enabled = false;
             pro.Enabled = true;
             pro.Start();
+        }
+
+        public Excel.Application GetExcelApp()
+        {
+            Excel.Application objExcel = null;
+
+            try
+            {
+                //Tìm instance Excel đang chạy.
+                objExcel = (Excel.Application)System.Runtime.InteropServices.Marshal.GetActiveObject("Excel.Application");
+            }
+            catch
+            {
+                //Không có instance nào của Excel đang chạy.
+                try
+                {
+                    objExcel = new Excel.Application();
+                }
+                catch
+                {
+                   
+                }
+            }
+
+            try
+            {
+                if (objExcel != null)
+                {
+                    objExcel.Interactive = false;
+                    objExcel.Interactive = true;
+                    return objExcel;
+                }
+            }
+            catch
+            {
+                
+            }
+
+            return null;
         }
     }
 }

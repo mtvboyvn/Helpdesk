@@ -70,8 +70,8 @@ namespace t
         {
             try
             {
-                string strWhere = TạoWHERE();
-                if (string.IsNullOrEmpty(strWhere) == true)
+                string[] strWhere = TạoWHERE();
+                if (string.IsNullOrEmpty(strWhere[0]) == true)
                 {
                     lblMSG.Text = "Vui lòng nhập điều kiện tìm kiếm!";
                     return;
@@ -103,22 +103,25 @@ namespace t
           
         }
 
-        private string TạoWHERE()
+        private string[] TạoWHERE()
         {
             //string strSQL = "SELECT * FROM MVIEW1_TOKHAIMD WHERE {0}";
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
             if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)
             {
-                return string.Format("V1.SIKNO='{0}'", SOTK.Text);
+                return new string[2]{
+                    string.Format("N501A_SIKNO='{0}' ", SOTK.Text),
+                    string.Format("N502A_SIKNO='{0}' ", SOTK.Text)};
             }
-            return "";
+            return new string[2];
         }
 
-        private string TạoTruyVấn(string strWhere)
+        private string TạoTruyVấn(string[] strWhere)
         {
-            string strSQL = "SELECT V1.* FROM (" + t.Properties.Resources.MVIEW1_TOKHAIMD + ") V1 WHERE {0}";
+            //string strSQL = "SELECT V1.* FROM (" + t.Properties.Resources.MVIEW1_TOKHAIMD + ") V1 WHERE {0}";
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
-            return string.Format(strSQL, strWhere);
+            string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2;
+            return string.Format(strSQL, strWhere[0], strWhere[1]);
         }
 
         protected void MA_LH_TextChanged(object sender, EventArgs e)

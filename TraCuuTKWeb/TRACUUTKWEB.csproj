@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DesignDB.mdb" />
+    <Content Include="App_Data\MVIEW1_TOKHAIMD2.sql" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD.sql" />
     <Content Include="DangNhap.aspx" />
     <Content Include="DLL\AjaxControlToolkit.dll" />
@@ -144,7 +145,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Reports\TuyenHM\abc.rar" />
     <Content Include="dsLOAIHINHMD.xsc">
       <DependentUpon>dsLOAIHINHMD.xsd</DependentUpon>
     </Content>
@@ -162,6 +162,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\TuyenHM\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

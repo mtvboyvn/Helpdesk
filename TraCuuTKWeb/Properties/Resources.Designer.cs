@@ -61,31 +61,30 @@ namespace t.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT 
-        ///N501A_SIKNO AS SIKNO ,
-        ///N501A_SGARI2 AS SGARI2 ,
-        ///N501A_NOUKC2 AS NOUKC2 ,
-        ///N501A_NOUKN2 AS NOUKN2 ,
-        ///N501A_NOZEI2 AS NOZEI2 ,
-        ///N501A_NOMEN2 AS NOMEN2 ,
-        ///N501A_NOGEN2 AS NOGEN2 ,
-        ///N501A_NOGAK2 AS NOGAK2 ,
-        ///N501A_ZEUKS2 AS ZEUKS2 ,
-        ///N501A_ZEZEI2 AS ZEZEI2 ,
-        ///N501A_ZEMEN2 AS ZEMEN2 ,
-        ///N501A_ZEGEN2 AS ZEGEN2 ,
-        ///N501A_ZEGAK2 AS ZEGAK2 ,
-        ///N501A_ZEDEF2 AS ZEDEF2 ,
-        ///N501A_NOZET2 AS NOZET2 ,
-        ///N501A_NOMET2 AS NOMET2 ,
-        ///N501A_NOGTN2 AS NOGTN2 ,
-        ///N501A_ZEGAT2 AS ZEGAT2 ,
-        ///N501A_ZEDET2 AS ZEDET2 ,
-        ///N501A_TITLE [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string MVIEW1_TOKHAIMD {
             get {
                 return ResourceManager.GetString("MVIEW1_TOKHAIMD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///N501A_SIKNO AS SIKNO ,
+        ///N501A_SINKS AS SINKS ,
+        ///N501A_ENDAY2 AS ENDAY2
+        /// FROM N501A N1 WHERE {0}
+        /// UNION 
+        ///SELECT 
+        ///N502A_SIKNO AS SIKNO ,
+        ///N502A_SINKS AS SINKS ,
+        ///N502A_ENDAY2 AS ENDAY2
+        /// FROM N502A N2 WHERE {1}.
+        /// </summary>
+        internal static string MVIEW1_TOKHAIMD2 {
+            get {
+                return ResourceManager.GetString("MVIEW1_TOKHAIMD2", resourceCulture);
             }
         }
         
