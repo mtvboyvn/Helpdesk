@@ -71,28 +71,27 @@ namespace t.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to SELECT 
-        ///N501A_SIKNO AS SIKNO ,
-        ///N501A_SINKD AS SINKD,
-        ///N501A_SINKS AS SINKS,
-        ///N501A_SHIKS AS SHIKS,
-        ///N501A_YUNYC AS YUNYC,
-        ///N501A_SINKS AS SINKS ,
-        ///N501A_ENDAY2 AS ENDAY2,
-        ///N501A_YUSYK AS YUSYK,
-        ///N501A_YUNN2 AS YUNN2
-        /// FROM N501A N1 WHERE {0}
-        /// UNION 
+        ///  N1.N501A_SIKNO AS SIKNO ,
+        ///  N1.N501A_SINKD AS SINKD,
+        ///  N1.N501A_SINKS AS SINKS,
+        ///  N1.N501A_SHIKS AS SHIKS,
+        ///  N1.N501A_YUNYC AS YUNYC,
+        ///  N1.N501A_SINKS AS SINKS ,
+        ///  N1.N501A_ENDAY2 AS ENDAY2,
+        ///  N1.N501A_YUSYK AS YUSYK,
+        ///  N1.N501A_YUNN2 AS YUNN2
+        ///FROM N501A N1 
+        ///WHERE {0}
+        ///UNION 
         ///SELECT 
-        ///N502A_SIKNO AS SIKNO ,
-        ///N502A_SINKD AS SINKD,
-        ///N502A_SINKS AS SINKS,
-        ///N502A_SHIKS AS SHIKS,
-        ///N502A_YUNYC AS YUNYC,
-        ///N502A_SINKS AS SINKS ,
-        ///N502A_ENDAY2 AS ENDAY2,
-        ///N502A_YUSYK AS YUSYK,
-        ///N502A_YUNN2 AS YUNN2
-        /// FROM N502A N2 WHERE {0}.
+        ///  N2.N502A_SIKNO AS SIKNO ,
+        ///  N2.N502A_SINKD AS SINKD,
+        ///  N2.N502A_SINKS AS SINKS,
+        ///  N2.N502A_SHIKS AS SHIKS,
+        ///  N2.N502A_YUNYC AS YUNYC,
+        ///  N2.N502A_SINKS AS SINKS ,
+        ///  N2.N502A_ENDAY2 AS ENDAY2,
+        ///  N2 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MVIEW1_TOKHAIMD2 {
             get {

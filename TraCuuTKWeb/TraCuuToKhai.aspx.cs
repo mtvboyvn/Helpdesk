@@ -111,8 +111,8 @@ namespace t
             if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)
             {
                 return new string[2]{
-                    string.Format("N501A_SIKNO='{0}' ", SOTK.Text),
-                    string.Format("N502A_SIKNO='{0}' ", SOTK.Text)};
+                    string.Format("N1.N501A_SIKNO='{0}' ", SOTK.Text),
+                    string.Format("N2.N502A_SIKNO='{0}' ", SOTK.Text)};
             }
             
             //THỜI GIAN ĐANG CHẠY RẤT CHẬP VÌ NGÀY ĐK TỜ KHAI ĐANG ĐỂ DẠNG TEXT TRONG ĐB
@@ -151,8 +151,8 @@ namespace t
                     strSQL[0] += " AND "; strSQL[1] += " AND ";
                 }
 
-                strSQL[0] += string.Format("N501A_SINKS='{0}' ", MA_LH.Text);
-                strSQL[1] += string.Format("N502A_SINKS='{0}' ", MA_LH.Text);
+                strSQL[0] += string.Format("N1.N501A_SINKS='{0}' ", MA_LH.Text);
+                strSQL[1] += string.Format("N2.N502A_SINKS='{0}' ", MA_LH.Text);
             }
 
             if (string.IsNullOrEmpty(MA_CC.Text) == false)
@@ -162,8 +162,8 @@ namespace t
                     strSQL[0] += " AND "; strSQL[1] += " AND ";
                 }
 
-                strSQL[0] += string.Format("N501A_SHIKS='{0}' ", MA_CC.Text);
-                strSQL[1] += string.Format("N502A_SHIKS='{0}' ", MA_CC.Text);
+                strSQL[0] += string.Format("N1.N501A_SHIKS='{0}' ", MA_CC.Text);
+                strSQL[1] += string.Format("N2.N502A_SHIKS='{0}' ", MA_CC.Text);
             }
             else
             {
@@ -174,8 +174,8 @@ namespace t
                         strSQL[0] += " AND "; strSQL[1] += " AND ";
                     }
 
-                    strSQL[0] += string.Format("SUBSTR(N501A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
-                    strSQL[1] += string.Format("SUBSTR(N502A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
+                    strSQL[0] += string.Format("SUBSTR(N1.N501A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
+                    strSQL[1] += string.Format("SUBSTR(N2.N502A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
                 } 
             }
 
@@ -186,8 +186,8 @@ namespace t
                     strSQL[0] += " AND "; strSQL[1] += " AND ";
                 }
 
-                strSQL[0] += string.Format("N501A_YUNYC='{0}' ", MA_DONVI.Text);
-                strSQL[1] += string.Format("N502A_YUNYC='{0}' ", MA_DONVI.Text);
+                strSQL[0] += string.Format("N1.N501A_YUNYC='{0}' ", MA_DONVI.Text);
+                strSQL[1] += string.Format("N2.N502A_YUNYC='{0}' ", MA_DONVI.Text);
             }
 
             if (string.IsNullOrEmpty(TEN_DOITAC.Text) == false)
@@ -197,8 +197,8 @@ namespace t
                     strSQL[0] += " AND "; strSQL[1] += " AND ";
                 }
 
-                strSQL[0] += string.Format("N501A_YUNN2 LIKE '%{0}%' ", TEN_DOITAC.Text);
-                strSQL[1] += string.Format("N502A_YUNN2 LIKE '%{0}%' ", TEN_DOITAC.Text);
+                strSQL[0] += string.Format("N1.N501A_YUNN2 LIKE '%{0}%' ", TEN_DOITAC.Text);
+                strSQL[1] += string.Format("N2.N502A_YUNN2 LIKE '%{0}%' ", TEN_DOITAC.Text);
             }
 
             //Nước xuất nhập khẩu (chung trường YUSYK)
@@ -209,8 +209,8 @@ namespace t
                     strSQL[0] += " AND "; strSQL[1] += " AND ";
                 }
 
-                strSQL[0] += string.Format("N501A_YUSYK='{0}' ", MA_NUOCXK.Text);
-                strSQL[1] += string.Format("N502A_YUSYK='{0}' ", MA_NUOCXK.Text);
+                strSQL[0] += string.Format("N1.N501A_YUSYK='{0}' ", MA_NUOCXK.Text);
+                strSQL[1] += string.Format("N2.N502A_YUSYK='{0}' ", MA_NUOCXK.Text);
             }
 
             //nước xuất xứ chưa tìm thấy trường nào
