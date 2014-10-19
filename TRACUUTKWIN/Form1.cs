@@ -83,11 +83,11 @@ namespace TRACUUTKWIN
                           Excel.Workbook wb = objExcel.Workbooks.Open(strReportFilePath);
                           objExcel.Visible = false;
                           Excel.Worksheet wsTOKHAIMD = (Excel.Worksheet)wb.Worksheets[1];
-                          wsTOKHAIMD.Range[string.Format("A1:IV{0}", dsTK.Tables[0].Rows.Count)].Value = objData;
+                          wsTOKHAIMD.Range[string.Format("A2:IV{0}", dsTK.Tables[0].Rows.Count+1)].Value = objData;
 
                           Excel.Worksheet wsHANGMD = (Excel.Worksheet)wb.Worksheets[2];
                           object[,] objDataHANG = t.clsAll.DataTable2ArrayObjects(dsHANG.Tables[0]);
-                          wsHANGMD.Range[string.Format("A1:IV{0}", dsHANG.Tables[0].Rows.Count)].Value = objDataHANG;
+                          wsHANGMD.Range[string.Format("A2:IV{0}", dsHANG.Tables[0].Rows.Count+1)].Value = objDataHANG;
 
                           objExcel.Visible = false;                        
                          // objExcel.SaveWorkspace(Missing.Value);
