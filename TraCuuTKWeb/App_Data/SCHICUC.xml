@@ -1,0 +1,1654 @@
+<?xml version="1.0" standalone="yes"?>
+<dsSCHICUC xmlns="http://tempuri.org/dsSCHICUC.xsd">
+  <SCHICUC>
+    <MA_CUC></MA_CUC>
+    <MA_CC></MA_CC>
+    <TEN_CC></TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>00</MA_CUC>
+    <MA_CC>00ZZ</MA_CC>
+    <TEN_CC>Tổng cục Hải quan</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01AB</MA_CC>
+    <TEN_CC>CC HQ CK Sân bay QT Nội Bài</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01AC</MA_CC>
+    <TEN_CC>CC HQ Gia Lâm Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01B1</MA_CC>
+    <TEN_CC>CC HQ Sân bay Nội bài-Đội HH Xuất</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01B2</MA_CC>
+    <TEN_CC>CC HQ Sân bay Nội bài-Đội CPN</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01B3</MA_CC>
+    <TEN_CC>CC HQ Sân bay Nội bài-Đội HH Nhập</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01BT</MA_CC>
+    <TEN_CC>CC HQ Yên Bái</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01D1</MA_CC>
+    <TEN_CC>HQ Mỹ Đình (thuộc HQ Bưu điện HN)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01D2</MA_CC>
+    <TEN_CC>HQ Bưu điện Hà Nội - FeDex</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01D3</MA_CC>
+    <TEN_CC>HQ Bưu điện Hà Nội - UPS</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01DD</MA_CC>
+    <TEN_CC>Chi cục hải quan Bưu Điện</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01E1</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ - CCHQ Bắc Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01E2</MA_CC>
+    <TEN_CC>Đội Hàng không - CCHQ Bắc Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01E3</MA_CC>
+    <TEN_CC>Đội TT CPN - CCHQ Bắc Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01IK</MA_CC>
+    <TEN_CC>CC HQ Gia Thụy  Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01M1</MA_CC>
+    <TEN_CC>CC HQ Hà Tây - Đội TT HQ Hà Đông</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01M2</MA_CC>
+    <TEN_CC>Đội TT HQ Khu CNC Hòa Lạc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01NV</MA_CC>
+    <TEN_CC>Chi cục hải quan Bắc Thăng Long</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01PJ</MA_CC>
+    <TEN_CC>Chi cục hải quan Việt Trì</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01PL</MA_CC>
+    <TEN_CC>CC HQ quản lý hàng ĐT-GC Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01PM</MA_CC>
+    <TEN_CC>CC HQ Hà Tây (Thuộc HQ Hà Nội)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01PR</MA_CC>
+    <TEN_CC>CC HQ Vĩnh Phúc (HQ Hà Nội)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01QQ</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01SI</MA_CC>
+    <TEN_CC>CC HQ Ga Yên Viên (Hà Nội)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01TE</MA_CC>
+    <TEN_CC>CC HQ Bắc Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>01</MA_CUC>
+    <MA_CC>01ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan TP Hà Nội</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02AB</MA_CC>
+    <TEN_CC>CC HQ Sân bay QT Tân Sơn Nhất</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02B1</MA_CC>
+    <TEN_CC>Đội TT - CC HQ SB QT Tân Sơn Nhất</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02B2</MA_CC>
+    <TEN_CC>Nhà ga Hàng hóa - CC HQ SB QT TSN</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02B4</MA_CC>
+    <TEN_CC>Chi cục HQ CK Sân bay Quốc tế Tân Sơn Nhất - Đội TT HH XNK – SCSC</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02CC</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Sài Gòn KV II</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02CH</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Sài Gòn KV III</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02CI</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Sài Gòn KV I</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02CV</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Hiệp Phước (HCM)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02CX</MA_CC>
+    <TEN_CC>CC HQ CK Tân Cảng (Hồ Chí Minh)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02DS</MA_CC>
+    <TEN_CC>CC HQ Chuyển phát nhanh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02F1</MA_CC>
+    <TEN_CC>HQ KCX Linh Trung 1 (Hồ Chí Minh)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02F2</MA_CC>
+    <TEN_CC>HQ KCX Linh Trung II (Hồ Chí Minh)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02F3</MA_CC>
+    <TEN_CC>HQ KCX Linh Trung - Khu CNC</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02H1</MA_CC>
+    <TEN_CC>Chi cục HQ CK Cảng Sài Gòn KV III - Đội Thủ tục hàng hóa XNK 1 (cảng Bến Nghé)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02H2</MA_CC>
+    <TEN_CC>Chi cục HQ CK Cảng Sài Gòn KV III - Đội thủ tục và Giám sát Xăng dầu (kho Xăng dầu)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02H3</MA_CC>
+    <TEN_CC>Chi cục HQ CK Cảng Sài Gòn KV III - Đội Thủ tục hàng hóa XNK 2 (cảng VICT)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02IK</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Sài Gòn khu vực IV</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02K1</MA_CC>
+    <TEN_CC>CC HQ KV IV (ICD Tanamexco)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02K2</MA_CC>
+    <TEN_CC>CC HQ KV IV (ICD Transimex)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02PG</MA_CC>
+    <TEN_CC>CC HQ quản lý hàng đầu tư HCM</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02PJ</MA_CC>
+    <TEN_CC>CC HQ quản lý hàng gia công HCM</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02QQ</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ TP Hồ Chí Minh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02XE</MA_CC>
+    <TEN_CC>CC HQ KCX Tân Thuận (HCM)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02XF</MA_CC>
+    <TEN_CC>CC HQ KCX Linh Trung (HCM)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>02</MA_CUC>
+    <MA_CC>02ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan TP Hồ Chí Minh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03CC</MA_CC>
+    <TEN_CC>CC HQ CK cảng HP KV I</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03CD</MA_CC>
+    <TEN_CC>CC HQ Thái Bình</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03CE</MA_CC>
+    <TEN_CC>CC HQ CK cảng HP KV II</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03EE</MA_CC>
+    <TEN_CC>CC HQ Cảng Đình Vũ  Hải Phòng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03NK</MA_CC>
+    <TEN_CC>CC HQ KCX và KCN Hải Phòng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03PA</MA_CC>
+    <TEN_CC>CC HQ QL hàng ĐT-GC Hải Phòng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03PJ</MA_CC>
+    <TEN_CC>CC HQ Hải dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03PL</MA_CC>
+    <TEN_CC>CC HQ Hưng yên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03QM</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Hải Phòng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03RR</MA_CC>
+    <TEN_CC>Phòng QLRR Hải Phòng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03TG</MA_CC>
+    <TEN_CC>CC HQ CK cảng HP KV III</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>03</MA_CUC>
+    <MA_CC>03ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan TP Hải Phòng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>10</MA_CUC>
+    <MA_CC>10BB</MA_CC>
+    <TEN_CC>CC HQ CK Thanh Thủy Hà Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>10</MA_CUC>
+    <MA_CC>10BC</MA_CC>
+    <TEN_CC>CC HQ CK Xín Mần Hà Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>10</MA_CUC>
+    <MA_CC>10BD</MA_CC>
+    <TEN_CC>CC HQ CK Phó Bảng Hà Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>10</MA_CUC>
+    <MA_CC>10BF</MA_CC>
+    <TEN_CC>CC HQ CK Săm Pun</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>10</MA_CUC>
+    <MA_CC>10BI</MA_CC>
+    <TEN_CC>CC HQ Tuyên Quang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>10</MA_CUC>
+    <MA_CC>10QG</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Hà Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>10</MA_CUC>
+    <MA_CC>10ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Hà Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11B1</MA_CC>
+    <TEN_CC>CC HQ CK Tà Lùng Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11B2</MA_CC>
+    <TEN_CC>Đội NV Số 2 Nà Lạn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11BB</MA_CC>
+    <TEN_CC>CC HQ CK Tà Lùng Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11BE</MA_CC>
+    <TEN_CC>CC HQ CK Trà Lĩnh Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11BF</MA_CC>
+    <TEN_CC>CC HQ CK Sóc Giang Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11BG</MA_CC>
+    <TEN_CC>CC HQ CK Bí Hà Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11BH</MA_CC>
+    <TEN_CC>CC HQ CK Pò Peo Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11G1</MA_CC>
+    <TEN_CC>CC HQ CF Bí Hà Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11G2</MA_CC>
+    <TEN_CC>Đội NV Lý Vạn - Chi cục HQCK Bí Hà</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11PK</MA_CC>
+    <TEN_CC>CC HQ Bắc Kạn Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11QL</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>11</MA_CUC>
+    <MA_CC>11ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Cao Bằng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12B1</MA_CC>
+    <TEN_CC>Chi cục HQ CK Quốc tế Tây Trang - Đội nghiệp vụ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12B2</MA_CC>
+    <TEN_CC>Chi cục HQ CK Quốc tế Tây Trang - Đội Thủ tục Huổi Puốc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12BB</MA_CC>
+    <TEN_CC>CC HQ CK Tây Trang Điện Biên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12BE</MA_CC>
+    <TEN_CC>CC HQ CK Lóng Sập Điện Biên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12BH</MA_CC>
+    <TEN_CC>CC HQ CK Ma Lu Thàng Điện Biên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12BI</MA_CC>
+    <TEN_CC>CC HQ CK Chiềng Khương Điện Biên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12F1</MA_CC>
+    <TEN_CC>Chi cục HQ Sơn La - HQ Thị xã Sơn La</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12F2</MA_CC>
+    <TEN_CC>Chi cục HQ Sơn La - Đội Nghiệp vụ HQCK Nà Cài   </TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12H1</MA_CC>
+    <TEN_CC>Chi cục HQ CK Ma Lu Thàng - Đội nghiệp vụ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12H2</MA_CC>
+    <TEN_CC>Chi cục HQ CK Ma Lu Thàng - Đội Hải quan Pô Tô</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12PF</MA_CC>
+    <TEN_CC>HQ Thị xã Sơn La - Điện Biên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12QK</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Điện Biên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>12</MA_CUC>
+    <MA_CC>12ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Điện Biên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>13</MA_CUC>
+    <MA_CC>13BB</MA_CC>
+    <TEN_CC>CC HQ CK QT Lào Cai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>13</MA_CUC>
+    <MA_CC>13BC</MA_CC>
+    <TEN_CC>CC HQ CK Mường Khương Lào Cai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>13</MA_CUC>
+    <MA_CC>13BD</MA_CC>
+    <TEN_CC>CC HQ Bát Xát Lào Cai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>13</MA_CUC>
+    <MA_CC>13G1</MA_CC>
+    <TEN_CC>Chi cục HQ Đường sắt LVQT Lào Cai - Đội Nghiệp vụ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>13</MA_CUC>
+    <MA_CC>13QH</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Lào Cai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>13</MA_CUC>
+    <MA_CC>13SG</MA_CC>
+    <TEN_CC>CC HQ Ga Đường Sắt QT Lào Cai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>13</MA_CUC>
+    <MA_CC>13ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Lào Cai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15B1</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ Hữu Nghị</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15B2</MA_CC>
+    <TEN_CC>Đội nghiệp vụ Co Sâu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15BB</MA_CC>
+    <TEN_CC>CC HQ CK Hữu Nghị Lạng Sơn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15BC</MA_CC>
+    <TEN_CC>CC HQ CK Chi Ma Lạng Sơn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15BD</MA_CC>
+    <TEN_CC>CC HQ Cốc Nam Lạng Sơn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15BE</MA_CC>
+    <TEN_CC>CC HQ Tân Thanh Lạng Sơn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15E1</MA_CC>
+    <TEN_CC>Độ nghiệp vụ Na Hình</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15E2</MA_CC>
+    <TEN_CC>Đội nghiệp vụ Nà Nưa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15E3</MA_CC>
+    <TEN_CC>Đội nghiệp vụ Bình Nghi</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15E4</MA_CC>
+    <TEN_CC>Đội nghiệp vụ Tân Thanh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15QL</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Lạng Sơn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15SI</MA_CC>
+    <TEN_CC>CC HQ Ga đường sắt QT Đồng Đăng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>15</MA_CUC>
+    <MA_CC>15ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Lạng Sơn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18A1</MA_CC>
+    <TEN_CC>Đội TT HQ quản lý KCN Yên Phong</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18A2</MA_CC>
+    <TEN_CC>Đội TT HQ quản lyý KCN Quế Võ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18A3</MA_CC>
+    <TEN_CC>Đội nghiệp vụ CC HQ Bắc Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18B1</MA_CC>
+    <TEN_CC>CC Hải quan Thái Nguyên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18B2</MA_CC>
+    <TEN_CC>ĐTT KCN Yên Bình-CCHQ Thái Nguyên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18BA</MA_CC>
+    <TEN_CC>CC Hải quan QLTT Bắc Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18BB</MA_CC>
+    <TEN_CC>CC Hải quan Thái Nguyên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18BC</MA_CC>
+    <TEN_CC>CC HQ Quản lý các KCN Bắc Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18ID</MA_CC>
+    <TEN_CC>CC HQ Cảng nội địa Tiên Sơn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>18</MA_CUC>
+    <MA_CC>18ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Bắc Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20B1</MA_CC>
+    <TEN_CC>HQ Cửa khẩu Bắc Luân</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20B2</MA_CC>
+    <TEN_CC>HQ Cửa khẩu Ka Long</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20BB</MA_CC>
+    <TEN_CC>CC HQ CK Móng Cái</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20BC</MA_CC>
+    <TEN_CC>CC HQ CK Hoành Mô Quảng Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20BD</MA_CC>
+    <TEN_CC>CC HQ Bắc Phong Sinh Quảng Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20CD</MA_CC>
+    <TEN_CC>HQ Cảng Biển Cái Lân </TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20CE</MA_CC>
+    <TEN_CC>CC HQ Vạn Gia Quảng Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20CF</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Hòn Gai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20CG</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Cẩm Phả</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20QK</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Quảng Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>20</MA_CUC>
+    <MA_CC>20ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Quảng Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27B1</MA_CC>
+    <TEN_CC>CC HQ CK Na Mèo Thanh Hóa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27B2</MA_CC>
+    <TEN_CC>Đội thủ tục Hải quan CK Tén Tằn</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27BB</MA_CC>
+    <TEN_CC>CC HQ CK Na Mèo Thanh Hoá</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27CF</MA_CC>
+    <TEN_CC>CC HQ Cảng Thanh Hoá</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27F1</MA_CC>
+    <TEN_CC>Đội TT - Chi cục HQ CK Cảng Thanh Hóa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27F2</MA_CC>
+    <TEN_CC>Đội TTHQ cảng Nghi Sơn - Chi cục HQ CK Cảng Thanh Hóa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27NJ</MA_CC>
+    <TEN_CC>CC HQ KCN tỉnh Hà Nam</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27PC</MA_CC>
+    <TEN_CC>CC HQ Ninh Bình</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27PE</MA_CC>
+    <TEN_CC>CC HQ Nam Định</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27QH</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Thanh Hóa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>27</MA_CUC>
+    <MA_CC>27ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Thanh Hoá</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>29</MA_CUC>
+    <MA_CC>29BB</MA_CC>
+    <TEN_CC>CC HQ CK Nậm Cắn Nghệ An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>29</MA_CUC>
+    <MA_CC>29BH</MA_CC>
+    <TEN_CC>Chi cục HQ CK Thanh Thủy</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>29</MA_CUC>
+    <MA_CC>29CC</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Cửa Lò</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>29</MA_CUC>
+    <MA_CC>29PF</MA_CC>
+    <TEN_CC>CC HQ Vinh Nghệ An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>29</MA_CUC>
+    <MA_CC>29QG</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Nghệ An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>29</MA_CUC>
+    <MA_CC>29ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Nghệ An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30BB</MA_CC>
+    <TEN_CC>CC HQ CK Cầu Treo Hà Tĩnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30BE</MA_CC>
+    <TEN_CC>CC HQ Hồng Lĩnh Hà Tĩnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30BI</MA_CC>
+    <TEN_CC>CC HQ khu kinh tế CK Cầu Treo</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30CC</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Xuân Hải Hà Tĩnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30CF</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Vũng Áng Hà Tĩnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30F1</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Vũng Áng Hà Tĩnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30F2</MA_CC>
+    <TEN_CC>Đội nghiệp vụ cảng Sơn Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30QH</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Hà Tĩnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>30</MA_CUC>
+    <MA_CC>30ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Hà Tĩnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31BB</MA_CC>
+    <TEN_CC>CC HQ CK Cha Lo Quảng Bình</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31BF</MA_CC>
+    <TEN_CC>CC HQ CK Cà Roòng Quảng Bình</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31CD</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Hòn La</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31D1</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ Đồng Hới</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31D2</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ Cảng Hòn La</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31D3</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ Cảng Gianh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31QG</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Quảng Bình</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>31</MA_CUC>
+    <MA_CC>31ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Quảng Bình</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>32</MA_CUC>
+    <MA_CC>32BB</MA_CC>
+    <TEN_CC>CC HQ CK Lao Bảo Quảng Trị</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>32</MA_CUC>
+    <MA_CC>32BC</MA_CC>
+    <TEN_CC>CC HQ CK La Lay Quảng Trị</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>32</MA_CUC>
+    <MA_CC>32BD</MA_CC>
+    <TEN_CC>CC HQ Khu Thương mại Lao Bảo</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>32</MA_CUC>
+    <MA_CC>32CD</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Cửa Việt Quảng Trị</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>32</MA_CUC>
+    <MA_CC>32QH</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Quảng Trị</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>32</MA_CUC>
+    <MA_CC>32VG</MA_CC>
+    <TEN_CC>Đội Kiẻm soát HQ Quảng Trị</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>32</MA_CUC>
+    <MA_CC>32ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Quảng Trị</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>33</MA_CUC>
+    <MA_CC>33BA</MA_CC>
+    <TEN_CC>CC HQ CK Ađớt</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>33</MA_CUC>
+    <MA_CC>33CC</MA_CC>
+    <TEN_CC>CC HQ Cảng Thuận An TT Huế</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>33</MA_CUC>
+    <MA_CC>33CF</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Chân Mây TT Huế</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>33</MA_CUC>
+    <MA_CC>33PD</MA_CC>
+    <TEN_CC>CC HQ Thuỷ An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>33</MA_CUC>
+    <MA_CC>33QG</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Thừa Thiên - Huế</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>33</MA_CUC>
+    <MA_CC>33ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Thừa thiên - Huế</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>34</MA_CUC>
+    <MA_CC>34AB</MA_CC>
+    <TEN_CC>CC HQ Sân bay QT  Đà Nẵng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>34</MA_CUC>
+    <MA_CC>34CC</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Đà Nẵng KV I</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>34</MA_CUC>
+    <MA_CC>34CE</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Đà Nẵng KV II</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>34</MA_CUC>
+    <MA_CC>34NG</MA_CC>
+    <TEN_CC>CC HQ KCN Hòa khánh-Liên chiểu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>34</MA_CUC>
+    <MA_CC>34NH</MA_CC>
+    <TEN_CC>CC HQ KCN Đà Nẵng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>34</MA_CUC>
+    <MA_CC>34QN</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Đà Nẵng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>34</MA_CUC>
+    <MA_CC>34ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan TP Đà Nẵng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>35</MA_CUC>
+    <MA_CC>35CB</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Dung Quất</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>35</MA_CUC>
+    <MA_CC>35NC</MA_CC>
+    <TEN_CC>CC HQ các KCN Quảng Ngãi</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>35</MA_CUC>
+    <MA_CC>35QE</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Quảng Ngãi</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>35</MA_CUC>
+    <MA_CC>35ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Quảng Ngãi</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>37</MA_CUC>
+    <MA_CC>37CB</MA_CC>
+    <TEN_CC>CC HQ Cảng Qui Nhơn Bình Định</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>37</MA_CUC>
+    <MA_CC>37QF</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Bình Định</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>37</MA_CUC>
+    <MA_CC>37TC</MA_CC>
+    <TEN_CC>CC HQ Phú Yên Bình Định</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>37</MA_CUC>
+    <MA_CC>37ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Bình Định</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>38</MA_CUC>
+    <MA_CC>38B1</MA_CC>
+    <TEN_CC>Chi cục HQ CK Lệ Thanh - Đội Nghiệp vụ tổng hợp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>38</MA_CUC>
+    <MA_CC>38B2</MA_CC>
+    <TEN_CC>Chi cục HQ CK Lệ Thanh - Đội Thủ tục</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>38</MA_CUC>
+    <MA_CC>38BB</MA_CC>
+    <TEN_CC>CC HQCK Lệ Thanh (Gia Lai)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>38</MA_CUC>
+    <MA_CC>38BC</MA_CC>
+    <TEN_CC>CC HQCK Quốc tế Bờ Y (Kon Tum)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>38</MA_CUC>
+    <MA_CC>38PD</MA_CC>
+    <TEN_CC>CC HQ CK Kon Tum</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>38</MA_CUC>
+    <MA_CC>38QF</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Gia Lai - Kontum</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>38</MA_CUC>
+    <MA_CC>38ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Gia Lai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40B1</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ I - CCHQ CK Buprăng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40B2</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ II - CCHQ CK Buprăng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40BB</MA_CC>
+    <TEN_CC>CC HQ CK BupRăng Đắc Lắc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40BC</MA_CC>
+    <TEN_CC>CC HQ Buôn Mê Thuột</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40D1</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ - CC HQ Đà Lạt</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40D2</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ 2 - CC HQ Đà Lạt</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40PD</MA_CC>
+    <TEN_CC>CC HQ Đà lạt</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40QF</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Đắc Lắc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>40</MA_CUC>
+    <MA_CC>40ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Đắc Lắc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>41</MA_CUC>
+    <MA_CC>41BH</MA_CC>
+    <TEN_CC>CC HQ Ninh Thuận Khánh Hòa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>41</MA_CUC>
+    <MA_CC>41CB</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Nha Trang KH</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>41</MA_CUC>
+    <MA_CC>41CC</MA_CC>
+    <TEN_CC>CC HQ CK cảng Cam Ranh Khánh Hòa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>41</MA_CUC>
+    <MA_CC>41PE</MA_CC>
+    <TEN_CC>CC HQ Vân Phong Khánh Hoà</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>41</MA_CUC>
+    <MA_CC>41QG</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Khánh Hòa</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>41</MA_CUC>
+    <MA_CC>41ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Khánh Hoà</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43CN</MA_CC>
+    <TEN_CC>Chi cục HQ CK Cảng tổng hợp Bình Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43H1</MA_CC>
+    <TEN_CC>CC HQ Sóng Thần</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43H2</MA_CC>
+    <TEN_CC>Đội TT Cảng Thạnh Phước</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43IH</MA_CC>
+    <TEN_CC>CC HQ Sóng Thần</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43K1</MA_CC>
+    <TEN_CC>CC HQ KCN Mỹ Phước Bình Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43K2</MA_CC>
+    <TEN_CC>CC HQ Mỹ Phước-Đội TT Khu liên hợp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43K3</MA_CC>
+    <TEN_CC>Đội TT Tân Định CCHQ Mỹ Phước</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43ND</MA_CC>
+    <TEN_CC>CC HQ KCN Sóng thần Bình Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43NF</MA_CC>
+    <TEN_CC>CC HQ KCN Viet Nam - Singapore</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43NG</MA_CC>
+    <TEN_CC>CC HQ KCN Việt Hương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43NK</MA_CC>
+    <TEN_CC>CC HQ KCN Mỹ Phước Bình Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43PB</MA_CC>
+    <TEN_CC>CC HQ QL ngoài KCN Bình Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43QL</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Bình Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>43</MA_CUC>
+    <MA_CC>43ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Bình Dương</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45B1</MA_CC>
+    <TEN_CC>Chi cục HQ CK Mộc Bài - Đội Nghiệp vụ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45B2</MA_CC>
+    <TEN_CC>Chi cục HQ CK Mộc Bài - Đội Quản lý Khu TM</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45BB</MA_CC>
+    <TEN_CC>CC HQ CK Mộc Bài Tây Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45BC</MA_CC>
+    <TEN_CC>CC HQ CK Xa Mát Tây Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45BD</MA_CC>
+    <TEN_CC>CC HQ Phước Tân Tây Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45BE</MA_CC>
+    <TEN_CC>CC HQ CK Katum Tây Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45C1</MA_CC>
+    <TEN_CC>Chi cục HQ CK Xa Mát - Đội Nghiệp vụ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45C2</MA_CC>
+    <TEN_CC>Chi cục HQ CK Xa Mát - Đội thủ tục Hải quan Chàng Riệc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45F1</MA_CC>
+    <TEN_CC>Đội TTHQ KCX và CN Linh Trung 3</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45F2</MA_CC>
+    <TEN_CC>Đội TTHQ Khu C.Nghiệp Phước Đông</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45NF</MA_CC>
+    <TEN_CC>CC HQ KCN Trảng Bàng Tây Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45QH</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Tây Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>45</MA_CUC>
+    <MA_CC>45ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Tây Ninh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47CD</MA_CC>
+    <TEN_CC>CC HQ Long Thành Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47CI</MA_CC>
+    <TEN_CC>CC HQ Long Bình Tân</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47D1</MA_CC>
+    <TEN_CC>Đội nghiệp vụ - HQ Long Thành</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47D2</MA_CC>
+    <TEN_CC>Đội nghiệp vụ 2 - HQ Long Thành</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47D3</MA_CC>
+    <TEN_CC>Đội NV3, HQ Long Thành, Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47I1</MA_CC>
+    <TEN_CC>Đội nghiệp vụ - HQ Long Bình Tân</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47I2</MA_CC>
+    <TEN_CC>Đội NV2, HQ Long Bình Tân, Đ.Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47NB</MA_CC>
+    <TEN_CC>CC HQ Biên Hoà</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47NF</MA_CC>
+    <TEN_CC>CC HQ Thống Nhất Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47NG</MA_CC>
+    <TEN_CC>CC HQ Nhơn Trạch Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47NM</MA_CC>
+    <TEN_CC>CC HQ QL KCN Bình Thuận Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47QN</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47XE</MA_CC>
+    <TEN_CC>CC HQ KCX Long Bình Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>47</MA_CUC>
+    <MA_CC>47ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Đồng Nai</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48BC</MA_CC>
+    <TEN_CC>CC HQ Mỹ Quý Tây Long An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48BD</MA_CC>
+    <TEN_CC>CC HQ Bình Hiệp Long An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48BE</MA_CC>
+    <TEN_CC>CC HQ Hưng Điền Long An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48BF</MA_CC>
+    <TEN_CC>CC HQ Bến Lức</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48BI</MA_CC>
+    <TEN_CC>CC HQ Đức Hòa Long An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48CG</MA_CC>
+    <TEN_CC>CC HQ Cảng Mỹ tho Long An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48F1</MA_CC>
+    <TEN_CC>Đội nghiệp vụ KCN Long Hậu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48F2</MA_CC>
+    <TEN_CC>Đội thủ tục- Chi cục HQ Bến Lức</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48QH</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Long An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>48</MA_CUC>
+    <MA_CC>48ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Long An</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49BB</MA_CC>
+    <TEN_CC>CC HQ CK Thường Phước Đồng Tháp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49BE</MA_CC>
+    <TEN_CC>Chi cục HQ Sở Thượng Đồng Tháp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49BF</MA_CC>
+    <TEN_CC>Chi cục HQ CK Thông Bình Đồng Tháp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49BG</MA_CC>
+    <TEN_CC>CC HQ cửa khẩu Dinh Bà</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49C1</MA_CC>
+    <TEN_CC>Chi cục HQ CK Cảng Đồng Tháp - KV Cao Lãnh</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49C2</MA_CC>
+    <TEN_CC>Chi cục HQ CK Cảng Đồng Tháp - KV Sa Đéc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49CC</MA_CC>
+    <TEN_CC>CC HQ Cảng Đồng Tháp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49QJ</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Đồng Tháp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>49</MA_CUC>
+    <MA_CC>49ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Đồng Tháp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50BB</MA_CC>
+    <TEN_CC>CC HQ CK Tịnh Biên An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50BC</MA_CC>
+    <TEN_CC>CC HQ Vĩnh Hội Đông An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50BD</MA_CC>
+    <TEN_CC>CC HQ CK Vĩnh Xương An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50BJ</MA_CC>
+    <TEN_CC>CC HQ Bắc Đai An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50BK</MA_CC>
+    <TEN_CC>CC HQ Khánh Bình An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50CE</MA_CC>
+    <TEN_CC>CC HQ Cảng Mỹ Thới An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50QM</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>50</MA_CUC>
+    <MA_CC>50ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan An Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51BE</MA_CC>
+    <TEN_CC>CC HQ Cảng Cát Lở Vũng Tàu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51C1</MA_CC>
+    <TEN_CC>Đội TTHHXNK Kho ngoại quan</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51C2</MA_CC>
+    <TEN_CC>CC HQCK Phú Mỹ V.Tàu-Đội TT SP-PSA</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51CB</MA_CC>
+    <TEN_CC>CC HQ CK Cảng - Sân bay Vũng Tàu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51CC</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Phú Mỹ Vũng Tàu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51CH</MA_CC>
+    <TEN_CC>Chi cục HQ CK Cảng Côn Đảo Vũng Tàu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51CI</MA_CC>
+    <TEN_CC>CC HQ CK cảng Cái Mép (Vũng Tàu)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51QJ</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Bà Rịa - Vũng Tàu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>51</MA_CUC>
+    <MA_CC>51ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Bà Rịa - Vũng Tàu</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>53</MA_CUC>
+    <MA_CC>53BC</MA_CC>
+    <TEN_CC>CC HQCK Quốc Tế Hà Tiên</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>53</MA_CUC>
+    <MA_CC>53BK</MA_CC>
+    <TEN_CC>CC HQ CK Giang Thành</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>53</MA_CUC>
+    <MA_CC>53CD</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Hòn Chông KG</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>53</MA_CUC>
+    <MA_CC>53CH</MA_CC>
+    <TEN_CC>CC HQ Phú Quốc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>53</MA_CUC>
+    <MA_CC>53QJ</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Kiên Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>53</MA_CUC>
+    <MA_CC>53ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Kiên Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>54</MA_CUC>
+    <MA_CC>54CB</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Cần Thơ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>54</MA_CUC>
+    <MA_CC>54CD</MA_CC>
+    <TEN_CC>CC HQ CK Vĩnh Long</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>54</MA_CUC>
+    <MA_CC>54PH</MA_CC>
+    <TEN_CC>CC HQ Tây Đô Cần Thơ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>54</MA_CUC>
+    <MA_CC>54PK</MA_CC>
+    <TEN_CC>CC HQ Sóc Trăng</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>54</MA_CUC>
+    <MA_CC>54QJ</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Cần Thơ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>54</MA_CUC>
+    <MA_CC>54ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan TP Cần Thơ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>59</MA_CUC>
+    <MA_CC>59BD</MA_CC>
+    <TEN_CC>CC HQ Hòa Trung (Cà Mau)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>59</MA_CUC>
+    <MA_CC>59CB</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Năm Căn Cà Mau</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>59</MA_CUC>
+    <MA_CC>59QE</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Cà Mau</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>59</MA_CUC>
+    <MA_CC>59ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Cà Mau</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>60</MA_CUC>
+    <MA_CC>60BD</MA_CC>
+    <TEN_CC>CC HQ CK Nam Giang (Quảng Nam)</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>60</MA_CUC>
+    <MA_CC>60C1</MA_CC>
+    <TEN_CC>Chi cục HQ KCN Điện Nam - Điện Ngọc - Đội Nghiệp vụ</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>60</MA_CUC>
+    <MA_CC>60C2</MA_CC>
+    <TEN_CC>Chi cục HQ KCN Điện Nam - Điện Ngọc - Đội Tây Giang</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>60</MA_CUC>
+    <MA_CC>60CB</MA_CC>
+    <TEN_CC>CC HQ CK Cảng Kỳ Hà</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>60</MA_CUC>
+    <MA_CC>60NC</MA_CC>
+    <TEN_CC>CC HQ KCN Điện Nam - Điện Ngọc</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>60</MA_CUC>
+    <MA_CC>60QE</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Quảng Nam</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>60</MA_CUC>
+    <MA_CC>60ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Quảng Nam</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61A1</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ Tổng hợp</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61A2</MA_CC>
+    <TEN_CC>Đội Thủ tục HQCK Tà Vát</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61A3</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ - CC HQ Chơn Thành</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61A4</MA_CC>
+    <TEN_CC>Đội Nghiệp vụ 2 - CC HQ Chơn Thành</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61BA</MA_CC>
+    <TEN_CC>CC HQ CK Hoa Lư Bình Phước</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61BB</MA_CC>
+    <TEN_CC>CC HQ CK Hoàng Diệu Bình Phước</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61PA</MA_CC>
+    <TEN_CC>CC Hải quan Chơn Thành</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61QC</MA_CC>
+    <TEN_CC>Chi cục KTSTQ HQ Bình Phước</TEN_CC>
+  </SCHICUC>
+  <SCHICUC>
+    <MA_CUC>61</MA_CUC>
+    <MA_CC>61ZZ</MA_CC>
+    <TEN_CC>Cục Hải quan Bình Phước</TEN_CC>
+  </SCHICUC>
+
+</dsSCHICUC>

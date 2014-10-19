@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSCHICUC" targetNamespace="http://tempuri.org/dsSCHICUC.xsd" xmlns:mstns="http://tempuri.org/dsSCHICUC.xsd" xmlns="http://tempuri.org/dsSCHICUC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSCHICUC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSCHICUC" msprop:Generator_UserDSName="dsSCHICUC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SCHICUC" msprop:Generator_TableClassName="SCHICUCDataTable" msprop:Generator_TableVarName="tableSCHICUC" msprop:Generator_TablePropName="SCHICUC" msprop:Generator_RowDeletingName="SCHICUCRowDeleting" msprop:Generator_RowChangingName="SCHICUCRowChanging" msprop:Generator_RowEvHandlerName="SCHICUCRowChangeEventHandler" msprop:Generator_RowDeletedName="SCHICUCRowDeleted" msprop:Generator_UserTableName="SCHICUC" msprop:Generator_RowChangedName="SCHICUCRowChanged" msprop:Generator_RowEvArgName="SCHICUCRowChangeEvent" msprop:Generator_RowClassName="SCHICUCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MA_CUC" msprop:Generator_ColumnVarNameInTable="columnMA_CUC" msprop:Generator_ColumnPropNameInRow="MA_CUC" msprop:Generator_ColumnPropNameInTable="MA_CUCColumn" msprop:Generator_UserColumnName="MA_CUC" type="xs:string" minOccurs="0" />
+              <xs:element name="MA_CC" msprop:Generator_ColumnVarNameInTable="columnMA_CC" msprop:Generator_ColumnPropNameInRow="MA_CC" msprop:Generator_ColumnPropNameInTable="MA_CCColumn" msprop:Generator_UserColumnName="MA_CC" type="xs:string" minOccurs="0" />
+              <xs:element name="TEN_CC" msprop:Generator_ColumnVarNameInTable="columnTEN_CC" msprop:Generator_ColumnPropNameInRow="TEN_CC" msprop:Generator_ColumnPropNameInTable="TEN_CCColumn" msprop:Generator_UserColumnName="TEN_CC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -72,6 +72,7 @@
     <Content Include="App_Data\DesignDB.mdb" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD2.sql" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD.sql" />
+    <Content Include="App_Data\SCHICUC.xml" />
     <Content Include="DangNhap.aspx" />
     <Content Include="DLL\AjaxControlToolkit.dll" />
     <Content Include="DLL\Interop.Excel.dll" />
@@ -79,6 +80,7 @@
     <Content Include="DLL\System.Web.Extensions.Design.dll" />
     <Content Include="DLL\System.Web.Extensions.dll" />
     <Content Include="DLL\vnConvert.dll" />
+    <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -117,6 +119,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsLOAIHINHMD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSCHICUC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSCHICUC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -165,6 +175,17 @@
     <Content Include="dsLOAIHINHMD.xss">
       <DependentUpon>dsLOAIHINHMD.xsd</DependentUpon>
     </Content>
+    <Content Include="dsSCHICUC.xsc">
+      <DependentUpon>dsSCHICUC.xsd</DependentUpon>
+    </Content>
+    <None Include="dsSCHICUC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSCHICUC.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsSCHICUC.xss">
+      <DependentUpon>dsSCHICUC.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -173,7 +194,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reports\TuyenHM\" />
+    <Folder Include="Reports\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

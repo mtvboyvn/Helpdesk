@@ -30,10 +30,16 @@ namespace t
                 Response.Redirect("~/DangNhap.aspx");
             }
 
+            TEN_CC.DataTextField = "TEN_CC";
+            TEN_CC.DataValueField = "MA_CC";
            
             if (Page.IsPostBack == false)
             {
                 clsAll.ClearDesignData2(tblDieuKien);
+
+                TEN_CC.DataSource = Global.dsCHICUC.Tables[0];
+                TEN_CC.DataBind();
+
                 //SOTK.Focus();
                 //Page.SetFocus(SOTK);
                 //Page.Form.DefaultFocus = SOTK.ClientID;
