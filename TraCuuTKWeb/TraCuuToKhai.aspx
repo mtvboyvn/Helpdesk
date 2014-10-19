@@ -104,8 +104,53 @@
                                                     <asp:TextBox ID="MA_LH" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_LH_TextChanged" TabIndex="4" ForeColor="Blue"></asp:TextBox>
                                                     <asp:DropDownList ID="TEN_LH" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_LH_SelectedIndexChanged" TabIndex="5" ForeColor="Blue">
                                                         <asp:ListItem Selected="True"></asp:ListItem>
-                                                        <asp:ListItem Value="A11">Nhập kinh doanh tiêu dùng</asp:ListItem>
-                                                        <asp:ListItem Value="A12">Nhập kinh doanh sản xuất</asp:ListItem>
+                                                       <asp:ListItem Value="A11">Nhập kinh doanh tiêu dùng</asp:ListItem>
+<asp:ListItem Value="A12">Nhập kinh doanh sản xuất</asp:ListItem>
+<asp:ListItem Value="A21">Chuyển tiêu thụ nội địa từ nguồn tạm nhập</asp:ListItem>
+<asp:ListItem Value="A31">Nhập hàng xuất khẩu bị trả lại</asp:ListItem>
+<asp:ListItem Value="A41">Nhập kinh doanh của DNCX</asp:ListItem>
+<asp:ListItem Value="A42">Chuyển tiêu thụ nội địa khác</asp:ListItem>
+<asp:ListItem Value="A43">Dự phòng</asp:ListItem>
+<asp:ListItem Value="A44">Dự phòng</asp:ListItem>
+<asp:ListItem Value="E11">Nhập nguyên liệu của DNCX từ nước ngoài</asp:ListItem>
+<asp:ListItem Value="E13">Nhập tạo tài sản cố định của DNCX</asp:ListItem>
+<asp:ListItem Value="E15">Nhập nguyên liệu của DNCX từ nội địa</asp:ListItem>
+<asp:ListItem Value="E21">Nhập nguyên liệu để gia công </asp:ListItem>
+<asp:ListItem Value="E23">Nhập nguyên liệu từ hợp đồng gia công khác chuyển sang</asp:ListItem>
+<asp:ListItem Value="E25">Dự phòng</asp:ListItem>
+<asp:ListItem Value="E31">Nhập nguyên liệu SXXK</asp:ListItem>
+<asp:ListItem Value="E33">Dự phòng</asp:ListItem>
+<asp:ListItem Value="E41">Nhập sản phẩm thuê gia công ở nước ngoài</asp:ListItem>
+<asp:ListItem Value="G11">Tạm nhập hàng kinh doanh TNTX</asp:ListItem>
+<asp:ListItem Value="G12">Tạm nhập máy móc, thiết bị phục vụ thực hiện các dự án có thời hạn …</asp:ListItem>
+<asp:ListItem Value="G13">Tạm nhập hàng miễn thuế</asp:ListItem>
+<asp:ListItem Value="G14">Tạm nhập khác</asp:ListItem>
+<asp:ListItem Value="G51">Tái nhập hàng đã tạm xuất</asp:ListItem>
+<asp:ListItem Value="C11">Hàng gửi kho ngoại quan</asp:ListItem>
+<asp:ListItem Value="C21">Hàng đưa vào khu phi thuế quan</asp:ListItem>
+<asp:ListItem Value="AEO">Doanh nghiệp AEO</asp:ListItem>
+<asp:ListItem Value="H11">Loại khác</asp:ListItem>
+<asp:ListItem Value="B11">Xuất kinh doanh</asp:ListItem>
+<asp:ListItem Value="B12">Xuất sau khi đã tạm xuất</asp:ListItem>
+<asp:ListItem Value="B13">Xuất trả hàng nhập khẩu</asp:ListItem>
+<asp:ListItem Value="E42">Xuất sản phẩm của DNCX</asp:ListItem>
+<asp:ListItem Value="E44">Dự phòng</asp:ListItem>
+<asp:ListItem Value="E46">Hàng của DNCX vào nội địa để GC</asp:ListItem>
+<asp:ListItem Value="E52">Xuất sản phẩm GC cho thương nhân nước ngoài</asp:ListItem>
+<asp:ListItem Value="E54">Xuất nguyên liệu từ HĐGC này sang HĐGC khác</asp:ListItem>
+<asp:ListItem Value="E56">Xuất sản phẩm GC vào nội địa</asp:ListItem>
+<asp:ListItem Value="E62">Xuất sản phẩm SXXK</asp:ListItem>
+<asp:ListItem Value="E64">Xuất kinh doanh của doanh nghiệp đầu tư (DNCX)</asp:ListItem>
+<asp:ListItem Value="E82">Xuất nguyên liệu thuê GC ở nước  ngoài</asp:ListItem>
+<asp:ListItem Value="G21">Tái xuất hàng kinh doanh TNTX</asp:ListItem>
+<asp:ListItem Value="G22">Tái xuất thiết bị, máy móc thuê phục vụ dự án có thời hạn</asp:ListItem>
+<asp:ListItem Value="G23">Tái xuất hàng miễn thuế tạm nhập</asp:ListItem>
+<asp:ListItem Value="G24">Tái xuất khác</asp:ListItem>
+<asp:ListItem Value="G61">Tạm xuất hàng hóa</asp:ListItem>
+<asp:ListItem Value="C12">Hàng xuất kho ngoại quan</asp:ListItem>
+<asp:ListItem Value="C22">Hàng đưa ra khỏi khu phi thuế quan</asp:ListItem>
+<asp:ListItem Value="AEO">Doanh nghiệp ưu tiên AEO</asp:ListItem>
+<asp:ListItem Value="H21">Loại hình khác</asp:ListItem>
                                                 </asp:DropDownList>
                                                         </nobr>
                                             </td>
