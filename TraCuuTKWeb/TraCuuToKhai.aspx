@@ -30,6 +30,19 @@
             prm.add_beginRequest(SavePostbackElement);
         }
     </script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1px;
+            height: 28px;
+        }
+        .auto-style2 {
+            height: 28px;
+        }
+        .auto-style3 {
+            width: 100%;
+            height: 28px;
+        }
+    </style>
 </head>
 <body onload="AddRequestHandler()">
     <form id="form1" defaultfocus="SOTK" runat="server">
@@ -63,15 +76,15 @@
                                 <ContentTemplate>
                                     <table id="tblDieuKien" runat="server" style="width: 100%; border: solid 0px black; border-collapse: collapse;">
                                         <tr runat="server">
-                                            <td style="text-align: right; width: 1px; border: solid 0px red;" runat="server">
+                                            <td style="text-align: right; border: solid 0px red;" runat="server" class="auto-style1">
                                                 <nobr>
                                                     <asp:Label ID="Label2" runat="server" Text="Số TK:"></asp:Label>
                                                         </nobr>
                                             </td>
-                                            <td style="width: 1px; text-align: left; border: solid 0px red;" runat="server">
+                                            <td style="text-align: left; border: solid 0px red;" runat="server" class="auto-style1">
                                                 <asp:TextBox ID="SOTK" runat="server" Width="100px" TabIndex="1" ForeColor="Blue">999999999999</asp:TextBox>
                                             </td>
-                                            <td style=" text-align: left; border: solid 0px red;" runat="server">
+                                            <td style=" text-align: left; border: solid 0px red;" runat="server" class="auto-style2">
                                                 <nobr>
                                                     <asp:Label ID="Label3" runat="server" Text="&nbsp;&nbsp;&nbsp;Ngày ĐK:"></asp:Label>
                                                         <asp:TextBox ID="NGAYDK_FROM" runat="server" Width="80px" TabIndex="2" ForeColor="Blue">31/12/2014</asp:TextBox>
@@ -88,9 +101,9 @@
                                                         </nobr>
                                             </td>
 
-                                            <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
-                                                &nbsp;</td>
-                                            <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
+                                            <td style="text-align: right; border-left: solid 1px red;" runat="server" class="auto-style1">
+                                                </td>
+                                            <td style="text-align: left; border: solid 0px red;" runat="server" class="auto-style3">
                                                 <asp:Label ID="Label14" runat="server" Text="Thông tin hàng:"></asp:Label>
                                             </td>
                                         </tr>
@@ -163,7 +176,7 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                <asp:TextBox ID="MA_HS" runat="server" ForeColor="Blue" TabIndex="19" Width="185px"></asp:TextBox>
+                                                <asp:TextBox ID="MA_HS" runat="server" ForeColor="Blue" TabIndex="17" Width="185px"></asp:TextBox>
                                                 </nobr>
                                             </td>
 
@@ -244,7 +257,7 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                <asp:TextBox ID="TEN_HANG" runat="server" ForeColor="Blue" TabIndex="20" Width="400px"></asp:TextBox>
+                                                <asp:TextBox ID="TEN_HANG" runat="server" ForeColor="Blue" TabIndex="18" Width="400px"></asp:TextBox>
                                                 </nobr>
                                             </td>
                                         </tr>
@@ -272,8 +285,8 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                <asp:TextBox ID="MA_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXX_TextChanged" TabIndex="17" Width="30px"></asp:TextBox>
-                                                <asp:DropDownList ID="TEN_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXX_SelectedIndexChanged" TabIndex="18" Width="150px">
+                                                <asp:TextBox ID="MA_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXX_TextChanged" TabIndex="19" Width="30px"></asp:TextBox>
+                                                <asp:DropDownList ID="TEN_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXX_SelectedIndexChanged" TabIndex="20" Width="150px">
                                                     <asp:ListItem></asp:ListItem>
                                                    <asp:ListItem Value="AF">Afganistan</asp:ListItem>
 <asp:ListItem Value="AL">Albania</asp:ListItem>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Web;
 using System.Web.UI;
@@ -349,17 +350,23 @@ namespace t
             if (string.IsNullOrEmpty(MA_CUCHQ.Text.Trim()) == true)
             {
                 TEN_CUCHQ.SelectedIndex = 0;
+                MA_CC.Text = string.Empty;
+                TEN_CC.DataSource = Global.dsCHICUC.Tables[0];
+                TEN_CC.DataBind();
                 return;
             }
             try
             {
                 TEN_CUCHQ.SelectedValue = MA_CUCHQ.Text.Trim().ToUpper();
                 MA_CUCHQ.Text = MA_CUCHQ.Text.Trim().ToUpper();
+                MA_CC.Text = string.Empty;
+                TEN_CUCHQ_SelectedIndexChanged(null, null);
             }
             catch (Exception ex)
             {
                 string s = ex.Message;
                 MA_CUCHQ.Text = string.Empty;
+                MA_CC.Text = string.Empty;
                 TEN_CUCHQ.SelectedIndex = 0;
             }
         }
@@ -370,15 +377,30 @@ namespace t
             {
                 TEN_CUCHQ.SelectedIndex = 0;
                 MA_CUCHQ.Text = string.Empty;
+                TEN_CC.DataSource = Global.dsCHICUC.Tables[0];
+                TEN_CC.DataBind();
+                MA_CC.Text = string.Empty;
                 return;
             }
             if (string.IsNullOrEmpty(TEN_CUCHQ.SelectedValue.ToString()) == true)
             {
                 TEN_CUCHQ.SelectedIndex = 0;
                 MA_CUCHQ.Text = string.Empty;
+                TEN_CC.DataSource = Global.dsCHICUC.Tables[0];
+                TEN_CC.DataBind();
+                MA_CC.Text = string.Empty;
                 return;
             }
             MA_CUCHQ.Text = TEN_CUCHQ.SelectedValue.ToString().ToUpper();
+            MA_CC.Text = string.Empty;
+           DataRow[] dr = Global.dsCHICUC.Tables[0].Select(string.Format("MA_CUC='{0}'",MA_CUCHQ.Text));
+           DataRow fRow = Global.dsCHICUC.Tables[0].NewRow();
+           fRow[0] = ""; fRow[1] = ""; fRow[2] = "";
+           List<DataRow> l = new List<DataRow>();
+           l.Add(fRow);
+           l.AddRange(dr);
+           TEN_CC.DataSource = l.ToArray();
+            TEN_CC.DataBind();
         }
 
         protected void MA_CC_TextChanged(object sender, EventArgs e)
