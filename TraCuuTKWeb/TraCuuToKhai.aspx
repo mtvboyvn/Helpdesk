@@ -90,13 +90,18 @@
 
                                             <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
                                                 <nobr>
-                                                   <asp:Label ID="Label9" runat="server" Text="&nbsp;&nbsp;Mã HS:"></asp:Label>
-                                                        </nobr>
+                                                <asp:Label ID="Label14" runat="server" Text="&nbsp;&nbsp;Nước NK:"></asp:Label>
+                                                </nobr>
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                   <asp:TextBox ID="MA_HS" runat="server" Width="185px" TabIndex="4" ForeColor="Blue"></asp:TextBox>
-                                                        </nobr>
+                                                <asp:TextBox ID="MA_NUOCNK" runat="server" AutoPostBack="True" ForeColor="Blue" TabIndex="13" Width="30px"></asp:TextBox>
+                                                <asp:DropDownList ID="TEN_NUOCNK" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" TabIndex="14" Width="150px">
+                                                    <asp:ListItem></asp:ListItem>
+                                                    <asp:ListItem Value="AF">Afganistan</asp:ListItem>
+                                                    <asp:ListItem Value="AL">Albania</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </nobr>
                                             </td>
                                         </tr>
                                         <tr runat="server">
@@ -107,8 +112,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_LH" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_LH_TextChanged" TabIndex="5" ForeColor="Blue"></asp:TextBox>
-                                                    <asp:DropDownList ID="TEN_LH" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_LH_SelectedIndexChanged" TabIndex="6" ForeColor="Blue">
+                                                    <asp:TextBox ID="MA_LH" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_LH_TextChanged" TabIndex="4" ForeColor="Blue"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_LH" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_LH_SelectedIndexChanged" TabIndex="5" ForeColor="Blue">
                                                         <asp:ListItem Selected="True"></asp:ListItem>
                                                         <asp:ListItem Value="A11">Nhập kinh doanh tiêu dùng</asp:ListItem>
                                                         <asp:ListItem Value="A12">Nhập kinh doanh sản xuất</asp:ListItem>
@@ -118,13 +123,18 @@
 
                                             <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
                                                 <nobr>
-                                                   <asp:Label ID="Label10" runat="server" Text="&nbsp;&nbsp;Tên hàng:"></asp:Label>
-                                                        </nobr>
+                                                <asp:Label ID="Label11" runat="server" Text="&nbsp;&nbsp;Nước XK:"></asp:Label>
+                                                </nobr>
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                   <asp:TextBox ID="TEN_HANG" runat="server" Width="400px" TabIndex="7" ForeColor="Blue"></asp:TextBox>
-                                                        </nobr>
+                                                <asp:TextBox ID="MA_NUOCXK" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXK_TextChanged" TabIndex="15" Width="30px"></asp:TextBox>
+                                                <asp:DropDownList ID="TEN_NUOCXK" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXK_SelectedIndexChanged" TabIndex="16" Width="150px">
+                                                    <asp:ListItem></asp:ListItem>
+                                                    <asp:ListItem Value="AF">Afganistan</asp:ListItem>
+                                                    <asp:ListItem Value="AL">Albania</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </nobr>
                                             </td>
 
                                         </tr>
@@ -136,8 +146,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_CUCHQ" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_CUCHQ_TextChanged" TabIndex="8" ForeColor="Blue"></asp:TextBox>
-                                                    <asp:DropDownList ID="TEN_CUCHQ" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_CUCHQ_SelectedIndexChanged" TabIndex="9" ForeColor="Blue">
+                                                    <asp:TextBox ID="MA_CUCHQ" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_CUCHQ_TextChanged" TabIndex="6" ForeColor="Blue"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_CUCHQ" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_CUCHQ_SelectedIndexChanged" TabIndex="7" ForeColor="Blue">
                                                         <asp:ListItem></asp:ListItem>
                                                         <asp:ListItem Value="01">Thành phố Hà Nội</asp:ListItem>
                                                         <asp:ListItem Value="02">Thành phố Hồ Chí Minh</asp:ListItem>
@@ -147,18 +157,18 @@
 
                                             <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
                                                 <nobr>
-                                                   <asp:Label ID="Label11" runat="server" Text="&nbsp;&nbsp;Nước XK, NK:"></asp:Label>
-                                                        </nobr>
+                                                <asp:Label ID="Label12" runat="server" Text="&nbsp;&nbsp;Nước xuất xứ:"></asp:Label>
+                                                </nobr>
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                   <asp:TextBox ID="MA_NUOCXNK" runat="server" Width="30px" AutoPostBack="True" OnTextChanged="MA_NUOCXNK_TextChanged" TabIndex="10" ForeColor="Blue"></asp:TextBox>
-                                                        <asp:DropDownList ID="TEN_NUOCXNK" runat="server" Height="22px" Width="150px" AutoPostBack="True" OnSelectedIndexChanged="TEN_NUOCXNK_SelectedIndexChanged" TabIndex="11" ForeColor="Blue">
-                                                            <asp:ListItem></asp:ListItem>
-                                                            <asp:ListItem Value="AF">Afganistan</asp:ListItem>
-                                                            <asp:ListItem Value="AL">Albania</asp:ListItem>
-                                                    </asp:DropDownList>
-                                                        </nobr>
+                                                <asp:TextBox ID="MA_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXX_TextChanged" TabIndex="17" Width="30px"></asp:TextBox>
+                                                <asp:DropDownList ID="TEN_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXX_SelectedIndexChanged" TabIndex="18" Width="150px">
+                                                    <asp:ListItem></asp:ListItem>
+                                                    <asp:ListItem Value="AF">Afganistan</asp:ListItem>
+                                                    <asp:ListItem Value="AL">Albania</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </nobr>
                                             </td>
                                         </tr>
                                         <tr runat="server">
@@ -169,8 +179,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_CC" Width="50px" runat="server" TabIndex="12" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_CC_TextChanged"></asp:TextBox>
-                                                    <asp:DropDownList ID="TEN_CC" Width="410px" runat="server" Height="22px" TabIndex="13" AutoPostBack="True" ForeColor="Blue" OnSelectedIndexChanged="TEN_CC_SelectedIndexChanged">
+                                                    <asp:TextBox ID="MA_CC" Width="50px" runat="server" TabIndex="8" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_CC_TextChanged"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_CC" Width="410px" runat="server" Height="22px" TabIndex="9" AutoPostBack="True" ForeColor="Blue" OnSelectedIndexChanged="TEN_CC_SelectedIndexChanged">
                                                         <asp:ListItem></asp:ListItem>
                                                         <asp:ListItem Value="01AB">CC HQ CK Sân bay QT Nội Bài</asp:ListItem>
                                                         <asp:ListItem Value="01AC">CC HQ Gia Lâm Hà Nội</asp:ListItem>
@@ -179,20 +189,9 @@
                                             </td>
 
                                             <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
-                                                <nobr>
-                                                   <asp:Label ID="Label12" runat="server" Text="&nbsp;&nbsp;Nước xuất xứ:"></asp:Label>
-                                                        </nobr>
-                                            </td>
+                                                &nbsp;</td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
-                                                <nobr>
-                                                   <asp:TextBox ID="MA_NUOCXX" runat="server" Width="30px" AutoPostBack="True" OnTextChanged="MA_NUOCXX_TextChanged" TabIndex="14" ForeColor="Blue"></asp:TextBox>
-                                                        <asp:DropDownList ID="TEN_NUOCXX" runat="server" Height="22px" Width="150px" AutoPostBack="True" OnSelectedIndexChanged="TEN_NUOCXX_SelectedIndexChanged" TabIndex="15" ForeColor="Blue">
-                                                            <asp:ListItem></asp:ListItem>
-                                                            <asp:ListItem Value="AF">Afganistan</asp:ListItem>
-                                                            <asp:ListItem Value="AL">Albania</asp:ListItem>
-                                                    </asp:DropDownList>
-                                                        </nobr>
-                                            </td>
+                                                &nbsp;</td>
                                         </tr>
                                         <tr runat="server">
                                             <td style="text-align: right; width: 1px; border: solid 0px red;" runat="server">
@@ -202,20 +201,42 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_DONVI" Width="100px" runat="server" TabIndex="16" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged"></asp:TextBox>
-                                                    <asp:TextBox ID="TEN_DONVI" runat="server" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged" ReadOnly="True" TabIndex="16" Width="360px"></asp:TextBox>
+                                                    <asp:TextBox ID="MA_DONVI" Width="100px" runat="server" TabIndex="10" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged"></asp:TextBox>
+                                                    <asp:TextBox ID="TEN_DONVI" runat="server" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged" ReadOnly="True" TabIndex="11" Width="355px"></asp:TextBox>
                                                         </nobr>
                                             </td>
 
                                             <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
                                                 <nobr>
-                                                   <asp:Label ID="Label13" runat="server" Text="&nbsp;&nbsp;Đơn vị đối tác:"></asp:Label>
-                                                        </nobr>
+                                                <asp:Label ID="Label9" runat="server" Text="&nbsp;&nbsp;Mã HS:"></asp:Label>
+                                                </nobr>
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                   <asp:TextBox ID="TextBox12" runat="server" Width="185px" TabIndex="18" ForeColor="Blue"></asp:TextBox>
-                                                        </nobr>
+                                                <asp:TextBox ID="MA_HS" runat="server" ForeColor="Blue" TabIndex="19" Width="185px"></asp:TextBox>
+                                                </nobr>
+                                            </td>
+                                        </tr>
+                                        <tr runat="server">
+                                            <td runat="server" style="text-align: right; width: 1px; border: solid 0px red;">
+                                                <nobr>
+                                                <asp:Label ID="Label13" runat="server" Text="Tên đối tác:"></asp:Label>
+                                                </nobr>
+                                            </td>
+                                            <td runat="server" colspan="2" style="width: 1px; text-align: left; border: solid 0px red;">
+                                                <nobr>
+                                                <asp:TextBox ID="TextBox12" runat="server" ForeColor="Blue" TabIndex="12" Width="465px"></asp:TextBox>
+                                                </nobr>
+                                            </td>
+                                            <td runat="server" style="width: 1px; text-align: right; border-left: solid 1px red;">
+                                                <nobr>
+                                                <asp:Label ID="Label10" runat="server" Text="&nbsp;&nbsp;Tên hàng:"></asp:Label>
+                                                </nobr>
+                                            </td>
+                                            <td runat="server" style="width: 100%; text-align: left; border: solid 0px red;">
+                                                <nobr>
+                                                <asp:TextBox ID="TEN_HANG" runat="server" ForeColor="Blue" TabIndex="20" Width="400px"></asp:TextBox>
+                                                </nobr>
                                             </td>
                                         </tr>
                                     </table>
@@ -228,10 +249,10 @@
                             <table style="width:100%;">
                                 <tr>
                                     <td style="width:1px;">
-    <asp:Button ID="btnDatLenh" runat="server" Text="Đặt lệnh tra cứu (Alt+S)" OnClick="btnDatLenh_Click" TabIndex="19" AccessKey="s" />
+    <asp:Button ID="btnDatLenh" runat="server" Text="Đặt lệnh tra cứu (Alt+S)" OnClick="btnDatLenh_Click" TabIndex="21" AccessKey="s" />
                                     </td>
  <td style="width:1px;">
-  <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click" TabIndex="20" />
+  <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click" TabIndex="22" />
     
                                      </td>
                                     <td style="width:1px;">

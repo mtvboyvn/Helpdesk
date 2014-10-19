@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Globalization;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -107,13 +107,89 @@ namespace t
         {
             //string strSQL = "SELECT * FROM MVIEW1_TOKHAIMD WHERE {0}";
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
+            string[] strSQL = new string[2];
             if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)
             {
                 return new string[2]{
                     string.Format("N501A_SIKNO='{0}' ", SOTK.Text),
                     string.Format("N502A_SIKNO='{0}' ", SOTK.Text)};
             }
-            return new string[2];
+            
+            //THỜI GIAN ĐANG CHẠY RẤT CHẬP VÌ NGÀY ĐK TỜ KHAI ĐANG ĐỂ DẠNG TEXT TRONG ĐB
+
+            //if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
+            //{
+            //    DateTime dFrom = new DateTime();
+            //    bool bP = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
+            //    if (bP == true)
+            //    { 
+            //        strSQL = new string[2]{
+            //        string.Format("N501A_UDATE>='{0:yyyyMMdd}' ", dFrom),
+            //        string.Format("N502A_UDATE>='{0:yyyyMMdd}' ", dFrom)};
+            //    }
+            //}
+            //if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
+            //{
+            //    DateTime dTO = new DateTime();
+            //    bool bP = DateTime.TryParseExact(NGAYDK_TO.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dTO);
+            //    if (bP == true)
+            //    {
+            //        if (string.IsNullOrEmpty(strSQL[0]) == false)
+            //        {
+            //            strSQL[0] += " AND "; strSQL[1] += " AND ";
+            //        }
+                  
+            //       strSQL[0] += string.Format("N501A_UDATE<='{0:yyyyMMdd}' ", dTO);
+            //       strSQL[1] += string.Format("N502A_UDATE<='{0:yyyyMMdd}' ", dTO);
+            //    }
+            //}
+
+            if (string.IsNullOrEmpty(MA_LH.Text) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[0]) == false)
+                {
+                    strSQL[0] += " AND "; strSQL[1] += " AND ";
+                }
+
+                strSQL[0] += string.Format("N501A_SINKS='{0}' ", MA_LH.Text);
+                strSQL[1] += string.Format("N502A_SINKS='{0}' ", MA_LH.Text);
+            }
+
+            if (string.IsNullOrEmpty(MA_CC.Text) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[0]) == false)
+                {
+                    strSQL[0] += " AND "; strSQL[1] += " AND ";
+                }
+
+                strSQL[0] += string.Format("N501A_SHIKS='{0}' ", MA_CC.Text);
+                strSQL[1] += string.Format("N502A_SHIKS='{0}' ", MA_CC.Text);
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
+                {
+                    if (string.IsNullOrEmpty(strSQL[0]) == false)
+                    {
+                        strSQL[0] += " AND "; strSQL[1] += " AND ";
+                    }
+
+                    strSQL[0] += string.Format("SUBSTR(N501A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
+                    strSQL[1] += string.Format("SUBSTR(N502A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
+                } 
+            }
+
+            if (string.IsNullOrEmpty(MA_DONVI.Text) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[0]) == false)
+                {
+                    strSQL[0] += " AND "; strSQL[1] += " AND ";
+                }
+
+                strSQL[0] += string.Format("N501A_YUNYC='{0}' ", MA_DONVI.Text);
+                strSQL[1] += string.Format("N502A_YUNYC='{0}' ", MA_DONVI.Text);
+            }
+            return strSQL;
         }
 
         private string TạoTruyVấn(string[] strWhere)
@@ -162,41 +238,41 @@ namespace t
             MA_LH.Text = TEN_LH.SelectedValue.ToString().ToUpper();
         }
 
-        protected void MA_NUOCXNK_TextChanged(object sender, EventArgs e)
+        protected void MA_NUOCXK_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(MA_NUOCXNK.Text.Trim()) == true)
+            if (string.IsNullOrEmpty(MA_NUOCXK.Text.Trim()) == true)
             {
-                TEN_NUOCXNK.SelectedIndex = 0;
+                TEN_NUOCXK.SelectedIndex = 0;
                 return;
             }
             try
             {
-                TEN_NUOCXNK.SelectedValue = MA_NUOCXNK.Text.Trim().ToUpper();
-                MA_NUOCXNK.Text = MA_NUOCXNK.Text.Trim().ToUpper();
+                TEN_NUOCXK.SelectedValue = MA_NUOCXK.Text.Trim().ToUpper();
+                MA_NUOCXK.Text = MA_NUOCXK.Text.Trim().ToUpper();
             }
             catch (Exception ex)
             {
                 string s = ex.Message;
-                MA_NUOCXNK.Text = string.Empty;
-                TEN_NUOCXNK.SelectedIndex = 0;
+                MA_NUOCXK.Text = string.Empty;
+                TEN_NUOCXK.SelectedIndex = 0;
             }
         }
 
-        protected void TEN_NUOCXNK_SelectedIndexChanged(object sender, EventArgs e)
+        protected void TEN_NUOCXK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (TEN_NUOCXNK.SelectedValue == null)
+            if (TEN_NUOCXK.SelectedValue == null)
             {
-                TEN_NUOCXNK.SelectedIndex = 0;
-                MA_NUOCXNK.Text = string.Empty;
+                TEN_NUOCXK.SelectedIndex = 0;
+                MA_NUOCXK.Text = string.Empty;
                 return;
             }
-            if (string.IsNullOrEmpty(TEN_NUOCXNK.SelectedValue.ToString()) == true)
+            if (string.IsNullOrEmpty(TEN_NUOCXK.SelectedValue.ToString()) == true)
             {
-                TEN_NUOCXNK.SelectedIndex = 0;
-                MA_NUOCXNK.Text = string.Empty;
+                TEN_NUOCXK.SelectedIndex = 0;
+                MA_NUOCXK.Text = string.Empty;
                 return;
             }
-            MA_NUOCXNK.Text = TEN_NUOCXNK.SelectedValue.ToString().ToUpper();
+            MA_NUOCXK.Text = TEN_NUOCXK.SelectedValue.ToString().ToUpper();
         }
 
         protected void MA_NUOCXX_TextChanged(object sender, EventArgs e)
