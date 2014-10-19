@@ -175,6 +175,15 @@ namespace t {
         protected global::AjaxControlToolkit.MaskedEditExtender NGAYDK_TO_MaskedEditExtender;
         
         /// <summary>
+        /// Label14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label14;
+        
+        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -202,31 +211,22 @@ namespace t {
         protected global::System.Web.UI.WebControls.DropDownList TEN_LH;
         
         /// <summary>
-        /// Label11 control.
+        /// Label9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// MA_NUOCXK control.
+        /// MA_HS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MA_NUOCXK;
-        
-        /// <summary>
-        /// TEN_NUOCXK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEN_NUOCXK;
+        protected global::System.Web.UI.WebControls.TextBox MA_HS;
         
         /// <summary>
         /// Label5 control.
@@ -256,31 +256,22 @@ namespace t {
         protected global::System.Web.UI.WebControls.DropDownList TEN_CUCHQ;
         
         /// <summary>
-        /// Label12 control.
+        /// Label10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// MA_NUOCXX control.
+        /// TEN_HANG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MA_NUOCXX;
-        
-        /// <summary>
-        /// TEN_NUOCXX control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEN_NUOCXX;
+        protected global::System.Web.UI.WebControls.TextBox TEN_HANG;
         
         /// <summary>
         /// Label7 control.
@@ -310,6 +301,33 @@ namespace t {
         protected global::System.Web.UI.WebControls.DropDownList TEN_CC;
         
         /// <summary>
+        /// Label12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label12;
+        
+        /// <summary>
+        /// MA_NUOCXX control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MA_NUOCXX;
+        
+        /// <summary>
+        /// TEN_NUOCXX control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList TEN_NUOCXX;
+        
+        /// <summary>
         /// Label8 control.
         /// </summary>
         /// <remarks>
@@ -337,24 +355,6 @@ namespace t {
         protected global::System.Web.UI.WebControls.TextBox TEN_DONVI;
         
         /// <summary>
-        /// Label9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
-        
-        /// <summary>
-        /// MA_HS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MA_HS;
-        
-        /// <summary>
         /// Label13 control.
         /// </summary>
         /// <remarks>
@@ -373,22 +373,31 @@ namespace t {
         protected global::System.Web.UI.WebControls.TextBox TEN_DOITAC;
         
         /// <summary>
-        /// Label10 control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// TEN_HANG control.
+        /// MA_NUOCXK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TEN_HANG;
+        protected global::System.Web.UI.WebControls.TextBox MA_NUOCXK;
+        
+        /// <summary>
+        /// TEN_NUOCXK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList TEN_NUOCXK;
         
         /// <summary>
         /// TabPanel2 control.
