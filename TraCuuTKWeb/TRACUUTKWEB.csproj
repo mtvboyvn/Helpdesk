@@ -102,6 +102,7 @@
     <Compile Include="1-BE\t.designer.cs">
       <DependentUpon>t.cs</DependentUpon>
     </Compile>
+    <Compile Include="1-BE\t.designer.SDONVI.cs" />
     <Compile Include="1-BE\t.designer.SREPORT.cs" />
     <Compile Include="1-BE\t.designer.SUSER.cs" />
     <Compile Include="Constants.cs" />

@@ -370,7 +370,7 @@ namespace t {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEN_DONVI;
+        protected global::System.Web.UI.WebControls.TextBox TEN_DONVI;
         
         /// <summary>
         /// Label13 control.

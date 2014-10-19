@@ -134,6 +134,16 @@ namespace t
 			}
 		}
 		/// <summary>
+		/// Thuộc tính đại diện cho bảng SDONVI.
+		/// </summary>
+		public DBTable<SDONVI> SDONVIs
+		{
+			get
+			{
+				return GetTable<SDONVI>();
+			}
+		}
+		/// <summary>
 		/// Cập nhật tất các thay đổi vào DB với transaction.
 		/// </summary>
 		/// <returns>Số dòng thay đổi</returns>

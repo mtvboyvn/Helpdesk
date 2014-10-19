@@ -314,37 +314,46 @@ namespace t
         {
             if (string.IsNullOrEmpty(MA_DONVI.Text.Trim()) == true)
             {
-                TEN_DONVI.SelectedIndex = 0;
+                TEN_DONVI.Text = string.Empty;
                 return;
             }
             try
-            {
-                TEN_DONVI.SelectedValue = MA_DONVI.Text.Trim().ToUpper();
-                MA_DONVI.Text = MA_DONVI.Text.Trim().ToUpper();
+            {                
+                MA_DONVI.Text = MA_DONVI.Text.Replace("'","").Trim().ToUpper();
+                using (tDBContext mainDB = new tDBContext())
+                {
+                    SDONVI dv = mainDB.SDONVIs.GetObject(string.Format("MA_DONVI=N'{0}'", MA_DONVI.Text));
+                    if (dv == null)
+                    {
+                        MA_DONVI.Text = string.Empty;
+                        TEN_DONVI.Text = string.Empty;
+                    }
+                    TEN_DONVI.Text = dv.TEN_DONVI;
+                }
             }
             catch (Exception ex)
             {
                 string s = ex.Message;
                 MA_DONVI.Text = string.Empty;
-                TEN_DONVI.SelectedIndex = 0;
+                TEN_DONVI.Text = string.Empty;
             }
         }
 
         protected void TEN_DONVI_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (TEN_DONVI.SelectedValue == null)
-            {
-                TEN_DONVI.SelectedIndex = 0;
-                MA_DONVI.Text = string.Empty;
-                return;
-            }
-            if (string.IsNullOrEmpty(TEN_DONVI.SelectedValue.ToString()) == true)
-            {
-                TEN_DONVI.SelectedIndex = 0;
-                MA_DONVI.Text = string.Empty;
-                return;
-            }
-            MA_DONVI.Text = TEN_DONVI.SelectedValue.ToString().ToUpper();
+            //if (TEN_DONVI.SelectedValue == null)
+            //{
+            //    TEN_DONVI.SelectedIndex = 0;
+            //    MA_DONVI.Text = string.Empty;
+            //    return;
+            //}
+            //if (string.IsNullOrEmpty(TEN_DONVI.SelectedValue.ToString()) == true)
+            //{
+            //    TEN_DONVI.SelectedIndex = 0;
+            //    MA_DONVI.Text = string.Empty;
+            //    return;
+            //}
+            //MA_DONVI.Text = TEN_DONVI.SelectedValue.ToString().ToUpper();
         }
     }
 }
