@@ -57,25 +57,32 @@ namespace TRACUUTKWIN
                       {                         
                           File.Copy(tmpFileXSL, strReportFilePath, true);
 
-                          DataSet ds = t.clsDalORACLE.GetDataSet(r["RP_QUERY"].ToString());
+                          string[] strQuery = r["RP_QUERY"].ToString().Split(';');
+                          DataSet dsTK = t.clsDalORACLE.GetDataSet(strQuery[0]);
+                          DataSet dsHANG = t.clsDalORACLE.GetDataSet(strQuery[1]);
 
-                          if (ds == null)//ko ra ket qua
+                          if (dsTK == null)//ko ra ket qua
                           { 
                           
                           }
-                          if (ds.Tables.Count<1)//ko ra ket qua
+                          if (dsTK.Tables.Count < 1)//ko ra ket qua
                           {
 
                           }
 
-                          object[,] objData = t.clsAll.DataTable2ArrayObjects(ds.Tables[0]);
+                          object[,] objData = t.clsAll.DataTable2ArrayObjects(dsTK.Tables[0]);
 
                           Excel.Application objExcel = this.GetExcelApp();                         
                           objExcel.Visible = false;
                           objExcel.Application.Visible = false; 
-                          objExcel.Workbooks.Open(strReportFilePath);
+                          Excel.Workbook wb = objExcel.Workbooks.Open(strReportFilePath);
                           objExcel.Visible = false;
-                          objExcel.Range[string.Format("A1:IV{0}", ds.Tables[0].Rows.Count)].Value = objData;
+                          Excel.Worksheet wsTOKHAIMD = (Excel.Worksheet)wb.Worksheets[1];
+                          wsTOKHAIMD.Range[string.Format("A1:IV{0}", dsTK.Tables[0].Rows.Count)].Value = objData;
+
+                          Excel.Worksheet wsHANGMD = (Excel.Worksheet)wb.Worksheets[2];
+                          object[,] objDataHANG = t.clsAll.DataTable2ArrayObjects(dsHANG.Tables[0]);
+                          wsHANGMD.Range[string.Format("A1:IV{0}", dsHANG.Tables[0].Rows.Count)].Value = objDataHANG;
 
                           objExcel.Visible = false;                        
                          // objExcel.SaveWorkspace(Missing.Value);
