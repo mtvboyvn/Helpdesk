@@ -184,7 +184,59 @@
                                                     <asp:DropDownList ID="TEN_CUCHQ" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_CUCHQ_SelectedIndexChanged" TabIndex="7" ForeColor="Blue">
                                                         <asp:ListItem></asp:ListItem>
                                                         <asp:ListItem Value="01">Thành phố Hà Nội</asp:ListItem>
-                                                        <asp:ListItem Value="02">Thành phố Hồ Chí Minh</asp:ListItem>
+<asp:ListItem Value="02">Thành phố Hồ Chí Minh</asp:ListItem>
+<asp:ListItem Value="03">Thành phố Hải Phòng</asp:ListItem>
+<asp:ListItem Value="10">Tỉnh Hà Giang</asp:ListItem>
+<asp:ListItem Value="11">Tỉnh Cao Bằng</asp:ListItem>
+<asp:ListItem Value="12">Tỉnh Lai Châu</asp:ListItem>
+<asp:ListItem Value="13">Tỉnh Lao Cai</asp:ListItem>
+<asp:ListItem Value="14">Tỉnh Tuyên Quang</asp:ListItem>
+<asp:ListItem Value="15">Tỉnh Lạng Sơn</asp:ListItem>
+<asp:ListItem Value="16">Tỉnh Bắc Thái</asp:ListItem>
+<asp:ListItem Value="17">Tỉnh Yên Bái</asp:ListItem>
+<asp:ListItem Value="18">Tỉnh Sơn La</asp:ListItem>
+<asp:ListItem Value="19">Tỉnh Vĩnh Phú</asp:ListItem>
+<asp:ListItem Value="20">Tỉnh Quảng Ninh</asp:ListItem>
+<asp:ListItem Value="21">Tỉnh Hà Bắc</asp:ListItem>
+<asp:ListItem Value="22">Tỉnh Hà Tây</asp:ListItem>
+<asp:ListItem Value="23">Tỉnh Hải Hưng</asp:ListItem>
+<asp:ListItem Value="24">Tỉnh Hoà Bình</asp:ListItem>
+<asp:ListItem Value="25">Tỉnh Nam Hà</asp:ListItem>
+<asp:ListItem Value="26">Tỉnh Thái Bình</asp:ListItem>
+<asp:ListItem Value="27">Tỉnh Thanh Hoá</asp:ListItem>
+<asp:ListItem Value="28">Tỉnh Ninh Bình</asp:ListItem>
+<asp:ListItem Value="29">Tỉnh Nghệ An</asp:ListItem>
+<asp:ListItem Value="30">Tỉnh Hà Tĩnh</asp:ListItem>
+<asp:ListItem Value="31">Tỉnh Quảng Bình</asp:ListItem>
+<asp:ListItem Value="32">Tỉnh Quảng Trị</asp:ListItem>
+<asp:ListItem Value="33">Tỉnh Thừa thiên - Huế</asp:ListItem>
+<asp:ListItem Value="34">Tỉnh Quảng Nam - Đà Nẵng</asp:ListItem>
+<asp:ListItem Value="35">Tỉnh Quảng Ngãi</asp:ListItem>
+<asp:ListItem Value="36">Tỉnh Kon Tum</asp:ListItem>
+<asp:ListItem Value="37">Tỉnh Bình Định</asp:ListItem>
+<asp:ListItem Value="38">Tỉnh Gia Lai</asp:ListItem>
+<asp:ListItem Value="39">Tỉnh Phú Yên</asp:ListItem>
+<asp:ListItem Value="40">Tỉnh Đắc Lắc</asp:ListItem>
+<asp:ListItem Value="41">Tỉnh Khánh Hoà</asp:ListItem>
+<asp:ListItem Value="42">Tỉnh Lâm Đồng</asp:ListItem>
+<asp:ListItem Value="43">Tỉnh Bình Dương</asp:ListItem>
+<asp:ListItem Value="44">Tỉnh Ninh Thuận</asp:ListItem>
+<asp:ListItem Value="45">Tỉnh Tây Ninh</asp:ListItem>
+<asp:ListItem Value="46">Tỉnh Bình Thuận</asp:ListItem>
+<asp:ListItem Value="47">Tỉnh Đồng Nai</asp:ListItem>
+<asp:ListItem Value="48">Tỉnh Long An</asp:ListItem>
+<asp:ListItem Value="49">Tỉnh Đồng Tháp</asp:ListItem>
+<asp:ListItem Value="50">Tỉnh An Giang</asp:ListItem>
+<asp:ListItem Value="51">Tỉnh Bà Rịa - Vũng Tàu</asp:ListItem>
+<asp:ListItem Value="52">Tỉnh Kiên Giang</asp:ListItem>
+<asp:ListItem Value="53">Tỉnh Tiền Giang</asp:ListItem>
+<asp:ListItem Value="54">Tỉnh Cần Thơ</asp:ListItem>
+<asp:ListItem Value="55">Tỉnh Bến Tre</asp:ListItem>
+<asp:ListItem Value="56">Tỉnh Vĩnh Long</asp:ListItem>
+<asp:ListItem Value="57">Tỉnh Trà Vinh</asp:ListItem>
+<asp:ListItem Value="58">Tỉnh Sóc Trăng</asp:ListItem>
+<asp:ListItem Value="59">Tỉnh Minh Hải </asp:ListItem>
+
                                                 </asp:DropDownList>
                                                         </nobr>
                                             </td>
