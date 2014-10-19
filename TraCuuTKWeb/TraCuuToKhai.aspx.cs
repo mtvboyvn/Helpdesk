@@ -38,6 +38,7 @@ namespace t
                 //Page.SetFocus(SOTK);
                 //Page.Form.DefaultFocus = SOTK.ClientID;
                // btnUpdate_Click(null, null);
+                GridView1.Columns[1].Visible = string.Format("{0}",Session[ct.USERNAME]).Equals("TuyenHM");
             }
         }
 

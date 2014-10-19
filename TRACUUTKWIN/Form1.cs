@@ -58,17 +58,22 @@ namespace TRACUUTKWIN
                           File.Copy(tmpFileXSL, strReportFilePath, true);
 
                           string[] strQuery = r["RP_QUERY"].ToString().Split(';');
-                          DataSet dsTK = t.clsDalORACLE.GetDataSet(strQuery[0]);
-                          DataSet dsHANG = t.clsDalORACLE.GetDataSet(strQuery[1]);
+                          DataSet dsTK = t.clsDalORACLE.GetDataSet(strQuery[0]);                         
 
                           if (dsTK == null)//ko ra ket qua
-                          { 
-                          
+                          {
+                              throw new Exception("Không tìm thấy tờ khai nào!");
                           }
                           if (dsTK.Tables.Count < 1)//ko ra ket qua
                           {
-
+                              throw new Exception("Không tìm thấy tờ khai nào!");
                           }
+                          if (dsTK.Tables[0].Rows.Count < 1)//ko ra ket qua
+                          {
+                              throw new Exception("Không tìm thấy tờ khai nào!");
+                          }
+
+                          DataSet dsHANG = t.clsDalORACLE.GetDataSet(strQuery[1]);
 
                           object[,] objData = t.clsAll.DataTable2ArrayObjects(dsTK.Tables[0]);
 
@@ -109,7 +114,14 @@ namespace TRACUUTKWIN
                       {
                           string s = ex.Message;
                           r["RP_STATUS"] = "Có lỗi";
-                          r["RP_FILEPATH"] = string.Format("~/ERROR_{0}.txt",r["RP_ID"]);
+                          string strErrorFileName = string.Format("ERROR_{0}.txt", r["RP_ID"]);
+                          string strErrorVirtualPath = string.Format("~/Reports/{0}/{1}", r["RP_USERNAME"], strErrorFileName);
+                          string strErrorFilePath = Path.Combine(strReportDir, strErrorFileName);
+                          r["RP_FILEPATH"] = strErrorVirtualPath;
+                          r["RP_FILENAME"] = strErrorFileName;
+                          r["RP_EXPORTDATE"] = DateTime.Now;
+                          if (Directory.Exists(strReportDir) == false) Directory.CreateDirectory(strReportDir);
+                          File.WriteAllText(strErrorFilePath, s,Encoding.UTF8);
                           t.SREPORT objUpdate=new t.SREPORT();
                           t.clsAll.DataRow2Object(r, objUpdate);
                           objUpdate.DataStatus = t.DBStatus.Updated;
