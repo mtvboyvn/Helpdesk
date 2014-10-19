@@ -175,33 +175,6 @@ namespace t {
         protected global::AjaxControlToolkit.MaskedEditExtender NGAYDK_TO_MaskedEditExtender;
         
         /// <summary>
-        /// Label14 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
-        
-        /// <summary>
-        /// MA_NUOCNK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MA_NUOCNK;
-        
-        /// <summary>
-        /// TEN_NUOCNK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TEN_NUOCNK;
-        
-        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -391,13 +364,13 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label Label13;
         
         /// <summary>
-        /// TextBox12 control.
+        /// TEN_DOITAC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox TEN_DOITAC;
         
         /// <summary>
         /// Label10 control.

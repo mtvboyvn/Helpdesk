@@ -89,20 +89,9 @@
                                             </td>
 
                                             <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
-                                                <nobr>
-                                                <asp:Label ID="Label14" runat="server" Text="&nbsp;&nbsp;Nước NK:"></asp:Label>
-                                                </nobr>
-                                            </td>
+                                                &nbsp;</td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
-                                                <nobr>
-                                                <asp:TextBox ID="MA_NUOCNK" runat="server" AutoPostBack="True" ForeColor="Blue" TabIndex="13" Width="30px"></asp:TextBox>
-                                                <asp:DropDownList ID="TEN_NUOCNK" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" TabIndex="14" Width="150px">
-                                                    <asp:ListItem></asp:ListItem>
-                                                    <asp:ListItem Value="AF">Afganistan</asp:ListItem>
-                                                    <asp:ListItem Value="AL">Albania</asp:ListItem>
-                                                </asp:DropDownList>
-                                                </nobr>
-                                            </td>
+                                                &nbsp;</td>
                                         </tr>
                                         <tr runat="server">
                                             <td style="text-align: right; width: 1px; border: solid 0px red;" runat="server">
@@ -123,7 +112,7 @@
 
                                             <td style="width: 1px; text-align: right; border-left: solid 1px red;" runat="server">
                                                 <nobr>
-                                                <asp:Label ID="Label11" runat="server" Text="&nbsp;&nbsp;Nước XK:"></asp:Label>
+                                                <asp:Label ID="Label11" runat="server" Text="&nbsp;&nbsp;Nước XK, NK:"></asp:Label>
                                                 </nobr>
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
@@ -225,7 +214,7 @@
                                             </td>
                                             <td runat="server" colspan="2" style="width: 1px; text-align: left; border: solid 0px red;">
                                                 <nobr>
-                                                <asp:TextBox ID="TextBox12" runat="server" ForeColor="Blue" TabIndex="12" Width="465px"></asp:TextBox>
+                                                <asp:TextBox ID="TEN_DOITAC" runat="server" ForeColor="Blue" TabIndex="12" Width="465px" AutoPostBack="True" OnTextChanged="TEN_DOITAC_TextChanged"></asp:TextBox>
                                                 </nobr>
                                             </td>
                                             <td runat="server" style="width: 1px; text-align: right; border-left: solid 1px red;">

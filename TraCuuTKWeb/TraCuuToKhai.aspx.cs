@@ -124,8 +124,8 @@ namespace t
             //    if (bP == true)
             //    { 
             //        strSQL = new string[2]{
-            //        string.Format("N501A_UDATE>='{0:yyyyMMdd}' ", dFrom),
-            //        string.Format("N502A_UDATE>='{0:yyyyMMdd}' ", dFrom)};
+            //        string.Format("N501A_SINKD>='{0:yyyyMMdd}' ", dFrom),
+            //        string.Format("N502A_SINKD>='{0:yyyyMMdd}' ", dFrom)};
             //    }
             //}
             //if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
@@ -138,9 +138,9 @@ namespace t
             //        {
             //            strSQL[0] += " AND "; strSQL[1] += " AND ";
             //        }
-                  
-            //       strSQL[0] += string.Format("N501A_UDATE<='{0:yyyyMMdd}' ", dTO);
-            //       strSQL[1] += string.Format("N502A_UDATE<='{0:yyyyMMdd}' ", dTO);
+
+            //       strSQL[0] += string.Format("N501A_SINKD<='{0:yyyyMMdd}' ", dTO);
+            //       strSQL[1] += string.Format("N502A_SINKD<='{0:yyyyMMdd}' ", dTO);
             //    }
             //}
 
@@ -189,6 +189,31 @@ namespace t
                 strSQL[0] += string.Format("N501A_YUNYC='{0}' ", MA_DONVI.Text);
                 strSQL[1] += string.Format("N502A_YUNYC='{0}' ", MA_DONVI.Text);
             }
+
+            if (string.IsNullOrEmpty(TEN_DOITAC.Text) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[0]) == false)
+                {
+                    strSQL[0] += " AND "; strSQL[1] += " AND ";
+                }
+
+                strSQL[0] += string.Format("N501A_YUNN2 LIKE '%{0}%' ", TEN_DOITAC.Text);
+                strSQL[1] += string.Format("N502A_YUNN2 LIKE '%{0}%' ", TEN_DOITAC.Text);
+            }
+
+            //Nước xuất nhập khẩu (chung trường YUSYK)
+            if (string.IsNullOrEmpty(MA_NUOCXK.Text) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[0]) == false)
+                {
+                    strSQL[0] += " AND "; strSQL[1] += " AND ";
+                }
+
+                strSQL[0] += string.Format("N501A_YUSYK='{0}' ", MA_NUOCXK.Text);
+                strSQL[1] += string.Format("N502A_YUSYK='{0}' ", MA_NUOCXK.Text);
+            }
+
+            //nước xuất xứ chưa tìm thấy trường nào
             return strSQL;
         }
 
@@ -430,6 +455,11 @@ namespace t
             //    return;
             //}
             //MA_DONVI.Text = TEN_DONVI.SelectedValue.ToString().ToUpper();
+        }
+
+        protected void TEN_DOITAC_TextChanged(object sender, EventArgs e)
+        {
+            TEN_DOITAC.Text = TEN_DOITAC.Text.Trim().ToUpper().Replace("'", "");
         }
     }
 }
