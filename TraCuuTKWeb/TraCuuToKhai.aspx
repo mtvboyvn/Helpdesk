@@ -881,9 +881,15 @@
                                             </div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="RP_DISPLAY" ItemStyle-Width="500px" HeaderText="Điều kiện tra cứu" >
-                                    <ItemStyle Width="500px" />
-                                    </asp:BoundField>
+                                   
+                                     <asp:TemplateField HeaderText="Điều kiện tra cứu">
+                                         <ItemStyle Width="500px" />
+                                        <ItemTemplate>
+                                            <div>                                               
+                                                <span  style="padding: 2px;"  runat="server"><%#Eval("RP_DISPLAY")%></span>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:BoundField DataField="RP_QUERY"  HeaderText="SQL QUERY" Visible="false" />
                                      <asp:TemplateField HeaderText="SQL QUERY">
                                         <ItemTemplate>

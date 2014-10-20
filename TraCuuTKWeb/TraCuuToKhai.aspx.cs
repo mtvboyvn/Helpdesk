@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Globalization;
 using System.Web;
 using System.Web.UI;
@@ -76,6 +77,12 @@ namespace t
 
         protected void btnDatLenh_Click(object sender, EventArgs e)
         {
+
+            if (this.ValidateCondition(tblDieuKien) == false)
+            {
+                return;
+            }
+
             try
             {
                 string[] strWhere = TạoWHERE();
@@ -111,44 +118,70 @@ namespace t
           
         }
 
+        private bool ValidateCondition(Control tblDieuKien)
+        {
+            bool re = true;
+
+            foreach (Control c in tblDieuKien.Controls)
+            {
+                TextBox txt = c as TextBox;
+                if (txt == null)
+                {
+                    re = ValidateCondition(c);
+                    if(re==true) continue;
+                    break;
+                }
+                txt.BackColor = Color.White;
+                if (txt.Text.IndexOf("'") > -1 || txt.Text.IndexOf(";") > -1)
+                {
+                    txt.BackColor = Color.Salmon;
+                    lblMSG.Text = "Điều kiện tìm kiếm có các ký tự lạ ['] và [;]";
+                    re = false;
+                    break;
+                }
+            }
+
+            return re;
+        }
+
         private string TaoDieuKienTimKiemText()
         {
             string strDK = "";
             if (string.IsNullOrEmpty(SOTK.Text)==false)
-            strDK += string.Format("Số TK: {0}\r\n", SOTK.Text);
+                strDK += string.Format("Số TK: {0}<br />", SOTK.Text);
 
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
-                strDK += string.Format("Ngày ĐK từ: {0}\r\n", NGAYDK_FROM.Text);
+                strDK += string.Format("Ngày ĐK từ: {0}<br />", NGAYDK_FROM.Text);
 
             if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
-                strDK += string.Format("Ngày ĐK trước: {0}\r\n", NGAYDK_TO.Text);
+                strDK += string.Format("Ngày ĐK trước: {0}<br />", NGAYDK_TO.Text);
 
             if (string.IsNullOrEmpty(MA_LH.Text) == false)
-                strDK += string.Format("Mã LH: {0}\r\n", MA_LH.Text);
+                strDK += string.Format("Mã LH: {0}<br />", MA_LH.Text);
 
             if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
-                strDK += string.Format("Mã Cục: {0}\r\n", MA_CUCHQ.Text);
+                strDK += string.Format("Mã Cục: {0}<br />", MA_CUCHQ.Text);
 
             if (string.IsNullOrEmpty(MA_CC.Text) == false)
-                strDK += string.Format("Mã Chi cục: {0}\r\n", MA_CC.Text);
+                strDK += string.Format("Mã Chi cục: {0}<br />", MA_CC.Text);
 
             if (string.IsNullOrEmpty(MA_DONVI.Text) == false)
-                strDK += string.Format("Mã đơn vị: {0}\r\n", MA_DONVI.Text);
+                strDK += string.Format("Mã đơn vị: {0}<br />", MA_DONVI.Text);
 
             if (string.IsNullOrEmpty(TEN_DOITAC.Text) == false)
-                strDK += string.Format("Tên đối tác: {0}\r\n", TEN_DOITAC.Text);           
+                strDK += string.Format("Tên đối tác: {0}<br />", TEN_DOITAC.Text);           
 
             if (string.IsNullOrEmpty(MA_NUOCXK.Text) == false)
-                strDK += string.Format("Nước XNK: {0}\r\n", MA_NUOCXK.Text);
+                strDK += string.Format("Nước XNK: {0}<br />", MA_NUOCXK.Text);
 
             if (string.IsNullOrEmpty(MA_HS.Text) == false)
-                strDK += string.Format("Mã HS: {0}\r\n", MA_HS.Text);
+                strDK += string.Format("Mã HS: {0}<br />", MA_HS.Text);
 
             if (string.IsNullOrEmpty(TEN_HANG.Text) == false)
-                strDK += string.Format("Tên hàng: {0}\r\n", TEN_HANG.Text);
+                strDK += string.Format("Tên hàng: {0}<br />", TEN_HANG.Text);
 
             if (string.IsNullOrEmpty(MA_NUOCXX.Text) == false)
-                strDK += string.Format("Nước xuất xứ: {0}\r\n", MA_NUOCXX.Text);
+                strDK += string.Format("Nước xuất xứ: {0}", MA_NUOCXX.Text);
            
 
             return strDK;
