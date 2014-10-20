@@ -127,6 +127,70 @@ namespace t
 
         private bool ValidateNGAY(System.Web.UI.HtmlControls.HtmlTable tblDieuKien)
         {
+
+            if (string.IsNullOrEmpty(SOTK.Text) == false)//neu co so to khai
+            {
+                SOTK.BackColor = Color.White;
+                if (SOTK.Text.Trim().Length != 12)
+                {
+                    lblMSG.Text = "Số tờ khai phải có 12 chữ số";
+                    SOTK.BackColor = Color.Salmon;
+                    return false;
+                }
+                Int64 intSoTK = -1;
+                bool ip = Int64.TryParse(SOTK.Text,out intSoTK);
+                if (ip==false)
+                {
+                    lblMSG.Text = "Số tờ khai chỉ được điền chữ số";
+                    SOTK.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+
+            if (string.IsNullOrEmpty(MA_HS.Text) == false)//neu co so to khai
+            {
+                MA_HS.BackColor = Color.White;
+                if ((3 < MA_HS.Text.Trim().Length) & (MA_HS.Text.Trim().Length < 9))
+                {
+
+                }
+                else
+                {
+                    lblMSG.Text = "Mã HS chỉ được nhập từ 4 đến 8 số";
+                    MA_HS.BackColor = Color.Salmon;
+                    return false;
+                }
+                Int64 intHS = -1;
+                bool ip = Int64.TryParse(MA_HS.Text, out intHS);
+                if (ip == false)
+                {
+                    lblMSG.Text = "Mã HS chỉ được điền chữ số";
+                    MA_HS.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+
+            if (string.IsNullOrEmpty(TEN_DOITAC.Text) == false)
+            {
+                TEN_DOITAC.BackColor = Color.White;
+                if (TEN_DOITAC.Text.Trim().Length <  11)
+                {
+                    lblMSG.Text = "Tên đối tác phải nhiều hơn 10 ký tự";
+                    TEN_DOITAC.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+            if (string.IsNullOrEmpty(TEN_HANG.Text) == false)
+            {
+                TEN_HANG.BackColor = Color.White;
+                if (TEN_HANG.Text.Trim().Length < 11)
+                {
+                    lblMSG.Text = "Tên hàng hóa phải nhiều hơn 10 ký tự";
+                    TEN_HANG.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+
             NGAYDK_FROM.BackColor = Color.White;
             NGAYDK_TO.BackColor = Color.White;
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == true)
