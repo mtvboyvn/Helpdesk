@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Globalization;
 using System.Web;
 using System.Web.UI;
@@ -37,6 +38,9 @@ namespace t
             if (Page.IsPostBack == false)
             {
                 clsAll.ClearDesignData2(tblDieuKien);
+
+                NGAYDK_FROM.Text = DateTime.Now.AddMonths(-1).ToString("dd/MM/yyyy");
+                NGAYDK_TO.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
                 TEN_CC.DataSource = Global.dsCHICUC.Tables[0];
                 TEN_CC.DataBind();
@@ -76,6 +80,16 @@ namespace t
 
         protected void btnDatLenh_Click(object sender, EventArgs e)
         {
+            if (this.ValidateCondition(tblDieuKien) == false)
+            {
+                return;
+            }
+
+            if (this.ValidateNGAY(tblDieuKien) == false)
+            {
+                return;
+            }
+
             try
             {
                 string[] strWhere = TạoWHERE();
@@ -95,7 +109,7 @@ namespace t
                     rp.RP_ID = ++intMax;
                     rp.RP_USERNAME = string.Format("{0}", Session[ct.USERNAME]);
                     rp.RP_CREATEDATE = DateTime.Now;
-                    rp.RP_DISPLAY = string.Format("Số TK: {0}", SOTK.Text);
+                    rp.RP_DISPLAY = TaoDieuKienTimKiemText();
                     rp.RP_QUERY = TạoTruyVấn(strWhere);
                     rp.RP_STATUS = "Đang xử lý";
                     mainDB.SREPORTs.InsertOnSubmit(rp);
@@ -109,6 +123,196 @@ namespace t
                 lblMSG.Text = string.Format("Đã xảy ra lỗi trong quá trình đặt lệnh, nội dung lỗi: {0}", ex.Message);
             }
           
+        }
+
+        private bool ValidateNGAY(System.Web.UI.HtmlControls.HtmlTable tblDieuKien)
+        {
+
+            if (string.IsNullOrEmpty(SOTK.Text) == false)//neu co so to khai
+            {
+                SOTK.BackColor = Color.White;
+                if (SOTK.Text.Trim().Length != 12)
+                {
+                    lblMSG.Text = "Số tờ khai phải có 12 chữ số";
+                    SOTK.BackColor = Color.Salmon;
+                    return false;
+                }
+                Int64 intSoTK = -1;
+                bool ip = Int64.TryParse(SOTK.Text,out intSoTK);
+                if (ip==false)
+                {
+                    lblMSG.Text = "Số tờ khai chỉ được điền chữ số";
+                    SOTK.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+
+            if (string.IsNullOrEmpty(MA_HS.Text) == false)//neu co so to khai
+            {
+                MA_HS.BackColor = Color.White;
+                if ((3 < MA_HS.Text.Trim().Length) & (MA_HS.Text.Trim().Length < 9))
+                {
+
+                }
+                else
+                {
+                    lblMSG.Text = "Mã HS chỉ được nhập từ 4 đến 8 số";
+                    MA_HS.BackColor = Color.Salmon;
+                    return false;
+                }
+                Int64 intHS = -1;
+                bool ip = Int64.TryParse(MA_HS.Text, out intHS);
+                if (ip == false)
+                {
+                    lblMSG.Text = "Mã HS chỉ được điền chữ số";
+                    MA_HS.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+
+            if (string.IsNullOrEmpty(TEN_DOITAC.Text) == false)
+            {
+                TEN_DOITAC.BackColor = Color.White;
+                if (TEN_DOITAC.Text.Trim().Length <  11)
+                {
+                    lblMSG.Text = "Tên đối tác phải nhiều hơn 10 ký tự";
+                    TEN_DOITAC.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+            if (string.IsNullOrEmpty(TEN_HANG.Text) == false)
+            {
+                TEN_HANG.BackColor = Color.White;
+                if (TEN_HANG.Text.Trim().Length < 11)
+                {
+                    lblMSG.Text = "Tên hàng hóa phải nhiều hơn 10 ký tự";
+                    TEN_HANG.BackColor = Color.Salmon;
+                    return false;
+                }
+            }
+
+            NGAYDK_FROM.BackColor = Color.White;
+            NGAYDK_TO.BackColor = Color.White;
+            if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày bắt đầu tìm kiếm tờ khai";
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+            if (NGAYDK_FROM.Text.Trim().Equals("__/__/____") == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày bắt đầu tìm kiếm tờ khai";
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+            DateTime dFrom = new DateTime();
+            bool bP1 = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
+            if (bP1 == false)
+            {
+                lblMSG.Text = "Ngày bắt đầu tìm kiếm tờ khai không đúng định dạng dd/MM/yyyy";
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(NGAYDK_TO.Text) == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày kết thúc tìm kiếm tờ khai";
+                NGAYDK_TO.BackColor = Color.Salmon;
+                return false;
+            }
+            if (NGAYDK_TO.Text.Trim().Equals("__/__/____") == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày kết thúc tìm kiếm tờ khai";
+                NGAYDK_TO.BackColor = Color.Salmon;
+                return false;
+            }
+            DateTime dTo = new DateTime();
+            bool bP2 = DateTime.TryParseExact(NGAYDK_TO.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dTo);
+            if (bP2 == false)
+            {
+                lblMSG.Text = "Ngày kết thúc tìm kiếm tờ khai không đúng định dạng dd/MM/yyyy";
+                NGAYDK_TO.BackColor = Color.Salmon;
+                return false;
+            }
+
+            if (dFrom > dTo)
+            {
+                lblMSG.Text =string.Format( "Ngày bắt đầu tìm kiếm {0:dd/MM/yyyy} phải trước ngày kết thúc tìm kiếm {1:dd/MM/yyyy}",dFrom,dTo);
+                NGAYDK_TO.BackColor = Color.Salmon;
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidateCondition(Control tblDieuKien)
+        {
+            bool re = true;
+
+            foreach (Control c in tblDieuKien.Controls)
+            {
+                TextBox txt = c as TextBox;
+                if (txt == null)
+                {
+                    re = ValidateCondition(c);
+                    if(re==true) continue;
+                    break;
+                }
+                txt.BackColor = Color.White;
+                if (txt.Text.IndexOf("'") > -1 || txt.Text.IndexOf(";") > -1)
+                {
+                    txt.BackColor = Color.Salmon;
+                    lblMSG.Text = "Điều kiện tìm kiếm có các ký tự lạ ['] và [;]";
+                    re = false;
+                    break;
+                }
+            }
+
+            return re;
+        }
+
+        private string TaoDieuKienTimKiemText()
+        {
+            string strDK = "";
+            if (string.IsNullOrEmpty(SOTK.Text)==false)
+                strDK += string.Format("Số TK: {0}<br />", SOTK.Text);
+
+            if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
+                strDK += string.Format("Ngày ĐK sau: {0}<br />", NGAYDK_FROM.Text);
+
+            if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
+                strDK += string.Format("Ngày ĐK trước: {0}<br />", NGAYDK_TO.Text);
+
+            if (string.IsNullOrEmpty(MA_LH.Text) == false)
+                strDK += string.Format("Mã LH: {0}<br />", MA_LH.Text);
+
+            if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
+                strDK += string.Format("Mã Cục: {0}<br />", MA_CUCHQ.Text);
+
+            if (string.IsNullOrEmpty(MA_CC.Text) == false)
+                strDK += string.Format("Mã Chi cục: {0}<br />", MA_CC.Text);
+
+            if (string.IsNullOrEmpty(MA_DONVI.Text) == false)
+                strDK += string.Format("Mã đơn vị: {0}<br />", MA_DONVI.Text);
+
+            if (string.IsNullOrEmpty(TEN_DOITAC.Text) == false)
+                strDK += string.Format("Tên đối tác: {0}<br />", TEN_DOITAC.Text);           
+
+            if (string.IsNullOrEmpty(MA_NUOCXK.Text) == false)
+                strDK += string.Format("Nước XNK: {0}<br />", MA_NUOCXK.Text);
+
+            if (string.IsNullOrEmpty(MA_HS.Text) == false)
+                strDK += string.Format("Mã HS: {0}<br />", MA_HS.Text);
+
+            if (string.IsNullOrEmpty(TEN_HANG.Text) == false)
+                strDK += string.Format("Tên hàng: {0}<br />", TEN_HANG.Text);
+
+            if (string.IsNullOrEmpty(MA_NUOCXX.Text) == false)
+                strDK += string.Format("Nước xuất xứ: {0}", MA_NUOCXX.Text);
+           
+
+            return strDK;
         }
 
         private string[] TạoWHERE()
@@ -125,32 +329,32 @@ namespace t
             
             //THỜI GIAN ĐANG CHẠY RẤT CHẬP VÌ NGÀY ĐK TỜ KHAI ĐANG ĐỂ DẠNG TEXT TRONG ĐB
 
-            //if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
-            //{
-            //    DateTime dFrom = new DateTime();
-            //    bool bP = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
-            //    if (bP == true)
-            //    { 
-            //        strSQL = new string[2]{
-            //        string.Format("N501A_SINKD>='{0:yyyyMMdd}' ", dFrom),
-            //        string.Format("N502A_SINKD>='{0:yyyyMMdd}' ", dFrom)};
-            //    }
-            //}
-            //if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
-            //{
-            //    DateTime dTO = new DateTime();
-            //    bool bP = DateTime.TryParseExact(NGAYDK_TO.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dTO);
-            //    if (bP == true)
-            //    {
-            //        if (string.IsNullOrEmpty(strSQL[0]) == false)
-            //        {
-            //            strSQL[0] += " AND "; strSQL[1] += " AND ";
-            //        }
+            if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
+            {
+                DateTime dFrom = new DateTime();
+                bool bP = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
+                if (bP == true)
+                {
+                    strSQL = new string[2]{
+                    string.Format("N1.N501A_SINKD>='{0:yyyyMMdd}' ", dFrom),
+                    string.Format("N2.N502A_SINKD>='{0:yyyyMMdd}' ", dFrom)};
+                }
+            }
+            if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
+            {
+                DateTime dTO = new DateTime();
+                bool bP = DateTime.TryParseExact(NGAYDK_TO.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dTO);
+                if (bP == true)
+                {
+                    if (string.IsNullOrEmpty(strSQL[0]) == false)
+                    {
+                        strSQL[0] += " AND "; strSQL[1] += " AND ";
+                    }
 
-            //       strSQL[0] += string.Format("N501A_SINKD<='{0:yyyyMMdd}' ", dTO);
-            //       strSQL[1] += string.Format("N502A_SINKD<='{0:yyyyMMdd}' ", dTO);
-            //    }
-            //}
+                    strSQL[0] += string.Format("N1.N501A_SINKD<='{0:yyyyMMdd}' ", dTO);
+                    strSQL[1] += string.Format("N2.N502A_SINKD<='{0:yyyyMMdd}' ", dTO);
+                }
+            }
 
             if (string.IsNullOrEmpty(MA_LH.Text) == false)
             {
@@ -221,7 +425,7 @@ namespace t
                 strSQL[1] += string.Format("N2.N502A_YUSYK='{0}' ", MA_NUOCXK.Text);
             }
 
-            //nước xuất xứ chưa tìm thấy trường nào
+            //nước xuất xứ chưa tìm thấy trường nào (ở trên dòng hàng ý)
             return strSQL;
         }
 
