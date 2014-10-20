@@ -42,6 +42,9 @@
             width: 100%;
             height: 28px;
         }
+        .tTextBox {
+            border:solid 1px #a9a9a9;
+        }
     </style>
 </head>
 <body onload="AddRequestHandler()">
@@ -82,18 +85,18 @@
                                                         </nobr>
                                             </td>
                                             <td style="text-align: left; border: solid 0px red;" runat="server" class="auto-style1">
-                                                <asp:TextBox ID="SOTK" runat="server" Width="100px" TabIndex="1" ForeColor="Blue">999999999999</asp:TextBox>
+                                                <asp:TextBox ID="SOTK" runat="server" Width="100px" TabIndex="1" ForeColor="Blue" CssClass="tTextBox">999999999999</asp:TextBox>
                                             </td>
                                             <td style=" text-align: left; border: solid 0px red;" runat="server" class="auto-style2">
                                                 <nobr>
                                                     <asp:Label ID="Label3" runat="server" Text="&nbsp;&nbsp;&nbsp;Ngày ĐK:"></asp:Label>
-                                                        <asp:TextBox ID="NGAYDK_FROM" runat="server" Width="80px" TabIndex="2" ForeColor="Blue">31/12/2014</asp:TextBox>
+                                                        <asp:TextBox ID="NGAYDK_FROM" runat="server" Width="80px" TabIndex="2" ForeColor="Blue" CssClass="tTextBox">31/12/2014</asp:TextBox>
                                                         <cc1:CalendarExtender ID="NGAYDK_FROM_CalendarExtender" runat="server" Enabled="True" Format="dd/MM/yyyy" TargetControlID="NGAYDK_FROM">
                                                     </cc1:CalendarExtender>
                                                     <cc1:MaskedEditExtender ID="NGAYDK_FROM_MaskedEditExtender" runat="server" ClearMaskOnLostFocus="False" ClearTextOnInvalid="True" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" TargetControlID="NGAYDK_FROM">
                                                     </cc1:MaskedEditExtender>
                                                         <asp:Label ID="Label6" runat="server" Text="đến:"></asp:Label>
-                                                        <asp:TextBox ID="NGAYDK_TO" runat="server" Width="80px" TabIndex="3" ForeColor="Blue">31/12/2014</asp:TextBox>
+                                                        <asp:TextBox ID="NGAYDK_TO" runat="server" Width="80px" TabIndex="3" ForeColor="Blue" CssClass="tTextBox">31/12/2014</asp:TextBox>
                                                         <cc1:CalendarExtender ID="NGAYDK_TO_CalendarExtender" runat="server" Enabled="True" Format="dd/MM/yyyy" TargetControlID="NGAYDK_TO">
                                                     </cc1:CalendarExtender>
                                                     <cc1:MaskedEditExtender ID="NGAYDK_TO_MaskedEditExtender" runat="server" ClearMaskOnLostFocus="False" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" TargetControlID="NGAYDK_TO">
@@ -115,8 +118,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_LH" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_LH_TextChanged" TabIndex="4" ForeColor="Blue"></asp:TextBox>
-                                                    <asp:DropDownList ID="TEN_LH" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_LH_SelectedIndexChanged" TabIndex="5" ForeColor="Blue">
+                                                    <asp:TextBox ID="MA_LH" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_LH_TextChanged" TabIndex="4" ForeColor="Blue" CssClass="tTextBox"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_LH" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_LH_SelectedIndexChanged" TabIndex="5" ForeColor="Blue" CssClass="tTextBox">
                                                         <asp:ListItem Selected="True"></asp:ListItem>
                                                        <asp:ListItem Value="A11">Nhập kinh doanh tiêu dùng</asp:ListItem>
 <asp:ListItem Value="A12">Nhập kinh doanh sản xuất</asp:ListItem>
@@ -176,7 +179,7 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                <asp:TextBox ID="MA_HS" runat="server" ForeColor="Blue" TabIndex="17" Width="185px"></asp:TextBox>
+                                                <asp:TextBox ID="MA_HS" runat="server" ForeColor="Blue" TabIndex="17" Width="185px" CssClass="tTextBox"></asp:TextBox>
                                                 </nobr>
                                             </td>
 
@@ -189,8 +192,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_CUCHQ" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_CUCHQ_TextChanged" TabIndex="6" ForeColor="Blue"></asp:TextBox>
-                                                    <asp:DropDownList ID="TEN_CUCHQ" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_CUCHQ_SelectedIndexChanged" TabIndex="7" ForeColor="Blue">
+                                                    <asp:TextBox ID="MA_CUCHQ" Width="50px" runat="server" AutoPostBack="True" OnTextChanged="MA_CUCHQ_TextChanged" TabIndex="6" ForeColor="Blue" CssClass="tTextBox"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_CUCHQ" Width="410px" runat="server" Height="22px" AutoPostBack="True" OnSelectedIndexChanged="TEN_CUCHQ_SelectedIndexChanged" TabIndex="7" ForeColor="Blue" CssClass="tTextBox">
                                                         <asp:ListItem></asp:ListItem>
                                                         <asp:ListItem Value="01">Thành phố Hà Nội</asp:ListItem>
 <asp:ListItem Value="02">Thành phố Hồ Chí Minh</asp:ListItem>
@@ -257,7 +260,7 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                <asp:TextBox ID="TEN_HANG" runat="server" ForeColor="Blue" TabIndex="18" Width="400px"></asp:TextBox>
+                                                <asp:TextBox ID="TEN_HANG" runat="server" ForeColor="Blue" TabIndex="18" Width="400px" CssClass="tTextBox"></asp:TextBox>
                                                 </nobr>
                                             </td>
                                         </tr>
@@ -269,8 +272,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_CC" Width="50px" runat="server" TabIndex="8" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_CC_TextChanged"></asp:TextBox>
-                                                    <asp:DropDownList ID="TEN_CC" Width="410px" runat="server" Height="22px" TabIndex="9" AutoPostBack="True" ForeColor="Blue" OnSelectedIndexChanged="TEN_CC_SelectedIndexChanged">
+                                                    <asp:TextBox ID="MA_CC" Width="50px" runat="server" TabIndex="8" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_CC_TextChanged" CssClass="tTextBox"></asp:TextBox>
+                                                    <asp:DropDownList ID="TEN_CC" Width="410px" runat="server" Height="22px" TabIndex="9" AutoPostBack="True" ForeColor="Blue" OnSelectedIndexChanged="TEN_CC_SelectedIndexChanged" CssClass="tTextBox">
                                                         <asp:ListItem></asp:ListItem>
                                                         <asp:ListItem Value="01AB">CC HQ CK Sân bay QT Nội Bài</asp:ListItem>
                                                         <asp:ListItem Value="01AC">CC HQ Gia Lâm Hà Nội</asp:ListItem>
@@ -285,8 +288,8 @@
                                             </td>
                                             <td style="width: 100%; text-align: left; border: solid 0px red;" runat="server">
                                                 <nobr>
-                                                <asp:TextBox ID="MA_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXX_TextChanged" TabIndex="19" Width="30px"></asp:TextBox>
-                                                <asp:DropDownList ID="TEN_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXX_SelectedIndexChanged" TabIndex="20" Width="150px">
+                                                <asp:TextBox ID="MA_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXX_TextChanged" TabIndex="19" Width="30px" CssClass="tTextBox"></asp:TextBox>
+                                                <asp:DropDownList ID="TEN_NUOCXX" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXX_SelectedIndexChanged" TabIndex="20" Width="150px" CssClass="tTextBox">
                                                     <asp:ListItem></asp:ListItem>
                                                    <asp:ListItem Value="AF">Afganistan</asp:ListItem>
 <asp:ListItem Value="AL">Albania</asp:ListItem>
@@ -538,8 +541,8 @@
                                             </td>
                                             <td style="width: 1px; text-align: left; border: solid 0px red;" colspan="2" runat="server">
                                                 <nobr>
-                                                    <asp:TextBox ID="MA_DONVI" Width="100px" runat="server" TabIndex="10" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged"></asp:TextBox>
-                                                    <asp:TextBox ID="TEN_DONVI" runat="server" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged" ReadOnly="True" TabIndex="11" Width="355px"></asp:TextBox>
+                                                    <asp:TextBox ID="MA_DONVI" Width="100px" runat="server" TabIndex="10" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged" CssClass="tTextBox"></asp:TextBox>
+                                                    <asp:TextBox ID="TEN_DONVI" runat="server" ForeColor="Blue" OnTextChanged="MA_DONVI_TextChanged" ReadOnly="True" TabIndex="11" Width="355px" CssClass="tTextBox"></asp:TextBox>
                                                         </nobr>
                                             </td>
 
@@ -556,7 +559,7 @@
                                             </td>
                                             <td runat="server" colspan="2" style="width: 1px; text-align: left; border: solid 0px red;">
                                                 <nobr>
-                                                <asp:TextBox ID="TEN_DOITAC" runat="server" ForeColor="Blue" TabIndex="12" Width="465px" AutoPostBack="True" OnTextChanged="TEN_DOITAC_TextChanged"></asp:TextBox>
+                                                <asp:TextBox ID="TEN_DOITAC" runat="server" ForeColor="Blue" TabIndex="12" Width="465px" AutoPostBack="True" OnTextChanged="TEN_DOITAC_TextChanged" CssClass="tTextBox"></asp:TextBox>
                                                 </nobr>
                                             </td>
                                             <td runat="server" style="width: 1px; text-align: right; border-left: solid 1px red;">
@@ -572,8 +575,8 @@
                                             </td>
                                             <td runat="server" colspan="2" style="width: 1px; text-align: left; border: solid 0px red;">
                                                 <nobr>
-                                                <asp:TextBox ID="MA_NUOCXK" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXK_TextChanged" TabIndex="15" Width="30px"></asp:TextBox>
-                                                <asp:DropDownList ID="TEN_NUOCXK" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXK_SelectedIndexChanged" TabIndex="16" Width="150px">
+                                                <asp:TextBox ID="MA_NUOCXK" runat="server" AutoPostBack="True" ForeColor="Blue" OnTextChanged="MA_NUOCXK_TextChanged" TabIndex="15" Width="30px" CssClass="tTextBox"></asp:TextBox>
+                                                <asp:DropDownList ID="TEN_NUOCXK" runat="server" AutoPostBack="True" ForeColor="Blue" Height="22px" OnSelectedIndexChanged="TEN_NUOCXK_SelectedIndexChanged" TabIndex="16" Width="150px" CssClass="tTextBox">
                                                     <asp:ListItem></asp:ListItem>
                                                     <asp:ListItem Value="AF">Afganistan</asp:ListItem>
 <asp:ListItem Value="AL">Albania</asp:ListItem>
@@ -970,7 +973,7 @@
             <div class="content-wrapper">
                 <div class="float-left">
                     <hr />
-                    <p>&copy; 2014- Trung tâm quản lý và vận hành hệ thống CNTT - Tổng Cục Hải Quan        </div>
+                    <p>&copy; 2014- Trung tâm quản lý và vận hành hệ thống CNTT - Cục CNTT và Thống kê Hải quan - Tổng Cục Hải quan        </div>
             </div>
         </footer>
        
