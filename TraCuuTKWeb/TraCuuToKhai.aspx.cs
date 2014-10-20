@@ -39,6 +39,9 @@ namespace t
             {
                 clsAll.ClearDesignData2(tblDieuKien);
 
+                NGAYDK_FROM.Text = DateTime.Now.AddMonths(-1).ToString("dd/MM/yyyy");
+                NGAYDK_TO.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
                 TEN_CC.DataSource = Global.dsCHICUC.Tables[0];
                 TEN_CC.DataBind();
 
@@ -77,8 +80,12 @@ namespace t
 
         protected void btnDatLenh_Click(object sender, EventArgs e)
         {
-
             if (this.ValidateCondition(tblDieuKien) == false)
+            {
+                return;
+            }
+
+            if (this.ValidateNGAY(tblDieuKien) == false)
             {
                 return;
             }
@@ -118,6 +125,63 @@ namespace t
           
         }
 
+        private bool ValidateNGAY(System.Web.UI.HtmlControls.HtmlTable tblDieuKien)
+        {
+            NGAYDK_FROM.BackColor = Color.White;
+            NGAYDK_TO.BackColor = Color.White;
+            if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày bắt đầu tìm kiếm tờ khai";
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+            if (NGAYDK_FROM.Text.Trim().Equals("__/__/____") == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày bắt đầu tìm kiếm tờ khai";
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+            DateTime dFrom = new DateTime();
+            bool bP1 = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
+            if (bP1 == false)
+            {
+                lblMSG.Text = "Ngày bắt đầu tìm kiếm tờ khai không đúng định dạng dd/MM/yyyy";
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(NGAYDK_TO.Text) == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày kết thúc tìm kiếm tờ khai";
+                NGAYDK_TO.BackColor = Color.Salmon;
+                return false;
+            }
+            if (NGAYDK_TO.Text.Trim().Equals("__/__/____") == true)
+            {
+                lblMSG.Text = "Bắt buộc phải nhập ngày kết thúc tìm kiếm tờ khai";
+                NGAYDK_TO.BackColor = Color.Salmon;
+                return false;
+            }
+            DateTime dTo = new DateTime();
+            bool bP2 = DateTime.TryParseExact(NGAYDK_TO.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dTo);
+            if (bP2 == false)
+            {
+                lblMSG.Text = "Ngày kết thúc tìm kiếm tờ khai không đúng định dạng dd/MM/yyyy";
+                NGAYDK_TO.BackColor = Color.Salmon;
+                return false;
+            }
+
+            if (dFrom > dTo)
+            {
+                lblMSG.Text =string.Format( "Ngày bắt đầu tìm kiếm {0:dd/MM/yyyy} phải trước ngày kết thúc tìm kiếm {1:dd/MM/yyyy}",dFrom,dTo);
+                NGAYDK_TO.BackColor = Color.Salmon;
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+
+            return true;
+        }
+
         private bool ValidateCondition(Control tblDieuKien)
         {
             bool re = true;
@@ -151,7 +215,7 @@ namespace t
                 strDK += string.Format("Số TK: {0}<br />", SOTK.Text);
 
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
-                strDK += string.Format("Ngày ĐK từ: {0}<br />", NGAYDK_FROM.Text);
+                strDK += string.Format("Ngày ĐK sau: {0}<br />", NGAYDK_FROM.Text);
 
             if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
                 strDK += string.Format("Ngày ĐK trước: {0}<br />", NGAYDK_TO.Text);
@@ -201,32 +265,32 @@ namespace t
             
             //THỜI GIAN ĐANG CHẠY RẤT CHẬP VÌ NGÀY ĐK TỜ KHAI ĐANG ĐỂ DẠNG TEXT TRONG ĐB
 
-            //if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
-            //{
-            //    DateTime dFrom = new DateTime();
-            //    bool bP = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
-            //    if (bP == true)
-            //    { 
-            //        strSQL = new string[2]{
-            //        string.Format("N501A_SINKD>='{0:yyyyMMdd}' ", dFrom),
-            //        string.Format("N502A_SINKD>='{0:yyyyMMdd}' ", dFrom)};
-            //    }
-            //}
-            //if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
-            //{
-            //    DateTime dTO = new DateTime();
-            //    bool bP = DateTime.TryParseExact(NGAYDK_TO.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dTO);
-            //    if (bP == true)
-            //    {
-            //        if (string.IsNullOrEmpty(strSQL[0]) == false)
-            //        {
-            //            strSQL[0] += " AND "; strSQL[1] += " AND ";
-            //        }
+            if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
+            {
+                DateTime dFrom = new DateTime();
+                bool bP = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
+                if (bP == true)
+                {
+                    strSQL = new string[2]{
+                    string.Format("N1.N501A_SINKD>='{0:yyyyMMdd}' ", dFrom),
+                    string.Format("N2.N502A_SINKD>='{0:yyyyMMdd}' ", dFrom)};
+                }
+            }
+            if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
+            {
+                DateTime dTO = new DateTime();
+                bool bP = DateTime.TryParseExact(NGAYDK_TO.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dTO);
+                if (bP == true)
+                {
+                    if (string.IsNullOrEmpty(strSQL[0]) == false)
+                    {
+                        strSQL[0] += " AND "; strSQL[1] += " AND ";
+                    }
 
-            //       strSQL[0] += string.Format("N501A_SINKD<='{0:yyyyMMdd}' ", dTO);
-            //       strSQL[1] += string.Format("N502A_SINKD<='{0:yyyyMMdd}' ", dTO);
-            //    }
-            //}
+                    strSQL[0] += string.Format("N1.N501A_SINKD<='{0:yyyyMMdd}' ", dTO);
+                    strSQL[1] += string.Format("N2.N502A_SINKD<='{0:yyyyMMdd}' ", dTO);
+                }
+            }
 
             if (string.IsNullOrEmpty(MA_LH.Text) == false)
             {
@@ -297,7 +361,7 @@ namespace t
                 strSQL[1] += string.Format("N2.N502A_YUSYK='{0}' ", MA_NUOCXK.Text);
             }
 
-            //nước xuất xứ chưa tìm thấy trường nào
+            //nước xuất xứ chưa tìm thấy trường nào (ở trên dòng hàng ý)
             return strSQL;
         }
 
