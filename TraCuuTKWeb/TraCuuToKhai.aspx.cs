@@ -95,7 +95,7 @@ namespace t
                     rp.RP_ID = ++intMax;
                     rp.RP_USERNAME = string.Format("{0}", Session[ct.USERNAME]);
                     rp.RP_CREATEDATE = DateTime.Now;
-                    rp.RP_DISPLAY = string.Format("Số TK: {0}", SOTK.Text);
+                    rp.RP_DISPLAY = TaoDieuKienTimKiemText();
                     rp.RP_QUERY = TạoTruyVấn(strWhere);
                     rp.RP_STATUS = "Đang xử lý";
                     mainDB.SREPORTs.InsertOnSubmit(rp);
@@ -109,6 +109,49 @@ namespace t
                 lblMSG.Text = string.Format("Đã xảy ra lỗi trong quá trình đặt lệnh, nội dung lỗi: {0}", ex.Message);
             }
           
+        }
+
+        private string TaoDieuKienTimKiemText()
+        {
+            string strDK = "";
+            if (string.IsNullOrEmpty(SOTK.Text)==false)
+            strDK += string.Format("Số TK: {0}\r\n", SOTK.Text);
+
+            if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
+                strDK += string.Format("Ngày ĐK từ: {0}\r\n", NGAYDK_FROM.Text);
+
+            if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
+                strDK += string.Format("Ngày ĐK trước: {0}\r\n", NGAYDK_TO.Text);
+
+            if (string.IsNullOrEmpty(MA_LH.Text) == false)
+                strDK += string.Format("Mã LH: {0}\r\n", MA_LH.Text);
+
+            if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
+                strDK += string.Format("Mã Cục: {0}\r\n", MA_CUCHQ.Text);
+
+            if (string.IsNullOrEmpty(MA_CC.Text) == false)
+                strDK += string.Format("Mã Chi cục: {0}\r\n", MA_CC.Text);
+
+            if (string.IsNullOrEmpty(MA_DONVI.Text) == false)
+                strDK += string.Format("Mã đơn vị: {0}\r\n", MA_DONVI.Text);
+
+            if (string.IsNullOrEmpty(TEN_DOITAC.Text) == false)
+                strDK += string.Format("Tên đối tác: {0}\r\n", TEN_DOITAC.Text);           
+
+            if (string.IsNullOrEmpty(MA_NUOCXK.Text) == false)
+                strDK += string.Format("Nước XNK: {0}\r\n", MA_NUOCXK.Text);
+
+            if (string.IsNullOrEmpty(MA_HS.Text) == false)
+                strDK += string.Format("Mã HS: {0}\r\n", MA_HS.Text);
+
+            if (string.IsNullOrEmpty(TEN_HANG.Text) == false)
+                strDK += string.Format("Tên hàng: {0}\r\n", TEN_HANG.Text);
+
+            if (string.IsNullOrEmpty(MA_NUOCXX.Text) == false)
+                strDK += string.Format("Nước xuất xứ: {0}\r\n", MA_NUOCXX.Text);
+           
+
+            return strDK;
         }
 
         private string[] TạoWHERE()
