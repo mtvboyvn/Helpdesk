@@ -70,9 +70,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DesignDB.mdb" />
-    <Content Include="App_Data\MVIEW1_TOKHAIMD2.sql" />
+    <Content Include="App_Data\MVIEW1_TOKHAIMD2.TXT" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD.sql" />
+    <Content Include="App_Data\N502A_FIELDS.TXT" />
+    <Content Include="App_Data\N501A_FIELDS.TXT" />
     <Content Include="App_Data\SCHICUC.xml" />
+    <Content Include="App_Data\SDONVI.sql" />
+    <Content Include="App_Data\SREPORT.sql" />
+    <Content Include="App_Data\SUSER.sql" />
     <Content Include="DangNhap.aspx" />
     <Content Include="DLL\AjaxControlToolkit.dll" />
     <Content Include="DLL\Interop.Excel.dll" />

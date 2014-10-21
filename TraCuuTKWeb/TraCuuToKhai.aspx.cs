@@ -434,7 +434,7 @@ namespace t
             //string strSQL = "SELECT V1.* FROM (" + t.Properties.Resources.MVIEW1_TOKHAIMD + ") V1 WHERE {0}";
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
             string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2;
-            return string.Format(strSQL, strWhere[0], strWhere[1]);
+            return string.Format(strSQL, t.Properties.Resources.N501A_FIELDS, strWhere[0], t.Properties.Resources.N502A_FIELDS, strWhere[1]);
         }
 
         protected void MA_LH_TextChanged(object sender, EventArgs e)

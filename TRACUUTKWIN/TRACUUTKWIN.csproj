@@ -66,6 +66,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="bin\Debug\tempExcel.xls" />
+    <None Include="bin\Debug\tempExcel2007.xlsx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,6 +77,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="tempExcel.xls" />
+    <None Include="tempExcel2007.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TraCuuTKWeb\TRACUUTKWEB.csproj">

@@ -49,8 +49,8 @@ namespace TRACUUTKWIN
                   {
                       string strReportDir = Path.Combine(strReportRootPath, r["RP_USERNAME"].ToString());
                       if (Directory.Exists(strReportDir) == false) Directory.CreateDirectory(strReportDir);
-                      string tmpFileXSL = Path.Combine(Application.StartupPath, "tempExcel.xls");
-                      string strReportFileName = string.Format("TOKHAIMD_{0}.xls", r["RP_ID"].ToString());
+                      string tmpFileXSL = Path.Combine(Application.StartupPath, "tempExcel2007.xlsx");
+                      string strReportFileName = string.Format("TOKHAIMD_{0}.xlsx", r["RP_ID"].ToString());
                       string strReportFilePath = Path.Combine(strReportDir, strReportFileName);
                       string strDuongDanTuongDoi = string.Format("~/Reports/{0}/{1}", r["RP_USERNAME"].ToString(), strReportFileName);
                       try
@@ -83,7 +83,8 @@ namespace TRACUUTKWIN
                           Excel.Workbook wb = objExcel.Workbooks.Open(strReportFilePath);
                           objExcel.Visible = false;
                           Excel.Worksheet wsTOKHAIMD = (Excel.Worksheet)wb.Worksheets[1];
-                          wsTOKHAIMD.Range[string.Format("A2:IV{0}", dsTK.Tables[0].Rows.Count+1)].Value = objData;
+                          wsTOKHAIMD.Range[string.Format("A2:WE{0}", dsTK.Tables[0].Rows.Count+1)].Value = objData;
+                          //603=WE
 
                           Excel.Worksheet wsHANGMD = (Excel.Worksheet)wb.Worksheets[2];
                           object[,] objDataHANG = t.clsAll.DataTable2ArrayObjects(dsHANG.Tables[0]);
