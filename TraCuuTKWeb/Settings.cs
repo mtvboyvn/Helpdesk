@@ -16,7 +16,7 @@ namespace t
         public static string sqlSTRINGADO_USER = "Data Source=.\\SQL2012ENT;Initial Catalog=TRACUUTKWEB;User ID=sa;pwd=1";
         public static string sqlSTRINGOLE = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\DesignDB.mdb;Persist Security Info=True;Jet OLEDB:Database Password=tuyenchim";
         public static string sqlSTRINGLITE = "Data Source= |DataDirectory|NACCS.VN.db;Version=3;New=False;Compress=True;";
-        public static string sqlSTRINGORACLE = "Data Source=//10.224.130.110:1521/orcl;User ID=;pwd=;";
+        public static string sqlSTRINGORACLE = "Data Source=//:1521/orcl;User ID=;pwd=;";
 
         //public static string sqlSTRINGORACLE = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
