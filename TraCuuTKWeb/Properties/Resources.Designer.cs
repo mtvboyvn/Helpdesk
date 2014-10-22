@@ -61,11 +61,51 @@ namespace t.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to H.SIKNO
+        ///H.RANNB
+        ///H.INMC 
+        ///H.INME 
+        ///H.ATCD 
+        ///H.ORGLC
+        ///H.TANI1
+        ///H.SURY1
+        ///H.TANKA
+        ///H.KAZTK
+        ///H.BPRIC
+        ///H.KANKG
+        ///H.KAZEI
+        ///H.KANRT
+        ///H.KANGK
+        ///H.ORGNK
+        ///H.NAIBC_1
+        ///H.NAIRT_1
+        ///H.NAIGK_1
+        ///H.NAIBC_2
+        ///H.NAIRT_2
+        ///H.NAIGK_2
+        ///H.NAIBC_3
+        ///H.NAIRT_3
+        ///H.NAIGK_3
+        ///H.NAIBC_4
+        ///H.NAIRT_4
+        ///H.NAIGK_4
+        ///H.NAIBC_5
+        ///H.NAIRT_5
+        ///H.NAIGK_5
+        ///.
+        /// </summary>
+        internal static string HANG_FIELDS {
+            get {
+                return ResourceManager.GetString("HANG_FIELDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT 
         /// {0}
         ///FROM N501A N1 
         ///WHERE {1}
-        ///UNION 
+        ///UNION ALL
         ///SELECT 
         ///  {2}
         ///FROM N502A N2 
@@ -106,11 +146,11 @@ namespace t.Properties {
         ///(
         ///  SELECT 
         ///  N1.N501A_SIKNO AS SIKNO  
-        ///  FROM N501A N1 WHERE {0}
+        ///  FROM N501A N1 WHERE {1}
         ///  UNION 
         ///  SELECT 
         ///  N2.N502A_SIKNO AS SIKNO 
-        ///  FROM  [rest of string was truncated]&quot;;.
+        ///  FR [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MVIEW1_TOKHAIMD2 {
             get {
@@ -146,31 +186,86 @@ namespace t.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to N2.N501A_SINKD AS SINKD ,
-        ///N2.N501A_SINKS AS SINKS ,
-        ///N2.N501A_SHIKS AS SHIKS ,
-        ///N2.N501A_YUNYC AS YUNYC ,
-        ///N2.N501A_YUSYK AS YUSYK ,
-        ///N2.N501A_YUNN2 AS YUNN2 ,
-        ///N2.N501A_CYUK1 AS CYUK1 ,
-        ///N2.N501A_TRANS AS TRANS ,
-        ///N2.N501A_TYBNA AS TYBNA ,
-        ///N2.N501A_TYNEP AS TYNEP ,
-        ///N2.N501A_AWBNB AS AWBNB ,
+        ///   Looks up a localized string similar to B1.N501B_SIKNO	AS	SIKNO	,
+        ///B1.N501B_RANNB	AS	RANNB	,
+        ///B1.N501B_HINMC 	AS	INMC 	,
+        ///B1.N501B_HINME 	AS	INME 	,
+        ///B1.N501B_MATCD 	AS	ATCD 	,
+        ///B1.N501B_ORGLC	AS	ORGLC	,
+        ///B1.N501B_TANI1	AS	TANI1	,
+        ///B1.N501B_SURY1	AS	SURY1	,
+        ///B1.N501B_TANKA	AS	TANKA	,
+        ///B1.N501B_KAZTK	AS	KAZTK	,
+        ///B1.N501B_BPRIC	AS	BPRIC	,
+        ///B1.N501B_KANKG	AS	KANKG	,
+        ///B1.N501B_KAZEI	AS	KAZEI	,
+        ///B1.N501B_KANRT	AS	KANRT	,
+        ///B1.N501B_KANGK	AS	KANGK	,
+        ///B1.N501B_ORGNK	AS	ORGNK	,
+        ///B1.N501B_NAIBC_1	AS	NAIBC_1	,
+        ///B1.N501B_NAIRT_1	AS	NAIRT_1	,
+        ///B1.N501B_NAIGK_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string N501B_FIELDS {
+            get {
+                return ResourceManager.GetString("N501B_FIELDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N2.N502A_SINKD AS SINKD ,
+        ///N2.N502A_SINKS AS SINKS ,
+        ///N2.N502A_SHIKS AS SHIKS ,
+        ///N2.N502A_YUNYC AS YUNYC ,
+        ///N2.N502A_YUSYK AS YUSYK ,
+        ///N2.N502A_YUNN2 AS YUNN2 ,
+        ///N2.N502A_CYUK1 AS CYUK1 ,
+        ///N2.N502A_TRANS AS TRANS ,
+        ///N2.N502A_TYBNA AS TYBNA ,
+        ///N2.N502A_TYNEP AS TYNEP ,
+        ///N2.N502A_AWBNB AS AWBNB ,
         ///NULL AS AWBNB_2 ,
         ///NULL AS AWBNB_3 ,
         ///NULL AS AWBNB_4 ,
         ///NULL AS AWBNB_5 ,
-        ///N2.N501A_TRORC AS TRORC ,
-        ///N2.N501A_TRORN AS TRORN ,
-        ///N2.N501A_TMDSI AS TMDSI ,
-        ///N2.N501A_TMDSM AS TMDSM ,
-        ///N2.N501A_YSYOS_1 AS YSYOS_1 ,
+        ///N2.N502A_TRORC AS TRORC ,
+        ///N2.N502A_TRORN AS TRORN ,
+        ///N2.N502A_TMDSI AS TMDSI ,
+        ///N2.N502A_TMDSM AS TMDSM ,
+        ///N2.N502A_YSYOS_1 AS YSYOS_1 ,
         /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string N502A_FIELDS {
             get {
                 return ResourceManager.GetString("N502A_FIELDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B2.N502B_SIKNO	AS	SIKNO	,
+        ///B2.N502B_RANNB	AS	RANNB	,
+        ///B2.N502B_HINMC 	AS	INMC 	,
+        ///B2.N502B_HINME 	AS	INME 	,
+        ///B2.N502B_MATCD 	AS	ATCD 	,
+        ///B2.N502B_ORGLC	AS	ORGLC	,
+        ///B2.N502B_TANI1	AS	TANI1	,
+        ///B2.N502B_SURY1	AS	SURY1	,
+        ///B2.N502B_TANKA	AS	TANKA	,
+        ///B2.N502B_KAZTK	AS	KAZTK	,
+        ///B2.N502B_BPRIC	AS	BPRIC	,
+        ///B2.N502B_KANKG	AS	KANKG	,
+        ///B2.N502B_KAZEI	AS	KAZEI	,
+        ///B2.N502B_KANRT	AS	KANRT	,
+        ///B2.N502B_KANGK	AS	KANGK	,
+        ///B2.N502B_ORGNK	AS	ORGNK	,
+        ///	NULL	AS	NAIBC_1	,
+        ///	NULL	AS	NAIRT_1	,
+        ///	NULL	AS	NAIGK_1	,
+        ///	NULL	AS	NAIBC_2	 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string N502B_FIELDS {
+            get {
+                return ResourceManager.GetString("N502B_FIELDS", resourceCulture);
             }
         }
         

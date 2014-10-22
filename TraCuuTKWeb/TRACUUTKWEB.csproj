@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DesignDB.mdb" />
+    <Content Include="App_Data\HANG_FIELDS.txt" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD2.TXT" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD.sql" />
     <Content Include="App_Data\N502A_FIELDS.TXT" />
@@ -78,6 +79,10 @@
     <Content Include="App_Data\SDONVI.sql" />
     <Content Include="App_Data\SREPORT.sql" />
     <Content Include="App_Data\SUSER.sql" />
+    <Content Include="App_Data\N501A_FIELDS_2.TXT" />
+    <Content Include="App_Data\N502A_FIELDS_2.TXT" />
+    <Content Include="App_Data\N501B_FIELDS.txt" />
+    <Content Include="App_Data\TextFile1.txt" />
     <Content Include="DangNhap.aspx" />
     <Content Include="DLL\AjaxControlToolkit.dll" />
     <Content Include="DLL\Interop.Excel.dll" />
@@ -89,6 +94,7 @@
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="App_Data\N502B_FIELDS.txt" />
     <Content Include="TraCuuToKhai.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />

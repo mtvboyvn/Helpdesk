@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using t.Properties;
 
 namespace t
 {
@@ -439,7 +440,11 @@ namespace t
             //string strSQL = "SELECT V1.* FROM (" + t.Properties.Resources.MVIEW1_TOKHAIMD + ") V1 WHERE {0}";
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
             string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2;
-            return string.Format(strSQL, t.Properties.Resources.N501A_FIELDS, strWhere[0], t.Properties.Resources.N502A_FIELDS, strWhere[1]);
+            return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0], 
+                                        Resources.N502A_FIELDS, strWhere[1],
+                                          Resources.HANG_FIELDS,
+                                          Resources.N501B_FIELDS,
+                                          Resources.N502B_FIELDS);
         }
 
         protected void MA_LH_TextChanged(object sender, EventArgs e)
