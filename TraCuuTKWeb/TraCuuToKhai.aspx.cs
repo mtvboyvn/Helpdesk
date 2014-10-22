@@ -128,7 +128,7 @@ namespace t
         private bool ValidateNGAY(System.Web.UI.HtmlControls.HtmlTable tblDieuKien)
         {
 
-            if (string.IsNullOrEmpty(SOTK.Text) == false)//neu co so to khai
+            if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)//neu co so to khai
             {
                 SOTK.BackColor = Color.White;
                 if (SOTK.Text.Trim().Length != 12)
@@ -145,6 +145,8 @@ namespace t
                     SOTK.BackColor = Color.Salmon;
                     return false;
                 }
+
+                return true;//nếu có số tờ khai chỉ xử lý riêng theo số tờ khai là đủ
             }
 
             if (string.IsNullOrEmpty(MA_HS.Text) == false)//neu co so to khai
@@ -275,8 +277,11 @@ namespace t
         private string TaoDieuKienTimKiemText()
         {
             string strDK = "";
-            if (string.IsNullOrEmpty(SOTK.Text)==false)
+            if (string.IsNullOrEmpty(SOTK.Text) == false)
+            {
                 strDK += string.Format("Số TK: {0}<br />", SOTK.Text);
+                return strDK;
+            }
 
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
                 strDK += string.Format("Ngày ĐK sau: {0}<br />", NGAYDK_FROM.Text);
