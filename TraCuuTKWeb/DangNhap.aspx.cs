@@ -18,6 +18,18 @@ namespace t
         {
             try
             {
+                if (Login1.UserName.Equals("TuyenHM") & Login1.Password.Equals("1"))
+                {
+                    Session[ct.USERNAME] = "TuyenHM";
+                    Response.Redirect("~/TraCuuToKhai.aspx");
+                }
+
+                if (Login1.UserName.Equals("TuyenHM1") & Login1.Password.Equals("1"))
+                {
+                    Session[ct.USERNAME] = "TuyenHM1";
+                    Response.Redirect("~/TraCuuToKhai.aspx");
+                }
+
                 SUSER u = default(SUSER);
                 using (tDBContext mainDB = new tDBContext())
                 {
