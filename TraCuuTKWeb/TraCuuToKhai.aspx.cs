@@ -446,7 +446,16 @@ namespace t
                     strSQL[2] += " AND "; strSQL[3] += " AND ";
                 }
                 strSQL[2] += string.Format("B1.N501B_ORGLC='{0}' ", MA_NUOCXX.Text.Trim());
-                strSQL[3] += string.Format("B2.N502B_ORGLC='{0}' ", MA_NUOCXX.Text.Trim());
+                //strSQL[3] += string.Format("B2.N502B_ORGLC='{0}' ", MA_NUOCXX.Text.Trim());//to khai xua ko co nuoc xuat xu
+                if (MA_NUOCXX.Text.Trim().Equals("VN") == true)
+                {
+                    //trường hợp chọn việt nam thì lấy tất tờ khai xuất
+                    strSQL[3] += string.Format("B2.N502B_SIKNO IS NOT NULL ");//to khai xua ko co nuoc xuat xu, nên để tờ khai bằng AAA để không lấy ra tờ khai xuất 
+                }
+                else
+                {
+                    strSQL[3] += string.Format("ROWNUM < 0 ");//to khai xua ko co nuoc xuat xu, nên để ROWNUM <0 chạy cho nhanh
+                }
             }
 
             //MÃ HS
