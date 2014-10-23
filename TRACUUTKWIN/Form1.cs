@@ -189,7 +189,7 @@ namespace TRACUUTKWIN
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string s = "SELECT * FROM N501B WHERE N501B_HINME LIKE 'Chất thử chuẩn đoán dùng ch' AND ROWNUM<2";
+            //string s = "SELECT * FROM N501B WHERE N501B_HINME LIKE 'Chất thử chuẩn đoán dùng ch' AND ROWNUM<2";
             DataSet dsTK = t.clsDalORACLE.GetDataSet(textBox1.Text);
 
             MessageBox.Show(dsTK.Tables[0].Rows.Count.ToString());

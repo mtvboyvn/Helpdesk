@@ -127,6 +127,8 @@ namespace t
         public static OracleConnection getConnOracle(string strConnString)
         {
             OracleConnection myConn = new OracleConnection(strConnString);
+            
+                
             try
             {
                 myConn.Open();
