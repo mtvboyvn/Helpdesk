@@ -61,36 +61,36 @@ namespace t.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to H.SIKNO
-        ///H.RANNB
-        ///H.INMC 
-        ///H.INME 
-        ///H.ATCD 
-        ///H.ORGLC
-        ///H.TANI1
-        ///H.SURY1
-        ///H.TANKA
-        ///H.KAZTK
-        ///H.BPRIC
-        ///H.KANKG
-        ///H.KAZEI
-        ///H.KANRT
-        ///H.KANGK
-        ///H.ORGNK
-        ///H.NAIBC_1
-        ///H.NAIRT_1
-        ///H.NAIGK_1
-        ///H.NAIBC_2
-        ///H.NAIRT_2
-        ///H.NAIGK_2
-        ///H.NAIBC_3
-        ///H.NAIRT_3
-        ///H.NAIGK_3
-        ///H.NAIBC_4
-        ///H.NAIRT_4
-        ///H.NAIGK_4
-        ///H.NAIBC_5
-        ///H.NAIRT_5
+        ///   Looks up a localized string similar to H.SIKNO,
+        ///H.RANNB,
+        ///H.INMC ,
+        ///H.INME ,
+        ///H.ATCD ,
+        ///H.ORGLC,
+        ///H.TANI1,
+        ///H.SURY1,
+        ///H.TANKA,
+        ///H.KAZTK,
+        ///H.BPRIC,
+        ///H.KANKG,
+        ///H.KAZEI,
+        ///H.KANRT,
+        ///H.KANGK,
+        ///H.ORGNK,
+        ///H.NAIBC_1,
+        ///H.NAIRT_1,
+        ///H.NAIGK_1,
+        ///H.NAIBC_2,
+        ///H.NAIRT_2,
+        ///H.NAIGK_2,
+        ///H.NAIBC_3,
+        ///H.NAIRT_3,
+        ///H.NAIGK_3,
+        ///H.NAIBC_4,
+        ///H.NAIRT_4,
+        ///H.NAIGK_4,
+        ///H.NAIBC_5,
+        ///H.NAIRT_5,
         ///H.NAIGK_5
         ///.
         /// </summary>
@@ -112,36 +112,7 @@ namespace t.Properties {
         ///WHERE {3};
         ///
         ///SELECT 
-        ///H.SIKNO,
-        ///H.RANNB ,
-        ///HINME,HINMC,
-        ///ORGLC,
-        ///TANI1,
-        ///SURY1,
-        ///TANKA,
-        ///KAZTK,
-        ///BPRIC,
-        ///KANKG,
-        ///KAZEI,
-        ///KANRT,
-        ///NAIBC_1,
-        ///NAIRT_1,
-        ///NAIGK_1,
-        ///NAIBC_2,
-        ///NAIRT_2,
-        ///NAIGK_2,
-        ///NAIBC_3,
-        ///NAIRT_3,
-        ///NAIGK_3,
-        ///NAIBC_4,
-        ///NAIRT_4,
-        ///NAIGK_4,
-        ///NAIBC_5,
-        ///NAIRT_5,
-        ///NAIGK_5,
-        ///ORGNK,
-        ///ATCD 
-        ///
+        ///{4}
         ///FROM 
         ///(
         ///  SELECT 
@@ -150,7 +121,20 @@ namespace t.Properties {
         ///  UNION 
         ///  SELECT 
         ///  N2.N502A_SIKNO AS SIKNO 
-        ///  FR [rest of string was truncated]&quot;;.
+        ///  FROM N502A N2 WHERE {3}
+        ///) V1 JOIN 
+        ///(
+        ///SELECT 
+        ///	{5}
+        ///  FROM  N501B B1 
+        ///  UNION ALL
+        ///  SELECT 
+        ///	{6}
+        ///  FROM N502B B2
+        ///) H
+        ///ON V1.SIKNO=H.SIKNO;
+        ///
+        ///.
         /// </summary>
         internal static string MVIEW1_TOKHAIMD2 {
             get {
@@ -159,7 +143,57 @@ namespace t.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to N1.N501A_SINKD AS SINKD ,
+        ///   Looks up a localized string similar to SELECT 
+        ///{7}
+        ///FROM
+        ///(
+        ///	SELECT 
+        ///	 {0}
+        ///	FROM N501A N1 
+        ///	WHERE {1}
+        ///	UNION ALL
+        ///	SELECT 
+        ///	  {2}
+        ///	FROM N502A N2 
+        ///	WHERE {3}
+        ///) V1 JOIN
+        ///(
+        ///  SELECT 
+        ///	B1.N501B_SIKNO AS SIKNO 
+        ///  FROM  N501B B1 WHERE {8}
+        ///  UNION ALL
+        ///  SELECT 
+        ///	B2.N502B_SIKNO AS SIKNO
+        ///  FROM N502B B2 WHERE {9}
+        ///) H
+        ///ON V1.SIKNO=H.SIKNO;
+        ///
+        ///SELECT 
+        ///{4}
+        ///FROM 
+        ///(
+        ///  SELECT 
+        ///  N1.N501A_SIKNO AS SIKNO  
+        ///  FROM N501A N1 WHERE {1}
+        ///  UNION 
+        ///  SELECT 
+        ///  N2.N502A_SIKNO AS SIKNO 
+        ///  FROM N502A N2 WHERE {3}
+        ///) V1 JOIN 
+        ///(
+        ///SELECT 
+        ///	{5}
+        ///  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MVIEW1_TOKHAIMD2_HANG {
+            get {
+                return ResourceManager.GetString("MVIEW1_TOKHAIMD2_HANG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N1.N501A_SIKNO AS SIKNO ,
+        ///N1.N501A_SINKD AS SINKD ,
         ///N1.N501A_SINKS AS SINKS ,
         ///N1.N501A_SHIKS AS SHIKS ,
         ///N1.N501A_YUNYC AS YUNYC ,
@@ -176,7 +210,6 @@ namespace t.Properties {
         ///N1.N501A_AWBNB_5 AS AWBNB_5 ,
         ///N1.N501A_TRORC AS TRORC ,
         ///N1.N501A_TRORN AS TRORN ,
-        ///N1.N501A_TMDSI AS TMDSI ,
         ///N1.N501A [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string N501A_FIELDS {
@@ -213,7 +246,8 @@ namespace t.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to N2.N502A_SINKD AS SINKD ,
+        ///   Looks up a localized string similar to N2.N502A_SIKNO AS SIKNO ,
+        ///N2.N502A_SINKD AS SINKD ,
         ///N2.N502A_SINKS AS SINKS ,
         ///N2.N502A_SHIKS AS SHIKS ,
         ///N2.N502A_YUNYC AS YUNYC ,
@@ -232,8 +266,7 @@ namespace t.Properties {
         ///N2.N502A_TRORN AS TRORN ,
         ///N2.N502A_TMDSI AS TMDSI ,
         ///N2.N502A_TMDSM AS TMDSM ,
-        ///N2.N502A_YSYOS_1 AS YSYOS_1 ,
-        /// [rest of string was truncated]&quot;;.
+        ///N2.N [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string N502A_FIELDS {
             get {
@@ -247,7 +280,7 @@ namespace t.Properties {
         ///B2.N502B_HINMC 	AS	INMC 	,
         ///B2.N502B_HINME 	AS	INME 	,
         ///B2.N502B_MATCD 	AS	ATCD 	,
-        ///B2.N502B_ORGLC	AS	ORGLC	,
+        ///	NULL	AS	ORGLC	,
         ///B2.N502B_TANI1	AS	TANI1	,
         ///B2.N502B_SURY1	AS	SURY1	,
         ///B2.N502B_TANKA	AS	TANKA	,
@@ -257,11 +290,12 @@ namespace t.Properties {
         ///B2.N502B_KAZEI	AS	KAZEI	,
         ///B2.N502B_KANRT	AS	KANRT	,
         ///B2.N502B_KANGK	AS	KANGK	,
-        ///B2.N502B_ORGNK	AS	ORGNK	,
+        ///	NULL	AS	ORGNK	,
         ///	NULL	AS	NAIBC_1	,
         ///	NULL	AS	NAIRT_1	,
         ///	NULL	AS	NAIGK_1	,
-        ///	NULL	AS	NAIBC_2	 [rest of string was truncated]&quot;;.
+        ///	NULL	AS	NAIBC_2	,
+        ///	NULL	AS	NAIRT_ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string N502B_FIELDS {
             get {
@@ -275,6 +309,59 @@ namespace t.Properties {
         internal static string String1 {
             get {
                 return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to V1.SIKNO,
+        ///V1.SINKD,
+        ///V1.SINKS,
+        ///V1.SHIKS,
+        ///V1.YUNYC,
+        ///V1.YUSYK,
+        ///V1.YUNN2,
+        ///V1.CYUK1,
+        ///V1.TRANS,
+        ///V1.TYBNA,
+        ///V1.TYNEP,
+        ///V1.AWBNB,
+        ///V1.AWBNB_2,
+        ///V1.AWBNB_3,
+        ///V1.AWBNB_4,
+        ///V1.AWBNB_5,
+        ///V1.TRORC,
+        ///V1.TRORN,
+        ///V1.TMDSI,
+        ///V1.TMDSM,
+        ///V1.YSYOS_1,
+        ///V1.YSYOS_2,
+        ///V1.YSYOS_3,
+        ///V1.YSYOS_4,
+        ///V1.YSYOS_5,
+        ///V1.KIJIT,,
+        ///V1.INVKJ,
+        ///V1.RPEAT,
+        ///V1.PAYCD,
+        ///V1.TUKCD_1,
+        ///V1.TUKRT_1,
+        ///V1.UDATE,
+        ///V1.UTIME,
+        ///V1.HOKEN,
+        ///V1.UNTIN,
+        ///V1.INVKA,
+        ///V1.HKANZ,
+        ///V1.WAIGW,
+        ///V1.KOSUK,,
+        ///V1.GSIRT,
+        ///V1.INVNO,
+        ///V1.INDAY,
+        ///V1.KIJIT,
+        ///V1.YUSYC,
+        ///V1.Y [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string V1_FIELDS {
+            get {
+                return ResourceManager.GetString("V1_FIELDS", resourceCulture);
             }
         }
     }

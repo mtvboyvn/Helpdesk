@@ -326,6 +326,13 @@ namespace t
             //string strSQL = "SELECT * FROM MVIEW1_TOKHAIMD WHERE {0}";
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
             string[] strSQL = new string[2];
+            if (string.IsNullOrEmpty(MA_HS.Text.Trim()) == false||
+                string.IsNullOrEmpty(TEN_HANG.Text.Trim()) == false||
+                string.IsNullOrEmpty(MA_NUOCXX.Text.Trim()) == false)
+            {
+                strSQL = new string[4];
+            }
+            
             if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)
             {
                 return new string[2]{
@@ -341,9 +348,9 @@ namespace t
                 bool bP = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
                 if (bP == true)
                 {
-                    strSQL = new string[2]{
-                    string.Format("N1.N501A_SINKD>='{0:yyyyMMdd}' ", dFrom),
-                    string.Format("N2.N502A_SINKD>='{0:yyyyMMdd}' ", dFrom)};
+
+                    strSQL[0] += string.Format("N1.N501A_SINKD>='{0:yyyyMMdd}' ", dFrom);
+                    strSQL[1] += string.Format("N2.N502A_SINKD>='{0:yyyyMMdd}' ", dFrom);
                 }
             }
             if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
@@ -431,7 +438,42 @@ namespace t
                 strSQL[1] += string.Format("N2.N502A_YUSYK='{0}' ", MA_NUOCXK.Text);
             }
 
-            //nước xuất xứ chưa tìm thấy trường nào (ở trên dòng hàng ý)
+            //nước xuất xứ
+            if (string.IsNullOrEmpty(MA_NUOCXX.Text.Trim()) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[2]) == false)
+                {
+                    strSQL[2] += " AND "; strSQL[3] += " AND ";
+                }
+                strSQL[2] += string.Format("B1.N501B_ORGLC='{0}' ", MA_NUOCXX.Text.Trim());
+                strSQL[3] += string.Format("B2.N502B_ORGLC='{0}' ", MA_NUOCXX.Text.Trim());
+            }
+
+            //MÃ HS
+            if (string.IsNullOrEmpty(MA_HS.Text.Trim()) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[2]) == false)
+                {
+                    strSQL[2] += " AND "; strSQL[3] += " AND ";
+                }
+                strSQL[2] += string.Format("B1.N501B_HINMC LIKE '%{0}%' ", MA_HS.Text.Trim());
+                strSQL[3] += string.Format("B2.N502B_HINMC LIKE '%{0}%' ", MA_HS.Text.Trim());
+            }
+
+            //TÊN HÀNG
+            if (string.IsNullOrEmpty(TEN_HANG.Text.Trim()) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[2]) == false)
+                {
+                    strSQL[2] += " AND "; strSQL[3] += " AND ";
+                }
+               // strSQL[2] += string.Format("B1.N501B_HINME  LIKE (N'%{0}%') ", TEN_HANG.Text.Trim());
+               // strSQL[3] += string.Format("B2.N502B_HINME  LIKE (N'%{0}%') ", TEN_HANG.Text.Trim());
+                //UPPER(supplier_name) LIKE UPPER('test%')
+                strSQL[2] += string.Format("UPPER(B1.N501B_HINME)  LIKE UPPER('%{0}%') ", TEN_HANG.Text.Trim());
+                strSQL[3] += string.Format("UPPER(B2.N502B_HINME)  LIKE UPPER('%{0}%') ", TEN_HANG.Text.Trim());
+            }
+
             return strSQL;
         }
 
@@ -439,12 +481,29 @@ namespace t
         {
             //string strSQL = "SELECT V1.* FROM (" + t.Properties.Resources.MVIEW1_TOKHAIMD + ") V1 WHERE {0}";
             //string strSQL = "SELECT * FROM A501A WHERE {0}";
-            string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2;
-            return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0], 
-                                        Resources.N502A_FIELDS, strWhere[1],
-                                          Resources.HANG_FIELDS,
-                                          Resources.N501B_FIELDS,
-                                          Resources.N502B_FIELDS);
+
+            if (strWhere.Length >= 4)//where co thong tin hang
+            {
+                string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2_HANG;
+                return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
+                                          Resources.N502A_FIELDS, strWhere[1],
+                                            Resources.HANG_FIELDS,
+                                            Resources.N501B_FIELDS,
+                                            Resources.N502B_FIELDS,
+                                            Resources.V1_FIELDS,
+                                           strWhere[2],
+                                           strWhere[3]);
+               
+            }
+            else //where khong co thong tin hang
+            {
+                string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2;
+                return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
+                                             Resources.N502A_FIELDS, strWhere[1],
+                                               Resources.HANG_FIELDS,
+                                               Resources.N501B_FIELDS,
+                                               Resources.N502B_FIELDS);
+            }
         }
 
         protected void MA_LH_TextChanged(object sender, EventArgs e)

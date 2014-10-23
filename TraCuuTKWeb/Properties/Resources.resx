@@ -124,6 +124,9 @@
   <data name="MVIEW1_TOKHAIMD2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\App_Data\MVIEW1_TOKHAIMD2.TXT;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="MVIEW1_TOKHAIMD2_HANG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\App_Data\MVIEW1_TOKHAIMD2_HANG.TXT;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="N501A_FIELDS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\App_Data\N501A_FIELDS.TXT;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -138,5 +141,8 @@
   </data>
   <data name="String1" xml:space="preserve">
     <value>abc</value>
+  </data>
+  <data name="V1_FIELDS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\App_Data\V1_FIELDS.TXT;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

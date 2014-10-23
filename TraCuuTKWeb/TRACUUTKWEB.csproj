@@ -73,6 +73,7 @@
     <Content Include="App_Data\HANG_FIELDS.txt" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD2.TXT" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD.sql" />
+    <Content Include="App_Data\V1_FIELDS.TXT" />
     <Content Include="App_Data\N502A_FIELDS.TXT" />
     <Content Include="App_Data\N501A_FIELDS.TXT" />
     <Content Include="App_Data\SCHICUC.xml" />
@@ -83,6 +84,7 @@
     <Content Include="App_Data\N502A_FIELDS_2.TXT" />
     <Content Include="App_Data\N501B_FIELDS.txt" />
     <Content Include="App_Data\TextFile1.txt" />
+    <Content Include="App_Data\MVIEW1_TOKHAIMD2_HANG.TXT" />
     <Content Include="DangNhap.aspx" />
     <Content Include="DLL\AjaxControlToolkit.dll" />
     <Content Include="DLL\Interop.Excel.dll" />
