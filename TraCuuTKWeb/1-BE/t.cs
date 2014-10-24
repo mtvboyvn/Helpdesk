@@ -144,6 +144,16 @@ namespace t
 			}
 		}
 		/// <summary>
+		/// Thuộc tính đại diện cho bảng APP_Users.
+		/// </summary>
+		public DBTable<APP_Users> APP_Userss
+		{
+			get
+			{
+				return GetTable<APP_Users>();
+			}
+		}
+		/// <summary>
 		/// Cập nhật tất các thay đổi vào DB với transaction.
 		/// </summary>
 		/// <returns>Số dòng thay đổi</returns>

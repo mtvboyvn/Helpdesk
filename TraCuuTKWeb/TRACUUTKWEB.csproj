@@ -103,6 +103,7 @@
     <Content Include="XemSQL.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="0-DAL\clsABC.cs" />
     <Compile Include="0-DAL\clsAll.cs" />
     <Compile Include="0-DAL\clsConn.cs" />
     <Compile Include="0-DAL\clsDAL.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="0-DAL\clsTranslator.cs" />
     <Compile Include="0-DAL\HtmlTable.cs" />
     <Compile Include="1-BE\t.cs" />
+    <Compile Include="1-BE\t.designer.APP_Users.cs" />
     <Compile Include="1-BE\t.designer.cs">
       <DependentUpon>t.cs</DependentUpon>
     </Compile>
