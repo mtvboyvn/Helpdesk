@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,14 +46,18 @@ namespace TRACUUTKWIN
                       pro.Start();
                       return;
                   }
+                  string strExtractor = Path.Combine(Application.StartupPath, "compress.config");
                   foreach (DataRow r in rr.Rows)
                   {
                       string strReportDir = Path.Combine(strReportRootPath, r["RP_USERNAME"].ToString());
                       if (Directory.Exists(strReportDir) == false) Directory.CreateDirectory(strReportDir);
                       string tmpFileXSL = Path.Combine(Application.StartupPath, "tempExcel2007.xlsx");
                       string strReportFileName = string.Format("TOKHAIMD_{0}.xlsx", r["RP_ID"].ToString());
+                      string strReportFileNameRAR = string.Format("TOKHAIMD_{0}.rar", r["RP_ID"].ToString());
                       string strReportFilePath = Path.Combine(strReportDir, strReportFileName);
-                      string strDuongDanTuongDoi = string.Format("~/Reports/{0}/{1}", r["RP_USERNAME"].ToString(), strReportFileName);
+                      string strReportFilePathRAR = Path.Combine(strReportDir, strReportFileNameRAR);
+                      string strDuongDanTuongDoi = string.Format("~/Reports/{0}/{1}", r["RP_USERNAME"].ToString(), strReportFileNameRAR);
+                      
                       try
                       {                         
                           File.Copy(tmpFileXSL, strReportFilePath, true);
@@ -103,8 +108,24 @@ namespace TRACUUTKWIN
                           //t.SREPORT a = new t.SREPORT();a.RP_EXPORTDATE
                           r["RP_STATUS"] = "Thành công";
                           r["RP_FILEPATH"] = strDuongDanTuongDoi;
-                          r["RP_FILENAME"] = strReportFileName;
+                          r["RP_FILENAME"] = strReportFileNameRAR;
                           r["RP_EXPORTDATE"]=DateTime.Now;
+
+                          //nen du lieu 
+                          string strZIP = string.Format("{0} a -p{3} -o+ -ep \"{1}\" \"{2}\"", strExtractor, strReportFilePathRAR, strReportFilePath, "abc");
+                          Interaction.Shell(strZIP, AppWinStyle.Hide, true, 100000);
+
+                          try
+                          {
+                             File.Delete(strReportFilePath + "x");
+                          }
+                          catch { }
+                          try
+                          {
+                              File.Delete(strReportFilePath);
+                          }
+                          catch { }
+
                           t.SREPORT objUpdate=new t.SREPORT();
                           t.clsAll.DataRow2Object(r, objUpdate);
                           objUpdate.DataStatus = t.DBStatus.Updated;
@@ -193,6 +214,18 @@ namespace TRACUUTKWIN
             DataSet dsTK = t.clsDalORACLE.GetDataSet(textBox1.Text);
 
             MessageBox.Show(dsTK.Tables[0].Rows.Count.ToString());
+        }
+
+        private void NenDuLieu(string strExcelFilePath,DataRow r)
+        { 
+                //Copy và ghi file trong ngày
+                string strExtractor = Path.Combine(Application.StartupPath, "compress.config");
+                string strFileName = string.Format("{0}",r["RP_FILEPATH"]);
+                string strZIP = string.Format("{0} a -p{3} -o+ -ep \"{1}\" \"{2}\"", strExtractor, strFileName, strExcelFilePath, "abc");
+                Interaction.Shell(strZIP, AppWinStyle.Hide, true, 100000);
+              
+                //File.Delete(strFileName);
+                //File.Delete(strExtractor);  
         }
     }
 }

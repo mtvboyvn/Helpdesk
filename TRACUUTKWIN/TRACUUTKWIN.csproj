@@ -37,6 +37,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>DLL\Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -65,8 +66,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="bin\Debug\tempExcel.xls" />
-    <None Include="bin\Debug\tempExcel2007.xlsx" />
+    <None Include="compress.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,7 +79,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="tempExcel.xls" />
-    <None Include="tempExcel2007.xlsx" />
+    <None Include="tempExcel2007.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TraCuuTKWeb\TRACUUTKWEB.csproj">
@@ -87,6 +91,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DLL\Interop.Excel.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
