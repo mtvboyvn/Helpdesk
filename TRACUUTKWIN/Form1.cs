@@ -49,6 +49,23 @@ namespace TRACUUTKWIN
                   string strExtractor = Path.Combine(Application.StartupPath, "compress.config");
                   foreach (DataRow r in rr.Rows)
                   {
+                      string strPass = "";
+
+                      try
+                      {
+                          using (t.tDBContext dbU = new t.tDBContext(t.st.sqlSTRINGADO_USER))
+                          {
+                              t.APP_Users u = dbU.APP_Userss.GetObject(string.Format("USER_ID='{0}'", r["RP_USERNAME"]));
+                              strPass = clsABC.Decrypt(u.User_Password);
+                          }
+
+                          if (string.IsNullOrEmpty(strPass) == true) continue;
+                      }
+                      catch
+                      {
+                          continue;
+                      }
+
                       string strReportDir = Path.Combine(strReportRootPath, r["RP_USERNAME"].ToString());
                       if (Directory.Exists(strReportDir) == false) Directory.CreateDirectory(strReportDir);
                       string tmpFileXSL = Path.Combine(Application.StartupPath, "tempExcel2007.xlsx");
@@ -112,7 +129,7 @@ namespace TRACUUTKWIN
                           r["RP_EXPORTDATE"]=DateTime.Now;
 
                           //nen du lieu 
-                          string strZIP = string.Format("{0} a -p{3} -o+ -ep \"{1}\" \"{2}\"", strExtractor, strReportFilePathRAR, strReportFilePath, "abc");
+                          string strZIP = string.Format("{0} a -p{3} -o+ -ep \"{1}\" \"{2}\"", strExtractor, strReportFilePathRAR, strReportFilePath, strPass);
                           Interaction.Shell(strZIP, AppWinStyle.Hide, true, 100000);
 
                           try
