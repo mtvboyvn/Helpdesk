@@ -51,6 +51,7 @@ namespace t
                 //Page.Form.DefaultFocus = SOTK.ClientID;
                // btnUpdate_Click(null, null);
                 GridView1.Columns[1].Visible = string.Format("{0}",Session[ct.USERNAME]).Equals("TuyenHM");
+                GridView1.Columns[GridView1.Columns.Count-1].Visible = GridView1.Columns[1].Visible;
             }
         }
 
@@ -128,7 +129,12 @@ namespace t
 
         private bool ValidateNGAY(System.Web.UI.HtmlControls.HtmlTable tblDieuKien)
         {
-
+            SOTK.BackColor = Color.White;
+            MA_LH.BackColor = Color.White;
+            MA_CC.BackColor = Color.White;
+            MA_DONVI.BackColor = Color.White;
+            TEN_DOITAC.BackColor = Color.White;
+            MA_NUOCXK.BackColor = Color.White;
             if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)//neu co so to khai
             {
                 SOTK.BackColor = Color.White;
@@ -150,7 +156,7 @@ namespace t
                 return true;//nếu có số tờ khai chỉ xử lý riêng theo số tờ khai là đủ
             }
 
-            if (string.IsNullOrEmpty(MA_HS.Text) == false)//neu co so to khai
+            if (string.IsNullOrEmpty(MA_HS.Text) == false)
             {
                 MA_HS.BackColor = Color.White;
                 if ((3 < MA_HS.Text.Trim().Length) & (MA_HS.Text.Trim().Length < 9))
@@ -243,6 +249,31 @@ namespace t
                 lblMSG.Text =string.Format( "Ngày bắt đầu tìm kiếm {0:dd/MM/yyyy} phải trước ngày kết thúc tìm kiếm {1:dd/MM/yyyy}",dFrom,dTo);
                 NGAYDK_TO.BackColor = Color.Salmon;
                 NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+
+            if( (dTo - dFrom).TotalDays>31)
+            {
+                lblMSG.Text = string.Format("Ngày bắt đầu tìm kiếm {0:dd/MM/yyyy} và ngày kết thúc tìm kiếm {1:dd/MM/yyyy} không được cách nhau quá 31 ngày", dFrom, dTo);
+                NGAYDK_TO.BackColor = Color.Salmon;
+                NGAYDK_FROM.BackColor = Color.Salmon;
+                return false;
+            }
+           
+            if (string.IsNullOrEmpty(SOTK.Text.Trim()) == true &
+                string.IsNullOrEmpty(MA_LH.Text.Trim()) == true &
+                string.IsNullOrEmpty(MA_CC.Text.Trim()) == true &
+                 string.IsNullOrEmpty(MA_DONVI.Text.Trim()) == true &
+                 string.IsNullOrEmpty(TEN_DOITAC.Text.Trim()) == true &
+                 string.IsNullOrEmpty(MA_NUOCXK.Text.Trim()) == true)
+            {
+                lblMSG.Text = string.Format("Phải nhập tối thiểu 1 chỉ tiêu thông tin của tờ khai bôi màu đỏ");
+                SOTK.BackColor = Color.Salmon;
+                MA_LH.BackColor = Color.Salmon;
+                MA_CC.BackColor = Color.Salmon;
+                MA_DONVI.BackColor = Color.Salmon;
+                TEN_DOITAC.BackColor = Color.Salmon;
+                MA_NUOCXK.BackColor = Color.Salmon;
                 return false;
             }
 

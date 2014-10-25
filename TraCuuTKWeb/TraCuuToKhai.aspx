@@ -825,7 +825,7 @@
                                     </table>
                                 </ContentTemplate>
                             </cc1:TabPanel>
-                            <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="Chỉ tiêu thông tin kết xuất">
+                            <cc1:TabPanel ID="TabPanel2" Visible="false" runat="server" HeaderText="Chỉ tiêu thông tin kết xuất">
                             </cc1:TabPanel>
                         </cc1:TabContainer>
                         <div id="background" style="text-align: left; vertical-align: top; padding: 5px; color: black;">
