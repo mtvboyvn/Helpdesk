@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsXuLy.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +111,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cach cai Winservice.txt" />
     <Content Include="DLL\Interop.Excel.dll" />
     <Content Include="REPORT_ROOT_PATH.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
