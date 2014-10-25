@@ -21,11 +21,13 @@ namespace TRACUUTKWIN
             pro.Interval = 3000;
             pro.Enabled = false;
             pro.Stop();
+
+            strReportRootPath = File.ReadAllText(Path.Combine(Application.StartupPath, "REPORT_ROOT_PATH.txt"));
         }
 
         string strReportRootPath = @"E:\PROJECTS\Helpdesk\TraCuuTKWeb\Reports";
 
-        void pro_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        public void pro_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             pro.Enabled = false;
             pro.Stop();
@@ -101,8 +103,16 @@ namespace TRACUUTKWIN
 
                           Excel.Application objExcel = this.GetExcelApp();                         
                           objExcel.Visible = false;
-                          objExcel.Application.Visible = false; 
-                          Excel.Workbook wb = objExcel.Workbooks.Open(strReportFilePath);
+                          objExcel.Application.Visible = false;
+                          Excel.Workbook wb = default(Excel.Workbook);
+                          try
+                          {
+                               wb = objExcel.Workbooks.Open(strReportFilePath);
+                          }
+                          catch
+                          {
+                              throw new Exception( " Excel.Workbook wb = objExcel.Workbooks.Open(strReportFilePath);");
+                          }
                           objExcel.Visible = false;
                           Excel.Worksheet wsTOKHAIMD = (Excel.Worksheet)wb.Worksheets[1];
                           wsTOKHAIMD.Range[string.Format("A2:AS{0}", dsTK.Tables[0].Rows.Count+1)].Value = objData;
