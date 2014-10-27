@@ -15,21 +15,22 @@ namespace t
         {
            string strCHICUCPath = Path.Combine( System.IO.Path.GetFullPath(Server.MapPath("~/App_Data")),"SCHICUC.xml");
            dsCHICUC.ReadXml(strCHICUCPath);
+          
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            Session.Timeout = 60;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void Application_Error(object sender, EventArgs e)

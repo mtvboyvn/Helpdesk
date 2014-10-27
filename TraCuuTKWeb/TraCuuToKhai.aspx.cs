@@ -12,6 +12,8 @@ namespace t
 {
     public partial class TraCuuToKhai : System.Web.UI.Page
     {
+        static DateTime? lastQueryTime = null;
+
         protected void Page_Init(object sender, EventArgs e)
         {
             //SOTK.Focus();
@@ -92,6 +94,15 @@ namespace t
                 return;
             }
 
+            if (lastQueryTime.HasValue==true)
+            {
+                if ((DateTime.Now - lastQueryTime.Value).TotalSeconds < 6)
+                {
+                    lblMSG.Text = "Không thể đặt lệnh ra cứu liên tiếp trong vòng 5 giây";
+                    return;
+                }
+            }
+
             try
             {
                 string[] strWhere = TạoWHERE();
@@ -118,6 +129,7 @@ namespace t
                     mainDB.SubmitAllChange();
                 }
                 lblMSG.Text = string.Format("Đặt lệnh thành công lúc {0}", DateTime.Now);
+                lastQueryTime = DateTime.Now;
                 btnUpdate_Click(null, null);
             }
             catch (Exception ex)
@@ -763,15 +775,20 @@ namespace t
             try
             {                
                 MA_DONVI.Text = MA_DONVI.Text.Replace("'","").Trim().ToUpper();
-                using (tDBContext mainDB = new tDBContext())
+                using (tDBContext mainDB = new tDBContext(st.sqlSTRINGADO_DONVI))
                 {
-                    SDONVI dv = mainDB.SDONVIs.GetObject(string.Format("MA_DONVI=N'{0}'", MA_DONVI.Text));
+                    HQ_SDONVI dv = mainDB.HQ_SDONVIs.GetObject(string.Format("MA_DV='{0}'", MA_DONVI.Text));
                     if (dv == null)
                     {
                         MA_DONVI.Text = string.Empty;
                         TEN_DONVI.Text = string.Empty;
                     }
-                    TEN_DONVI.Text = dv.TEN_DONVI;
+                    //TEN_DONVI.Text =   dv.TEN_DV;
+                    string s=dv.TEN_DV;
+                   // vnConvert a = new vnConvert();
+                    ConvertDB.ConvertFont a = new ConvertDB.ConvertFont();
+                    a.Convert(ref s, ConvertDB.FontIndex.iTCV, ConvertDB.FontIndex.iUNI);
+                    TEN_DONVI.Text = s;
                 }
             }
             catch (Exception ex)

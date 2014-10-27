@@ -51,7 +51,7 @@
     <form id="form1" defaultfocus="SOTK" runat="server">
        
         <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></cc1:ToolkitScriptManager>
-        <asp:Timer ID="timer1" runat="server" Interval="1000000" OnTick="btnUpdate_Click"></asp:Timer>
+        <asp:Timer ID="timer1" runat="server" Interval="5000" Enabled="false" OnTick="btnUpdate_Click"></asp:Timer>
         <div style="width: 100%; background-color: #215a9d; text-align: center;">
             <table style="width:100%;border-collapse:collapse;">
                 <tr>

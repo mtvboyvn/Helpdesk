@@ -144,6 +144,16 @@ namespace t
 			}
 		}
 		/// <summary>
+		/// Thuộc tính đại diện cho bảng HQ_SDONVI.
+		/// </summary>
+		public DBTable<HQ_SDONVI> HQ_SDONVIs
+		{
+			get
+			{
+				return GetTable<HQ_SDONVI>();
+			}
+		}
+		/// <summary>
 		/// Thuộc tính đại diện cho bảng APP_Users.
 		/// </summary>
 		public DBTable<APP_Users> APP_Userss
