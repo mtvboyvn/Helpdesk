@@ -17,6 +17,7 @@ namespace t
             //    string strPass = clsABC.Decrypt(u.User_Password);
             //    string aa = "";
             //}
+            Session.Timeout = 60;
         }
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)

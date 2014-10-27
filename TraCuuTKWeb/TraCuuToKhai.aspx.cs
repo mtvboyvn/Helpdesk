@@ -30,11 +30,12 @@ namespace t
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session.Timeout = 60;
             if (Session[ct.USERNAME] == null)
             {
                 Response.Redirect("~/DangNhap.aspx");
             }
-
+            Session.Timeout = 60;
             TEN_CC.DataTextField = "TEN_CC";
             TEN_CC.DataValueField = "MA_CC";
            
