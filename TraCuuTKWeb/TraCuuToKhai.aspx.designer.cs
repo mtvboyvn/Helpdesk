@@ -427,6 +427,15 @@ namespace t {
         protected global::System.Web.UI.WebControls.Button btnBoHet;
         
         /// <summary>
+        /// tdFieldTK1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tdFieldTK1;
+        
+        /// <summary>
         /// labeltokhai1 control.
         /// </summary>
         /// <remarks>
@@ -661,6 +670,15 @@ namespace t {
         protected global::System.Web.UI.WebControls.CheckBox YSYOS_5;
         
         /// <summary>
+        /// tdFieldTK2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tdFieldTK2;
+        
+        /// <summary>
         /// label15 control.
         /// </summary>
         /// <remarks>
@@ -823,13 +841,13 @@ namespace t {
         protected global::System.Web.UI.WebControls.CheckBox INDAY;
         
         /// <summary>
-        /// CheckBox1 control.
+        /// KIJIT_DEXUAT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox KIJIT_DEXUAT;
         
         /// <summary>
         /// YUSYC control.
@@ -886,6 +904,15 @@ namespace t {
         protected global::System.Web.UI.WebControls.CheckBox KYOKT;
         
         /// <summary>
+        /// tdFieldHANG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tdFieldHANG;
+        
+        /// <summary>
         /// label16 control.
         /// </summary>
         /// <remarks>
@@ -895,13 +922,13 @@ namespace t {
         protected global::System.Web.UI.WebControls.Label label16;
         
         /// <summary>
-        /// CheckBox2 control.
+        /// SIKNO_HANG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.WebControls.CheckBox SIKNO_HANG;
         
         /// <summary>
         /// RANNB control.
@@ -913,31 +940,31 @@ namespace t {
         protected global::System.Web.UI.WebControls.CheckBox RANNB;
         
         /// <summary>
-        /// CheckBox3 control.
+        /// HINMC_MA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
+        protected global::System.Web.UI.WebControls.CheckBox HINMC_MA;
         
         /// <summary>
-        /// CheckBox4 control.
+        /// HINME_TEN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox4;
+        protected global::System.Web.UI.WebControls.CheckBox HINME_TEN;
         
         /// <summary>
-        /// CheckBox5 control.
+        /// MATCD_LOAI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox5;
+        protected global::System.Web.UI.WebControls.CheckBox MATCD_LOAI;
         
         /// <summary>
         /// ORGLC control.

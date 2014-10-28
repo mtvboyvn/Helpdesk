@@ -833,7 +833,7 @@
                                     
                                    <table style="border:solid 1px gray;">
                                        <tr >
-                                           <td style="border:solid 0px gray;vertical-align:top;"> 
+                                           <td id="tdFieldTK1" style="border:solid 0px gray;vertical-align:top;" runat="server"> 
                                                <asp:Label ID="labeltokhai1" Text="THÔNG TIN TỜ KHAI" BackColor="Yellow" runat="server"></asp:Label>
                                                <br />
                                                <br />
@@ -863,7 +863,7 @@
 <asp:CheckBox ID="YSYOS_4"  Text="SỐ GiẤY PHÉP 4" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="YSYOS_5"  Text="SỐ GiẤY PHÉP 5" Enabled="true" runat="server" Checked="true" />
                                            </td>
-                                           <td style="padding-left:30px;border:solid 0px gray;vertical-align:top;" >
+                                           <td id="tdFieldTK2" style="padding-left:30px;border:solid 0px gray;vertical-align:top;" runat="server" >
                                                <asp:Label ID="label15" Text="THÔNG TIN TỜ KHAI" BackColor="Yellow" runat="server"></asp:Label>
                                                 <br />
                                                <br />
@@ -884,7 +884,7 @@
 <asp:CheckBox ID="GSIRT"  Text="PHÂN LUỒNG" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="INVNO"  Text="SỐ HÓA ĐƠN TM" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="INDAY"  Text="NGÀY HÓA ĐƠN TM" Enabled="true" runat="server" Checked="true" /><br/>
-<asp:CheckBox ID="CheckBox1"  Text="ĐỀ XUẤT KHÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KIJIT_DEXUAT"  Text="ĐỀ XUẤT KHÁC" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="YUSYC"  Text="TÊN ĐỐI TÁC" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="YUNN1"  Text="TÊN ĐƠN VỊ" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="CYUK2"  Text="ĐƠN VỊ ỦY THÁC" Enabled="true" runat="server" Checked="true" /><br/>
@@ -892,14 +892,14 @@
 <asp:CheckBox ID="KYOKD"  Text="NGÀY HOÀN THÀNH" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="KYOKT"  Text="GIỜ HOÀN THÀNH" Enabled="true" runat="server" Checked="true" /><br/>
                                            </td>
-                                            <td style="padding-left:30px;border-left:solid 1px gray;vertical-align:top;" >
+                                            <td id="tdFieldHANG" style="padding-left:30px;border-left:solid 1px gray;vertical-align:top;" runat="server" >
                                                 <asp:Label ID="label16" Text="THÔNG TIN HÀNG HÓA" BackColor="Yellow" runat="server"></asp:Label>
                                                 <br /><br />
-                                                <asp:CheckBox ID="CheckBox2"  Text="SỐ TK" Enabled="false" runat="server" Checked="true" /><br/>
+                                                <asp:CheckBox ID="SIKNO_HANG"  Text="SỐ TK" Enabled="false" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="RANNB"  Text="STT HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
-<asp:CheckBox ID="CheckBox3"  Text="MÃ HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
-<asp:CheckBox ID="CheckBox4"  Text="TÊN HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
-<asp:CheckBox ID="CheckBox5"  Text="LOẠI HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HINMC_MA"  Text="MÃ HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HINME_TEN"  Text="TÊN HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="MATCD_LOAI"  Text="LOẠI HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="ORGLC"  Text="NƯỚC XX" Enabled="true" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="TANI1"  Text="MÃ ĐVT" Enabled="false" runat="server" Checked="true" /><br/>
 <asp:CheckBox ID="SURY1"  Text="SỐ LƯỢNG" Enabled="false" runat="server" Checked="true" /><br/>
