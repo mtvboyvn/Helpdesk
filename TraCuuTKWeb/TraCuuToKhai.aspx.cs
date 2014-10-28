@@ -126,8 +126,8 @@ namespace t
                     rp.RP_DISPLAY = TaoDieuKienTimKiemText();
                     rp.RP_QUERY = TạoTruyVấn(strWhere);
                     rp.RP_STATUS = "Đang xử lý";
-                    rp.RP_TOKHAI_SHOW_FIELDS = DanhSachTruongToKhaiHienThi();
-                    rp.RP_HANG_SHOW_FIELDS = DanhSachTruongHangHienThi();
+                    rp.RP_TOKHAI_SHOW_FIELDS = DanhSachTruongToKhaiAnDi();
+                    rp.RP_HANG_SHOW_FIELDS = DanhSachTruongHangAnDi();
                     mainDB.SREPORTs.InsertOnSubmit(rp);
                     mainDB.SubmitAllChange();
                 }
@@ -142,35 +142,35 @@ namespace t
           
         }
 
-        private string DanhSachTruongHangHienThi()
+        private string DanhSachTruongHangAnDi()
         {
             string strF = "";
             foreach (Control c in tdFieldHANG.Controls)
             {
                 CheckBox cb = c as CheckBox;
                 if (cb == null) continue;
-                if (cb.Checked == false) continue;
+                if (cb.Checked == true) continue;
                 strF += string.Format("{0}, ",cb.ID);
             }
 
             return strF;
         }
 
-        private string DanhSachTruongToKhaiHienThi()
+        private string DanhSachTruongToKhaiAnDi()
         {
             string strF = "";
             foreach (Control c in tdFieldTK1.Controls)
             {
                 CheckBox cb = c as CheckBox;
                 if (cb == null) continue;
-                if (cb.Checked == false) continue;
+                if (cb.Checked == true) continue;
                 strF += string.Format("{0}, ", cb.ID);
             }
             foreach (Control c in tdFieldTK2.Controls)
             {
                 CheckBox cb = c as CheckBox;
                 if (cb == null) continue;
-                if (cb.Checked == false) continue;
+                if (cb.Checked == true) continue;
                 strF += string.Format("{0}, ", cb.ID);
             }
 

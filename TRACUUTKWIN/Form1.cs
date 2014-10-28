@@ -117,12 +117,49 @@ namespace TRACUUTKWIN
                             Excel.Worksheet wsTOKHAIMD = (Excel.Worksheet)wb.Worksheets[1];
                             wsTOKHAIMD.Range[string.Format("A2:AS{0}", dsTK.Tables[0].Rows.Count + 1)].Value = objData;
                             //603=WE
+                            //an cot to khai
+                            if (r["RP_TOKHAI_SHOW_FIELDS"] != null)
+                            {
+                                string strF = string.Format("{0}", r["RP_TOKHAI_SHOW_FIELDS"]);
+                                if (string.IsNullOrEmpty(strF) == false)
+                                {
+                                    foreach (string f in strF.Split(','))
+                                    {
+                                        string f1 = f.Trim().Replace(",", "");
+                                        try
+                                        {
+                                            wsTOKHAIMD.get_Range(f1, f1).EntireColumn.Hidden = true;
+                                        }
+                                        catch { }
+                                    }
+                                }
+                            }
 
                             Excel.Worksheet wsHANGMD = (Excel.Worksheet)wb.Worksheets[2];
                             object[,] objDataHANG = t.clsAll.DataTable2ArrayObjects(dsHANG.Tables[0]);
                             wsHANGMD.Range[string.Format("A2:AE{0}", dsHANG.Tables[0].Rows.Count + 1)].Value = objDataHANG;
+                         
+                            //an cot hang
+                            if (r["RP_HANG_SHOW_FIELDS"] != null)
+                            {
+                                string strF = string.Format("{0}", r["RP_HANG_SHOW_FIELDS"]);
+                                if (string.IsNullOrEmpty(strF) == false)
+                                {
+                                    foreach (string f in strF.Split(','))
+                                    {
+                                        string f1 = f.Trim().Replace(",", "");
+                                        try
+                                        {
+                                            wsHANGMD.get_Range(f1, f1).EntireColumn.Hidden = true;
+                                        }
+                                        catch { }
+                                    }
+                                }
+                            }
 
                             objExcel.Visible = false;
+
+                           
                             // objExcel.SaveWorkspace(Missing.Value);
 
                             try
