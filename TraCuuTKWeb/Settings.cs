@@ -11,7 +11,7 @@ namespace t
     {
         //Liên quan tới CSDL
         //public static string AccessDBDir = Server.MapPath("~");
-        public static string sqlSTRINGADO = "Data Source=.\\SQL2012ENT;Initial Catalog=TRACUUTKWEB;User ID=sa;pwd=1";
+        public static string sqlSTRINGADO = "Data Source=10.224.130.85;Initial Catalog=TRACUUTKWEB;User ID=sa;pwd=toilatoi@123";
         public static string sqlSTRINGADO_MONITORING = "Data Source=.\\SQL2012ENT;Initial Catalog=TTDL;User ID=sa;pwd=1";
         public static string sqlSTRINGADO_USER = "Data Source=10.224.130.118;Initial Catalog=FCAP ;User ID=sa;pwd=tchq@2012";
         public static string sqlSTRINGADO_DONVI = "Data Source=10.224.33.12;Initial Catalog=t2c;User ID=ttdl;pwd=ttdl";
