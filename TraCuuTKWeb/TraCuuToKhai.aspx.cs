@@ -821,5 +821,33 @@ namespace t
         {
             TEN_DOITAC.Text = TEN_DOITAC.Text.Trim().ToUpper().Replace("'", "");
         }
+
+        protected void btnChonTat_Click(object sender, EventArgs e)
+        {
+            SelectAll(TabPanel2,true);
+        }
+
+        private void SelectAll(Control cc,bool isSelectAll)
+        {
+            foreach (Control c in cc.Controls)
+            {
+                CheckBox cb = c as CheckBox;
+                if (cb != null)
+                {
+                    if (cb.Enabled == false) continue;
+                    cb.Checked = isSelectAll;
+                    continue;
+                }
+                else
+                {
+                    SelectAll(c,isSelectAll);
+                }
+            }
+        }
+
+        protected void btnBoHet_Click(object sender, EventArgs e)
+        {
+            SelectAll(TabPanel2,false);
+        }
     }
 }

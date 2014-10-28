@@ -12,7 +12,10 @@
     </p>
     <form id="form1" runat="server">
     <div>
-    
+        <asp:Button ID="btnChonTat" runat="server" Text="Chọn toàn bộ" />
+        <asp:Button ID="btnBoHet" runat="server" Text="Bỏ chọn toàn bộ" />
+        <hr />
+        <asp:CheckBox ID="SIKNO" Text="SỐ TK" Enabled="true" runat="server" Checked="true" />
     </div>
     </form>
 </body>

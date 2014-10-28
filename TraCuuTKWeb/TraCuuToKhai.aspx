@@ -825,7 +825,116 @@
                                     </table>
                                 </ContentTemplate>
                             </cc1:TabPanel>
-                            <cc1:TabPanel ID="TabPanel2" Visible="false" runat="server" HeaderText="Chỉ tiêu thông tin kết xuất">
+                            <cc1:TabPanel ID="TabPanel2" Visible="true" runat="server" HeaderText="Chỉ tiêu thông tin kết xuất">
+                                <ContentTemplate>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnChonTat" runat="server"  Text="Chọn toàn bộ" OnClick="btnChonTat_Click" />
+        <asp:Button ID="btnBoHet" runat="server" Text="Bỏ chọn toàn bộ" OnClick="btnBoHet_Click" />
+        <hr />
+                                    
+                                   <table style="border:solid 1px gray;">
+                                       <tr >
+                                           <td style="border:solid 0px gray;vertical-align:top;"> 
+                                               <asp:Label ID="labeltokhai1" Text="THÔNG TIN TỜ KHAI" BackColor="Yellow" runat="server"></asp:Label>
+                                               <br />
+                                               <br />
+                                              <asp:CheckBox ID="SIKNO"  Text="SỐ TK" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SINKD"  Text="NGÀY ĐK" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SINKS"  Text="MÃ LH" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SHIKS"  Text="MÃ HQ" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUNYC"  Text="MÃ ĐƠN VỊ" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUSYK"  Text="NƯỚC XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUNN2"  Text="ĐỐI TÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CYUK1"  Text="ĐƠN VỊ ỦY THÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TRANS"  Text="MÃ PTVT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TYBNA"  Text="TÊN PTVT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TYNEP"  Text="NGÀY ĐẾN PTVT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_1"  Text="SỐ VẬN ĐƠN 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_2"  Text="SỐ VẬN ĐƠN 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_3"  Text="SỐ VẬN ĐƠN 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_4"  Text="SỐ VẬN ĐƠN 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_5"  Text="SỐ VẬN ĐƠN 5" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TRORC"  Text="MÃ CỬA KHẨU" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TRORN"  Text="TÊN CỬA KHẨU" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TMDSI"  Text="CẢNG NƯỚC NGOÀI" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TMDSM"  Text="TÊN CẢNG NƯỚC NGOÀI" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_1"  Text="SỐ GiẤY PHÉP 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_2"  Text="SỐ GiẤY PHÉP 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_3"  Text="SỐ GiẤY PHÉP 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_4"  Text="SỐ GiẤY PHÉP 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_5"  Text="SỐ GiẤY PHÉP 5" Enabled="true" runat="server" Checked="true" />
+                                           </td>
+                                           <td style="padding-left:30px;border:solid 0px gray;vertical-align:top;" >
+                                               <asp:Label ID="label15" Text="THÔNG TIN TỜ KHAI" BackColor="Yellow" runat="server"></asp:Label>
+                                                <br />
+                                               <br />
+                                              <asp:CheckBox ID="KIJIT"  Text="SỐ HỢP ĐỒNG #& NGÀY HỢP ĐỒNG (nếu là tờ khai gia công) hoặc GHI CHÚ KHÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INVKJ"  Text="MÃ GIAO HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="RPEAT"  Text="SỐ DÒNG HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="PAYCD"  Text="MÃ PTTT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TUKCD_1"  Text="MÃ NT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TUKRT_1"  Text="TỶ GIÁ VNĐ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="UDATE"  Text="NGÀY KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="UTIME"  Text="GiỜ KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HOKEN"  Text="PHÍ BẢO HiỂM" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="UNTIN"  Text="PHÍ VẬN CHUYỂN" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INVKA"  Text="TỔNG TRỊ GIÁ KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HKANZ"  Text="TỔNG TRỊ GIÁ TÍNH THUẾ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="WAIGW"  Text="TRỌNG LƯỢNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KOSUK"  Text="SỐ KIỆN" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="GSIRT"  Text="PHÂN LUỒNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INVNO"  Text="SỐ HÓA ĐƠN TM" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INDAY"  Text="NGÀY HÓA ĐƠN TM" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CheckBox1"  Text="ĐỀ XUẤT KHÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUSYC"  Text="TÊN ĐỐI TÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUNN1"  Text="TÊN ĐƠN VỊ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CYUK2"  Text="ĐƠN VỊ ỦY THÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KONTA"  Text="SỐ CONT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KYOKD"  Text="NGÀY HOÀN THÀNH" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KYOKT"  Text="GIỜ HOÀN THÀNH" Enabled="true" runat="server" Checked="true" /><br/>
+                                           </td>
+                                            <td style="padding-left:30px;border-left:solid 1px gray;vertical-align:top;" >
+                                                <asp:Label ID="label16" Text="THÔNG TIN HÀNG HÓA" BackColor="Yellow" runat="server"></asp:Label>
+                                                <br /><br />
+                                                <asp:CheckBox ID="CheckBox2"  Text="SỐ TK" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="RANNB"  Text="STT HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CheckBox3"  Text="MÃ HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CheckBox4"  Text="TÊN HÀNG" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CheckBox5"  Text="LOẠI HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="ORGLC"  Text="NƯỚC XX" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TANI1"  Text="MÃ ĐVT" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SURY1"  Text="SỐ LƯỢNG" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TANKA"  Text="ĐƠN GIÁ KB" Enabled="false" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KAZTK"  Text="ĐƠN GIÁ TÍNH THUẾ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="BPRIC"  Text="TRỊ GIÁ KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KANKG"  Text="TRỊ GIÁ TÍNH THUẾ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KAZEI"  Text="TRỊ GIÁ KB VNĐ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KANRT"  Text="TS XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KANGK"  Text="THUẾ XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="ORGNK"  Text="MÃ BIỂU THUẾ XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_1"  Text="LOẠI THUẾ 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_1"  Text="TS LOẠI THUẾ 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_1"  Text="TiỀN THUẾ LOẠI THUẾ 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_2"  Text="LOẠI THUẾ 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_2"  Text="TS LOẠI THUẾ 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_2"  Text="TiỀN THUẾ LOẠI THUẾ 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_3"  Text="LOẠI THUẾ 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_3"  Text="TS LOẠI THUẾ 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_3"  Text="TiỀN THUẾ LOẠI THUẾ 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_4"  Text="LOẠI THUẾ 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_4"  Text="TS LOẠI THUẾ 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_4"  Text="TiỀN THUẾ LOẠI THUẾ 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_5"  Text="LOẠI THUẾ 5" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_5"  Text="TS LOẠI THUẾ 5" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_5"  Text="TiỀN THUẾ LOẠI THUẾ 5" Enabled="true" runat="server" Checked="true" /><br/>
+
+                                                </td>
+                                       </tr>
+                                   </table>
+                              
+
+
+
+                                    </ContentTemplate>
                             </cc1:TabPanel>
                         </cc1:TabContainer>
                         <div id="background" style="text-align: left; vertical-align: top; padding: 5px; color: black;">

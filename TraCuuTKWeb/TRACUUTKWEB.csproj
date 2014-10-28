@@ -75,6 +75,12 @@
     <Content Include="App_Data\HANG_FIELDS.txt" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD2.TXT" />
     <Content Include="App_Data\MVIEW1_TOKHAIMD.sql" />
+    <Content Include="App_Data\TextFile2.txt" />
+    <Content Include="App_Data\TextFile3.txt" />
+    <Content Include="App_Data\TextFile4.txt" />
+    <Content Include="App_Data\TextFile5.txt" />
+    <Content Include="App_Data\TextFile6.txt" />
+    <Content Include="App_Data\TextFile7.txt" />
     <Content Include="App_Data\V1_FIELDS.TXT" />
     <Content Include="App_Data\N502A_FIELDS.TXT" />
     <Content Include="App_Data\N501A_FIELDS.TXT" />

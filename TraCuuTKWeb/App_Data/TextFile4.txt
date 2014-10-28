@@ -1,0 +1,49 @@
+﻿<asp:CheckBox ID="SIKNO"  Text="SỐ TK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SINKD"  Text="NGÀY ĐK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SINKS"  Text="MÃ LH" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SHIKS"  Text="MÃ HQ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUNYC"  Text="MÃ ĐƠN VỊ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUSYK"  Text="NƯỚC XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUNN2"  Text="ĐỐI TÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CYUK1"  Text="ĐƠN VỊ ỦY THÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TRANS"  Text="MÃ PTVT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TYBNA"  Text="TÊN PTVT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TYNEP"  Text="NGÀY ĐẾN PTVT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_1"  Text="SỐ VẬN ĐƠN 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_2"  Text="SỐ VẬN ĐƠN 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_3"  Text="SỐ VẬN ĐƠN 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_4"  Text="SỐ VẬN ĐƠN 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="AWBNB_5"  Text="SỐ VẬN ĐƠN 5" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TRORC"  Text="MÃ CỬA KHẨU" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TRORN"  Text="TÊN CỬA KHẨU" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TMDSI"  Text="CẢNG NƯỚC NGOÀI" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TMDSM"  Text="TÊN CẢNG NƯỚC NGOÀI" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_1"  Text="SỐ GiẤY PHÉP 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_2"  Text="SỐ GiẤY PHÉP 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_3"  Text="SỐ GiẤY PHÉP 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_4"  Text="SỐ GiẤY PHÉP 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YSYOS_5"  Text="SỐ GiẤY PHÉP 5" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KIJIT"  Text="SỐ HỢP ĐỒNG #& NGÀY HỢP ĐỒNG (nếu là tờ khai gia công) hoặc GHI CHÚ KHÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INVKJ"  Text="MÃ GIAO HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="RPEAT"  Text="SỐ DÒNG HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="PAYCD"  Text="MÃ PTTT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TUKCD_1"  Text="MÃ NT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TUKRT_1"  Text="TỶ GIÁ VNĐ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="UDATE"  Text="NGÀY KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="UTIME"  Text="GiỜ KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HOKEN"  Text="PHÍ BẢO HiỂM" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="UNTIN"  Text="PHÍ VẬN CHUYỂN" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INVKA"  Text="TỔNG TRỊ GIÁ KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HKANZ"  Text="TỔNG TRỊ GIÁ TÍNH THUẾ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="WAIGW"  Text="TRỌNG LƯỢNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KOSUK"  Text="SỐ KIỆN" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="GSIRT"  Text="PHÂN LUỒNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INVNO"  Text="SỐ HÓA ĐƠN TM" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="INDAY"  Text="NGÀY HÓA ĐƠN TM" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KIJIT"  Text="ĐỀ XUẤT KHÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUSYC"  Text="TÊN ĐỐI TÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="YUNN1"  Text="TÊN ĐƠN VỊ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="CYUK2"  Text="ĐƠN VỊ ỦY THÁC" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KONTA"  Text="SỐ CONT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KYOKD"  Text="NGÀY HOÀN THÀNH" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KYOKT"  Text="GIỜ HOÀN THÀNH" Enabled="true" runat="server" Checked="true" /><br/>

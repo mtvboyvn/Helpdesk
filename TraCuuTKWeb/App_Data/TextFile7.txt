@@ -1,0 +1,31 @@
+﻿<asp:CheckBox ID="SIKNO"  Text="SỐ TK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="RANNB"  Text="STT HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HINMC "  Text="MÃ HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="HINME "  Text="TÊN HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="MATCD "  Text="LOẠI HÀNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="ORGLC"  Text="NƯỚC XX" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TANI1"  Text="MÃ ĐVT" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="SURY1"  Text="SỐ LƯỢNG" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="TANKA"  Text="ĐƠN GIÁ KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KAZTK"  Text="ĐƠN GIÁ TÍNH THUẾ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="BPRIC"  Text="TRỊ GIÁ KB" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KANKG"  Text="TRỊ GIÁ TÍNH THUẾ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KAZEI"  Text="TRỊ GIÁ KB VNĐ" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KANRT"  Text="TS XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="KANGK"  Text="THUẾ XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="ORGNK"  Text="MÃ BIỂU THUẾ XNK" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_1"  Text="LOẠI THUẾ 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_1"  Text="TS LOẠI THUẾ 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_1"  Text="TiỀN THUẾ LOẠI THUẾ 1" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_2"  Text="LOẠI THUẾ 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_2"  Text="TS LOẠI THUẾ 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_2"  Text="TiỀN THUẾ LOẠI THUẾ 2" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_3"  Text="LOẠI THUẾ 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_3"  Text="TS LOẠI THUẾ 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_3"  Text="TiỀN THUẾ LOẠI THUẾ 3" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_4"  Text="LOẠI THUẾ 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_4"  Text="TS LOẠI THUẾ 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_4"  Text="TiỀN THUẾ LOẠI THUẾ 4" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIBC_5"  Text="LOẠI THUẾ 5" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIRT_5"  Text="TS LOẠI THUẾ 5" Enabled="true" runat="server" Checked="true" /><br/>
+<asp:CheckBox ID="NAIGK_5"  Text="TiỀN THUẾ LOẠI THUẾ 5" Enabled="true" runat="server" Checked="true" /><br/>

@@ -1,0 +1,49 @@
+﻿SỐ TK
+NGÀY ĐK
+MÃ LH
+MÃ HQ
+MÃ ĐƠN VỊ
+NƯỚC XNK
+ĐỐI TÁC
+ĐƠN VỊ ỦY THÁC
+MÃ PTVT
+TÊN PTVT
+NGÀY ĐẾN PTVT
+SỐ VẬN ĐƠN 1
+SỐ VẬN ĐƠN 2
+SỐ VẬN ĐƠN 3
+SỐ VẬN ĐƠN 4
+SỐ VẬN ĐƠN 5
+MÃ CỬA KHẨU
+TÊN CỬA KHẨU
+CẢNG NƯỚC NGOÀI
+TÊN CẢNG NƯỚC NGOÀI
+SỐ GiẤY PHÉP 1
+SỐ GiẤY PHÉP 2
+SỐ GiẤY PHÉP 3
+SỐ GiẤY PHÉP 4
+SỐ GiẤY PHÉP 5
+SỐ HỢP ĐỒNG #& NGÀY HỢP ĐỒNG (nếu là tờ khai gia công) hoặc GHI CHÚ KHÁC
+MÃ GIAO HÀNG
+SỐ DÒNG HÀNG
+MÃ PTTT
+MÃ NT
+TỶ GIÁ VNĐ
+NGÀY KB
+GiỜ KB
+PHÍ BẢO HiỂM
+PHÍ VẬN CHUYỂN
+TỔNG TRỊ GIÁ KB
+TỔNG TRỊ GIÁ TÍNH THUẾ
+TRỌNG LƯỢNG
+SỐ KIỆN
+PHÂN LUỒNG
+SỐ HÓA ĐƠN TM
+NGÀY HÓA ĐƠN TM
+ĐỀ XUẤT KHÁC
+TÊN ĐỐI TÁC
+TÊN ĐƠN VỊ
+ĐƠN VỊ ỦY THÁC
+SỐ CONT
+NGÀY HOÀN THÀNH
+GIỜ HOÀN THÀNH
