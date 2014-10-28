@@ -115,7 +115,7 @@ namespace TRACUUTKWIN
                             }
                             objExcel.Visible = false;
                             Excel.Worksheet wsTOKHAIMD = (Excel.Worksheet)wb.Worksheets[1];
-                            wsTOKHAIMD.Range[string.Format("A2:AS{0}", dsTK.Tables[0].Rows.Count + 1)].Value = objData;
+                            wsTOKHAIMD.Range[string.Format("A2:AW{0}", dsTK.Tables[0].Rows.Count + 1)].Value = objData;
                             //603=WE
                             //an cot to khai
                             if (r["RP_TOKHAI_SHOW_FIELDS"] != null)
