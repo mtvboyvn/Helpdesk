@@ -28,6 +28,7 @@ namespace TRACUUTKWIN
 
         public void pro_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
+            Application.CurrentCulture = Program.CulUS;
             pro.Enabled = false;
             pro.Stop();
             try
