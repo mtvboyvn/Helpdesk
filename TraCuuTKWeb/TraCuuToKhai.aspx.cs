@@ -242,9 +242,9 @@ namespace t
             if (string.IsNullOrEmpty(TEN_HANG.Text) == false)
             {
                 TEN_HANG.BackColor = Color.White;
-                if (TEN_HANG.Text.Trim().Length < 11)
+                if (TEN_HANG.Text.Trim().Length < 6)
                 {
-                    lblMSG.Text = "Tên hàng hóa phải nhiều hơn 10 ký tự";
+                    lblMSG.Text = "Tên hàng hóa phải nhiều hơn 5 ký tự";
                     TEN_HANG.BackColor = Color.Salmon;
                     return false;
                 }
@@ -302,9 +302,9 @@ namespace t
                 return false;
             }
 
-            if( (dTo - dFrom).TotalDays>31)
+            if( (dTo - dFrom).TotalDays>15)
             {
-                lblMSG.Text = string.Format("Ngày bắt đầu tìm kiếm {0:dd/MM/yyyy} và ngày kết thúc tìm kiếm {1:dd/MM/yyyy} không được cách nhau quá 31 ngày", dFrom, dTo);
+                lblMSG.Text = string.Format("Ngày bắt đầu tìm kiếm {0:dd/MM/yyyy} và ngày kết thúc tìm kiếm {1:dd/MM/yyyy} không được cách nhau quá 15 ngày", dFrom, dTo);
                 NGAYDK_TO.BackColor = Color.Salmon;
                 NGAYDK_FROM.BackColor = Color.Salmon;
                 return false;
