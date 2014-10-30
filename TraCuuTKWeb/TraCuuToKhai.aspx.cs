@@ -185,6 +185,20 @@ namespace t
             MA_DONVI.BackColor = Color.White;
             TEN_DOITAC.BackColor = Color.White;
             MA_NUOCXK.BackColor = Color.White;
+
+            using (tDBContext mainDB = new tDBContext())
+            {
+                //SREPORT rp = new SREPORT();
+                //rp.RP_FILENAME
+                //rp.RP_USERNAME = string.Format("{0}", Session[ct.USERNAME]);
+                int intCount = mainDB.SREPORTs.Count(string.Format("RP_USERNAME = '{0}' AND RP_FILENAME IS NULL", Session[ct.USERNAME]));
+                if (intCount >= 5)
+                {
+                    lblMSG.Text = string.Format("Hiện tại đang có 5 lệnh chờ xử lý. Không thể đặt thêm lệnh tìm kiếm.");
+                    return false;
+                }
+            }
+
             if (string.IsNullOrEmpty(SOTK.Text.Trim()) == false)//neu co so to khai
             {
                 SOTK.BackColor = Color.White;
@@ -326,6 +340,8 @@ namespace t
                 MA_NUOCXK.BackColor = Color.Salmon;
                 return false;
             }
+
+           
 
             return true;
         }
