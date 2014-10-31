@@ -207,6 +207,12 @@ namespace TRACUUTKWIN
                             catch { }
                             objExcel.Workbooks.Close();
                             objExcel.Quit();
+                            try
+                            {
+                                objExcel.Application.Quit();
+                                objExcel = null;
+                            }
+                            catch { }
                             //t.SREPORT a = new t.SREPORT();a.RP_EXPORTDATE
                             r["RP_STATUS"] = "Thành công";
                             r["RP_FILEPATH"] = strDuongDanTuongDoi;
