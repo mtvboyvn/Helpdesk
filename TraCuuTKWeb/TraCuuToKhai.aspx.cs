@@ -220,6 +220,13 @@ namespace t
                 return true;//nếu có số tờ khai chỉ xử lý riêng theo số tờ khai là đủ
             }
 
+            if (string.IsNullOrEmpty(MA_CC.Text.Trim()) == true)
+            {
+                MA_CC.BackColor = Color.Salmon;
+                lblMSG.Text = "Trong trường hợp không nhập số tờ khai thì mã chi cục bắt buộc phải nhập";
+                return false;
+            }
+
             if (string.IsNullOrEmpty(MA_HS.Text) == false)
             {
                 MA_HS.BackColor = Color.White;
@@ -381,6 +388,9 @@ namespace t
                 return strDK;
             }
 
+            if (string.IsNullOrEmpty(MA_CC.Text) == false)
+                strDK += string.Format("Mã Chi cục: {0}<br />", MA_CC.Text);
+
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
                 strDK += string.Format("Ngày ĐK sau: {0}<br />", NGAYDK_FROM.Text);
 
@@ -390,11 +400,8 @@ namespace t
             if (string.IsNullOrEmpty(MA_LH.Text) == false)
                 strDK += string.Format("Mã LH: {0}<br />", MA_LH.Text);
 
-            if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
-                strDK += string.Format("Mã Cục: {0}<br />", MA_CUCHQ.Text);
-
-            if (string.IsNullOrEmpty(MA_CC.Text) == false)
-                strDK += string.Format("Mã Chi cục: {0}<br />", MA_CC.Text);
+            //if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
+            //    strDK += string.Format("Mã Cục: {0}<br />", MA_CUCHQ.Text);            
 
             if (string.IsNullOrEmpty(MA_DONVI.Text) == false)
                 strDK += string.Format("Mã đơn vị: {0}<br />", MA_DONVI.Text);
@@ -436,7 +443,31 @@ namespace t
                     string.Format("N1.N501A_SIKNO='{0}' ", SOTK.Text),
                     string.Format("N2.N502A_SIKNO='{0}' ", SOTK.Text)};
             }
-            
+
+            if (string.IsNullOrEmpty(MA_CC.Text) == false)
+            {
+                if (string.IsNullOrEmpty(strSQL[0]) == false)
+                {
+                    strSQL[0] += " AND "; strSQL[1] += " AND ";
+                }
+
+                strSQL[0] += string.Format("N1.N501A_SHIKS='{0}' ", MA_CC.Text);
+                strSQL[1] += string.Format("N2.N502A_SHIKS='{0}' ", MA_CC.Text);
+            }
+            else
+            {
+                //if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
+                //{
+                //    if (string.IsNullOrEmpty(strSQL[0]) == false)
+                //    {
+                //        strSQL[0] += " AND "; strSQL[1] += " AND ";
+                //    }
+
+                //    strSQL[0] += string.Format("SUBSTR(N1.N501A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
+                //    strSQL[1] += string.Format("SUBSTR(N2.N502A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
+                //}
+            }
+
             //THỜI GIAN ĐANG CHẠY RẤT CHẬP VÌ NGÀY ĐK TỜ KHAI ĐANG ĐỂ DẠNG TEXT TRONG ĐB
 
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
@@ -477,29 +508,7 @@ namespace t
                 strSQL[1] += string.Format("N2.N502A_SINKS='{0}' ", MA_LH.Text);
             }
 
-            if (string.IsNullOrEmpty(MA_CC.Text) == false)
-            {
-                if (string.IsNullOrEmpty(strSQL[0]) == false)
-                {
-                    strSQL[0] += " AND "; strSQL[1] += " AND ";
-                }
-
-                strSQL[0] += string.Format("N1.N501A_SHIKS='{0}' ", MA_CC.Text);
-                strSQL[1] += string.Format("N2.N502A_SHIKS='{0}' ", MA_CC.Text);
-            }
-            else
-            {
-                if (string.IsNullOrEmpty(MA_CUCHQ.Text) == false)
-                {
-                    if (string.IsNullOrEmpty(strSQL[0]) == false)
-                    {
-                        strSQL[0] += " AND "; strSQL[1] += " AND ";
-                    }
-
-                    strSQL[0] += string.Format("SUBSTR(N1.N501A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
-                    strSQL[1] += string.Format("SUBSTR(N2.N502A_SHIKS,0,2)='{0}' ", MA_CUCHQ.Text);
-                } 
-            }
+            
 
             if (string.IsNullOrEmpty(MA_DONVI.Text) == false)
             {
