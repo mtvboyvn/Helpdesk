@@ -382,6 +382,9 @@ namespace t
         private string TaoDieuKienTimKiemText()
         {
             string strDK = "";
+
+            strDK += rNK.Checked == true ? "Tìm tờ khai Nhập khẩu:<br />" : "Tìm tờ khai Xuất khẩu:<br />";
+            
             if (string.IsNullOrEmpty(SOTK.Text) == false)
             {
                 strDK += string.Format("Số TK: {0}<br />", SOTK.Text);
@@ -392,10 +395,10 @@ namespace t
                 strDK += string.Format("Mã Chi cục: {0}<br />", MA_CC.Text);
 
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
-                strDK += string.Format("Ngày ĐK sau: {0}<br />", NGAYDK_FROM.Text);
+                strDK += string.Format("Ngày ĐK từ ngày: {0}", NGAYDK_FROM.Text);
 
             if (string.IsNullOrEmpty(NGAYDK_TO.Text) == false)
-                strDK += string.Format("Ngày ĐK trước: {0}<br />", NGAYDK_TO.Text);
+                strDK += string.Format(" đến ngày: {0}<br />", NGAYDK_TO.Text);
 
             if (string.IsNullOrEmpty(MA_LH.Text) == false)
                 strDK += string.Format("Mã LH: {0}<br />", MA_LH.Text);
