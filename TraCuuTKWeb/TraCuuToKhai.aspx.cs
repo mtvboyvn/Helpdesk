@@ -468,7 +468,7 @@ namespace t
                 //}
             }
 
-            //THỜI GIAN ĐANG CHẠY RẤT CHẬP VÌ NGÀY ĐK TỜ KHAI ĐANG ĐỂ DẠNG TEXT TRONG ĐB
+            //THỜI GIAN ĐANG CHẠY RẤT CHẬM VÌ NGÀY ĐK TỜ KHAI ĐANG ĐỂ DẠNG TEXT TRONG ĐB
 
             if (string.IsNullOrEmpty(NGAYDK_FROM.Text) == false)
             {
@@ -476,6 +476,11 @@ namespace t
                 bool bP = DateTime.TryParseExact(NGAYDK_FROM.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out dFrom);
                 if (bP == true)
                 {
+
+                    if (string.IsNullOrEmpty(strSQL[0]) == false)
+                    {
+                        strSQL[0] += " AND "; strSQL[1] += " AND ";
+                    }
 
                     strSQL[0] += string.Format("N1.N501A_SINKD>='{0:yyyyMMdd}' ", dFrom);
                     strSQL[1] += string.Format("N2.N502A_SINKD>='{0:yyyyMMdd}' ", dFrom);
