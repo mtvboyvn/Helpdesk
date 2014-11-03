@@ -144,29 +144,10 @@ namespace t.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to SELECT 
-        ///{7}
-        ///FROM
-        ///(
-        ///	SELECT 
-        ///	 {0}
-        ///	FROM N501A N1 
-        ///	WHERE {1}
-        ///	UNION ALL
-        ///	SELECT 
-        ///	  {2}
-        ///	FROM N502A N2 
-        ///	WHERE {3}
-        ///) V1 JOIN
-        ///(
-        ///  SELECT 
-        ///	B1.N501B_SIKNO AS SIKNO 
-        ///  FROM  N501B B1 WHERE {8}
-        ///  UNION ALL
-        ///  SELECT 
-        ///	B2.N502B_SIKNO AS SIKNO
-        ///  FROM N502B B2 WHERE {9}
-        ///) H
-        ///ON V1.SIKNO=H.SIKNO;
+        /// {0}
+        ///FROM N501A N1 
+        ///WHERE {1}
+        ///;
         ///
         ///SELECT 
         ///{4}
@@ -174,20 +155,157 @@ namespace t.Properties {
         ///(
         ///  SELECT 
         ///  N1.N501A_SIKNO AS SIKNO  
-        ///  FROM N501A N1 WHERE {1}
-        ///  UNION 
+        ///  FROM N501A N1 WHERE {1}  
+        ///) V1 JOIN 
+        ///(
+        ///SELECT 
+        ///	{5}
+        ///  FROM  N501B B1   
+        ///) H
+        ///ON V1.SIKNO=H.SIKNO;
+        ///
+        ///.
+        /// </summary>
+        internal static string MVIEW1_TOKHAIMD2_1NK {
+            get {
+                return ResourceManager.GetString("MVIEW1_TOKHAIMD2_1NK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///  {2}
+        ///FROM N502A N2 
+        ///WHERE {3};
+        ///
+        ///SELECT 
+        ///{4}
+        ///FROM 
+        ///(
         ///  SELECT 
         ///  N2.N502A_SIKNO AS SIKNO 
         ///  FROM N502A N2 WHERE {3}
         ///) V1 JOIN 
         ///(
+        ///  SELECT 
+        ///	{6}
+        ///  FROM N502B B2
+        ///) H
+        ///ON V1.SIKNO=H.SIKNO;
+        ///
+        ///.
+        /// </summary>
+        internal static string MVIEW1_TOKHAIMD2_2XK {
+            get {
+                return ResourceManager.GetString("MVIEW1_TOKHAIMD2_2XK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///{0}
+        ///FROM
+        ///(
+        ///	SELECT DISTINCT V1.SIKNO FROM
+        ///	(  
+        ///		SELECT 
+        ///		N1.N501A_SIKNO AS SIKNO
+        ///		FROM N501A N1 
+        ///		WHERE {1}
+        ///	) V1 JOIN N501B B1 ON V1.SIKNO=B1.N501B_SIKNO
+        ///WHERE {8}
+        ///) V2 JOIN N501A N1 ON V2.SIKNO=N1.N501A_SIKNO
+        ///UNION ALL
         ///SELECT 
-        ///	{5}
-        ///  [rest of string was truncated]&quot;;.
+        ///{2}
+        ///FROM
+        ///(
+        ///	SELECT DISTINCT V1.SIKNO FROM
+        ///	(  
+        ///		SELECT 
+        ///		N2.N502A_SIKNO AS SIKNO
+        ///		FROM N502A N2 
+        ///		WHERE {3}
+        ///	) V1 JOIN N502B B2 ON V1.SIKNO=B2.N502B_SIKNO
+        ///	WHERE {9}
+        ///) V2 JOIN N502A N2 ON V2.SIKNO=N2.N502A_SIKNO
+        ///;
+        ///
+        ///SELECT 
+        ///{5} 
+        ///FROM
+        ///(  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MVIEW1_TOKHAIMD2_HANG {
             get {
                 return ResourceManager.GetString("MVIEW1_TOKHAIMD2_HANG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///{0}
+        ///FROM
+        ///(
+        ///	SELECT DISTINCT V1.SIKNO FROM
+        ///	(  
+        ///		SELECT 
+        ///		N1.N501A_SIKNO AS SIKNO
+        ///		FROM N501A N1 
+        ///		WHERE {1}
+        ///	) V1 JOIN N501B B1 ON V1.SIKNO=B1.N501B_SIKNO
+        ///WHERE {8}
+        ///) V2 JOIN N501A N1 ON V2.SIKNO=N1.N501A_SIKNO
+        ///;
+        ///
+        ///SELECT 
+        ///{5} 
+        ///FROM
+        ///(  
+        ///    SELECT 
+        ///    N1.N501A_SIKNO AS SIKNO
+        ///    FROM N501A N1 
+        ///    WHERE {1}
+        ///) V1 JOIN N501B B1 ON V1.SIKNO=B1.N501B_SIKNO
+        ///WHERE {8}
+        ///.
+        /// </summary>
+        internal static string MVIEW1_TOKHAIMD2_HANG_1NK {
+            get {
+                return ResourceManager.GetString("MVIEW1_TOKHAIMD2_HANG_1NK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///{2}
+        ///FROM
+        ///(
+        ///	SELECT DISTINCT V1.SIKNO FROM
+        ///	(  
+        ///		SELECT 
+        ///		N2.N502A_SIKNO AS SIKNO
+        ///		FROM N502A N2 
+        ///		WHERE {3}
+        ///	) V1 JOIN N502B B2 ON V1.SIKNO=B2.N502B_SIKNO
+        ///	WHERE {9}
+        ///) V2 JOIN N502A N2 ON V2.SIKNO=N2.N502A_SIKNO
+        ///;
+        ///
+        ///SELECT 
+        ///{6} 
+        ///FROM
+        ///(  
+        ///    SELECT 
+        ///    N2.N502A_SIKNO AS SIKNO
+        ///    FROM N502A N2 
+        ///    WHERE {3}
+        ///) V1 JOIN N502B B2 ON V1.SIKNO=B2.N502B_SIKNO
+        ///WHERE {9}.
+        /// </summary>
+        internal static string MVIEW1_TOKHAIMD2_HANG_2XK {
+            get {
+                return ResourceManager.GetString("MVIEW1_TOKHAIMD2_HANG_2XK", resourceCulture);
             }
         }
         
@@ -338,7 +456,7 @@ namespace t.Properties {
         ///V1.YSYOS_3,
         ///V1.YSYOS_4,
         ///V1.YSYOS_5,
-        ///V1.KIJIT,,
+        ///V1.KIJIT,
         ///V1.INVKJ,
         ///V1.RPEAT,
         ///V1.PAYCD,
@@ -351,13 +469,13 @@ namespace t.Properties {
         ///V1.INVKA,
         ///V1.HKANZ,
         ///V1.WAIGW,
-        ///V1.KOSUK,,
+        ///V1.KOSUK,
         ///V1.GSIRT,
         ///V1.INVNO,
         ///V1.INDAY,
         ///V1.KIJIT,
         ///V1.YUSYC,
-        ///V1.Y [rest of string was truncated]&quot;;.
+        ///V1.YUN [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string V1_FIELDS {
             get {

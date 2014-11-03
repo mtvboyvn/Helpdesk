@@ -124,40 +124,73 @@ namespace TRACUUTKWIN
             {
                 #region Xử lý count trước
                 string[] strQuery = r["RP_QUERY"].ToString().Split(';');
-                string[] strSelect_501_502 = strQuery[0].Split(new string[] { "UNION ALL" }, StringSplitOptions.RemoveEmptyEntries);
-                string strQueryCount501 = string.Format("SELECT COUNT(*) {0}", strSelect_501_502[0].Substring(strSelect_501_502[0].IndexOf("FROM")));
-                string strQueryCount502 = string.Format("SELECT COUNT(*) {0}", strSelect_501_502[1].Substring(strSelect_501_502[1].IndexOf("FROM")));
-                DataSet dsCount501 = t.clsDalORACLE.GetDataSet(strQueryCount501);
-                DataSet dsCount502 = t.clsDalORACLE.GetDataSet(strQueryCount502);
+                //string[] strSelect_501_502 = strQuery[0].Split(new string[] { "UNION ALL" }, StringSplitOptions.RemoveEmptyEntries);
+                //string strQueryCount501 = string.Format("SELECT COUNT(*) {0}", strSelect_501_502[0].Substring(strSelect_501_502[0].IndexOf("FROM")));
+                //string strQueryCount502 = string.Format("SELECT COUNT(*) {0}", strSelect_501_502[1].Substring(strSelect_501_502[1].IndexOf("FROM")));
+                //DataSet dsCount501 = t.clsDalORACLE.GetDataSet(strQueryCount501);
+                //DataSet dsCount502 = t.clsDalORACLE.GetDataSet(strQueryCount502);
 
-                int intCount1 = 0;
-                if (dsCount501 != null)
+                //int intCount1 = 0;
+                //if (dsCount501 != null)
+                //{
+                //    if (dsCount501.Tables.Count > 0)
+                //    {
+                //        if (dsCount501.Tables[0].Rows.Count > 0)
+                //        {
+                //            intCount1 = (int)(decimal)dsCount501.Tables[0].Rows[0][0];
+                //        }
+                //    }
+
+                //}
+
+                //int intCount2 = 0;
+                //if (dsCount502 != null)
+                //{
+                //    if (dsCount502.Tables.Count > 0)
+                //    {
+                //        if (dsCount502.Tables[0].Rows.Count > 0)
+                //        {
+                //            intCount2 = (int)(decimal)dsCount502.Tables[0].Rows[0][0];
+                //        }
+                //    }
+                //}
+
+                //if (intCount1 + intCount2 > 3000)
+                //{
+                //    throw new Exception(string.Format("Tổng số tờ khai tìm thấy là {0} tờ khai, vượt quá số lượng trích xuất cho phép của hệ thống là 3000 tờ khai. Vui lòng bổ sung thêm điều kiện tìm kiếm để giảm số lượng tờ khai xuống.", intCount1 + intCount2));
+                //}
+
+                string strQueryCount = string.Format("SELECT COUNT(*) {0}", strQuery[0].Substring(strQuery[0].IndexOf("FROM")));
+                DataSet dsCount = t.clsDalORACLE.GetDataSet(strQueryCount);
+                int intCount = 0;
+                if (dsCount != null)
                 {
-                    if (dsCount501.Tables.Count > 0)
+                    if (dsCount.Tables.Count > 0)
                     {
-                        if (dsCount501.Tables[0].Rows.Count > 0)
-                        {
-                            intCount1 = (int)(decimal)dsCount501.Tables[0].Rows[0][0];
+                        if (dsCount.Tables[0].Rows.Count > 0)
+                        {                            
+                            try
+                            {
+                                intCount = Convert.ToInt32(dsCount.Tables[0].Rows[0][0]);
+                            }
+                            catch
+                            {
+                                try
+                                {
+                                    intCount =Convert.ToInt32(Convert.ToDecimal(dsCount.Tables[0].Rows[0][0]));
+                                }
+                                catch
+                                {
+                                    intCount =(int)(decimal)dsCount.Tables[0].Rows[0][0];
+                                }
+                            }
                         }
                     }
 
                 }
-
-                int intCount2 = 0;
-                if (dsCount502 != null)
+                if (intCount > 3000)
                 {
-                    if (dsCount502.Tables.Count > 0)
-                    {
-                        if (dsCount502.Tables[0].Rows.Count > 0)
-                        {
-                            intCount2 = (int)(decimal)dsCount502.Tables[0].Rows[0][0];
-                        }
-                    }
-                }
-
-                if (intCount1 + intCount2 > 3000)
-                {
-                    throw new Exception(string.Format("Tổng số tờ khai tìm thấy là {0} tờ khai, vượt quá số lượng trích xuất cho phép của hệ thống là 3000 tờ khai. Vui lòng bổ sung thêm điều kiện tìm kiếm để giảm số lượng tờ khai xuống.", intCount1 + intCount2));
+                    throw new Exception(string.Format("Tổng số tờ khai tìm thấy là {0} tờ khai, vượt quá số lượng trích xuất cho phép của hệ thống là 3000 tờ khai. Vui lòng bổ sung thêm điều kiện tìm kiếm để giảm số lượng tờ khai xuống.", intCount));
                 }
                 #endregion
 

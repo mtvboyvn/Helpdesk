@@ -85,6 +85,24 @@ namespace t {
         protected global::System.Web.UI.HtmlControls.HtmlTable tblDieuKien;
         
         /// <summary>
+        /// rNK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rNK;
+        
+        /// <summary>
+        /// rXK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rXK;
+        
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>

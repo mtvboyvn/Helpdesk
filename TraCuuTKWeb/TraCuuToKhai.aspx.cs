@@ -53,7 +53,7 @@ namespace t
                 //Page.SetFocus(SOTK);
                 //Page.Form.DefaultFocus = SOTK.ClientID;
                // btnUpdate_Click(null, null);
-                GridView1.Columns[1].Visible = string.Format("{0}",Session[ct.USERNAME]).Equals("TuyenHM");
+                GridView1.Columns[1].Visible = string.Format("{0}",Session[ct.USERNAME]).ToLower().Equals("tuanvm");
                 GridView1.Columns[GridView1.Columns.Count-1].Visible = GridView1.Columns[1].Visible;
             }
         }
@@ -604,25 +604,52 @@ namespace t
 
             if (strWhere.Length >= 4)//where co thong tin hang
             {
-                string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2_HANG;
-                return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
-                                          Resources.N502A_FIELDS, strWhere[1],
-                                            Resources.HANG_FIELDS,
-                                            Resources.N501B_FIELDS,
-                                            Resources.N502B_FIELDS,
-                                            Resources.V1_FIELDS,
-                                           strWhere[2],
-                                           strWhere[3]);
+                if (rNK.Checked == true)
+                {
+                    string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2_HANG_1NK;
+                    return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
+                                              Resources.N502A_FIELDS, strWhere[1],
+                                                Resources.HANG_FIELDS,
+                                                Resources.N501B_FIELDS,
+                                                Resources.N502B_FIELDS,
+                                                Resources.V1_FIELDS,
+                                               strWhere[2],
+                                               strWhere[3]);
+                }
+                else
+                {
+                    string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2_HANG_2XK;
+                    return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
+                                              Resources.N502A_FIELDS, strWhere[1],
+                                                Resources.HANG_FIELDS,
+                                                Resources.N501B_FIELDS,
+                                                Resources.N502B_FIELDS,
+                                                Resources.V1_FIELDS,
+                                               strWhere[2],
+                                               strWhere[3]);
+                }
                
             }
             else //where khong co thong tin hang
             {
-                string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2;
-                return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
-                                             Resources.N502A_FIELDS, strWhere[1],
-                                               Resources.HANG_FIELDS,
-                                               Resources.N501B_FIELDS,
-                                               Resources.N502B_FIELDS);
+                if (rNK.Checked == true)
+                {
+                    string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2_1NK;
+                    return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
+                                                 Resources.N502A_FIELDS, strWhere[1],
+                                                   Resources.HANG_FIELDS,
+                                                   Resources.N501B_FIELDS,
+                                                   Resources.N502B_FIELDS);
+                }
+                else
+                {
+                    string strSQL = t.Properties.Resources.MVIEW1_TOKHAIMD2_2XK;
+                    return string.Format(strSQL, Resources.N501A_FIELDS, strWhere[0],
+                                                 Resources.N502A_FIELDS, strWhere[1],
+                                                   Resources.HANG_FIELDS,
+                                                   Resources.N501B_FIELDS,
+                                                   Resources.N502B_FIELDS);
+                }
             }
         }
 

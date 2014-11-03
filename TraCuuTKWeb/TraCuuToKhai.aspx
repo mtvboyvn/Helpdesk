@@ -78,6 +78,15 @@
                                 </HeaderTemplate>
                                 <ContentTemplate>
                                     <table id="tblDieuKien" runat="server" style="width: 100%; border: solid 0px black; border-collapse: collapse;">
+                                        <tr>
+                                            <td>
+                                               &nbsp;
+                                            </td>
+                                            <td colspan="2" style=" text-align: left; border-right: solid 1px red;" runat="server">
+                                            <asp:RadioButton ForeColor="Blue"  Checked="true"  ID="rNK" Text="Tờ khai Nhập" runat="server" GroupName="TK" />
+                                                <asp:RadioButton ForeColor="DarkGreen" Checked="false" ID="rXK"  Text="Tờ khai Xuất"  runat="server"  GroupName="TK" />
+                                            </td>
+                                        </tr>
                                         <tr runat="server">
                                             <td style="text-align: right; border: solid 0px red;" runat="server" class="auto-style1">
                                                 <nobr>
