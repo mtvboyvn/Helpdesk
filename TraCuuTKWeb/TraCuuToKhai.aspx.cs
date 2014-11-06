@@ -43,7 +43,7 @@ namespace t
             {
                 clsAll.ClearDesignData2(tblDieuKien);
 
-                NGAYDK_FROM.Text = DateTime.Now.AddMonths(-1).ToString("dd/MM/yyyy");
+                NGAYDK_FROM.Text = DateTime.Now.AddDays(-15).ToString("dd/MM/yyyy");
                 NGAYDK_TO.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
                 TEN_CC.DataSource = Global.dsCHICUC.Tables[0];
@@ -579,8 +579,42 @@ namespace t
                 {
                     strSQL[2] += " AND "; strSQL[3] += " AND ";
                 }
-                strSQL[2] += string.Format("B1.N501B_HINMC LIKE '%{0}%' ", MA_HS.Text.Trim());
-                strSQL[3] += string.Format("B2.N502B_HINMC LIKE '%{0}%' ", MA_HS.Text.Trim());
+                //like chay rat cham
+              //  strSQL[2] += string.Format("B1.N501B_HINMC LIKE '%{0}%' ", MA_HS.Text.Trim());
+              //  strSQL[3] += string.Format("B2.N502B_HINMC LIKE '%{0}%' ", MA_HS.Text.Trim());
+
+                //=> chuyen sang dung index
+                string strMinHS = ""; string strMaxHS = "";
+                if (MA_HS.Text.Trim().Length == 8)
+                {
+                    strSQL[2] += string.Format("B1.N501B_HINMC = '{0}' ", MA_HS.Text.Trim());
+                    strSQL[3] += string.Format("B2.N502B_HINMC = '{0}' ", MA_HS.Text.Trim());
+                }
+                else
+                {
+                    if (MA_HS.Text.Trim().Length == 7)
+                    {
+                        strMinHS = MA_HS.Text.Trim() + "0";
+                        strMaxHS = MA_HS.Text.Trim() + "9";
+                    }
+                    if (MA_HS.Text.Trim().Length == 6)
+                    {
+                        strMinHS = MA_HS.Text.Trim() + "00";
+                        strMaxHS = MA_HS.Text.Trim() + "99";
+                    }
+                    if (MA_HS.Text.Trim().Length == 5)
+                    {
+                        strMinHS = MA_HS.Text.Trim() + "000";
+                        strMaxHS = MA_HS.Text.Trim() + "999";
+                    }
+                    if (MA_HS.Text.Trim().Length == 4)
+                    {
+                        strMinHS = MA_HS.Text.Trim() + "0000";
+                        strMaxHS = MA_HS.Text.Trim() + "9999";
+                    }
+                    strSQL[2] += string.Format("B1.N501B_HINMC >= '{0}' AND B1.N501B_HINMC <= '{1}' ", strMinHS, strMaxHS);
+                    strSQL[3] += string.Format("B2.N502B_HINMC >= '{0}' AND B2.N502B_HINMC <= '{1}' ", strMinHS, strMaxHS);
+                }
             }
 
             //TÊN HÀNG

@@ -24,7 +24,7 @@ namespace t
         public static string sqlSTRINGORACLE =
   "User Id=TRACUUTK;Password=1;Data Source=(DESCRIPTION=" +
   "(ADDRESS=(PROTOCOL=TCP)(HOST=TC-APP-CCK.tongcuc.haiquan.vn)(PORT=1521))" +
-  "(CONNECT_DATA=(SID=ORCL)));";
+  "(CONNECT_DATA=(SID=ORCL)));Unicode=True;";
 
         //Liên quan tới thư mục tạm, excel
         public static string TEMP_DIR = "";//Path.Combine(Server.MapPath("~"), "@temp");
